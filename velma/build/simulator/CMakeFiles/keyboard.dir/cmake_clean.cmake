@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/f1tenth/devel/lib/f1tenth_simulator/keyboard"
-  "/home/ubuntu/f1tenth/devel/lib/f1tenth_simulator/keyboard.pdb"
+  "/home/ubuntu/capstone/velma/devel/lib/f1tenth_simulator/keyboard"
+  "/home/ubuntu/capstone/velma/devel/lib/f1tenth_simulator/keyboard.pdb"
   "CMakeFiles/keyboard.dir/node/keyboard.cpp.o"
 )
 

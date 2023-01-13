@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/f1tenth/devel/lib/pixy2_node/pixy2_node"
-  "/home/ubuntu/f1tenth/devel/lib/pixy2_node/pixy2_node.pdb"
+  "/home/ubuntu/capstone/velma/devel/lib/pixy2_node/pixy2_node"
+  "/home/ubuntu/capstone/velma/devel/lib/pixy2_node/pixy2_node.pdb"
   "CMakeFiles/pixy2_node.dir/src/pixy2_node.cpp.o"
 )
 

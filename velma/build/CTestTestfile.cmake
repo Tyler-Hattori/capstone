@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/ubuntu/f1tenth/src
-# Build directory: /home/ubuntu/f1tenth/build
+# Source directory: /home/ubuntu/capstone/velma/src
+# Build directory: /home/ubuntu/capstone/velma/build
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
@@ -19,7 +19,6 @@ subdirs("pixy/pixy2_msgs")
 subdirs("pixy/pixy2_node")
 subdirs("lidar")
 subdirs("simulator")
-subdirs("velma")
 subdirs("vesc/vesc_ackermann")
 subdirs("vesc/vesc_driver")
 subdirs("waypoint_logger")

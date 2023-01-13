@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/f1tenth/src
+CMAKE_SOURCE_DIR = /home/ubuntu/capstone/velma/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/f1tenth/build
+CMAKE_BINARY_DIR = /home/ubuntu/capstone/velma/build
 
 # Utility rule file for clean_test_results.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/ubuntu/f1tenth/build
 include CMakeFiles/clean_test_results.dir/progress.make
 
 CMakeFiles/clean_test_results:
-	/usr/bin/python3 /opt/ros/noetic/share/catkin/cmake/test/remove_test_results.py /home/ubuntu/f1tenth/build/test_results
+	/usr/bin/python3 /opt/ros/noetic/share/catkin/cmake/test/remove_test_results.py /home/ubuntu/capstone/velma/build/test_results
 
 clean_test_results: CMakeFiles/clean_test_results
 clean_test_results: CMakeFiles/clean_test_results.dir/build.make
@@ -71,6 +71,6 @@ CMakeFiles/clean_test_results.dir/clean:
 .PHONY : CMakeFiles/clean_test_results.dir/clean
 
 CMakeFiles/clean_test_results.dir/depend:
-	cd /home/ubuntu/f1tenth/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/f1tenth/src /home/ubuntu/f1tenth/src /home/ubuntu/f1tenth/build /home/ubuntu/f1tenth/build /home/ubuntu/f1tenth/build/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/capstone/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/capstone/velma/src /home/ubuntu/capstone/velma/src /home/ubuntu/capstone/velma/build /home/ubuntu/capstone/velma/build /home/ubuntu/capstone/velma/build/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/clean_test_results.dir/depend
 

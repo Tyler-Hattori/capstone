@@ -1,8 +1,8 @@
-prefix=/home/ubuntu/f1tenth/devel
+prefix=/home/ubuntu/capstone/velma/devel
 
 Name: gpio_control
 Description: Description of gpio_control
 Version: 1.0.0
-Cflags: -I/home/ubuntu/f1tenth/devel/include
+Cflags: -I/home/ubuntu/capstone/velma/devel/include
 Libs: -L${prefix}/lib 
 Requires: message_runtime

@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/ubuntu/f1tenth/src/simulator/node/keyboard.cpp
+/home/ubuntu/capstone/velma/src/simulator/node/keyboard.cpp
 ros/ros.h
 -
 std_msgs/String.h

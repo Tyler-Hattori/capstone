@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/f1tenth/devel/share/common-lisp/ros/gpio_control/msg/InputState.lisp"
-  "/home/ubuntu/f1tenth/devel/share/common-lisp/ros/gpio_control/msg/OutputState.lisp"
+  "/home/ubuntu/capstone/velma/devel/share/common-lisp/ros/gpio_control/msg/InputState.lisp"
+  "/home/ubuntu/capstone/velma/devel/share/common-lisp/ros/gpio_control/msg/OutputState.lisp"
   "CMakeFiles/gpio_control_generate_messages_lisp"
 )
 

@@ -13,21 +13,21 @@ fi
 
 echo_and_run() { echo "+ $@" ; "$@" ; }
 
-echo_and_run cd "/home/ubuntu/f1tenth/src/gpio"
+echo_and_run cd "/home/ubuntu/capstone/velma/src/gpio"
 
 # ensure that Python install destination exists
-echo_and_run mkdir -p "$DESTDIR/home/ubuntu/f1tenth/install/lib/python3/dist-packages"
+echo_and_run mkdir -p "$DESTDIR/home/ubuntu/capstone/velma/install/lib/python3/dist-packages"
 
 # Note that PYTHONPATH is pulled from the environment to support installing
 # into one location when some dependencies were installed in another
 # location, #123.
 echo_and_run /usr/bin/env \
-    PYTHONPATH="/home/ubuntu/f1tenth/install/lib/python3/dist-packages:/home/ubuntu/f1tenth/build/lib/python3/dist-packages:$PYTHONPATH" \
-    CATKIN_BINARY_DIR="/home/ubuntu/f1tenth/build" \
+    PYTHONPATH="/home/ubuntu/capstone/velma/install/lib/python3/dist-packages:/home/ubuntu/capstone/velma/build/lib/python3/dist-packages:$PYTHONPATH" \
+    CATKIN_BINARY_DIR="/home/ubuntu/capstone/velma/build" \
     "/usr/bin/python3" \
-    "/home/ubuntu/f1tenth/src/gpio/setup.py" \
+    "/home/ubuntu/capstone/velma/src/gpio/setup.py" \
      \
-    build --build-base "/home/ubuntu/f1tenth/build/gpio" \
+    build --build-base "/home/ubuntu/capstone/velma/build/gpio" \
     install \
     --root="${DESTDIR-/}" \
-    --install-layout=deb --prefix="/home/ubuntu/f1tenth/install" --install-scripts="/home/ubuntu/f1tenth/install/bin"
+    --install-layout=deb --prefix="/home/ubuntu/capstone/velma/install" --install-scripts="/home/ubuntu/capstone/velma/install/bin"

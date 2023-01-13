@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/f1tenth/src
+CMAKE_SOURCE_DIR = /home/ubuntu/capstone/velma/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/f1tenth/build
+CMAKE_BINARY_DIR = /home/ubuntu/capstone/velma/build
 
 # Include any dependencies generated for this target.
 include serial/CMakeFiles/serial_example.dir/depend.make
@@ -58,17 +58,17 @@ include serial/CMakeFiles/serial_example.dir/progress.make
 include serial/CMakeFiles/serial_example.dir/flags.make
 
 serial/CMakeFiles/serial_example.dir/examples/serial_example.cc.o: serial/CMakeFiles/serial_example.dir/flags.make
-serial/CMakeFiles/serial_example.dir/examples/serial_example.cc.o: /home/ubuntu/f1tenth/src/serial/examples/serial_example.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/f1tenth/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object serial/CMakeFiles/serial_example.dir/examples/serial_example.cc.o"
-	cd /home/ubuntu/f1tenth/build/serial && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/serial_example.dir/examples/serial_example.cc.o -c /home/ubuntu/f1tenth/src/serial/examples/serial_example.cc
+serial/CMakeFiles/serial_example.dir/examples/serial_example.cc.o: /home/ubuntu/capstone/velma/src/serial/examples/serial_example.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/capstone/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object serial/CMakeFiles/serial_example.dir/examples/serial_example.cc.o"
+	cd /home/ubuntu/capstone/velma/build/serial && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/serial_example.dir/examples/serial_example.cc.o -c /home/ubuntu/capstone/velma/src/serial/examples/serial_example.cc
 
 serial/CMakeFiles/serial_example.dir/examples/serial_example.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/serial_example.dir/examples/serial_example.cc.i"
-	cd /home/ubuntu/f1tenth/build/serial && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/f1tenth/src/serial/examples/serial_example.cc > CMakeFiles/serial_example.dir/examples/serial_example.cc.i
+	cd /home/ubuntu/capstone/velma/build/serial && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/capstone/velma/src/serial/examples/serial_example.cc > CMakeFiles/serial_example.dir/examples/serial_example.cc.i
 
 serial/CMakeFiles/serial_example.dir/examples/serial_example.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/serial_example.dir/examples/serial_example.cc.s"
-	cd /home/ubuntu/f1tenth/build/serial && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/f1tenth/src/serial/examples/serial_example.cc -o CMakeFiles/serial_example.dir/examples/serial_example.cc.s
+	cd /home/ubuntu/capstone/velma/build/serial && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/capstone/velma/src/serial/examples/serial_example.cc -o CMakeFiles/serial_example.dir/examples/serial_example.cc.s
 
 # Object files for target serial_example
 serial_example_OBJECTS = \
@@ -77,23 +77,23 @@ serial_example_OBJECTS = \
 # External object files for target serial_example
 serial_example_EXTERNAL_OBJECTS =
 
-/home/ubuntu/f1tenth/devel/lib/serial/serial_example: serial/CMakeFiles/serial_example.dir/examples/serial_example.cc.o
-/home/ubuntu/f1tenth/devel/lib/serial/serial_example: serial/CMakeFiles/serial_example.dir/build.make
-/home/ubuntu/f1tenth/devel/lib/serial/serial_example: /home/ubuntu/f1tenth/devel/lib/libserial.so
-/home/ubuntu/f1tenth/devel/lib/serial/serial_example: serial/CMakeFiles/serial_example.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/f1tenth/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/ubuntu/f1tenth/devel/lib/serial/serial_example"
-	cd /home/ubuntu/f1tenth/build/serial && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/serial_example.dir/link.txt --verbose=$(VERBOSE)
+/home/ubuntu/capstone/velma/devel/lib/serial/serial_example: serial/CMakeFiles/serial_example.dir/examples/serial_example.cc.o
+/home/ubuntu/capstone/velma/devel/lib/serial/serial_example: serial/CMakeFiles/serial_example.dir/build.make
+/home/ubuntu/capstone/velma/devel/lib/serial/serial_example: /home/ubuntu/capstone/velma/devel/lib/libserial.so
+/home/ubuntu/capstone/velma/devel/lib/serial/serial_example: serial/CMakeFiles/serial_example.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/capstone/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/ubuntu/capstone/velma/devel/lib/serial/serial_example"
+	cd /home/ubuntu/capstone/velma/build/serial && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/serial_example.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-serial/CMakeFiles/serial_example.dir/build: /home/ubuntu/f1tenth/devel/lib/serial/serial_example
+serial/CMakeFiles/serial_example.dir/build: /home/ubuntu/capstone/velma/devel/lib/serial/serial_example
 
 .PHONY : serial/CMakeFiles/serial_example.dir/build
 
 serial/CMakeFiles/serial_example.dir/clean:
-	cd /home/ubuntu/f1tenth/build/serial && $(CMAKE_COMMAND) -P CMakeFiles/serial_example.dir/cmake_clean.cmake
+	cd /home/ubuntu/capstone/velma/build/serial && $(CMAKE_COMMAND) -P CMakeFiles/serial_example.dir/cmake_clean.cmake
 .PHONY : serial/CMakeFiles/serial_example.dir/clean
 
 serial/CMakeFiles/serial_example.dir/depend:
-	cd /home/ubuntu/f1tenth/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/f1tenth/src /home/ubuntu/f1tenth/src/serial /home/ubuntu/f1tenth/build /home/ubuntu/f1tenth/build/serial /home/ubuntu/f1tenth/build/serial/CMakeFiles/serial_example.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/capstone/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/capstone/velma/src /home/ubuntu/capstone/velma/src/serial /home/ubuntu/capstone/velma/build /home/ubuntu/capstone/velma/build/serial /home/ubuntu/capstone/velma/build/serial/CMakeFiles/serial_example.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : serial/CMakeFiles/serial_example.dir/depend
 

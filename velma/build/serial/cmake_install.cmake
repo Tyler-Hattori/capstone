@@ -1,8 +1,8 @@
-# Install script for directory: /home/ubuntu/f1tenth/src/serial
+# Install script for directory: /home/ubuntu/capstone/velma/src/serial
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/ubuntu/f1tenth/install")
+  set(CMAKE_INSTALL_PREFIX "/home/ubuntu/capstone/velma/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,18 +38,18 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ubuntu/f1tenth/build/serial/catkin_generated/installspace/serial.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ubuntu/capstone/velma/build/serial/catkin_generated/installspace/serial.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/serial/cmake" TYPE FILE FILES
-    "/home/ubuntu/f1tenth/build/serial/catkin_generated/installspace/serialConfig.cmake"
-    "/home/ubuntu/f1tenth/build/serial/catkin_generated/installspace/serialConfig-version.cmake"
+    "/home/ubuntu/capstone/velma/build/serial/catkin_generated/installspace/serialConfig.cmake"
+    "/home/ubuntu/capstone/velma/build/serial/catkin_generated/installspace/serialConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/serial" TYPE FILE FILES "/home/ubuntu/f1tenth/src/serial/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/serial" TYPE FILE FILES "/home/ubuntu/capstone/velma/src/serial/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -59,7 +59,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libserial.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/ubuntu/f1tenth/devel/lib/libserial.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/ubuntu/capstone/velma/devel/lib/libserial.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libserial.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libserial.so")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -73,14 +73,14 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/serial" TYPE FILE FILES
-    "/home/ubuntu/f1tenth/src/serial/include/serial/serial.h"
-    "/home/ubuntu/f1tenth/src/serial/include/serial/v8stdint.h"
+    "/home/ubuntu/capstone/velma/src/serial/include/serial/serial.h"
+    "/home/ubuntu/capstone/velma/src/serial/include/serial/v8stdint.h"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/ubuntu/f1tenth/build/serial/tests/cmake_install.cmake")
+  include("/home/ubuntu/capstone/velma/build/serial/tests/cmake_install.cmake")
 
 endif()
 

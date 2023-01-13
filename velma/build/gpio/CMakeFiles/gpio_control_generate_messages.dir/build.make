@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/f1tenth/src
+CMAKE_SOURCE_DIR = /home/ubuntu/capstone/velma/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/f1tenth/build
+CMAKE_BINARY_DIR = /home/ubuntu/capstone/velma/build
 
 # Utility rule file for gpio_control_generate_messages.
 
@@ -63,10 +63,10 @@ gpio/CMakeFiles/gpio_control_generate_messages.dir/build: gpio_control_generate_
 .PHONY : gpio/CMakeFiles/gpio_control_generate_messages.dir/build
 
 gpio/CMakeFiles/gpio_control_generate_messages.dir/clean:
-	cd /home/ubuntu/f1tenth/build/gpio && $(CMAKE_COMMAND) -P CMakeFiles/gpio_control_generate_messages.dir/cmake_clean.cmake
+	cd /home/ubuntu/capstone/velma/build/gpio && $(CMAKE_COMMAND) -P CMakeFiles/gpio_control_generate_messages.dir/cmake_clean.cmake
 .PHONY : gpio/CMakeFiles/gpio_control_generate_messages.dir/clean
 
 gpio/CMakeFiles/gpio_control_generate_messages.dir/depend:
-	cd /home/ubuntu/f1tenth/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/f1tenth/src /home/ubuntu/f1tenth/src/gpio /home/ubuntu/f1tenth/build /home/ubuntu/f1tenth/build/gpio /home/ubuntu/f1tenth/build/gpio/CMakeFiles/gpio_control_generate_messages.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/capstone/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/capstone/velma/src /home/ubuntu/capstone/velma/src/gpio /home/ubuntu/capstone/velma/build /home/ubuntu/capstone/velma/build/gpio /home/ubuntu/capstone/velma/build/gpio/CMakeFiles/gpio_control_generate_messages.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : gpio/CMakeFiles/gpio_control_generate_messages.dir/depend
 

@@ -1,4 +1,4 @@
-prefix=/home/ubuntu/f1tenth/install
+prefix=/home/ubuntu/capstone/velma/install
 
 Name: ackermann_cmd_mux
 Description: Description of ackermann_cmd_mux

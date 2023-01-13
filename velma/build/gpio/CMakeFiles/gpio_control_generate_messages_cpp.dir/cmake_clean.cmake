@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/f1tenth/devel/include/gpio_control/InputState.h"
-  "/home/ubuntu/f1tenth/devel/include/gpio_control/OutputState.h"
+  "/home/ubuntu/capstone/velma/devel/include/gpio_control/InputState.h"
+  "/home/ubuntu/capstone/velma/devel/include/gpio_control/OutputState.h"
   "CMakeFiles/gpio_control_generate_messages_cpp"
 )
 

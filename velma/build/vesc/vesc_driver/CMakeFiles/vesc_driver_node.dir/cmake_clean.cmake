@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/f1tenth/devel/lib/vesc_driver/vesc_driver_node"
-  "/home/ubuntu/f1tenth/devel/lib/vesc_driver/vesc_driver_node.pdb"
+  "/home/ubuntu/capstone/velma/devel/lib/vesc_driver/vesc_driver_node"
+  "/home/ubuntu/capstone/velma/devel/lib/vesc_driver/vesc_driver_node.pdb"
   "CMakeFiles/vesc_driver_node.dir/src/vesc_driver.cpp.o"
   "CMakeFiles/vesc_driver_node.dir/src/vesc_driver_node.cpp.o"
   "CMakeFiles/vesc_driver_node.dir/src/vesc_interface.cpp.o"

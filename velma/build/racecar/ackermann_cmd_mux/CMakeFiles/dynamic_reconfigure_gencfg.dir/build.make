@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/f1tenth/src
+CMAKE_SOURCE_DIR = /home/ubuntu/capstone/velma/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/f1tenth/build
+CMAKE_BINARY_DIR = /home/ubuntu/capstone/velma/build
 
 # Utility rule file for dynamic_reconfigure_gencfg.
 
@@ -63,10 +63,10 @@ racecar/ackermann_cmd_mux/CMakeFiles/dynamic_reconfigure_gencfg.dir/build: dynam
 .PHONY : racecar/ackermann_cmd_mux/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
 
 racecar/ackermann_cmd_mux/CMakeFiles/dynamic_reconfigure_gencfg.dir/clean:
-	cd /home/ubuntu/f1tenth/build/racecar/ackermann_cmd_mux && $(CMAKE_COMMAND) -P CMakeFiles/dynamic_reconfigure_gencfg.dir/cmake_clean.cmake
+	cd /home/ubuntu/capstone/velma/build/racecar/ackermann_cmd_mux && $(CMAKE_COMMAND) -P CMakeFiles/dynamic_reconfigure_gencfg.dir/cmake_clean.cmake
 .PHONY : racecar/ackermann_cmd_mux/CMakeFiles/dynamic_reconfigure_gencfg.dir/clean
 
 racecar/ackermann_cmd_mux/CMakeFiles/dynamic_reconfigure_gencfg.dir/depend:
-	cd /home/ubuntu/f1tenth/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/f1tenth/src /home/ubuntu/f1tenth/src/racecar/ackermann_cmd_mux /home/ubuntu/f1tenth/build /home/ubuntu/f1tenth/build/racecar/ackermann_cmd_mux /home/ubuntu/f1tenth/build/racecar/ackermann_cmd_mux/CMakeFiles/dynamic_reconfigure_gencfg.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/capstone/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/capstone/velma/src /home/ubuntu/capstone/velma/src/racecar/ackermann_cmd_mux /home/ubuntu/capstone/velma/build /home/ubuntu/capstone/velma/build/racecar/ackermann_cmd_mux /home/ubuntu/capstone/velma/build/racecar/ackermann_cmd_mux/CMakeFiles/dynamic_reconfigure_gencfg.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : racecar/ackermann_cmd_mux/CMakeFiles/dynamic_reconfigure_gencfg.dir/depend
 

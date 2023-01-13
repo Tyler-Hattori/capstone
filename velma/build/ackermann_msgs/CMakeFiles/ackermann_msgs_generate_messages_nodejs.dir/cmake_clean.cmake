@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/f1tenth/devel/share/gennodejs/ros/ackermann_msgs/msg/AckermannDrive.js"
-  "/home/ubuntu/f1tenth/devel/share/gennodejs/ros/ackermann_msgs/msg/AckermannDriveStamped.js"
+  "/home/ubuntu/capstone/velma/devel/share/gennodejs/ros/ackermann_msgs/msg/AckermannDrive.js"
+  "/home/ubuntu/capstone/velma/devel/share/gennodejs/ros/ackermann_msgs/msg/AckermannDriveStamped.js"
   "CMakeFiles/ackermann_msgs_generate_messages_nodejs"
 )
 

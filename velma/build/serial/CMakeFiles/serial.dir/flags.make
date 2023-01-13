@@ -6,5 +6,5 @@ CXX_FLAGS = -fPIC
 
 CXX_DEFINES = -DROS_BUILD_SHARED_LIBS=1 -Dserial_EXPORTS
 
-CXX_INCLUDES = -I/home/ubuntu/f1tenth/src/serial/include 
+CXX_INCLUDES = -I/home/ubuntu/capstone/velma/src/serial/include 
 

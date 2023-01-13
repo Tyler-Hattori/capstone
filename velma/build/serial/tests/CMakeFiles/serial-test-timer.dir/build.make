@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/f1tenth/src
+CMAKE_SOURCE_DIR = /home/ubuntu/capstone/velma/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/f1tenth/build
+CMAKE_BINARY_DIR = /home/ubuntu/capstone/velma/build
 
 # Include any dependencies generated for this target.
 include serial/tests/CMakeFiles/serial-test-timer.dir/depend.make
@@ -58,17 +58,17 @@ include serial/tests/CMakeFiles/serial-test-timer.dir/progress.make
 include serial/tests/CMakeFiles/serial-test-timer.dir/flags.make
 
 serial/tests/CMakeFiles/serial-test-timer.dir/unit/unix_timer_tests.cc.o: serial/tests/CMakeFiles/serial-test-timer.dir/flags.make
-serial/tests/CMakeFiles/serial-test-timer.dir/unit/unix_timer_tests.cc.o: /home/ubuntu/f1tenth/src/serial/tests/unit/unix_timer_tests.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/f1tenth/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object serial/tests/CMakeFiles/serial-test-timer.dir/unit/unix_timer_tests.cc.o"
-	cd /home/ubuntu/f1tenth/build/serial/tests && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/serial-test-timer.dir/unit/unix_timer_tests.cc.o -c /home/ubuntu/f1tenth/src/serial/tests/unit/unix_timer_tests.cc
+serial/tests/CMakeFiles/serial-test-timer.dir/unit/unix_timer_tests.cc.o: /home/ubuntu/capstone/velma/src/serial/tests/unit/unix_timer_tests.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/capstone/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object serial/tests/CMakeFiles/serial-test-timer.dir/unit/unix_timer_tests.cc.o"
+	cd /home/ubuntu/capstone/velma/build/serial/tests && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/serial-test-timer.dir/unit/unix_timer_tests.cc.o -c /home/ubuntu/capstone/velma/src/serial/tests/unit/unix_timer_tests.cc
 
 serial/tests/CMakeFiles/serial-test-timer.dir/unit/unix_timer_tests.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/serial-test-timer.dir/unit/unix_timer_tests.cc.i"
-	cd /home/ubuntu/f1tenth/build/serial/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/f1tenth/src/serial/tests/unit/unix_timer_tests.cc > CMakeFiles/serial-test-timer.dir/unit/unix_timer_tests.cc.i
+	cd /home/ubuntu/capstone/velma/build/serial/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/capstone/velma/src/serial/tests/unit/unix_timer_tests.cc > CMakeFiles/serial-test-timer.dir/unit/unix_timer_tests.cc.i
 
 serial/tests/CMakeFiles/serial-test-timer.dir/unit/unix_timer_tests.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/serial-test-timer.dir/unit/unix_timer_tests.cc.s"
-	cd /home/ubuntu/f1tenth/build/serial/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/f1tenth/src/serial/tests/unit/unix_timer_tests.cc -o CMakeFiles/serial-test-timer.dir/unit/unix_timer_tests.cc.s
+	cd /home/ubuntu/capstone/velma/build/serial/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/capstone/velma/src/serial/tests/unit/unix_timer_tests.cc -o CMakeFiles/serial-test-timer.dir/unit/unix_timer_tests.cc.s
 
 # Object files for target serial-test-timer
 serial__test__timer_OBJECTS = \
@@ -77,24 +77,24 @@ serial__test__timer_OBJECTS = \
 # External object files for target serial-test-timer
 serial__test__timer_EXTERNAL_OBJECTS =
 
-/home/ubuntu/f1tenth/devel/lib/serial/serial-test-timer: serial/tests/CMakeFiles/serial-test-timer.dir/unit/unix_timer_tests.cc.o
-/home/ubuntu/f1tenth/devel/lib/serial/serial-test-timer: serial/tests/CMakeFiles/serial-test-timer.dir/build.make
-/home/ubuntu/f1tenth/devel/lib/serial/serial-test-timer: gtest/lib/libgtest.so
-/home/ubuntu/f1tenth/devel/lib/serial/serial-test-timer: /home/ubuntu/f1tenth/devel/lib/libserial.so
-/home/ubuntu/f1tenth/devel/lib/serial/serial-test-timer: serial/tests/CMakeFiles/serial-test-timer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/f1tenth/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/ubuntu/f1tenth/devel/lib/serial/serial-test-timer"
-	cd /home/ubuntu/f1tenth/build/serial/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/serial-test-timer.dir/link.txt --verbose=$(VERBOSE)
+/home/ubuntu/capstone/velma/devel/lib/serial/serial-test-timer: serial/tests/CMakeFiles/serial-test-timer.dir/unit/unix_timer_tests.cc.o
+/home/ubuntu/capstone/velma/devel/lib/serial/serial-test-timer: serial/tests/CMakeFiles/serial-test-timer.dir/build.make
+/home/ubuntu/capstone/velma/devel/lib/serial/serial-test-timer: gtest/lib/libgtest.so
+/home/ubuntu/capstone/velma/devel/lib/serial/serial-test-timer: /home/ubuntu/capstone/velma/devel/lib/libserial.so
+/home/ubuntu/capstone/velma/devel/lib/serial/serial-test-timer: serial/tests/CMakeFiles/serial-test-timer.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/capstone/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/ubuntu/capstone/velma/devel/lib/serial/serial-test-timer"
+	cd /home/ubuntu/capstone/velma/build/serial/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/serial-test-timer.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-serial/tests/CMakeFiles/serial-test-timer.dir/build: /home/ubuntu/f1tenth/devel/lib/serial/serial-test-timer
+serial/tests/CMakeFiles/serial-test-timer.dir/build: /home/ubuntu/capstone/velma/devel/lib/serial/serial-test-timer
 
 .PHONY : serial/tests/CMakeFiles/serial-test-timer.dir/build
 
 serial/tests/CMakeFiles/serial-test-timer.dir/clean:
-	cd /home/ubuntu/f1tenth/build/serial/tests && $(CMAKE_COMMAND) -P CMakeFiles/serial-test-timer.dir/cmake_clean.cmake
+	cd /home/ubuntu/capstone/velma/build/serial/tests && $(CMAKE_COMMAND) -P CMakeFiles/serial-test-timer.dir/cmake_clean.cmake
 .PHONY : serial/tests/CMakeFiles/serial-test-timer.dir/clean
 
 serial/tests/CMakeFiles/serial-test-timer.dir/depend:
-	cd /home/ubuntu/f1tenth/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/f1tenth/src /home/ubuntu/f1tenth/src/serial/tests /home/ubuntu/f1tenth/build /home/ubuntu/f1tenth/build/serial/tests /home/ubuntu/f1tenth/build/serial/tests/CMakeFiles/serial-test-timer.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/capstone/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/capstone/velma/src /home/ubuntu/capstone/velma/src/serial/tests /home/ubuntu/capstone/velma/build /home/ubuntu/capstone/velma/build/serial/tests /home/ubuntu/capstone/velma/build/serial/tests/CMakeFiles/serial-test-timer.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : serial/tests/CMakeFiles/serial-test-timer.dir/depend
 

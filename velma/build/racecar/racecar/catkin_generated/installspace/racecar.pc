@@ -1,4 +1,4 @@
-prefix=/home/ubuntu/f1tenth/install
+prefix=/home/ubuntu/capstone/velma/install
 
 Name: racecar
 Description: Description of racecar

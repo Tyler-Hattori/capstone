@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/f1tenth/devel/lib/serial/serial-test"
-  "/home/ubuntu/f1tenth/devel/lib/serial/serial-test.pdb"
+  "/home/ubuntu/capstone/velma/devel/lib/serial/serial-test"
+  "/home/ubuntu/capstone/velma/devel/lib/serial/serial-test.pdb"
   "CMakeFiles/serial-test.dir/unix_serial_tests.cc.o"
 )
 

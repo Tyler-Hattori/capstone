@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/f1tenth/src
+CMAKE_SOURCE_DIR = /home/ubuntu/capstone/velma/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/f1tenth/build
+CMAKE_BINARY_DIR = /home/ubuntu/capstone/velma/build
 
 # Utility rule file for diagnostic_msgs_generate_messages_py.
 
@@ -63,10 +63,10 @@ joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build: 
 .PHONY : joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build
 
 joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/clean:
-	cd /home/ubuntu/f1tenth/build/joystick_drivers/joy && $(CMAKE_COMMAND) -P CMakeFiles/diagnostic_msgs_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/ubuntu/capstone/velma/build/joystick_drivers/joy && $(CMAKE_COMMAND) -P CMakeFiles/diagnostic_msgs_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/clean
 
 joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/depend:
-	cd /home/ubuntu/f1tenth/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/f1tenth/src /home/ubuntu/f1tenth/src/joystick_drivers/joy /home/ubuntu/f1tenth/build /home/ubuntu/f1tenth/build/joystick_drivers/joy /home/ubuntu/f1tenth/build/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/capstone/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/capstone/velma/src /home/ubuntu/capstone/velma/src/joystick_drivers/joy /home/ubuntu/capstone/velma/build /home/ubuntu/capstone/velma/build/joystick_drivers/joy /home/ubuntu/capstone/velma/build/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/depend
 

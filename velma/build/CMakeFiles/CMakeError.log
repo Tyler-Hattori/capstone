@@ -1,21 +1,21 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
-Change Dir: /home/ubuntu/f1tenth/build/CMakeFiles/CMakeTmp
+Change Dir: /home/ubuntu/capstone/velma/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_054e5/fast && /usr/bin/make -f CMakeFiles/cmTC_054e5.dir/build.make CMakeFiles/cmTC_054e5.dir/build
-make[1]: Entering directory '/home/ubuntu/f1tenth/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_054e5.dir/src.c.o
-/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_054e5.dir/src.c.o   -c /home/ubuntu/f1tenth/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_054e5
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_054e5.dir/link.txt --verbose=1
-/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_054e5.dir/src.c.o  -o cmTC_054e5 
-/usr/bin/ld: CMakeFiles/cmTC_054e5.dir/src.c.o: in function `main':
+Run Build Command(s):/usr/bin/make cmTC_049f6/fast && /usr/bin/make -f CMakeFiles/cmTC_049f6.dir/build.make CMakeFiles/cmTC_049f6.dir/build
+make[1]: Entering directory '/home/ubuntu/capstone/velma/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_049f6.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_049f6.dir/src.c.o   -c /home/ubuntu/capstone/velma/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_049f6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_049f6.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_049f6.dir/src.c.o  -o cmTC_049f6 
+/usr/bin/ld: CMakeFiles/cmTC_049f6.dir/src.c.o: in function `main':
 src.c:(.text+0x48): undefined reference to `pthread_create'
 /usr/bin/ld: src.c:(.text+0x50): undefined reference to `pthread_detach'
 /usr/bin/ld: src.c:(.text+0x5c): undefined reference to `pthread_join'
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_054e5.dir/build.make:87: cmTC_054e5] Error 1
-make[1]: Leaving directory '/home/ubuntu/f1tenth/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_054e5/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_049f6.dir/build.make:87: cmTC_049f6] Error 1
+make[1]: Leaving directory '/home/ubuntu/capstone/velma/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_049f6/fast] Error 2
 
 
 Source file was:
@@ -39,20 +39,20 @@ int main(void)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/ubuntu/f1tenth/build/CMakeFiles/CMakeTmp
+Change Dir: /home/ubuntu/capstone/velma/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_35915/fast && /usr/bin/make -f CMakeFiles/cmTC_35915.dir/build.make CMakeFiles/cmTC_35915.dir/build
-make[1]: Entering directory '/home/ubuntu/f1tenth/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_35915.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_35915.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
-Linking C executable cmTC_35915
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_35915.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_35915.dir/CheckFunctionExists.c.o  -o cmTC_35915  -lpthreads 
+Run Build Command(s):/usr/bin/make cmTC_49a3c/fast && /usr/bin/make -f CMakeFiles/cmTC_49a3c.dir/build.make CMakeFiles/cmTC_49a3c.dir/build
+make[1]: Entering directory '/home/ubuntu/capstone/velma/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_49a3c.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_49a3c.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_49a3c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_49a3c.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_49a3c.dir/CheckFunctionExists.c.o  -o cmTC_49a3c  -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_35915.dir/build.make:87: cmTC_35915] Error 1
-make[1]: Leaving directory '/home/ubuntu/f1tenth/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_35915/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_49a3c.dir/build.make:87: cmTC_49a3c] Error 1
+make[1]: Leaving directory '/home/ubuntu/capstone/velma/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_49a3c/fast] Error 2
 
 
 

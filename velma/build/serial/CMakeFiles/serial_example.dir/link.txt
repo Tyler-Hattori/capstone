@@ -1,1 +1,1 @@
-/usr/bin/c++    -rdynamic CMakeFiles/serial_example.dir/examples/serial_example.cc.o  -o /home/ubuntu/f1tenth/devel/lib/serial/serial_example  -Wl,-rpath,/home/ubuntu/f1tenth/devel/lib /home/ubuntu/f1tenth/devel/lib/libserial.so -lrt -lpthread 
+/usr/bin/c++    -rdynamic CMakeFiles/serial_example.dir/examples/serial_example.cc.o  -o /home/ubuntu/capstone/velma/devel/lib/serial/serial_example  -Wl,-rpath,/home/ubuntu/capstone/velma/devel/lib /home/ubuntu/capstone/velma/devel/lib/libserial.so -lrt -lpthread 

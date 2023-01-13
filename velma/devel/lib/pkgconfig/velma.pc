@@ -1,8 +1,0 @@
-prefix=/home/ubuntu/f1tenth/devel
-
-Name: velma
-Description: Description of velma
-Version: 0.0.1
-Cflags: -I/home/ubuntu/f1tenth/src/velma/include
-Libs: -L${prefix}/lib -lvelma
-Requires: message_runtime

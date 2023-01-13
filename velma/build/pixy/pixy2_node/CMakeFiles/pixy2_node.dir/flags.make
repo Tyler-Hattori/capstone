@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"pixy2_node\"
 
-CXX_INCLUDES = -I/home/ubuntu/f1tenth/src/pixy/pixy2_node/pixy2/src/common/inc -I/home/ubuntu/f1tenth/src/pixy/pixy2_node/pixy2/src/host/arduino/libraries/Pixy2 -I/home/ubuntu/f1tenth/src/pixy/pixy2_node/pixy2/src/host/libpixyusb2/include -I/usr/include/libusb-1.0 -I/home/ubuntu/f1tenth/devel/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
+CXX_INCLUDES = -I/home/ubuntu/capstone/velma/src/pixy/pixy2_node/pixy2/src/common/inc -I/home/ubuntu/capstone/velma/src/pixy/pixy2_node/pixy2/src/host/arduino/libraries/Pixy2 -I/home/ubuntu/capstone/velma/src/pixy/pixy2_node/pixy2/src/host/libpixyusb2/include -I/usr/include/libusb-1.0 -I/home/ubuntu/capstone/velma/devel/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
 

@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/f1tenth/devel/share/roseus/ros/gpio_control/manifest.l"
-  "/home/ubuntu/f1tenth/devel/share/roseus/ros/gpio_control/msg/InputState.l"
-  "/home/ubuntu/f1tenth/devel/share/roseus/ros/gpio_control/msg/OutputState.l"
+  "/home/ubuntu/capstone/velma/devel/share/roseus/ros/gpio_control/manifest.l"
+  "/home/ubuntu/capstone/velma/devel/share/roseus/ros/gpio_control/msg/InputState.l"
+  "/home/ubuntu/capstone/velma/devel/share/roseus/ros/gpio_control/msg/OutputState.l"
   "CMakeFiles/gpio_control_generate_messages_eus"
 )
 

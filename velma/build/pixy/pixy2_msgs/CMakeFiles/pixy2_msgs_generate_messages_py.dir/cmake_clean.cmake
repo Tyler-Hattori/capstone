@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/f1tenth/devel/lib/python3/dist-packages/pixy2_msgs/msg/_PixyBlock.py"
-  "/home/ubuntu/f1tenth/devel/lib/python3/dist-packages/pixy2_msgs/msg/_PixyData.py"
-  "/home/ubuntu/f1tenth/devel/lib/python3/dist-packages/pixy2_msgs/msg/_PixyResolution.py"
-  "/home/ubuntu/f1tenth/devel/lib/python3/dist-packages/pixy2_msgs/msg/_Servo.py"
-  "/home/ubuntu/f1tenth/devel/lib/python3/dist-packages/pixy2_msgs/msg/__init__.py"
+  "/home/ubuntu/capstone/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_PixyBlock.py"
+  "/home/ubuntu/capstone/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_PixyData.py"
+  "/home/ubuntu/capstone/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_PixyResolution.py"
+  "/home/ubuntu/capstone/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_Servo.py"
+  "/home/ubuntu/capstone/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/__init__.py"
   "CMakeFiles/pixy2_msgs_generate_messages_py"
 )
 

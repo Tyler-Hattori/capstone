@@ -1,2 +1,2 @@
-ackermann_msgs:gpio:joystick_drivers/joy:joystick_drivers/joystick_drivers:lidar:pixy/pixy2_msgs:pixy/pixy2_node:pixy/pixy2_ros:racecar/ackermann_cmd_mux:racecar/racecar:serial:simulator:velma:vesc/vesc:vesc/vesc_ackermann:vesc/vesc_driver:vesc/vesc_msgs:waypoint_logger
--DCATKIN_DEVEL_PREFIX=/home/ubuntu/f1tenth/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntu/f1tenth/install -G Unix Makefiles
+ackermann_msgs:gpio:joystick_drivers/joy:joystick_drivers/joystick_drivers:lidar:pixy/pixy2_msgs:pixy/pixy2_node:pixy/pixy2_ros:racecar/ackermann_cmd_mux:racecar/racecar:serial:simulator:vesc/vesc:vesc/vesc_ackermann:vesc/vesc_driver:vesc/vesc_msgs:waypoint_logger
+-DCATKIN_DEVEL_PREFIX=/home/ubuntu/capstone/velma/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntu/capstone/velma/install -G Unix Makefiles

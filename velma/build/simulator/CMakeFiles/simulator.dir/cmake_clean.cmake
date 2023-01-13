@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/f1tenth/devel/lib/f1tenth_simulator/simulator"
-  "/home/ubuntu/f1tenth/devel/lib/f1tenth_simulator/simulator.pdb"
+  "/home/ubuntu/capstone/velma/devel/lib/f1tenth_simulator/simulator"
+  "/home/ubuntu/capstone/velma/devel/lib/f1tenth_simulator/simulator.pdb"
   "CMakeFiles/simulator.dir/node/simulator.cpp.o"
 )
 

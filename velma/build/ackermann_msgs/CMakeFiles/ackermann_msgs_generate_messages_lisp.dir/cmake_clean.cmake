@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/f1tenth/devel/share/common-lisp/ros/ackermann_msgs/msg/AckermannDrive.lisp"
-  "/home/ubuntu/f1tenth/devel/share/common-lisp/ros/ackermann_msgs/msg/AckermannDriveStamped.lisp"
+  "/home/ubuntu/capstone/velma/devel/share/common-lisp/ros/ackermann_msgs/msg/AckermannDrive.lisp"
+  "/home/ubuntu/capstone/velma/devel/share/common-lisp/ros/ackermann_msgs/msg/AckermannDriveStamped.lisp"
   "CMakeFiles/ackermann_msgs_generate_messages_lisp"
 )
 

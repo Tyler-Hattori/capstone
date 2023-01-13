@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/f1tenth/src
+CMAKE_SOURCE_DIR = /home/ubuntu/capstone/velma/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/f1tenth/build
+CMAKE_BINARY_DIR = /home/ubuntu/capstone/velma/build
 
 # Utility rule file for roscpp_generate_messages_lisp.
 
@@ -63,10 +63,10 @@ gpio/CMakeFiles/roscpp_generate_messages_lisp.dir/build: roscpp_generate_message
 .PHONY : gpio/CMakeFiles/roscpp_generate_messages_lisp.dir/build
 
 gpio/CMakeFiles/roscpp_generate_messages_lisp.dir/clean:
-	cd /home/ubuntu/f1tenth/build/gpio && $(CMAKE_COMMAND) -P CMakeFiles/roscpp_generate_messages_lisp.dir/cmake_clean.cmake
+	cd /home/ubuntu/capstone/velma/build/gpio && $(CMAKE_COMMAND) -P CMakeFiles/roscpp_generate_messages_lisp.dir/cmake_clean.cmake
 .PHONY : gpio/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
 
 gpio/CMakeFiles/roscpp_generate_messages_lisp.dir/depend:
-	cd /home/ubuntu/f1tenth/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/f1tenth/src /home/ubuntu/f1tenth/src/gpio /home/ubuntu/f1tenth/build /home/ubuntu/f1tenth/build/gpio /home/ubuntu/f1tenth/build/gpio/CMakeFiles/roscpp_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/capstone/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/capstone/velma/src /home/ubuntu/capstone/velma/src/gpio /home/ubuntu/capstone/velma/build /home/ubuntu/capstone/velma/build/gpio /home/ubuntu/capstone/velma/build/gpio/CMakeFiles/roscpp_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : gpio/CMakeFiles/roscpp_generate_messages_lisp.dir/depend
 

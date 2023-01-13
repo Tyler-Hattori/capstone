@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/f1tenth/src
+CMAKE_SOURCE_DIR = /home/ubuntu/capstone/velma/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/f1tenth/build
+CMAKE_BINARY_DIR = /home/ubuntu/capstone/velma/build
 
 # Utility rule file for _vesc_msgs_generate_messages_check_deps_VescStateStamped.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/ubuntu/f1tenth/build
 include vesc/vesc_msgs/CMakeFiles/_vesc_msgs_generate_messages_check_deps_VescStateStamped.dir/progress.make
 
 vesc/vesc_msgs/CMakeFiles/_vesc_msgs_generate_messages_check_deps_VescStateStamped:
-	cd /home/ubuntu/f1tenth/build/vesc/vesc_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py vesc_msgs /home/ubuntu/f1tenth/src/vesc/vesc_msgs/msg/VescStateStamped.msg vesc_msgs/VescState:std_msgs/Header
+	cd /home/ubuntu/capstone/velma/build/vesc/vesc_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py vesc_msgs /home/ubuntu/capstone/velma/src/vesc/vesc_msgs/msg/VescStateStamped.msg vesc_msgs/VescState:std_msgs/Header
 
 _vesc_msgs_generate_messages_check_deps_VescStateStamped: vesc/vesc_msgs/CMakeFiles/_vesc_msgs_generate_messages_check_deps_VescStateStamped
 _vesc_msgs_generate_messages_check_deps_VescStateStamped: vesc/vesc_msgs/CMakeFiles/_vesc_msgs_generate_messages_check_deps_VescStateStamped.dir/build.make
@@ -67,10 +67,10 @@ vesc/vesc_msgs/CMakeFiles/_vesc_msgs_generate_messages_check_deps_VescStateStamp
 .PHONY : vesc/vesc_msgs/CMakeFiles/_vesc_msgs_generate_messages_check_deps_VescStateStamped.dir/build
 
 vesc/vesc_msgs/CMakeFiles/_vesc_msgs_generate_messages_check_deps_VescStateStamped.dir/clean:
-	cd /home/ubuntu/f1tenth/build/vesc/vesc_msgs && $(CMAKE_COMMAND) -P CMakeFiles/_vesc_msgs_generate_messages_check_deps_VescStateStamped.dir/cmake_clean.cmake
+	cd /home/ubuntu/capstone/velma/build/vesc/vesc_msgs && $(CMAKE_COMMAND) -P CMakeFiles/_vesc_msgs_generate_messages_check_deps_VescStateStamped.dir/cmake_clean.cmake
 .PHONY : vesc/vesc_msgs/CMakeFiles/_vesc_msgs_generate_messages_check_deps_VescStateStamped.dir/clean
 
 vesc/vesc_msgs/CMakeFiles/_vesc_msgs_generate_messages_check_deps_VescStateStamped.dir/depend:
-	cd /home/ubuntu/f1tenth/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/f1tenth/src /home/ubuntu/f1tenth/src/vesc/vesc_msgs /home/ubuntu/f1tenth/build /home/ubuntu/f1tenth/build/vesc/vesc_msgs /home/ubuntu/f1tenth/build/vesc/vesc_msgs/CMakeFiles/_vesc_msgs_generate_messages_check_deps_VescStateStamped.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/capstone/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/capstone/velma/src /home/ubuntu/capstone/velma/src/vesc/vesc_msgs /home/ubuntu/capstone/velma/build /home/ubuntu/capstone/velma/build/vesc/vesc_msgs /home/ubuntu/capstone/velma/build/vesc/vesc_msgs/CMakeFiles/_vesc_msgs_generate_messages_check_deps_VescStateStamped.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : vesc/vesc_msgs/CMakeFiles/_vesc_msgs_generate_messages_check_deps_VescStateStamped.dir/depend
 

@@ -1,8 +1,8 @@
-# Install script for directory: /home/ubuntu/f1tenth/src/gpio
+# Install script for directory: /home/ubuntu/capstone/velma/src/gpio
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/ubuntu/f1tenth/install")
+  set(CMAKE_INSTALL_PREFIX "/home/ubuntu/capstone/velma/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,64 +38,64 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/ubuntu/f1tenth/build/gpio/catkin_generated/safe_execute_install.cmake")
+  include("/home/ubuntu/capstone/velma/build/gpio/catkin_generated/safe_execute_install.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gpio_control/msg" TYPE FILE FILES
-    "/home/ubuntu/f1tenth/src/gpio/msg/InputState.msg"
-    "/home/ubuntu/f1tenth/src/gpio/msg/OutputState.msg"
+    "/home/ubuntu/capstone/velma/src/gpio/msg/InputState.msg"
+    "/home/ubuntu/capstone/velma/src/gpio/msg/OutputState.msg"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gpio_control/cmake" TYPE FILE FILES "/home/ubuntu/f1tenth/build/gpio/catkin_generated/installspace/gpio_control-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gpio_control/cmake" TYPE FILE FILES "/home/ubuntu/capstone/velma/build/gpio/catkin_generated/installspace/gpio_control-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/ubuntu/f1tenth/devel/include/gpio_control")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/ubuntu/capstone/velma/devel/include/gpio_control")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/ubuntu/f1tenth/devel/share/roseus/ros/gpio_control")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/ubuntu/capstone/velma/devel/share/roseus/ros/gpio_control")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/ubuntu/f1tenth/devel/share/common-lisp/ros/gpio_control")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/ubuntu/capstone/velma/devel/share/common-lisp/ros/gpio_control")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/ubuntu/f1tenth/devel/share/gennodejs/ros/gpio_control")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/ubuntu/capstone/velma/devel/share/gennodejs/ros/gpio_control")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/ubuntu/f1tenth/devel/lib/python3/dist-packages/gpio_control")
+  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/ubuntu/capstone/velma/devel/lib/python3/dist-packages/gpio_control")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/ubuntu/f1tenth/devel/lib/python3/dist-packages/gpio_control" REGEX "/\\_\\_init\\_\\_\\.py$" EXCLUDE REGEX "/\\_\\_init\\_\\_\\.pyc$" EXCLUDE)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/ubuntu/capstone/velma/devel/lib/python3/dist-packages/gpio_control" REGEX "/\\_\\_init\\_\\_\\.py$" EXCLUDE REGEX "/\\_\\_init\\_\\_\\.pyc$" EXCLUDE)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/ubuntu/f1tenth/devel/lib/python3/dist-packages/gpio_control" FILES_MATCHING REGEX "/home/ubuntu/f1tenth/devel/lib/python3/dist-packages/gpio_control/.+/__init__.pyc?$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/ubuntu/capstone/velma/devel/lib/python3/dist-packages/gpio_control" FILES_MATCHING REGEX "/home/ubuntu/capstone/velma/devel/lib/python3/dist-packages/gpio_control/.+/__init__.pyc?$")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ubuntu/f1tenth/build/gpio/catkin_generated/installspace/gpio_control.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ubuntu/capstone/velma/build/gpio/catkin_generated/installspace/gpio_control.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gpio_control/cmake" TYPE FILE FILES "/home/ubuntu/f1tenth/build/gpio/catkin_generated/installspace/gpio_control-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gpio_control/cmake" TYPE FILE FILES "/home/ubuntu/capstone/velma/build/gpio/catkin_generated/installspace/gpio_control-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gpio_control/cmake" TYPE FILE FILES
-    "/home/ubuntu/f1tenth/build/gpio/catkin_generated/installspace/gpio_controlConfig.cmake"
-    "/home/ubuntu/f1tenth/build/gpio/catkin_generated/installspace/gpio_controlConfig-version.cmake"
+    "/home/ubuntu/capstone/velma/build/gpio/catkin_generated/installspace/gpio_controlConfig.cmake"
+    "/home/ubuntu/capstone/velma/build/gpio/catkin_generated/installspace/gpio_controlConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gpio_control" TYPE FILE FILES "/home/ubuntu/f1tenth/src/gpio/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gpio_control" TYPE FILE FILES "/home/ubuntu/capstone/velma/src/gpio/package.xml")
 endif()
 

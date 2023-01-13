@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/f1tenth/devel/share/roseus/ros/ackermann_msgs/manifest.l"
-  "/home/ubuntu/f1tenth/devel/share/roseus/ros/ackermann_msgs/msg/AckermannDrive.l"
-  "/home/ubuntu/f1tenth/devel/share/roseus/ros/ackermann_msgs/msg/AckermannDriveStamped.l"
+  "/home/ubuntu/capstone/velma/devel/share/roseus/ros/ackermann_msgs/manifest.l"
+  "/home/ubuntu/capstone/velma/devel/share/roseus/ros/ackermann_msgs/msg/AckermannDrive.l"
+  "/home/ubuntu/capstone/velma/devel/share/roseus/ros/ackermann_msgs/msg/AckermannDriveStamped.l"
   "CMakeFiles/ackermann_msgs_generate_messages_eus"
 )
 

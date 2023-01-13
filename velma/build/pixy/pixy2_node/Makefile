@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/f1tenth/src
+CMAKE_SOURCE_DIR = /home/ubuntu/capstone/velma/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/f1tenth/build
+CMAKE_BINARY_DIR = /home/ubuntu/capstone/velma/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/ubuntu/f1tenth/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/f1tenth/build/CMakeFiles /home/ubuntu/f1tenth/build/pixy/pixy2_node/CMakeFiles/progress.marks
-	cd /home/ubuntu/f1tenth/build && $(MAKE) -f CMakeFiles/Makefile2 pixy/pixy2_node/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/f1tenth/build/CMakeFiles 0
+	cd /home/ubuntu/capstone/velma/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/capstone/velma/build/CMakeFiles /home/ubuntu/capstone/velma/build/pixy/pixy2_node/CMakeFiles/progress.marks
+	cd /home/ubuntu/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pixy/pixy2_node/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/capstone/velma/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/ubuntu/f1tenth/build && $(MAKE) -f CMakeFiles/Makefile2 pixy/pixy2_node/clean
+	cd /home/ubuntu/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pixy/pixy2_node/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/ubuntu/f1tenth/build && $(MAKE) -f CMakeFiles/Makefile2 pixy/pixy2_node/preinstall
+	cd /home/ubuntu/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pixy/pixy2_node/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/ubuntu/f1tenth/build && $(MAKE) -f CMakeFiles/Makefile2 pixy/pixy2_node/preinstall
+	cd /home/ubuntu/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pixy/pixy2_node/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/ubuntu/f1tenth/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/ubuntu/capstone/velma/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 pixy/pixy2_node/CMakeFiles/libpixyusb2_build_step.dir/rule:
-	cd /home/ubuntu/f1tenth/build && $(MAKE) -f CMakeFiles/Makefile2 pixy/pixy2_node/CMakeFiles/libpixyusb2_build_step.dir/rule
+	cd /home/ubuntu/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pixy/pixy2_node/CMakeFiles/libpixyusb2_build_step.dir/rule
 .PHONY : pixy/pixy2_node/CMakeFiles/libpixyusb2_build_step.dir/rule
 
 # Convenience name for target.
@@ -179,12 +179,12 @@ libpixyusb2_build_step: pixy/pixy2_node/CMakeFiles/libpixyusb2_build_step.dir/ru
 
 # fast build rule for target.
 libpixyusb2_build_step/fast:
-	cd /home/ubuntu/f1tenth/build && $(MAKE) -f pixy/pixy2_node/CMakeFiles/libpixyusb2_build_step.dir/build.make pixy/pixy2_node/CMakeFiles/libpixyusb2_build_step.dir/build
+	cd /home/ubuntu/capstone/velma/build && $(MAKE) -f pixy/pixy2_node/CMakeFiles/libpixyusb2_build_step.dir/build.make pixy/pixy2_node/CMakeFiles/libpixyusb2_build_step.dir/build
 .PHONY : libpixyusb2_build_step/fast
 
 # Convenience name for target.
 pixy/pixy2_node/CMakeFiles/pixy2_node.dir/rule:
-	cd /home/ubuntu/f1tenth/build && $(MAKE) -f CMakeFiles/Makefile2 pixy/pixy2_node/CMakeFiles/pixy2_node.dir/rule
+	cd /home/ubuntu/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pixy/pixy2_node/CMakeFiles/pixy2_node.dir/rule
 .PHONY : pixy/pixy2_node/CMakeFiles/pixy2_node.dir/rule
 
 # Convenience name for target.
@@ -194,7 +194,7 @@ pixy2_node: pixy/pixy2_node/CMakeFiles/pixy2_node.dir/rule
 
 # fast build rule for target.
 pixy2_node/fast:
-	cd /home/ubuntu/f1tenth/build && $(MAKE) -f pixy/pixy2_node/CMakeFiles/pixy2_node.dir/build.make pixy/pixy2_node/CMakeFiles/pixy2_node.dir/build
+	cd /home/ubuntu/capstone/velma/build && $(MAKE) -f pixy/pixy2_node/CMakeFiles/pixy2_node.dir/build.make pixy/pixy2_node/CMakeFiles/pixy2_node.dir/build
 .PHONY : pixy2_node/fast
 
 src/pixy2_node.o: src/pixy2_node.cpp.o
@@ -203,7 +203,7 @@ src/pixy2_node.o: src/pixy2_node.cpp.o
 
 # target to build an object file
 src/pixy2_node.cpp.o:
-	cd /home/ubuntu/f1tenth/build && $(MAKE) -f pixy/pixy2_node/CMakeFiles/pixy2_node.dir/build.make pixy/pixy2_node/CMakeFiles/pixy2_node.dir/src/pixy2_node.cpp.o
+	cd /home/ubuntu/capstone/velma/build && $(MAKE) -f pixy/pixy2_node/CMakeFiles/pixy2_node.dir/build.make pixy/pixy2_node/CMakeFiles/pixy2_node.dir/src/pixy2_node.cpp.o
 .PHONY : src/pixy2_node.cpp.o
 
 src/pixy2_node.i: src/pixy2_node.cpp.i
@@ -212,7 +212,7 @@ src/pixy2_node.i: src/pixy2_node.cpp.i
 
 # target to preprocess a source file
 src/pixy2_node.cpp.i:
-	cd /home/ubuntu/f1tenth/build && $(MAKE) -f pixy/pixy2_node/CMakeFiles/pixy2_node.dir/build.make pixy/pixy2_node/CMakeFiles/pixy2_node.dir/src/pixy2_node.cpp.i
+	cd /home/ubuntu/capstone/velma/build && $(MAKE) -f pixy/pixy2_node/CMakeFiles/pixy2_node.dir/build.make pixy/pixy2_node/CMakeFiles/pixy2_node.dir/src/pixy2_node.cpp.i
 .PHONY : src/pixy2_node.cpp.i
 
 src/pixy2_node.s: src/pixy2_node.cpp.s
@@ -221,7 +221,7 @@ src/pixy2_node.s: src/pixy2_node.cpp.s
 
 # target to generate assembly for a file
 src/pixy2_node.cpp.s:
-	cd /home/ubuntu/f1tenth/build && $(MAKE) -f pixy/pixy2_node/CMakeFiles/pixy2_node.dir/build.make pixy/pixy2_node/CMakeFiles/pixy2_node.dir/src/pixy2_node.cpp.s
+	cd /home/ubuntu/capstone/velma/build && $(MAKE) -f pixy/pixy2_node/CMakeFiles/pixy2_node.dir/build.make pixy/pixy2_node/CMakeFiles/pixy2_node.dir/src/pixy2_node.cpp.s
 .PHONY : src/pixy2_node.cpp.s
 
 # Help Target
@@ -253,6 +253,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/ubuntu/f1tenth/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/ubuntu/capstone/velma/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/f1tenth/devel/lib/f1tenth_simulator/random_walk"
-  "/home/ubuntu/f1tenth/devel/lib/f1tenth_simulator/random_walk.pdb"
+  "/home/ubuntu/capstone/velma/devel/lib/f1tenth_simulator/random_walk"
+  "/home/ubuntu/capstone/velma/devel/lib/f1tenth_simulator/random_walk.pdb"
   "CMakeFiles/random_walk.dir/node/random_walk.cpp.o"
 )
 

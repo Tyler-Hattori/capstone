@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/f1tenth/src
+CMAKE_SOURCE_DIR = /home/ubuntu/capstone/velma/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/f1tenth/build
+CMAKE_BINARY_DIR = /home/ubuntu/capstone/velma/build
 
 # Utility rule file for f1tenth_simulator_generate_messages.
 
@@ -63,10 +63,10 @@ simulator/CMakeFiles/f1tenth_simulator_generate_messages.dir/build: f1tenth_simu
 .PHONY : simulator/CMakeFiles/f1tenth_simulator_generate_messages.dir/build
 
 simulator/CMakeFiles/f1tenth_simulator_generate_messages.dir/clean:
-	cd /home/ubuntu/f1tenth/build/simulator && $(CMAKE_COMMAND) -P CMakeFiles/f1tenth_simulator_generate_messages.dir/cmake_clean.cmake
+	cd /home/ubuntu/capstone/velma/build/simulator && $(CMAKE_COMMAND) -P CMakeFiles/f1tenth_simulator_generate_messages.dir/cmake_clean.cmake
 .PHONY : simulator/CMakeFiles/f1tenth_simulator_generate_messages.dir/clean
 
 simulator/CMakeFiles/f1tenth_simulator_generate_messages.dir/depend:
-	cd /home/ubuntu/f1tenth/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/f1tenth/src /home/ubuntu/f1tenth/src/simulator /home/ubuntu/f1tenth/build /home/ubuntu/f1tenth/build/simulator /home/ubuntu/f1tenth/build/simulator/CMakeFiles/f1tenth_simulator_generate_messages.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/capstone/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/capstone/velma/src /home/ubuntu/capstone/velma/src/simulator /home/ubuntu/capstone/velma/build /home/ubuntu/capstone/velma/build/simulator /home/ubuntu/capstone/velma/build/simulator/CMakeFiles/f1tenth_simulator_generate_messages.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : simulator/CMakeFiles/f1tenth_simulator_generate_messages.dir/depend
 

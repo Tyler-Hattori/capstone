@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "${prefix}/include".split(';') if "${prefix}/i
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-lserial;-lrt;-lpthread".split(';') if "-lserial;-lrt;-lpthread" != "" else []
 PROJECT_NAME = "serial"
-PROJECT_SPACE_DIR = "/home/ubuntu/f1tenth/install"
+PROJECT_SPACE_DIR = "/home/ubuntu/capstone/velma/install"
 PROJECT_VERSION = "1.2.1"

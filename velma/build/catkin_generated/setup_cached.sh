@@ -7,4 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export PWD='/home/ubuntu/f1tenth/build'
+export CMAKE_PREFIX_PATH="/home/ubuntu/capstone/velma/devel:$CMAKE_PREFIX_PATH"
+export PWD='/home/ubuntu/capstone/velma/build'
+export ROSLISP_PACKAGE_DIRECTORIES="/home/ubuntu/capstone/velma/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
+export ROS_PACKAGE_PATH="/home/ubuntu/capstone/velma/src:$ROS_PACKAGE_PATH"

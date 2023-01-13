@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/f1tenth/src
+CMAKE_SOURCE_DIR = /home/ubuntu/capstone/velma/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/f1tenth/build
+CMAKE_BINARY_DIR = /home/ubuntu/capstone/velma/build
 
 # Utility rule file for run_tests_serial_gtest.
 
@@ -63,10 +63,10 @@ serial/tests/CMakeFiles/run_tests_serial_gtest.dir/build: run_tests_serial_gtest
 .PHONY : serial/tests/CMakeFiles/run_tests_serial_gtest.dir/build
 
 serial/tests/CMakeFiles/run_tests_serial_gtest.dir/clean:
-	cd /home/ubuntu/f1tenth/build/serial/tests && $(CMAKE_COMMAND) -P CMakeFiles/run_tests_serial_gtest.dir/cmake_clean.cmake
+	cd /home/ubuntu/capstone/velma/build/serial/tests && $(CMAKE_COMMAND) -P CMakeFiles/run_tests_serial_gtest.dir/cmake_clean.cmake
 .PHONY : serial/tests/CMakeFiles/run_tests_serial_gtest.dir/clean
 
 serial/tests/CMakeFiles/run_tests_serial_gtest.dir/depend:
-	cd /home/ubuntu/f1tenth/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/f1tenth/src /home/ubuntu/f1tenth/src/serial/tests /home/ubuntu/f1tenth/build /home/ubuntu/f1tenth/build/serial/tests /home/ubuntu/f1tenth/build/serial/tests/CMakeFiles/run_tests_serial_gtest.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/capstone/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/capstone/velma/src /home/ubuntu/capstone/velma/src/serial/tests /home/ubuntu/capstone/velma/build /home/ubuntu/capstone/velma/build/serial/tests /home/ubuntu/capstone/velma/build/serial/tests/CMakeFiles/run_tests_serial_gtest.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : serial/tests/CMakeFiles/run_tests_serial_gtest.dir/depend
 

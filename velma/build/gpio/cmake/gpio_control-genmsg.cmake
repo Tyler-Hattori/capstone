@@ -2,7 +2,7 @@
 
 message(STATUS "gpio_control: 2 messages, 0 services")
 
-set(MSG_I_FLAGS "-Igpio_control:/home/ubuntu/f1tenth/src/gpio/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Igpio_control:/home/ubuntu/capstone/velma/src/gpio/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -17,14 +17,14 @@ add_custom_target(gpio_control_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/ubuntu/f1tenth/src/gpio/msg/InputState.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/capstone/velma/src/gpio/msg/InputState.msg" NAME_WE)
 add_custom_target(_gpio_control_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "gpio_control" "/home/ubuntu/f1tenth/src/gpio/msg/InputState.msg" "std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "gpio_control" "/home/ubuntu/capstone/velma/src/gpio/msg/InputState.msg" "std_msgs/Header"
 )
 
-get_filename_component(_filename "/home/ubuntu/f1tenth/src/gpio/msg/OutputState.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/capstone/velma/src/gpio/msg/OutputState.msg" NAME_WE)
 add_custom_target(_gpio_control_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "gpio_control" "/home/ubuntu/f1tenth/src/gpio/msg/OutputState.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "gpio_control" "/home/ubuntu/capstone/velma/src/gpio/msg/OutputState.msg" ""
 )
 
 #
@@ -34,13 +34,13 @@ add_custom_target(_gpio_control_generate_messages_check_deps_${_filename}
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(gpio_control
-  "/home/ubuntu/f1tenth/src/gpio/msg/InputState.msg"
+  "/home/ubuntu/capstone/velma/src/gpio/msg/InputState.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/gpio_control
 )
 _generate_msg_cpp(gpio_control
-  "/home/ubuntu/f1tenth/src/gpio/msg/OutputState.msg"
+  "/home/ubuntu/capstone/velma/src/gpio/msg/OutputState.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/gpio_control
@@ -60,9 +60,9 @@ add_custom_target(gpio_control_generate_messages_cpp
 add_dependencies(gpio_control_generate_messages gpio_control_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/ubuntu/f1tenth/src/gpio/msg/InputState.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/capstone/velma/src/gpio/msg/InputState.msg" NAME_WE)
 add_dependencies(gpio_control_generate_messages_cpp _gpio_control_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/f1tenth/src/gpio/msg/OutputState.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/capstone/velma/src/gpio/msg/OutputState.msg" NAME_WE)
 add_dependencies(gpio_control_generate_messages_cpp _gpio_control_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -75,13 +75,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS gpio_control_generate_messages_cpp)
 ### Section generating for lang: geneus
 ### Generating Messages
 _generate_msg_eus(gpio_control
-  "/home/ubuntu/f1tenth/src/gpio/msg/InputState.msg"
+  "/home/ubuntu/capstone/velma/src/gpio/msg/InputState.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/gpio_control
 )
 _generate_msg_eus(gpio_control
-  "/home/ubuntu/f1tenth/src/gpio/msg/OutputState.msg"
+  "/home/ubuntu/capstone/velma/src/gpio/msg/OutputState.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/gpio_control
@@ -101,9 +101,9 @@ add_custom_target(gpio_control_generate_messages_eus
 add_dependencies(gpio_control_generate_messages gpio_control_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/ubuntu/f1tenth/src/gpio/msg/InputState.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/capstone/velma/src/gpio/msg/InputState.msg" NAME_WE)
 add_dependencies(gpio_control_generate_messages_eus _gpio_control_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/f1tenth/src/gpio/msg/OutputState.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/capstone/velma/src/gpio/msg/OutputState.msg" NAME_WE)
 add_dependencies(gpio_control_generate_messages_eus _gpio_control_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -116,13 +116,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS gpio_control_generate_messages_eus)
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(gpio_control
-  "/home/ubuntu/f1tenth/src/gpio/msg/InputState.msg"
+  "/home/ubuntu/capstone/velma/src/gpio/msg/InputState.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/gpio_control
 )
 _generate_msg_lisp(gpio_control
-  "/home/ubuntu/f1tenth/src/gpio/msg/OutputState.msg"
+  "/home/ubuntu/capstone/velma/src/gpio/msg/OutputState.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/gpio_control
@@ -142,9 +142,9 @@ add_custom_target(gpio_control_generate_messages_lisp
 add_dependencies(gpio_control_generate_messages gpio_control_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/ubuntu/f1tenth/src/gpio/msg/InputState.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/capstone/velma/src/gpio/msg/InputState.msg" NAME_WE)
 add_dependencies(gpio_control_generate_messages_lisp _gpio_control_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/f1tenth/src/gpio/msg/OutputState.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/capstone/velma/src/gpio/msg/OutputState.msg" NAME_WE)
 add_dependencies(gpio_control_generate_messages_lisp _gpio_control_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -157,13 +157,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS gpio_control_generate_messages_lisp
 ### Section generating for lang: gennodejs
 ### Generating Messages
 _generate_msg_nodejs(gpio_control
-  "/home/ubuntu/f1tenth/src/gpio/msg/InputState.msg"
+  "/home/ubuntu/capstone/velma/src/gpio/msg/InputState.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/gpio_control
 )
 _generate_msg_nodejs(gpio_control
-  "/home/ubuntu/f1tenth/src/gpio/msg/OutputState.msg"
+  "/home/ubuntu/capstone/velma/src/gpio/msg/OutputState.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/gpio_control
@@ -183,9 +183,9 @@ add_custom_target(gpio_control_generate_messages_nodejs
 add_dependencies(gpio_control_generate_messages gpio_control_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/ubuntu/f1tenth/src/gpio/msg/InputState.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/capstone/velma/src/gpio/msg/InputState.msg" NAME_WE)
 add_dependencies(gpio_control_generate_messages_nodejs _gpio_control_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/f1tenth/src/gpio/msg/OutputState.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/capstone/velma/src/gpio/msg/OutputState.msg" NAME_WE)
 add_dependencies(gpio_control_generate_messages_nodejs _gpio_control_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -198,13 +198,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS gpio_control_generate_messages_node
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(gpio_control
-  "/home/ubuntu/f1tenth/src/gpio/msg/InputState.msg"
+  "/home/ubuntu/capstone/velma/src/gpio/msg/InputState.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/gpio_control
 )
 _generate_msg_py(gpio_control
-  "/home/ubuntu/f1tenth/src/gpio/msg/OutputState.msg"
+  "/home/ubuntu/capstone/velma/src/gpio/msg/OutputState.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/gpio_control
@@ -224,9 +224,9 @@ add_custom_target(gpio_control_generate_messages_py
 add_dependencies(gpio_control_generate_messages gpio_control_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/ubuntu/f1tenth/src/gpio/msg/InputState.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/capstone/velma/src/gpio/msg/InputState.msg" NAME_WE)
 add_dependencies(gpio_control_generate_messages_py _gpio_control_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/f1tenth/src/gpio/msg/OutputState.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/capstone/velma/src/gpio/msg/OutputState.msg" NAME_WE)
 add_dependencies(gpio_control_generate_messages_py _gpio_control_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

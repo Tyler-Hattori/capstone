@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/f1tenth/devel/share/roseus/ros/vesc_msgs/manifest.l"
-  "/home/ubuntu/f1tenth/devel/share/roseus/ros/vesc_msgs/msg/VescState.l"
-  "/home/ubuntu/f1tenth/devel/share/roseus/ros/vesc_msgs/msg/VescStateStamped.l"
+  "/home/ubuntu/capstone/velma/devel/share/roseus/ros/vesc_msgs/manifest.l"
+  "/home/ubuntu/capstone/velma/devel/share/roseus/ros/vesc_msgs/msg/VescState.l"
+  "/home/ubuntu/capstone/velma/devel/share/roseus/ros/vesc_msgs/msg/VescStateStamped.l"
   "CMakeFiles/vesc_msgs_generate_messages_eus"
 )
 
