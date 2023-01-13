@@ -1,8 +1,8 @@
-prefix=/home/ubuntu/f1tenth/basic/devel
+prefix=/home/ubuntu/capstone/basic/devel
 
 Name: serial
 Description: Description of serial
 Version: 1.2.1
-Cflags: -I/home/ubuntu/f1tenth/basic/src/f110-fall2018-skeletons/system/serial/include
+Cflags: -I/home/ubuntu/capstone/basic/src/f1tenth_2018/system/serial/include
 Libs: -L${prefix}/lib -lserial -lrt -lpthread
 Requires: 

@@ -1,4 +1,4 @@
-prefix=/home/ubuntu/f1tenth/basic/devel
+prefix=/home/ubuntu/capstone/basic/devel
 
 Name: waypoint_logger
 Description: Description of waypoint_logger

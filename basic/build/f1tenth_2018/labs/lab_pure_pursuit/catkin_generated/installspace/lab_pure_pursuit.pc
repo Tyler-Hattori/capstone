@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/capstone/basic/install
+
+Name: lab_pure_pursuit
+Description: Description of lab_pure_pursuit
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
