@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -Wall -Wextra -O3  -shared -Wl,-soname,libvelma.so -o /home/ubuntu/f1tenth/devel/lib/libvelma.so CMakeFiles/velma.dir/src/distance_transform.cpp.o CMakeFiles/velma.dir/src/ks_kinematics.cpp.o CMakeFiles/velma.dir/src/precompute.cpp.o CMakeFiles/velma.dir/src/scan_simulator_2d.cpp.o CMakeFiles/velma.dir/src/st_kinematics.cpp.o 

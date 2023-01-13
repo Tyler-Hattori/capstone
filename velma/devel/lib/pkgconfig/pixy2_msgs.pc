@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/f1tenth/devel
+
+Name: pixy2_msgs
+Description: Description of pixy2_msgs
+Version: 0.0.0
+Cflags: -I/home/ubuntu/f1tenth/devel/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime sensor_msgs

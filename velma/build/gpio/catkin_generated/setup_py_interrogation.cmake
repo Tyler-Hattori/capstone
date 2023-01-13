@@ -1,0 +1,7 @@
+set(gpio_control_SETUP_PY_SETUP_MODULE "distutils.core")
+set(gpio_control_SETUP_PY_VERSION "1.0.0")
+set(gpio_control_SETUP_PY_SCRIPTS "")
+set(gpio_control_SETUP_PY_PACKAGES "gpio_control")
+set(gpio_control_SETUP_PY_PACKAGE_DIRS "include/gpio_control")
+set(gpio_control_SETUP_PY_MODULES "")
+set(gpio_control_SETUP_PY_MODULE_DIRS "")

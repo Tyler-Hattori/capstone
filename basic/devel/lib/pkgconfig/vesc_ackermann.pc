@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/f1tenth/basic/devel
+
+Name: vesc_ackermann
+Description: Description of vesc_ackermann
+Version: 0.0.1
+Cflags: -I/home/ubuntu/f1tenth/basic/src/f110-fall2018-skeletons/system/vesc/vesc_ackermann/include
+Libs: -L${prefix}/lib 
+Requires: nodelet pluginlib roscpp nav_msgs std_msgs geometry_msgs tf ackermann_msgs vesc_msgs

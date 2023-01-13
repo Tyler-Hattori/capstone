@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/f1tenth/basic/devel
+
+Name: race
+Description: Description of race
+Version: 0.0.0
+Cflags: -I/home/ubuntu/f1tenth/basic/devel/include
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy sensor_msgs std_msgs geometry_msgs
