@@ -1,0 +1,9 @@
+<!-- -*- mode: XML -*- -->
+<launch>
+  <!-- typical racecar system -->
+  <include file="$(find racecar)/launch/teleop.launch"/>
+  <!-- planner framework -->
+  <include file="$(find f1tenth_simulator)/launch/simulator.launch"/>
+  <!-- pixy -->
+  <include file="$(find pixy2_node)/launch/pixy2.launch"/>
+</launch>

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/capstone/basic/src
+CMAKE_SOURCE_DIR = /home/ubuntu/F1Tenth/basic/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/capstone/basic/build
+CMAKE_BINARY_DIR = /home/ubuntu/F1Tenth/basic/build
 
 # Utility rule file for race_gennodejs.
 
@@ -63,10 +63,10 @@ f1tenth_2018/simulator/f1_10_sim/race/CMakeFiles/race_gennodejs.dir/build: race_
 .PHONY : f1tenth_2018/simulator/f1_10_sim/race/CMakeFiles/race_gennodejs.dir/build
 
 f1tenth_2018/simulator/f1_10_sim/race/CMakeFiles/race_gennodejs.dir/clean:
-	cd /home/ubuntu/capstone/basic/build/f1tenth_2018/simulator/f1_10_sim/race && $(CMAKE_COMMAND) -P CMakeFiles/race_gennodejs.dir/cmake_clean.cmake
+	cd /home/ubuntu/F1Tenth/basic/build/f1tenth_2018/simulator/f1_10_sim/race && $(CMAKE_COMMAND) -P CMakeFiles/race_gennodejs.dir/cmake_clean.cmake
 .PHONY : f1tenth_2018/simulator/f1_10_sim/race/CMakeFiles/race_gennodejs.dir/clean
 
 f1tenth_2018/simulator/f1_10_sim/race/CMakeFiles/race_gennodejs.dir/depend:
-	cd /home/ubuntu/capstone/basic/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/capstone/basic/src /home/ubuntu/capstone/basic/src/f1tenth_2018/simulator/f1_10_sim/race /home/ubuntu/capstone/basic/build /home/ubuntu/capstone/basic/build/f1tenth_2018/simulator/f1_10_sim/race /home/ubuntu/capstone/basic/build/f1tenth_2018/simulator/f1_10_sim/race/CMakeFiles/race_gennodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/F1Tenth/basic/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/F1Tenth/basic/src /home/ubuntu/F1Tenth/basic/src/f1tenth_2018/simulator/f1_10_sim/race /home/ubuntu/F1Tenth/basic/build /home/ubuntu/F1Tenth/basic/build/f1tenth_2018/simulator/f1_10_sim/race /home/ubuntu/F1Tenth/basic/build/f1tenth_2018/simulator/f1_10_sim/race/CMakeFiles/race_gennodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : f1tenth_2018/simulator/f1_10_sim/race/CMakeFiles/race_gennodejs.dir/depend
 

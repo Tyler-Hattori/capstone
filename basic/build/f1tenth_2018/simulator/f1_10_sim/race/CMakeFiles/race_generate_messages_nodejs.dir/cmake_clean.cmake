@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/capstone/basic/devel/share/gennodejs/ros/race/msg/drive_param.js"
-  "/home/ubuntu/capstone/basic/devel/share/gennodejs/ros/race/msg/drive_values.js"
-  "/home/ubuntu/capstone/basic/devel/share/gennodejs/ros/race/msg/pid_input.js"
+  "/home/ubuntu/F1Tenth/basic/devel/share/gennodejs/ros/race/msg/drive_param.js"
+  "/home/ubuntu/F1Tenth/basic/devel/share/gennodejs/ros/race/msg/drive_values.js"
+  "/home/ubuntu/F1Tenth/basic/devel/share/gennodejs/ros/race/msg/pid_input.js"
   "CMakeFiles/race_generate_messages_nodejs"
 )
 

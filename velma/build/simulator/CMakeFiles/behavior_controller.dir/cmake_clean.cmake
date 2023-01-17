@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/capstone/velma/devel/lib/f1tenth_simulator/behavior_controller"
-  "/home/ubuntu/capstone/velma/devel/lib/f1tenth_simulator/behavior_controller.pdb"
+  "/home/ubuntu/F1Tenth/velma/devel/lib/f1tenth_simulator/behavior_controller"
+  "/home/ubuntu/F1Tenth/velma/devel/lib/f1tenth_simulator/behavior_controller.pdb"
   "CMakeFiles/behavior_controller.dir/node/behavior_controller.cpp.o"
 )
 

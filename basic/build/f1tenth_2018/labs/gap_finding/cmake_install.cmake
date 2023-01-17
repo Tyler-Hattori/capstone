@@ -1,8 +1,8 @@
-# Install script for directory: /home/ubuntu/capstone/basic/src/f1tenth_2018/labs/gap_finding
+# Install script for directory: /home/ubuntu/F1Tenth/basic/src/f1tenth_2018/labs/gap_finding
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/ubuntu/capstone/basic/install")
+  set(CMAKE_INSTALL_PREFIX "/home/ubuntu/F1Tenth/basic/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ubuntu/capstone/basic/build/f1tenth_2018/labs/gap_finding/catkin_generated/installspace/gap_finding.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ubuntu/F1Tenth/basic/build/f1tenth_2018/labs/gap_finding/catkin_generated/installspace/gap_finding.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gap_finding/cmake" TYPE FILE FILES
-    "/home/ubuntu/capstone/basic/build/f1tenth_2018/labs/gap_finding/catkin_generated/installspace/gap_findingConfig.cmake"
-    "/home/ubuntu/capstone/basic/build/f1tenth_2018/labs/gap_finding/catkin_generated/installspace/gap_findingConfig-version.cmake"
+    "/home/ubuntu/F1Tenth/basic/build/f1tenth_2018/labs/gap_finding/catkin_generated/installspace/gap_findingConfig.cmake"
+    "/home/ubuntu/F1Tenth/basic/build/f1tenth_2018/labs/gap_finding/catkin_generated/installspace/gap_findingConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gap_finding" TYPE FILE FILES "/home/ubuntu/capstone/basic/src/f1tenth_2018/labs/gap_finding/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gap_finding" TYPE FILE FILES "/home/ubuntu/F1Tenth/basic/src/f1tenth_2018/labs/gap_finding/package.xml")
 endif()
 

@@ -1,8 +1,8 @@
-# Install script for directory: /home/ubuntu/capstone/basic/src/f1tenth_2018/labs/lab_pure_pursuit
+# Install script for directory: /home/ubuntu/F1Tenth/basic/src/f1tenth_2018/labs/lab_pure_pursuit
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/ubuntu/capstone/basic/install")
+  set(CMAKE_INSTALL_PREFIX "/home/ubuntu/F1Tenth/basic/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ubuntu/capstone/basic/build/f1tenth_2018/labs/lab_pure_pursuit/catkin_generated/installspace/lab_pure_pursuit.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ubuntu/F1Tenth/basic/build/f1tenth_2018/labs/lab_pure_pursuit/catkin_generated/installspace/lab_pure_pursuit.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lab_pure_pursuit/cmake" TYPE FILE FILES
-    "/home/ubuntu/capstone/basic/build/f1tenth_2018/labs/lab_pure_pursuit/catkin_generated/installspace/lab_pure_pursuitConfig.cmake"
-    "/home/ubuntu/capstone/basic/build/f1tenth_2018/labs/lab_pure_pursuit/catkin_generated/installspace/lab_pure_pursuitConfig-version.cmake"
+    "/home/ubuntu/F1Tenth/basic/build/f1tenth_2018/labs/lab_pure_pursuit/catkin_generated/installspace/lab_pure_pursuitConfig.cmake"
+    "/home/ubuntu/F1Tenth/basic/build/f1tenth_2018/labs/lab_pure_pursuit/catkin_generated/installspace/lab_pure_pursuitConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lab_pure_pursuit" TYPE FILE FILES "/home/ubuntu/capstone/basic/src/f1tenth_2018/labs/lab_pure_pursuit/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lab_pure_pursuit" TYPE FILE FILES "/home/ubuntu/F1Tenth/basic/src/f1tenth_2018/labs/lab_pure_pursuit/package.xml")
 endif()
 

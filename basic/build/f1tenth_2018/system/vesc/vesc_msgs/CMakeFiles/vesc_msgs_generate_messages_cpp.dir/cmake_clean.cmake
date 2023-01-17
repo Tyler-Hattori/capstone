@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/capstone/basic/devel/include/vesc_msgs/VescState.h"
-  "/home/ubuntu/capstone/basic/devel/include/vesc_msgs/VescStateStamped.h"
+  "/home/ubuntu/F1Tenth/basic/devel/include/vesc_msgs/VescState.h"
+  "/home/ubuntu/F1Tenth/basic/devel/include/vesc_msgs/VescStateStamped.h"
   "CMakeFiles/vesc_msgs_generate_messages_cpp"
 )
 

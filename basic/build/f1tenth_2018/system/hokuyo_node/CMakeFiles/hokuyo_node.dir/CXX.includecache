@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/ubuntu/capstone/basic/devel/include/hokuyo_node/HokuyoConfig.h
+/home/ubuntu/F1Tenth/basic/devel/include/hokuyo_node/HokuyoConfig.h
 dynamic_reconfigure/config_tools.h
 -
 limits
@@ -24,7 +24,7 @@ dynamic_reconfigure/config_init_mutex.h
 boost/any.hpp
 -
 
-/home/ubuntu/capstone/basic/src/f1tenth_2018/system/hokuyo_node/include/hokuyo_node/hokuyo.h
+/home/ubuntu/F1Tenth/basic/src/f1tenth_2018/system/hokuyo_node/include/hokuyo_node/hokuyo.h
 stdexcept
 -
 termios.h
@@ -38,11 +38,11 @@ stdint.h
 limits
 -
 
-/home/ubuntu/capstone/basic/src/f1tenth_2018/system/hokuyo_node/src/hokuyo_node.cpp
+/home/ubuntu/F1Tenth/basic/src/f1tenth_2018/system/hokuyo_node/src/hokuyo_node.cpp
 driver_base/driver.h
-/home/ubuntu/capstone/basic/src/f1tenth_2018/system/hokuyo_node/src/driver_base/driver.h
+/home/ubuntu/F1Tenth/basic/src/f1tenth_2018/system/hokuyo_node/src/driver_base/driver.h
 driver_base/driver_node.h
-/home/ubuntu/capstone/basic/src/f1tenth_2018/system/hokuyo_node/src/driver_base/driver_node.h
+/home/ubuntu/F1Tenth/basic/src/f1tenth_2018/system/hokuyo_node/src/driver_base/driver_node.h
 diagnostic_updater/publisher.h
 -
 assert.h
@@ -56,13 +56,13 @@ sstream
 iomanip
 -
 ros/ros.h
-/home/ubuntu/capstone/basic/src/f1tenth_2018/system/hokuyo_node/src/ros/ros.h
+/home/ubuntu/F1Tenth/basic/src/f1tenth_2018/system/hokuyo_node/src/ros/ros.h
 sensor_msgs/LaserScan.h
-/home/ubuntu/capstone/basic/src/f1tenth_2018/system/hokuyo_node/src/sensor_msgs/LaserScan.h
+/home/ubuntu/F1Tenth/basic/src/f1tenth_2018/system/hokuyo_node/src/sensor_msgs/LaserScan.h
 hokuyo_node/HokuyoConfig.h
-/home/ubuntu/capstone/basic/src/f1tenth_2018/system/hokuyo_node/src/hokuyo_node/HokuyoConfig.h
+/home/ubuntu/F1Tenth/basic/src/f1tenth_2018/system/hokuyo_node/src/hokuyo_node/HokuyoConfig.h
 hokuyo_node/hokuyo.h
-/home/ubuntu/capstone/basic/src/f1tenth_2018/system/hokuyo_node/src/hokuyo_node/hokuyo.h
+/home/ubuntu/F1Tenth/basic/src/f1tenth_2018/system/hokuyo_node/src/hokuyo_node/hokuyo.h
 
 /opt/ros/noetic/include/diagnostic_msgs/DiagnosticArray.h
 string

@@ -67,14 +67,14 @@ set(wall_following_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(wall_following_SOURCE_PREFIX /home/ubuntu/capstone/basic/src/f1tenth_2018/labs/wall_following)
-  set(wall_following_DEVEL_PREFIX /home/ubuntu/capstone/basic/devel)
+  set(wall_following_SOURCE_PREFIX /home/ubuntu/F1Tenth/basic/src/f1tenth_2018/labs/wall_following)
+  set(wall_following_DEVEL_PREFIX /home/ubuntu/F1Tenth/basic/devel)
   set(wall_following_INSTALL_PREFIX "")
   set(wall_following_PREFIX ${wall_following_DEVEL_PREFIX})
 else()
   set(wall_following_SOURCE_PREFIX "")
   set(wall_following_DEVEL_PREFIX "")
-  set(wall_following_INSTALL_PREFIX /home/ubuntu/capstone/basic/install)
+  set(wall_following_INSTALL_PREFIX /home/ubuntu/F1Tenth/basic/install)
   set(wall_following_PREFIX ${wall_following_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/ubuntu/capstone/basic/install/lib;/opt/ros/noetic/lib)
+    foreach(path /home/ubuntu/F1Tenth/basic/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

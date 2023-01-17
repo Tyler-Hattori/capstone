@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/ubuntu/capstone/basic/src
-# Build directory: /home/ubuntu/capstone/basic/build
+# Source directory: /home/ubuntu/F1Tenth/basic/src
+# Build directory: /home/ubuntu/F1Tenth/basic/build
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

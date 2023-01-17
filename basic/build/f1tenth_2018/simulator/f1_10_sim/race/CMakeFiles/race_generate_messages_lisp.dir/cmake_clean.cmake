@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/capstone/basic/devel/share/common-lisp/ros/race/msg/drive_param.lisp"
-  "/home/ubuntu/capstone/basic/devel/share/common-lisp/ros/race/msg/drive_values.lisp"
-  "/home/ubuntu/capstone/basic/devel/share/common-lisp/ros/race/msg/pid_input.lisp"
+  "/home/ubuntu/F1Tenth/basic/devel/share/common-lisp/ros/race/msg/drive_param.lisp"
+  "/home/ubuntu/F1Tenth/basic/devel/share/common-lisp/ros/race/msg/drive_values.lisp"
+  "/home/ubuntu/F1Tenth/basic/devel/share/common-lisp/ros/race/msg/pid_input.lisp"
   "CMakeFiles/race_generate_messages_lisp"
 )
 

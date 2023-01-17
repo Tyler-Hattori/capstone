@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/capstone/basic/devel/lib/python3/dist-packages/vesc_msgs/msg/_VescState.py"
-  "/home/ubuntu/capstone/basic/devel/lib/python3/dist-packages/vesc_msgs/msg/_VescStateStamped.py"
-  "/home/ubuntu/capstone/basic/devel/lib/python3/dist-packages/vesc_msgs/msg/__init__.py"
+  "/home/ubuntu/F1Tenth/basic/devel/lib/python3/dist-packages/vesc_msgs/msg/_VescState.py"
+  "/home/ubuntu/F1Tenth/basic/devel/lib/python3/dist-packages/vesc_msgs/msg/_VescStateStamped.py"
+  "/home/ubuntu/F1Tenth/basic/devel/lib/python3/dist-packages/vesc_msgs/msg/__init__.py"
   "CMakeFiles/vesc_msgs_generate_messages_py"
 )
 

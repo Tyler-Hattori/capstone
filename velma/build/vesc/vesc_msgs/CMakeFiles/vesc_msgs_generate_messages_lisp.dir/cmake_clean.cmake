@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/capstone/velma/devel/share/common-lisp/ros/vesc_msgs/msg/VescState.lisp"
-  "/home/ubuntu/capstone/velma/devel/share/common-lisp/ros/vesc_msgs/msg/VescStateStamped.lisp"
+  "/home/ubuntu/F1Tenth/velma/devel/share/common-lisp/ros/vesc_msgs/msg/VescState.lisp"
+  "/home/ubuntu/F1Tenth/velma/devel/share/common-lisp/ros/vesc_msgs/msg/VescStateStamped.lisp"
   "CMakeFiles/vesc_msgs_generate_messages_lisp"
 )
 

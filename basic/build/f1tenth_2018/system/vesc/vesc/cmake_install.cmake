@@ -1,8 +1,8 @@
-# Install script for directory: /home/ubuntu/capstone/basic/src/f1tenth_2018/system/vesc/vesc
+# Install script for directory: /home/ubuntu/F1Tenth/basic/src/f1tenth_2018/system/vesc/vesc
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/ubuntu/capstone/basic/install")
+  set(CMAKE_INSTALL_PREFIX "/home/ubuntu/F1Tenth/basic/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,6 +38,6 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/vesc" TYPE FILE FILES "/home/ubuntu/capstone/basic/src/f1tenth_2018/system/vesc/vesc/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/vesc" TYPE FILE FILES "/home/ubuntu/F1Tenth/basic/src/f1tenth_2018/system/vesc/vesc/package.xml")
 endif()
 

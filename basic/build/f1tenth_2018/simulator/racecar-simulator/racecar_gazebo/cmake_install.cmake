@@ -1,8 +1,8 @@
-# Install script for directory: /home/ubuntu/capstone/basic/src/f1tenth_2018/simulator/racecar-simulator/racecar_gazebo
+# Install script for directory: /home/ubuntu/F1Tenth/basic/src/f1tenth_2018/simulator/racecar-simulator/racecar_gazebo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/ubuntu/capstone/basic/install")
+  set(CMAKE_INSTALL_PREFIX "/home/ubuntu/F1Tenth/basic/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ubuntu/capstone/basic/build/f1tenth_2018/simulator/racecar-simulator/racecar_gazebo/catkin_generated/installspace/racecar_gazebo.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ubuntu/F1Tenth/basic/build/f1tenth_2018/simulator/racecar-simulator/racecar_gazebo/catkin_generated/installspace/racecar_gazebo.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/racecar_gazebo/cmake" TYPE FILE FILES
-    "/home/ubuntu/capstone/basic/build/f1tenth_2018/simulator/racecar-simulator/racecar_gazebo/catkin_generated/installspace/racecar_gazeboConfig.cmake"
-    "/home/ubuntu/capstone/basic/build/f1tenth_2018/simulator/racecar-simulator/racecar_gazebo/catkin_generated/installspace/racecar_gazeboConfig-version.cmake"
+    "/home/ubuntu/F1Tenth/basic/build/f1tenth_2018/simulator/racecar-simulator/racecar_gazebo/catkin_generated/installspace/racecar_gazeboConfig.cmake"
+    "/home/ubuntu/F1Tenth/basic/build/f1tenth_2018/simulator/racecar-simulator/racecar_gazebo/catkin_generated/installspace/racecar_gazeboConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/racecar_gazebo" TYPE FILE FILES "/home/ubuntu/capstone/basic/src/f1tenth_2018/simulator/racecar-simulator/racecar_gazebo/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/racecar_gazebo" TYPE FILE FILES "/home/ubuntu/F1Tenth/basic/src/f1tenth_2018/simulator/racecar-simulator/racecar_gazebo/package.xml")
 endif()
 

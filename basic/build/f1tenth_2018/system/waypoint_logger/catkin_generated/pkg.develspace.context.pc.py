@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "waypoint_logger"
-PROJECT_SPACE_DIR = "/home/ubuntu/capstone/basic/devel"
+PROJECT_SPACE_DIR = "/home/ubuntu/F1Tenth/basic/devel"
 PROJECT_VERSION = "0.0.0"

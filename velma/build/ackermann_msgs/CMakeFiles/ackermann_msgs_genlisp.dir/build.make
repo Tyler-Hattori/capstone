@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/capstone/velma/src
+CMAKE_SOURCE_DIR = /home/ubuntu/F1Tenth/velma/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/capstone/velma/build
+CMAKE_BINARY_DIR = /home/ubuntu/F1Tenth/velma/build
 
 # Utility rule file for ackermann_msgs_genlisp.
 
@@ -63,10 +63,10 @@ ackermann_msgs/CMakeFiles/ackermann_msgs_genlisp.dir/build: ackermann_msgs_genli
 .PHONY : ackermann_msgs/CMakeFiles/ackermann_msgs_genlisp.dir/build
 
 ackermann_msgs/CMakeFiles/ackermann_msgs_genlisp.dir/clean:
-	cd /home/ubuntu/capstone/velma/build/ackermann_msgs && $(CMAKE_COMMAND) -P CMakeFiles/ackermann_msgs_genlisp.dir/cmake_clean.cmake
+	cd /home/ubuntu/F1Tenth/velma/build/ackermann_msgs && $(CMAKE_COMMAND) -P CMakeFiles/ackermann_msgs_genlisp.dir/cmake_clean.cmake
 .PHONY : ackermann_msgs/CMakeFiles/ackermann_msgs_genlisp.dir/clean
 
 ackermann_msgs/CMakeFiles/ackermann_msgs_genlisp.dir/depend:
-	cd /home/ubuntu/capstone/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/capstone/velma/src /home/ubuntu/capstone/velma/src/ackermann_msgs /home/ubuntu/capstone/velma/build /home/ubuntu/capstone/velma/build/ackermann_msgs /home/ubuntu/capstone/velma/build/ackermann_msgs/CMakeFiles/ackermann_msgs_genlisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/F1Tenth/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/F1Tenth/velma/src /home/ubuntu/F1Tenth/velma/src/ackermann_msgs /home/ubuntu/F1Tenth/velma/build /home/ubuntu/F1Tenth/velma/build/ackermann_msgs /home/ubuntu/F1Tenth/velma/build/ackermann_msgs/CMakeFiles/ackermann_msgs_genlisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : ackermann_msgs/CMakeFiles/ackermann_msgs_genlisp.dir/depend
 

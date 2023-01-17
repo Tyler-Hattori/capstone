@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/capstone/basic/src
+CMAKE_SOURCE_DIR = /home/ubuntu/F1Tenth/basic/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/capstone/basic/build
+CMAKE_BINARY_DIR = /home/ubuntu/F1Tenth/basic/build
 
 # Utility rule file for run_tests_serial_gtest_serial-test-timer.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/ubuntu/capstone/basic/build
 include f1tenth_2018/system/serial/tests/CMakeFiles/run_tests_serial_gtest_serial-test-timer.dir/progress.make
 
 f1tenth_2018/system/serial/tests/CMakeFiles/run_tests_serial_gtest_serial-test-timer:
-	cd /home/ubuntu/capstone/basic/build/f1tenth_2018/system/serial/tests && ../../../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/catkin/cmake/test/run_tests.py /home/ubuntu/capstone/basic/build/test_results/serial/gtest-serial-test-timer.xml "/home/ubuntu/capstone/basic/devel/lib/serial/serial-test-timer --gtest_output=xml:/home/ubuntu/capstone/basic/build/test_results/serial/gtest-serial-test-timer.xml"
+	cd /home/ubuntu/F1Tenth/basic/build/f1tenth_2018/system/serial/tests && ../../../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/catkin/cmake/test/run_tests.py /home/ubuntu/F1Tenth/basic/build/test_results/serial/gtest-serial-test-timer.xml "/home/ubuntu/F1Tenth/basic/devel/lib/serial/serial-test-timer --gtest_output=xml:/home/ubuntu/F1Tenth/basic/build/test_results/serial/gtest-serial-test-timer.xml"
 
 run_tests_serial_gtest_serial-test-timer: f1tenth_2018/system/serial/tests/CMakeFiles/run_tests_serial_gtest_serial-test-timer
 run_tests_serial_gtest_serial-test-timer: f1tenth_2018/system/serial/tests/CMakeFiles/run_tests_serial_gtest_serial-test-timer.dir/build.make
@@ -67,10 +67,10 @@ f1tenth_2018/system/serial/tests/CMakeFiles/run_tests_serial_gtest_serial-test-t
 .PHONY : f1tenth_2018/system/serial/tests/CMakeFiles/run_tests_serial_gtest_serial-test-timer.dir/build
 
 f1tenth_2018/system/serial/tests/CMakeFiles/run_tests_serial_gtest_serial-test-timer.dir/clean:
-	cd /home/ubuntu/capstone/basic/build/f1tenth_2018/system/serial/tests && $(CMAKE_COMMAND) -P CMakeFiles/run_tests_serial_gtest_serial-test-timer.dir/cmake_clean.cmake
+	cd /home/ubuntu/F1Tenth/basic/build/f1tenth_2018/system/serial/tests && $(CMAKE_COMMAND) -P CMakeFiles/run_tests_serial_gtest_serial-test-timer.dir/cmake_clean.cmake
 .PHONY : f1tenth_2018/system/serial/tests/CMakeFiles/run_tests_serial_gtest_serial-test-timer.dir/clean
 
 f1tenth_2018/system/serial/tests/CMakeFiles/run_tests_serial_gtest_serial-test-timer.dir/depend:
-	cd /home/ubuntu/capstone/basic/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/capstone/basic/src /home/ubuntu/capstone/basic/src/f1tenth_2018/system/serial/tests /home/ubuntu/capstone/basic/build /home/ubuntu/capstone/basic/build/f1tenth_2018/system/serial/tests /home/ubuntu/capstone/basic/build/f1tenth_2018/system/serial/tests/CMakeFiles/run_tests_serial_gtest_serial-test-timer.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/F1Tenth/basic/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/F1Tenth/basic/src /home/ubuntu/F1Tenth/basic/src/f1tenth_2018/system/serial/tests /home/ubuntu/F1Tenth/basic/build /home/ubuntu/F1Tenth/basic/build/f1tenth_2018/system/serial/tests /home/ubuntu/F1Tenth/basic/build/f1tenth_2018/system/serial/tests/CMakeFiles/run_tests_serial_gtest_serial-test-timer.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : f1tenth_2018/system/serial/tests/CMakeFiles/run_tests_serial_gtest_serial-test-timer.dir/depend
 

@@ -1,8 +1,8 @@
-# Install script for directory: /home/ubuntu/capstone/basic/src/f1tenth_2018/system/ackermann_msgs
+# Install script for directory: /home/ubuntu/F1Tenth/basic/src/f1tenth_2018/system/ackermann_msgs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/ubuntu/capstone/basic/install")
+  set(CMAKE_INSTALL_PREFIX "/home/ubuntu/F1Tenth/basic/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,55 +39,55 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ackermann_msgs/msg" TYPE FILE FILES
-    "/home/ubuntu/capstone/basic/src/f1tenth_2018/system/ackermann_msgs/msg/AckermannDrive.msg"
-    "/home/ubuntu/capstone/basic/src/f1tenth_2018/system/ackermann_msgs/msg/AckermannDriveStamped.msg"
+    "/home/ubuntu/F1Tenth/basic/src/f1tenth_2018/system/ackermann_msgs/msg/AckermannDrive.msg"
+    "/home/ubuntu/F1Tenth/basic/src/f1tenth_2018/system/ackermann_msgs/msg/AckermannDriveStamped.msg"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ackermann_msgs/cmake" TYPE FILE FILES "/home/ubuntu/capstone/basic/build/f1tenth_2018/system/ackermann_msgs/catkin_generated/installspace/ackermann_msgs-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ackermann_msgs/cmake" TYPE FILE FILES "/home/ubuntu/F1Tenth/basic/build/f1tenth_2018/system/ackermann_msgs/catkin_generated/installspace/ackermann_msgs-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/ubuntu/capstone/basic/devel/include/ackermann_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/ubuntu/F1Tenth/basic/devel/include/ackermann_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/ubuntu/capstone/basic/devel/share/roseus/ros/ackermann_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/ubuntu/F1Tenth/basic/devel/share/roseus/ros/ackermann_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/ubuntu/capstone/basic/devel/share/common-lisp/ros/ackermann_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/ubuntu/F1Tenth/basic/devel/share/common-lisp/ros/ackermann_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/ubuntu/capstone/basic/devel/share/gennodejs/ros/ackermann_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/ubuntu/F1Tenth/basic/devel/share/gennodejs/ros/ackermann_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/ubuntu/capstone/basic/devel/lib/python3/dist-packages/ackermann_msgs")
+  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/ubuntu/F1Tenth/basic/devel/lib/python3/dist-packages/ackermann_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/ubuntu/capstone/basic/devel/lib/python3/dist-packages/ackermann_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/ubuntu/F1Tenth/basic/devel/lib/python3/dist-packages/ackermann_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ubuntu/capstone/basic/build/f1tenth_2018/system/ackermann_msgs/catkin_generated/installspace/ackermann_msgs.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ubuntu/F1Tenth/basic/build/f1tenth_2018/system/ackermann_msgs/catkin_generated/installspace/ackermann_msgs.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ackermann_msgs/cmake" TYPE FILE FILES "/home/ubuntu/capstone/basic/build/f1tenth_2018/system/ackermann_msgs/catkin_generated/installspace/ackermann_msgs-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ackermann_msgs/cmake" TYPE FILE FILES "/home/ubuntu/F1Tenth/basic/build/f1tenth_2018/system/ackermann_msgs/catkin_generated/installspace/ackermann_msgs-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ackermann_msgs/cmake" TYPE FILE FILES
-    "/home/ubuntu/capstone/basic/build/f1tenth_2018/system/ackermann_msgs/catkin_generated/installspace/ackermann_msgsConfig.cmake"
-    "/home/ubuntu/capstone/basic/build/f1tenth_2018/system/ackermann_msgs/catkin_generated/installspace/ackermann_msgsConfig-version.cmake"
+    "/home/ubuntu/F1Tenth/basic/build/f1tenth_2018/system/ackermann_msgs/catkin_generated/installspace/ackermann_msgsConfig.cmake"
+    "/home/ubuntu/F1Tenth/basic/build/f1tenth_2018/system/ackermann_msgs/catkin_generated/installspace/ackermann_msgsConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ackermann_msgs" TYPE FILE FILES "/home/ubuntu/capstone/basic/src/f1tenth_2018/system/ackermann_msgs/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ackermann_msgs" TYPE FILE FILES "/home/ubuntu/F1Tenth/basic/src/f1tenth_2018/system/ackermann_msgs/package.xml")
 endif()
 

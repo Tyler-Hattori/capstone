@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/capstone/velma/src
+CMAKE_SOURCE_DIR = /home/ubuntu/F1Tenth/velma/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/capstone/velma/build
+CMAKE_BINARY_DIR = /home/ubuntu/F1Tenth/velma/build
 
 # Utility rule file for clean_test_results_serial.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/ubuntu/capstone/velma/build
 include serial/tests/CMakeFiles/clean_test_results_serial.dir/progress.make
 
 serial/tests/CMakeFiles/clean_test_results_serial:
-	cd /home/ubuntu/capstone/velma/build/serial/tests && /usr/bin/python3 /opt/ros/noetic/share/catkin/cmake/test/remove_test_results.py /home/ubuntu/capstone/velma/build/test_results/serial
+	cd /home/ubuntu/F1Tenth/velma/build/serial/tests && /usr/bin/python3 /opt/ros/noetic/share/catkin/cmake/test/remove_test_results.py /home/ubuntu/F1Tenth/velma/build/test_results/serial
 
 clean_test_results_serial: serial/tests/CMakeFiles/clean_test_results_serial
 clean_test_results_serial: serial/tests/CMakeFiles/clean_test_results_serial.dir/build.make
@@ -67,10 +67,10 @@ serial/tests/CMakeFiles/clean_test_results_serial.dir/build: clean_test_results_
 .PHONY : serial/tests/CMakeFiles/clean_test_results_serial.dir/build
 
 serial/tests/CMakeFiles/clean_test_results_serial.dir/clean:
-	cd /home/ubuntu/capstone/velma/build/serial/tests && $(CMAKE_COMMAND) -P CMakeFiles/clean_test_results_serial.dir/cmake_clean.cmake
+	cd /home/ubuntu/F1Tenth/velma/build/serial/tests && $(CMAKE_COMMAND) -P CMakeFiles/clean_test_results_serial.dir/cmake_clean.cmake
 .PHONY : serial/tests/CMakeFiles/clean_test_results_serial.dir/clean
 
 serial/tests/CMakeFiles/clean_test_results_serial.dir/depend:
-	cd /home/ubuntu/capstone/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/capstone/velma/src /home/ubuntu/capstone/velma/src/serial/tests /home/ubuntu/capstone/velma/build /home/ubuntu/capstone/velma/build/serial/tests /home/ubuntu/capstone/velma/build/serial/tests/CMakeFiles/clean_test_results_serial.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/F1Tenth/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/F1Tenth/velma/src /home/ubuntu/F1Tenth/velma/src/serial/tests /home/ubuntu/F1Tenth/velma/build /home/ubuntu/F1Tenth/velma/build/serial/tests /home/ubuntu/F1Tenth/velma/build/serial/tests/CMakeFiles/clean_test_results_serial.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : serial/tests/CMakeFiles/clean_test_results_serial.dir/depend
 

@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/ubuntu/capstone/velma/devel/include/ackermann_msgs/AckermannDrive.h
+/home/ubuntu/F1Tenth/velma/devel/include/ackermann_msgs/AckermannDrive.h
 string
 -
 vector
@@ -22,7 +22,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/ubuntu/capstone/velma/devel/include/ackermann_msgs/AckermannDriveStamped.h
+/home/ubuntu/F1Tenth/velma/devel/include/ackermann_msgs/AckermannDriveStamped.h
 string
 -
 vector
@@ -42,7 +42,7 @@ std_msgs/Header.h
 ackermann_msgs/AckermannDrive.h
 -
 
-/home/ubuntu/capstone/velma/src/simulator/node/random_walk.cpp
+/home/ubuntu/F1Tenth/velma/src/simulator/node/random_walk.cpp
 ros/ros.h
 -
 ackermann_msgs/AckermannDriveStamped.h

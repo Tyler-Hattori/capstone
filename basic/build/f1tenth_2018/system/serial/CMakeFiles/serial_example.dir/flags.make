@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = -DROS_BUILD_SHARED_LIBS=1
 
-CXX_INCLUDES = -I/home/ubuntu/capstone/basic/src/f1tenth_2018/system/serial/include 
+CXX_INCLUDES = -I/home/ubuntu/F1Tenth/basic/src/f1tenth_2018/system/serial/include 
 

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/capstone/basic/devel/lib/hokuyo_node/getFirmwareVersion"
-  "/home/ubuntu/capstone/basic/devel/lib/hokuyo_node/getFirmwareVersion.pdb"
+  "/home/ubuntu/F1Tenth/basic/devel/lib/hokuyo_node/getFirmwareVersion"
+  "/home/ubuntu/F1Tenth/basic/devel/lib/hokuyo_node/getFirmwareVersion.pdb"
   "CMakeFiles/getFirmwareVersion.dir/src/getFirmwareVersion.cpp.o"
 )
 

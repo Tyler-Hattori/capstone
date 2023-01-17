@@ -1,4 +1,4 @@
-prefix=/home/ubuntu/capstone/velma/install
+prefix=/home/ubuntu/F1Tenth/velma/install
 
 Name: pixy2_msgs
 Description: Description of pixy2_msgs

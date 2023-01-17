@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"joy\"
 
-CXX_INCLUDES = -I/home/ubuntu/capstone/basic/src/f1tenth_2018/system/joystick_drivers/joy/msg/cpp -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
+CXX_INCLUDES = -I/home/ubuntu/F1Tenth/basic/src/f1tenth_2018/system/joystick_drivers/joy/msg/cpp -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
 

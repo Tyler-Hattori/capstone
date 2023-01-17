@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ubuntu/capstone/velma/src/lidar/src/client.cpp" "/home/ubuntu/capstone/velma/build/lidar/CMakeFiles/rplidarNodeClient.dir/src/client.cpp.o"
+  "/home/ubuntu/F1Tenth/velma/src/lidar/src/client.cpp" "/home/ubuntu/F1Tenth/velma/build/lidar/CMakeFiles/rplidarNodeClient.dir/src/client.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,8 +17,8 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/ubuntu/capstone/velma/src/lidar/./sdk/include"
-  "/home/ubuntu/capstone/velma/src/lidar/./sdk/src"
+  "/home/ubuntu/F1Tenth/velma/src/lidar/./sdk/include"
+  "/home/ubuntu/F1Tenth/velma/src/lidar/./sdk/src"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   )

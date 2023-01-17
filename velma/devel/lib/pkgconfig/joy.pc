@@ -1,4 +1,4 @@
-prefix=/home/ubuntu/capstone/velma/devel
+prefix=/home/ubuntu/F1Tenth/velma/devel
 
 Name: joy
 Description: Description of joy

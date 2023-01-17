@@ -1,4 +1,4 @@
-prefix=/home/ubuntu/capstone/basic/devel
+prefix=/home/ubuntu/F1Tenth/basic/devel
 
 Name: f110_description
 Description: Description of f110_description

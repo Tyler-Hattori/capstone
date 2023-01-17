@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ubuntu/capstone/velma/src/serial/examples/serial_example.cc" "/home/ubuntu/capstone/velma/build/serial/CMakeFiles/serial_example.dir/examples/serial_example.cc.o"
+  "/home/ubuntu/F1Tenth/velma/src/serial/examples/serial_example.cc" "/home/ubuntu/F1Tenth/velma/build/serial/CMakeFiles/serial_example.dir/examples/serial_example.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -15,12 +15,12 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/ubuntu/capstone/velma/src/serial/include"
+  "/home/ubuntu/F1Tenth/velma/src/serial/include"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/ubuntu/capstone/velma/build/serial/CMakeFiles/serial.dir/DependInfo.cmake"
+  "/home/ubuntu/F1Tenth/velma/build/serial/CMakeFiles/serial.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

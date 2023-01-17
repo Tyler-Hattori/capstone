@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/ubuntu/capstone/basic/src/f1tenth_2018/system/hokuyo_node/include/hokuyo_node/hokuyo.h
+/home/ubuntu/F1Tenth/basic/src/f1tenth_2018/system/hokuyo_node/include/hokuyo_node/hokuyo.h
 stdexcept
 -
 termios.h
@@ -20,7 +20,7 @@ stdint.h
 limits
 -
 
-/home/ubuntu/capstone/basic/src/f1tenth_2018/system/hokuyo_node/src/hokuyo.cpp
+/home/ubuntu/F1Tenth/basic/src/f1tenth_2018/system/hokuyo_node/src/hokuyo.cpp
 stdio.h
 -
 string.h
@@ -36,7 +36,7 @@ poll.h
 signal.h
 -
 hokuyo_node/hokuyo.h
-/home/ubuntu/capstone/basic/src/f1tenth_2018/system/hokuyo_node/src/hokuyo_node/hokuyo.h
+/home/ubuntu/F1Tenth/basic/src/f1tenth_2018/system/hokuyo_node/src/hokuyo_node/hokuyo.h
 algorithm
 -
 time.h
@@ -44,7 +44,7 @@ time.h
 fcntl.h
 -
 ros/console.h
-/home/ubuntu/capstone/basic/src/f1tenth_2018/system/hokuyo_node/src/ros/console.h
+/home/ubuntu/F1Tenth/basic/src/f1tenth_2018/system/hokuyo_node/src/ros/console.h
 sys/time.h
 -
 

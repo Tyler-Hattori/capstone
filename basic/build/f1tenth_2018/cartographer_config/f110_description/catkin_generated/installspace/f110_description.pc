@@ -1,4 +1,4 @@
-prefix=/home/ubuntu/capstone/basic/install
+prefix=/home/ubuntu/F1Tenth/basic/install
 
 Name: f110_description
 Description: Description of f110_description

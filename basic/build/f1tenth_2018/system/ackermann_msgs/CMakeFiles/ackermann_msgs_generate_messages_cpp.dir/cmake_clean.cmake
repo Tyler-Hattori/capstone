@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/capstone/basic/devel/include/ackermann_msgs/AckermannDrive.h"
-  "/home/ubuntu/capstone/basic/devel/include/ackermann_msgs/AckermannDriveStamped.h"
+  "/home/ubuntu/F1Tenth/basic/devel/include/ackermann_msgs/AckermannDrive.h"
+  "/home/ubuntu/F1Tenth/basic/devel/include/ackermann_msgs/AckermannDriveStamped.h"
   "CMakeFiles/ackermann_msgs_generate_messages_cpp"
 )
 

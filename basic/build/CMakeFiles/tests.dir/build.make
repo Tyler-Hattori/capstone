@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/capstone/basic/src
+CMAKE_SOURCE_DIR = /home/ubuntu/F1Tenth/basic/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/capstone/basic/build
+CMAKE_BINARY_DIR = /home/ubuntu/F1Tenth/basic/build
 
 # Utility rule file for tests.
 
@@ -67,6 +67,6 @@ CMakeFiles/tests.dir/clean:
 .PHONY : CMakeFiles/tests.dir/clean
 
 CMakeFiles/tests.dir/depend:
-	cd /home/ubuntu/capstone/basic/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/capstone/basic/src /home/ubuntu/capstone/basic/src /home/ubuntu/capstone/basic/build /home/ubuntu/capstone/basic/build /home/ubuntu/capstone/basic/build/CMakeFiles/tests.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/F1Tenth/basic/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/F1Tenth/basic/src /home/ubuntu/F1Tenth/basic/src /home/ubuntu/F1Tenth/basic/build /home/ubuntu/F1Tenth/basic/build /home/ubuntu/F1Tenth/basic/build/CMakeFiles/tests.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/tests.dir/depend
 

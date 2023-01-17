@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/capstone/velma/devel/lib/vesc_ackermann/vesc_to_odom_node"
-  "/home/ubuntu/capstone/velma/devel/lib/vesc_ackermann/vesc_to_odom_node.pdb"
+  "/home/ubuntu/F1Tenth/velma/devel/lib/vesc_ackermann/vesc_to_odom_node"
+  "/home/ubuntu/F1Tenth/velma/devel/lib/vesc_ackermann/vesc_to_odom_node.pdb"
   "CMakeFiles/vesc_to_odom_node.dir/src/vesc_to_odom.cpp.o"
   "CMakeFiles/vesc_to_odom_node.dir/src/vesc_to_odom_node.cpp.o"
 )

@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/F1Tenth/velma/devel
+
+Name: velma
+Description: Description of velma
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/capstone/velma/devel/lib/f1tenth_simulator/wall_follow"
-  "/home/ubuntu/capstone/velma/devel/lib/f1tenth_simulator/wall_follow.pdb"
+  "/home/ubuntu/F1Tenth/velma/devel/lib/f1tenth_simulator/wall_follow"
+  "/home/ubuntu/F1Tenth/velma/devel/lib/f1tenth_simulator/wall_follow.pdb"
   "CMakeFiles/wall_follow.dir/node/wall_follow.cpp.o"
 )
 

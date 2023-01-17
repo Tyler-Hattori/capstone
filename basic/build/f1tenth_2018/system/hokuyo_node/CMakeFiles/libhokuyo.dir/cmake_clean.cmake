@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/capstone/basic/devel/lib/liblibhokuyo.pdb"
-  "/home/ubuntu/capstone/basic/devel/lib/liblibhokuyo.so"
+  "/home/ubuntu/F1Tenth/basic/devel/lib/liblibhokuyo.pdb"
+  "/home/ubuntu/F1Tenth/basic/devel/lib/liblibhokuyo.so"
   "CMakeFiles/libhokuyo.dir/src/hokuyo.cpp.o"
 )
 

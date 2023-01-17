@@ -1,8 +1,8 @@
-# Install script for directory: /home/ubuntu/capstone/basic/src/f1tenth_2018/simulator/f1_10_sim/race
+# Install script for directory: /home/ubuntu/F1Tenth/basic/src/f1tenth_2018/simulator/f1_10_sim/race
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/ubuntu/capstone/basic/install")
+  set(CMAKE_INSTALL_PREFIX "/home/ubuntu/F1Tenth/basic/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,56 +39,56 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/race/msg" TYPE FILE FILES
-    "/home/ubuntu/capstone/basic/src/f1tenth_2018/simulator/f1_10_sim/race/msg/drive_param.msg"
-    "/home/ubuntu/capstone/basic/src/f1tenth_2018/simulator/f1_10_sim/race/msg/drive_values.msg"
-    "/home/ubuntu/capstone/basic/src/f1tenth_2018/simulator/f1_10_sim/race/msg/pid_input.msg"
+    "/home/ubuntu/F1Tenth/basic/src/f1tenth_2018/simulator/f1_10_sim/race/msg/drive_param.msg"
+    "/home/ubuntu/F1Tenth/basic/src/f1tenth_2018/simulator/f1_10_sim/race/msg/drive_values.msg"
+    "/home/ubuntu/F1Tenth/basic/src/f1tenth_2018/simulator/f1_10_sim/race/msg/pid_input.msg"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/race/cmake" TYPE FILE FILES "/home/ubuntu/capstone/basic/build/f1tenth_2018/simulator/f1_10_sim/race/catkin_generated/installspace/race-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/race/cmake" TYPE FILE FILES "/home/ubuntu/F1Tenth/basic/build/f1tenth_2018/simulator/f1_10_sim/race/catkin_generated/installspace/race-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/ubuntu/capstone/basic/devel/include/race")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/ubuntu/F1Tenth/basic/devel/include/race")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/ubuntu/capstone/basic/devel/share/roseus/ros/race")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/ubuntu/F1Tenth/basic/devel/share/roseus/ros/race")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/ubuntu/capstone/basic/devel/share/common-lisp/ros/race")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/ubuntu/F1Tenth/basic/devel/share/common-lisp/ros/race")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/ubuntu/capstone/basic/devel/share/gennodejs/ros/race")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/ubuntu/F1Tenth/basic/devel/share/gennodejs/ros/race")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/ubuntu/capstone/basic/devel/lib/python3/dist-packages/race")
+  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/ubuntu/F1Tenth/basic/devel/lib/python3/dist-packages/race")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/ubuntu/capstone/basic/devel/lib/python3/dist-packages/race")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/ubuntu/F1Tenth/basic/devel/lib/python3/dist-packages/race")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ubuntu/capstone/basic/build/f1tenth_2018/simulator/f1_10_sim/race/catkin_generated/installspace/race.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ubuntu/F1Tenth/basic/build/f1tenth_2018/simulator/f1_10_sim/race/catkin_generated/installspace/race.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/race/cmake" TYPE FILE FILES "/home/ubuntu/capstone/basic/build/f1tenth_2018/simulator/f1_10_sim/race/catkin_generated/installspace/race-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/race/cmake" TYPE FILE FILES "/home/ubuntu/F1Tenth/basic/build/f1tenth_2018/simulator/f1_10_sim/race/catkin_generated/installspace/race-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/race/cmake" TYPE FILE FILES
-    "/home/ubuntu/capstone/basic/build/f1tenth_2018/simulator/f1_10_sim/race/catkin_generated/installspace/raceConfig.cmake"
-    "/home/ubuntu/capstone/basic/build/f1tenth_2018/simulator/f1_10_sim/race/catkin_generated/installspace/raceConfig-version.cmake"
+    "/home/ubuntu/F1Tenth/basic/build/f1tenth_2018/simulator/f1_10_sim/race/catkin_generated/installspace/raceConfig.cmake"
+    "/home/ubuntu/F1Tenth/basic/build/f1tenth_2018/simulator/f1_10_sim/race/catkin_generated/installspace/raceConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/race" TYPE FILE FILES "/home/ubuntu/capstone/basic/src/f1tenth_2018/simulator/f1_10_sim/race/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/race" TYPE FILE FILES "/home/ubuntu/F1Tenth/basic/src/f1tenth_2018/simulator/f1_10_sim/race/package.xml")
 endif()
 

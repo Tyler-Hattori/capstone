@@ -161,7 +161,7 @@ void VescInterface::connect(const std::string& port)
   }
   catch (const std::exception& e) {
       std::stringstream ss;
-      ss << "Failed to open the serial port to the VESC. " << e.what();
+      ss << "Failed to open the serial port to the VESC (" << port << ")." << e.what();
       throw SerialException(ss.str().c_str());
   }
 

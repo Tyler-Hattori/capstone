@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/capstone/basic/devel/lib/python3/dist-packages/race/msg/__init__.py"
-  "/home/ubuntu/capstone/basic/devel/lib/python3/dist-packages/race/msg/_drive_param.py"
-  "/home/ubuntu/capstone/basic/devel/lib/python3/dist-packages/race/msg/_drive_values.py"
-  "/home/ubuntu/capstone/basic/devel/lib/python3/dist-packages/race/msg/_pid_input.py"
+  "/home/ubuntu/F1Tenth/basic/devel/lib/python3/dist-packages/race/msg/__init__.py"
+  "/home/ubuntu/F1Tenth/basic/devel/lib/python3/dist-packages/race/msg/_drive_param.py"
+  "/home/ubuntu/F1Tenth/basic/devel/lib/python3/dist-packages/race/msg/_drive_values.py"
+  "/home/ubuntu/F1Tenth/basic/devel/lib/python3/dist-packages/race/msg/_pid_input.py"
   "CMakeFiles/race_generate_messages_py"
 )
 

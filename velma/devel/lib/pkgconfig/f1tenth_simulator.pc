@@ -1,8 +1,8 @@
-prefix=/home/ubuntu/capstone/velma/devel
+prefix=/home/ubuntu/F1Tenth/velma/devel
 
 Name: f1tenth_simulator
 Description: Description of f1tenth_simulator
 Version: 0.0.1
-Cflags: -I/home/ubuntu/capstone/velma/src/simulator/include
+Cflags: -I/home/ubuntu/F1Tenth/velma/src/simulator/include
 Libs: -L${prefix}/lib -lf1tenth_simulator
 Requires: message_runtime

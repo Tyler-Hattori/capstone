@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/capstone/basic/src
+CMAKE_SOURCE_DIR = /home/ubuntu/F1Tenth/basic/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/capstone/basic/build
+CMAKE_BINARY_DIR = /home/ubuntu/F1Tenth/basic/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/ubuntu/capstone/basic/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/capstone/basic/build/CMakeFiles /home/ubuntu/capstone/basic/build/f1tenth_2018/system/joystick_drivers/joy/CMakeFiles/progress.marks
-	cd /home/ubuntu/capstone/basic/build && $(MAKE) -f CMakeFiles/Makefile2 f1tenth_2018/system/joystick_drivers/joy/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/capstone/basic/build/CMakeFiles 0
+	cd /home/ubuntu/F1Tenth/basic/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/F1Tenth/basic/build/CMakeFiles /home/ubuntu/F1Tenth/basic/build/f1tenth_2018/system/joystick_drivers/joy/CMakeFiles/progress.marks
+	cd /home/ubuntu/F1Tenth/basic/build && $(MAKE) -f CMakeFiles/Makefile2 f1tenth_2018/system/joystick_drivers/joy/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/F1Tenth/basic/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/ubuntu/capstone/basic/build && $(MAKE) -f CMakeFiles/Makefile2 f1tenth_2018/system/joystick_drivers/joy/clean
+	cd /home/ubuntu/F1Tenth/basic/build && $(MAKE) -f CMakeFiles/Makefile2 f1tenth_2018/system/joystick_drivers/joy/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/ubuntu/capstone/basic/build && $(MAKE) -f CMakeFiles/Makefile2 f1tenth_2018/system/joystick_drivers/joy/preinstall
+	cd /home/ubuntu/F1Tenth/basic/build && $(MAKE) -f CMakeFiles/Makefile2 f1tenth_2018/system/joystick_drivers/joy/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/ubuntu/capstone/basic/build && $(MAKE) -f CMakeFiles/Makefile2 f1tenth_2018/system/joystick_drivers/joy/preinstall
+	cd /home/ubuntu/F1Tenth/basic/build && $(MAKE) -f CMakeFiles/Makefile2 f1tenth_2018/system/joystick_drivers/joy/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/ubuntu/capstone/basic/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/ubuntu/F1Tenth/basic/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 f1tenth_2018/system/joystick_drivers/joy/CMakeFiles/joy_node.dir/rule:
-	cd /home/ubuntu/capstone/basic/build && $(MAKE) -f CMakeFiles/Makefile2 f1tenth_2018/system/joystick_drivers/joy/CMakeFiles/joy_node.dir/rule
+	cd /home/ubuntu/F1Tenth/basic/build && $(MAKE) -f CMakeFiles/Makefile2 f1tenth_2018/system/joystick_drivers/joy/CMakeFiles/joy_node.dir/rule
 .PHONY : f1tenth_2018/system/joystick_drivers/joy/CMakeFiles/joy_node.dir/rule
 
 # Convenience name for target.
@@ -179,7 +179,7 @@ joy_node: f1tenth_2018/system/joystick_drivers/joy/CMakeFiles/joy_node.dir/rule
 
 # fast build rule for target.
 joy_node/fast:
-	cd /home/ubuntu/capstone/basic/build && $(MAKE) -f f1tenth_2018/system/joystick_drivers/joy/CMakeFiles/joy_node.dir/build.make f1tenth_2018/system/joystick_drivers/joy/CMakeFiles/joy_node.dir/build
+	cd /home/ubuntu/F1Tenth/basic/build && $(MAKE) -f f1tenth_2018/system/joystick_drivers/joy/CMakeFiles/joy_node.dir/build.make f1tenth_2018/system/joystick_drivers/joy/CMakeFiles/joy_node.dir/build
 .PHONY : joy_node/fast
 
 src/joy_node.o: src/joy_node.cpp.o
@@ -188,7 +188,7 @@ src/joy_node.o: src/joy_node.cpp.o
 
 # target to build an object file
 src/joy_node.cpp.o:
-	cd /home/ubuntu/capstone/basic/build && $(MAKE) -f f1tenth_2018/system/joystick_drivers/joy/CMakeFiles/joy_node.dir/build.make f1tenth_2018/system/joystick_drivers/joy/CMakeFiles/joy_node.dir/src/joy_node.cpp.o
+	cd /home/ubuntu/F1Tenth/basic/build && $(MAKE) -f f1tenth_2018/system/joystick_drivers/joy/CMakeFiles/joy_node.dir/build.make f1tenth_2018/system/joystick_drivers/joy/CMakeFiles/joy_node.dir/src/joy_node.cpp.o
 .PHONY : src/joy_node.cpp.o
 
 src/joy_node.i: src/joy_node.cpp.i
@@ -197,7 +197,7 @@ src/joy_node.i: src/joy_node.cpp.i
 
 # target to preprocess a source file
 src/joy_node.cpp.i:
-	cd /home/ubuntu/capstone/basic/build && $(MAKE) -f f1tenth_2018/system/joystick_drivers/joy/CMakeFiles/joy_node.dir/build.make f1tenth_2018/system/joystick_drivers/joy/CMakeFiles/joy_node.dir/src/joy_node.cpp.i
+	cd /home/ubuntu/F1Tenth/basic/build && $(MAKE) -f f1tenth_2018/system/joystick_drivers/joy/CMakeFiles/joy_node.dir/build.make f1tenth_2018/system/joystick_drivers/joy/CMakeFiles/joy_node.dir/src/joy_node.cpp.i
 .PHONY : src/joy_node.cpp.i
 
 src/joy_node.s: src/joy_node.cpp.s
@@ -206,7 +206,7 @@ src/joy_node.s: src/joy_node.cpp.s
 
 # target to generate assembly for a file
 src/joy_node.cpp.s:
-	cd /home/ubuntu/capstone/basic/build && $(MAKE) -f f1tenth_2018/system/joystick_drivers/joy/CMakeFiles/joy_node.dir/build.make f1tenth_2018/system/joystick_drivers/joy/CMakeFiles/joy_node.dir/src/joy_node.cpp.s
+	cd /home/ubuntu/F1Tenth/basic/build && $(MAKE) -f f1tenth_2018/system/joystick_drivers/joy/CMakeFiles/joy_node.dir/build.make f1tenth_2018/system/joystick_drivers/joy/CMakeFiles/joy_node.dir/src/joy_node.cpp.s
 .PHONY : src/joy_node.cpp.s
 
 # Help Target
@@ -237,6 +237,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/ubuntu/capstone/basic/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/ubuntu/F1Tenth/basic/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

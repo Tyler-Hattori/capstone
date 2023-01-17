@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/capstone/basic/src
+CMAKE_SOURCE_DIR = /home/ubuntu/F1Tenth/basic/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/capstone/basic/build
+CMAKE_BINARY_DIR = /home/ubuntu/F1Tenth/basic/build
 
 # Utility rule file for tf_generate_messages_py.
 
@@ -63,10 +63,10 @@ f1tenth_2018/simulator/f1_10_sim/race/CMakeFiles/tf_generate_messages_py.dir/bui
 .PHONY : f1tenth_2018/simulator/f1_10_sim/race/CMakeFiles/tf_generate_messages_py.dir/build
 
 f1tenth_2018/simulator/f1_10_sim/race/CMakeFiles/tf_generate_messages_py.dir/clean:
-	cd /home/ubuntu/capstone/basic/build/f1tenth_2018/simulator/f1_10_sim/race && $(CMAKE_COMMAND) -P CMakeFiles/tf_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/ubuntu/F1Tenth/basic/build/f1tenth_2018/simulator/f1_10_sim/race && $(CMAKE_COMMAND) -P CMakeFiles/tf_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : f1tenth_2018/simulator/f1_10_sim/race/CMakeFiles/tf_generate_messages_py.dir/clean
 
 f1tenth_2018/simulator/f1_10_sim/race/CMakeFiles/tf_generate_messages_py.dir/depend:
-	cd /home/ubuntu/capstone/basic/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/capstone/basic/src /home/ubuntu/capstone/basic/src/f1tenth_2018/simulator/f1_10_sim/race /home/ubuntu/capstone/basic/build /home/ubuntu/capstone/basic/build/f1tenth_2018/simulator/f1_10_sim/race /home/ubuntu/capstone/basic/build/f1tenth_2018/simulator/f1_10_sim/race/CMakeFiles/tf_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/F1Tenth/basic/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/F1Tenth/basic/src /home/ubuntu/F1Tenth/basic/src/f1tenth_2018/simulator/f1_10_sim/race /home/ubuntu/F1Tenth/basic/build /home/ubuntu/F1Tenth/basic/build/f1tenth_2018/simulator/f1_10_sim/race /home/ubuntu/F1Tenth/basic/build/f1tenth_2018/simulator/f1_10_sim/race/CMakeFiles/tf_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : f1tenth_2018/simulator/f1_10_sim/race/CMakeFiles/tf_generate_messages_py.dir/depend
 

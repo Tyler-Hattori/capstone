@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/capstone/basic/devel/include/race/drive_param.h"
-  "/home/ubuntu/capstone/basic/devel/include/race/drive_values.h"
-  "/home/ubuntu/capstone/basic/devel/include/race/pid_input.h"
+  "/home/ubuntu/F1Tenth/basic/devel/include/race/drive_param.h"
+  "/home/ubuntu/F1Tenth/basic/devel/include/race/drive_values.h"
+  "/home/ubuntu/F1Tenth/basic/devel/include/race/pid_input.h"
   "CMakeFiles/race_generate_messages_cpp"
 )
 

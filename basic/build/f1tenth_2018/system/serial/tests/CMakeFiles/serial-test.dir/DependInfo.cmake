@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ubuntu/capstone/basic/src/f1tenth_2018/system/serial/tests/unix_serial_tests.cc" "/home/ubuntu/capstone/basic/build/f1tenth_2018/system/serial/tests/CMakeFiles/serial-test.dir/unix_serial_tests.cc.o"
+  "/home/ubuntu/F1Tenth/basic/src/f1tenth_2018/system/serial/tests/unix_serial_tests.cc" "/home/ubuntu/F1Tenth/basic/build/f1tenth_2018/system/serial/tests/CMakeFiles/serial-test.dir/unix_serial_tests.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -15,15 +15,15 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/ubuntu/capstone/basic/src/f1tenth_2018/system/serial/include"
+  "/home/ubuntu/F1Tenth/basic/src/f1tenth_2018/system/serial/include"
   "/usr/src/googletest/googletest/include"
   "/usr/src/googletest/googletest"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/ubuntu/capstone/basic/build/gtest/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
-  "/home/ubuntu/capstone/basic/build/f1tenth_2018/system/serial/CMakeFiles/serial.dir/DependInfo.cmake"
+  "/home/ubuntu/F1Tenth/basic/build/gtest/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "/home/ubuntu/F1Tenth/basic/build/f1tenth_2018/system/serial/CMakeFiles/serial.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

@@ -7,7 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/ubuntu/capstone/basic/devel:$CMAKE_PREFIX_PATH"
-export PWD='/home/ubuntu/capstone/basic/build'
-export ROSLISP_PACKAGE_DIRECTORIES='/home/ubuntu/capstone/basic/devel/share/common-lisp'
-export ROS_PACKAGE_PATH="/home/ubuntu/capstone/basic/src:$ROS_PACKAGE_PATH"
+export CMAKE_PREFIX_PATH="/home/ubuntu/F1Tenth/basic/devel:$CMAKE_PREFIX_PATH"
+export PWD='/home/ubuntu/F1Tenth/basic/build'
+export ROSLISP_PACKAGE_DIRECTORIES='/home/ubuntu/F1Tenth/basic/devel/share/common-lisp'
+export ROS_PACKAGE_PATH="/home/ubuntu/F1Tenth/basic/src:$ROS_PACKAGE_PATH"

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/capstone/velma/src
+CMAKE_SOURCE_DIR = /home/ubuntu/F1Tenth/velma/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/capstone/velma/build
+CMAKE_BINARY_DIR = /home/ubuntu/F1Tenth/velma/build
 
 # Utility rule file for _pixy2_msgs_generate_messages_check_deps_PixyData.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/ubuntu/capstone/velma/build
 include pixy/pixy2_msgs/CMakeFiles/_pixy2_msgs_generate_messages_check_deps_PixyData.dir/progress.make
 
 pixy/pixy2_msgs/CMakeFiles/_pixy2_msgs_generate_messages_check_deps_PixyData:
-	cd /home/ubuntu/capstone/velma/build/pixy/pixy2_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py pixy2_msgs /home/ubuntu/capstone/velma/src/pixy/pixy2_msgs/msg/PixyData.msg std_msgs/Header:sensor_msgs/RegionOfInterest:pixy2_msgs/PixyBlock
+	cd /home/ubuntu/F1Tenth/velma/build/pixy/pixy2_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py pixy2_msgs /home/ubuntu/F1Tenth/velma/src/pixy/pixy2_msgs/msg/PixyData.msg sensor_msgs/RegionOfInterest:std_msgs/Header:pixy2_msgs/PixyBlock
 
 _pixy2_msgs_generate_messages_check_deps_PixyData: pixy/pixy2_msgs/CMakeFiles/_pixy2_msgs_generate_messages_check_deps_PixyData
 _pixy2_msgs_generate_messages_check_deps_PixyData: pixy/pixy2_msgs/CMakeFiles/_pixy2_msgs_generate_messages_check_deps_PixyData.dir/build.make
@@ -67,10 +67,10 @@ pixy/pixy2_msgs/CMakeFiles/_pixy2_msgs_generate_messages_check_deps_PixyData.dir
 .PHONY : pixy/pixy2_msgs/CMakeFiles/_pixy2_msgs_generate_messages_check_deps_PixyData.dir/build
 
 pixy/pixy2_msgs/CMakeFiles/_pixy2_msgs_generate_messages_check_deps_PixyData.dir/clean:
-	cd /home/ubuntu/capstone/velma/build/pixy/pixy2_msgs && $(CMAKE_COMMAND) -P CMakeFiles/_pixy2_msgs_generate_messages_check_deps_PixyData.dir/cmake_clean.cmake
+	cd /home/ubuntu/F1Tenth/velma/build/pixy/pixy2_msgs && $(CMAKE_COMMAND) -P CMakeFiles/_pixy2_msgs_generate_messages_check_deps_PixyData.dir/cmake_clean.cmake
 .PHONY : pixy/pixy2_msgs/CMakeFiles/_pixy2_msgs_generate_messages_check_deps_PixyData.dir/clean
 
 pixy/pixy2_msgs/CMakeFiles/_pixy2_msgs_generate_messages_check_deps_PixyData.dir/depend:
-	cd /home/ubuntu/capstone/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/capstone/velma/src /home/ubuntu/capstone/velma/src/pixy/pixy2_msgs /home/ubuntu/capstone/velma/build /home/ubuntu/capstone/velma/build/pixy/pixy2_msgs /home/ubuntu/capstone/velma/build/pixy/pixy2_msgs/CMakeFiles/_pixy2_msgs_generate_messages_check_deps_PixyData.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/F1Tenth/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/F1Tenth/velma/src /home/ubuntu/F1Tenth/velma/src/pixy/pixy2_msgs /home/ubuntu/F1Tenth/velma/build /home/ubuntu/F1Tenth/velma/build/pixy/pixy2_msgs /home/ubuntu/F1Tenth/velma/build/pixy/pixy2_msgs/CMakeFiles/_pixy2_msgs_generate_messages_check_deps_PixyData.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : pixy/pixy2_msgs/CMakeFiles/_pixy2_msgs_generate_messages_check_deps_PixyData.dir/depend
 

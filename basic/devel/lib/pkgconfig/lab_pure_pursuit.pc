@@ -1,4 +1,4 @@
-prefix=/home/ubuntu/capstone/basic/devel
+prefix=/home/ubuntu/F1Tenth/basic/devel
 
 Name: lab_pure_pursuit
 Description: Description of lab_pure_pursuit
