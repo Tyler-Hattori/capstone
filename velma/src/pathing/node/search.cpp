@@ -16,12 +16,14 @@ private:
   ros::Subscriber time_cm;
   ros::Subscriber ease_cm;
   ros::Subscriber object_cm;
+  ros::Subscriber obstacle_cm;
   ros::Subscriber unsearched_area_cm;
   ros::Subscriber frontier_cm;
  
   nav_msgs::OccupancyGrid time_costmap;
   nav_msgs::OccupancyGrid ease_costmap;
   nav_msgs::OccupancyGrid object_costmap;
+  nav_msgs::OccupancyGrid obstacle_costmap;
   nav_msgs::OccupancyGrid unsearched_area_costmap;
   nav_msgs::OccupancyGrid frontier_costmap;
   
@@ -30,6 +32,7 @@ private:
   int time_cm_weight;
   int ease_cm_weight;
   int object_cm_weight;
+  int obstacle_cm_weight;
   int unsearched_area_cm_weight;
   int frontier_cm_weight;
    
@@ -41,11 +44,13 @@ public:
     time_cm = n.subscribe("time_costmap", 1000, &Search::time_cm_callback, this);
     ease_cm = n.subscribe("ease_costmap", 1000, &Search::ease_cm_callback, this);
     object_cm = n.subscribe("object_costmap", 1000, &Search::object_cm_callback, this);
+    obstacle_cm = n.subscribe("obstacle_costmap", 1000, &Search::obstacle_cm_callback, this);
     frontier_cm = n.subscribe("frontier_costmap", 1000, &Search::frontier_cm_callback, this);
     
     n.getParam("time_cm_weight", time_cm_weight);
     n.getParam("ease_cm_weight", ease_cm_weight);
     n.getParam("object_cm_weight", object_cm_weight);
+    n.getParam("obsstacle_cm_weight", obstacle_cm_weight);
     n.getParam("unsearched_area_cm_weight", unsearched_area_cm_weight);
     n.getParam("frontier_cm_weight", frontier_cm_weight);
   }
@@ -78,6 +83,10 @@ public:
   }
   void object_cm_callback(const nav_msgs::OccupancyGrid & cm) {
     object_costmap = cm;
+    consolidate_costmaps();
+  }
+  void obstacle_cm_callback(const nav_msgs::OccupancyGrid & cm) {
+    obstacle_costmap = cm;
     consolidate_costmaps();
   }
   void frontier_cm_callback(const nav_msgs::OccupancyGrid & cm) {
