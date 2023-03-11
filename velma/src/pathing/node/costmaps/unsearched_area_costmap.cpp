@@ -23,7 +23,11 @@ private:
 public:
   UnsearchedAreaCostmap() {
     n = ros::NodeHandle("~");
-    unsearched_area_cm = n.advertise<nav_msgs::OccupancyGrid>("/algorithms/navigation_algoritms/unsearched_area_costmap", 1000);
+      
+    std::string costmap_topic;
+    n.getParam("unsearched_area_costmap_topic", costmap_topic);
+      
+    unsearched_area_cm = n.advertise<nav_msgs::OccupancyGrid>(costmap_topic, 1000);
     laser = n.subscribe("/scan", 1000, &UnsearchedAreaCostmap::laser_callback, this);
     odom = n.subscribe("/odom", 1000, &UnsearchedAreaCostmap::odom_callback, this);
     map = n.subscribe("/map", 1000, &UnsearchedAreaCostmap::map_callback, this);
