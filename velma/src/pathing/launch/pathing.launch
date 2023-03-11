@@ -16,5 +16,5 @@
   
   <!-- navigation -->
   <include file="$(find velma_nav)/move_base.launch"/>
-  <node pkg="twist_to_ackermann" name="twist_to_ackermann" type="twist_to_ackermann.py" output="screen"/>
+  <node pkg="twist_to_ackermann" name="twist_to_ackermann" type="convert.py" output="screen"/>
 </launch>
