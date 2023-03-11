@@ -20,7 +20,6 @@ include_directories(
 # EDIT: list all executable python and shell scripts for installation
 install(PROGRAMS
    scripts/*
-   nodes/*
    DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
