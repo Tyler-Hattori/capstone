@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/thattori/capstone/F1Tenth/velma/devel/share/common-lisp/ros/pathing/msg/gpio.lisp"
+  "/home/thattori/capstone/velma/devel/share/common-lisp/ros/pathing/msg/gpio.lisp"
   "CMakeFiles/pathing_generate_messages_lisp"
 )
 

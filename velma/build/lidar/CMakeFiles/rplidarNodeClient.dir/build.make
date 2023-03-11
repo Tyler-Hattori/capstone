@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/thattori/capstone/F1Tenth/velma/src
+CMAKE_SOURCE_DIR = /home/thattori/capstone/velma/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/thattori/capstone/F1Tenth/velma/build
+CMAKE_BINARY_DIR = /home/thattori/capstone/velma/build
 
 # Include any dependencies generated for this target.
 include lidar/CMakeFiles/rplidarNodeClient.dir/depend.make
@@ -58,17 +58,17 @@ include lidar/CMakeFiles/rplidarNodeClient.dir/progress.make
 include lidar/CMakeFiles/rplidarNodeClient.dir/flags.make
 
 lidar/CMakeFiles/rplidarNodeClient.dir/src/client.cpp.o: lidar/CMakeFiles/rplidarNodeClient.dir/flags.make
-lidar/CMakeFiles/rplidarNodeClient.dir/src/client.cpp.o: /home/thattori/capstone/F1Tenth/velma/src/lidar/src/client.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/thattori/capstone/F1Tenth/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object lidar/CMakeFiles/rplidarNodeClient.dir/src/client.cpp.o"
-	cd /home/thattori/capstone/F1Tenth/velma/build/lidar && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rplidarNodeClient.dir/src/client.cpp.o -c /home/thattori/capstone/F1Tenth/velma/src/lidar/src/client.cpp
+lidar/CMakeFiles/rplidarNodeClient.dir/src/client.cpp.o: /home/thattori/capstone/velma/src/lidar/src/client.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object lidar/CMakeFiles/rplidarNodeClient.dir/src/client.cpp.o"
+	cd /home/thattori/capstone/velma/build/lidar && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rplidarNodeClient.dir/src/client.cpp.o -c /home/thattori/capstone/velma/src/lidar/src/client.cpp
 
 lidar/CMakeFiles/rplidarNodeClient.dir/src/client.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rplidarNodeClient.dir/src/client.cpp.i"
-	cd /home/thattori/capstone/F1Tenth/velma/build/lidar && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/thattori/capstone/F1Tenth/velma/src/lidar/src/client.cpp > CMakeFiles/rplidarNodeClient.dir/src/client.cpp.i
+	cd /home/thattori/capstone/velma/build/lidar && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/thattori/capstone/velma/src/lidar/src/client.cpp > CMakeFiles/rplidarNodeClient.dir/src/client.cpp.i
 
 lidar/CMakeFiles/rplidarNodeClient.dir/src/client.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rplidarNodeClient.dir/src/client.cpp.s"
-	cd /home/thattori/capstone/F1Tenth/velma/build/lidar && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/thattori/capstone/F1Tenth/velma/src/lidar/src/client.cpp -o CMakeFiles/rplidarNodeClient.dir/src/client.cpp.s
+	cd /home/thattori/capstone/velma/build/lidar && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/thattori/capstone/velma/src/lidar/src/client.cpp -o CMakeFiles/rplidarNodeClient.dir/src/client.cpp.s
 
 # Object files for target rplidarNodeClient
 rplidarNodeClient_OBJECTS = \
@@ -77,39 +77,39 @@ rplidarNodeClient_OBJECTS = \
 # External object files for target rplidarNodeClient
 rplidarNodeClient_EXTERNAL_OBJECTS =
 
-/home/thattori/capstone/F1Tenth/velma/devel/lib/rplidar_ros/rplidarNodeClient: lidar/CMakeFiles/rplidarNodeClient.dir/src/client.cpp.o
-/home/thattori/capstone/F1Tenth/velma/devel/lib/rplidar_ros/rplidarNodeClient: lidar/CMakeFiles/rplidarNodeClient.dir/build.make
-/home/thattori/capstone/F1Tenth/velma/devel/lib/rplidar_ros/rplidarNodeClient: /opt/ros/noetic/lib/libroscpp.so
-/home/thattori/capstone/F1Tenth/velma/devel/lib/rplidar_ros/rplidarNodeClient: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/thattori/capstone/F1Tenth/velma/devel/lib/rplidar_ros/rplidarNodeClient: /usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.71.0
-/home/thattori/capstone/F1Tenth/velma/devel/lib/rplidar_ros/rplidarNodeClient: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0
-/home/thattori/capstone/F1Tenth/velma/devel/lib/rplidar_ros/rplidarNodeClient: /opt/ros/noetic/lib/libxmlrpcpp.so
-/home/thattori/capstone/F1Tenth/velma/devel/lib/rplidar_ros/rplidarNodeClient: /opt/ros/noetic/lib/librosconsole.so
-/home/thattori/capstone/F1Tenth/velma/devel/lib/rplidar_ros/rplidarNodeClient: /opt/ros/noetic/lib/librosconsole_log4cxx.so
-/home/thattori/capstone/F1Tenth/velma/devel/lib/rplidar_ros/rplidarNodeClient: /opt/ros/noetic/lib/librosconsole_backend_interface.so
-/home/thattori/capstone/F1Tenth/velma/devel/lib/rplidar_ros/rplidarNodeClient: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
-/home/thattori/capstone/F1Tenth/velma/devel/lib/rplidar_ros/rplidarNodeClient: /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.71.0
-/home/thattori/capstone/F1Tenth/velma/devel/lib/rplidar_ros/rplidarNodeClient: /opt/ros/noetic/lib/libroscpp_serialization.so
-/home/thattori/capstone/F1Tenth/velma/devel/lib/rplidar_ros/rplidarNodeClient: /opt/ros/noetic/lib/librostime.so
-/home/thattori/capstone/F1Tenth/velma/devel/lib/rplidar_ros/rplidarNodeClient: /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0
-/home/thattori/capstone/F1Tenth/velma/devel/lib/rplidar_ros/rplidarNodeClient: /opt/ros/noetic/lib/libcpp_common.so
-/home/thattori/capstone/F1Tenth/velma/devel/lib/rplidar_ros/rplidarNodeClient: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
-/home/thattori/capstone/F1Tenth/velma/devel/lib/rplidar_ros/rplidarNodeClient: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
-/home/thattori/capstone/F1Tenth/velma/devel/lib/rplidar_ros/rplidarNodeClient: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
-/home/thattori/capstone/F1Tenth/velma/devel/lib/rplidar_ros/rplidarNodeClient: lidar/CMakeFiles/rplidarNodeClient.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/thattori/capstone/F1Tenth/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/thattori/capstone/F1Tenth/velma/devel/lib/rplidar_ros/rplidarNodeClient"
-	cd /home/thattori/capstone/F1Tenth/velma/build/lidar && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rplidarNodeClient.dir/link.txt --verbose=$(VERBOSE)
+/home/thattori/capstone/velma/devel/lib/rplidar_ros/rplidarNodeClient: lidar/CMakeFiles/rplidarNodeClient.dir/src/client.cpp.o
+/home/thattori/capstone/velma/devel/lib/rplidar_ros/rplidarNodeClient: lidar/CMakeFiles/rplidarNodeClient.dir/build.make
+/home/thattori/capstone/velma/devel/lib/rplidar_ros/rplidarNodeClient: /opt/ros/noetic/lib/libroscpp.so
+/home/thattori/capstone/velma/devel/lib/rplidar_ros/rplidarNodeClient: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/thattori/capstone/velma/devel/lib/rplidar_ros/rplidarNodeClient: /usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.71.0
+/home/thattori/capstone/velma/devel/lib/rplidar_ros/rplidarNodeClient: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0
+/home/thattori/capstone/velma/devel/lib/rplidar_ros/rplidarNodeClient: /opt/ros/noetic/lib/libxmlrpcpp.so
+/home/thattori/capstone/velma/devel/lib/rplidar_ros/rplidarNodeClient: /opt/ros/noetic/lib/librosconsole.so
+/home/thattori/capstone/velma/devel/lib/rplidar_ros/rplidarNodeClient: /opt/ros/noetic/lib/librosconsole_log4cxx.so
+/home/thattori/capstone/velma/devel/lib/rplidar_ros/rplidarNodeClient: /opt/ros/noetic/lib/librosconsole_backend_interface.so
+/home/thattori/capstone/velma/devel/lib/rplidar_ros/rplidarNodeClient: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+/home/thattori/capstone/velma/devel/lib/rplidar_ros/rplidarNodeClient: /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.71.0
+/home/thattori/capstone/velma/devel/lib/rplidar_ros/rplidarNodeClient: /opt/ros/noetic/lib/libroscpp_serialization.so
+/home/thattori/capstone/velma/devel/lib/rplidar_ros/rplidarNodeClient: /opt/ros/noetic/lib/librostime.so
+/home/thattori/capstone/velma/devel/lib/rplidar_ros/rplidarNodeClient: /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0
+/home/thattori/capstone/velma/devel/lib/rplidar_ros/rplidarNodeClient: /opt/ros/noetic/lib/libcpp_common.so
+/home/thattori/capstone/velma/devel/lib/rplidar_ros/rplidarNodeClient: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
+/home/thattori/capstone/velma/devel/lib/rplidar_ros/rplidarNodeClient: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
+/home/thattori/capstone/velma/devel/lib/rplidar_ros/rplidarNodeClient: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
+/home/thattori/capstone/velma/devel/lib/rplidar_ros/rplidarNodeClient: lidar/CMakeFiles/rplidarNodeClient.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/thattori/capstone/velma/devel/lib/rplidar_ros/rplidarNodeClient"
+	cd /home/thattori/capstone/velma/build/lidar && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rplidarNodeClient.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-lidar/CMakeFiles/rplidarNodeClient.dir/build: /home/thattori/capstone/F1Tenth/velma/devel/lib/rplidar_ros/rplidarNodeClient
+lidar/CMakeFiles/rplidarNodeClient.dir/build: /home/thattori/capstone/velma/devel/lib/rplidar_ros/rplidarNodeClient
 
 .PHONY : lidar/CMakeFiles/rplidarNodeClient.dir/build
 
 lidar/CMakeFiles/rplidarNodeClient.dir/clean:
-	cd /home/thattori/capstone/F1Tenth/velma/build/lidar && $(CMAKE_COMMAND) -P CMakeFiles/rplidarNodeClient.dir/cmake_clean.cmake
+	cd /home/thattori/capstone/velma/build/lidar && $(CMAKE_COMMAND) -P CMakeFiles/rplidarNodeClient.dir/cmake_clean.cmake
 .PHONY : lidar/CMakeFiles/rplidarNodeClient.dir/clean
 
 lidar/CMakeFiles/rplidarNodeClient.dir/depend:
-	cd /home/thattori/capstone/F1Tenth/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/thattori/capstone/F1Tenth/velma/src /home/thattori/capstone/F1Tenth/velma/src/lidar /home/thattori/capstone/F1Tenth/velma/build /home/thattori/capstone/F1Tenth/velma/build/lidar /home/thattori/capstone/F1Tenth/velma/build/lidar/CMakeFiles/rplidarNodeClient.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/thattori/capstone/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/thattori/capstone/velma/src /home/thattori/capstone/velma/src/lidar /home/thattori/capstone/velma/build /home/thattori/capstone/velma/build/lidar /home/thattori/capstone/velma/build/lidar/CMakeFiles/rplidarNodeClient.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : lidar/CMakeFiles/rplidarNodeClient.dir/depend
 

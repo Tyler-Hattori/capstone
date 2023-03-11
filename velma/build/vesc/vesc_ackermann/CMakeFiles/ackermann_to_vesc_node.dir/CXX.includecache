@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/thattori/capstone/F1Tenth/velma/src/vesc/vesc_ackermann/include/vesc_ackermann/ackermann_to_vesc.h
+/home/thattori/capstone/velma/src/vesc/vesc_ackermann/include/vesc_ackermann/ackermann_to_vesc.h
 ros/ros.h
 -
 ackermann_msgs/AckermannDriveStamped.h
 -
 
-/home/thattori/capstone/F1Tenth/velma/src/vesc/vesc_ackermann/src/ackermann_to_vesc.cpp
+/home/thattori/capstone/velma/src/vesc/vesc_ackermann/src/ackermann_to_vesc.cpp
 vesc_ackermann/ackermann_to_vesc.h
-/home/thattori/capstone/F1Tenth/velma/src/vesc/vesc_ackermann/src/vesc_ackermann/ackermann_to_vesc.h
+/home/thattori/capstone/velma/src/vesc/vesc_ackermann/src/vesc_ackermann/ackermann_to_vesc.h
 cmath
 -
 sstream
@@ -22,11 +22,11 @@ sstream
 std_msgs/Float64.h
 -
 
-/home/thattori/capstone/F1Tenth/velma/src/vesc/vesc_ackermann/src/ackermann_to_vesc_node.cpp
+/home/thattori/capstone/velma/src/vesc/vesc_ackermann/src/ackermann_to_vesc_node.cpp
 ros/ros.h
 -
 vesc_ackermann/ackermann_to_vesc.h
-/home/thattori/capstone/F1Tenth/velma/src/vesc/vesc_ackermann/src/vesc_ackermann/ackermann_to_vesc.h
+/home/thattori/capstone/velma/src/vesc/vesc_ackermann/src/vesc_ackermann/ackermann_to_vesc.h
 
 /opt/ros/noetic/include/ackermann_msgs/AckermannDrive.h
 string

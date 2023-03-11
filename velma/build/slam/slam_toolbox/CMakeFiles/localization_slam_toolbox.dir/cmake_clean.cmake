@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/thattori/capstone/F1Tenth/velma/devel/lib/liblocalization_slam_toolbox.pdb"
-  "/home/thattori/capstone/F1Tenth/velma/devel/lib/liblocalization_slam_toolbox.so"
+  "/home/thattori/capstone/velma/devel/lib/liblocalization_slam_toolbox.pdb"
+  "/home/thattori/capstone/velma/devel/lib/liblocalization_slam_toolbox.so"
   "CMakeFiles/localization_slam_toolbox.dir/src/slam_toolbox_localization.cpp.o"
 )
 

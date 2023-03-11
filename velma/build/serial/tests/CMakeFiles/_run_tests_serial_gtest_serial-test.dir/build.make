@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/thattori/capstone/F1Tenth/velma/src
+CMAKE_SOURCE_DIR = /home/thattori/capstone/velma/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/thattori/capstone/F1Tenth/velma/build
+CMAKE_BINARY_DIR = /home/thattori/capstone/velma/build
 
 # Utility rule file for _run_tests_serial_gtest_serial-test.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/thattori/capstone/F1Tenth/velma/build
 include serial/tests/CMakeFiles/_run_tests_serial_gtest_serial-test.dir/progress.make
 
 serial/tests/CMakeFiles/_run_tests_serial_gtest_serial-test:
-	cd /home/thattori/capstone/F1Tenth/velma/build/serial/tests && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/catkin/cmake/test/run_tests.py /home/thattori/capstone/F1Tenth/velma/build/test_results/serial/gtest-serial-test.xml "/home/thattori/capstone/F1Tenth/velma/devel/lib/serial/serial-test --gtest_output=xml:/home/thattori/capstone/F1Tenth/velma/build/test_results/serial/gtest-serial-test.xml"
+	cd /home/thattori/capstone/velma/build/serial/tests && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/catkin/cmake/test/run_tests.py /home/thattori/capstone/velma/build/test_results/serial/gtest-serial-test.xml "/home/thattori/capstone/velma/devel/lib/serial/serial-test --gtest_output=xml:/home/thattori/capstone/velma/build/test_results/serial/gtest-serial-test.xml"
 
 _run_tests_serial_gtest_serial-test: serial/tests/CMakeFiles/_run_tests_serial_gtest_serial-test
 _run_tests_serial_gtest_serial-test: serial/tests/CMakeFiles/_run_tests_serial_gtest_serial-test.dir/build.make
@@ -67,10 +67,10 @@ serial/tests/CMakeFiles/_run_tests_serial_gtest_serial-test.dir/build: _run_test
 .PHONY : serial/tests/CMakeFiles/_run_tests_serial_gtest_serial-test.dir/build
 
 serial/tests/CMakeFiles/_run_tests_serial_gtest_serial-test.dir/clean:
-	cd /home/thattori/capstone/F1Tenth/velma/build/serial/tests && $(CMAKE_COMMAND) -P CMakeFiles/_run_tests_serial_gtest_serial-test.dir/cmake_clean.cmake
+	cd /home/thattori/capstone/velma/build/serial/tests && $(CMAKE_COMMAND) -P CMakeFiles/_run_tests_serial_gtest_serial-test.dir/cmake_clean.cmake
 .PHONY : serial/tests/CMakeFiles/_run_tests_serial_gtest_serial-test.dir/clean
 
 serial/tests/CMakeFiles/_run_tests_serial_gtest_serial-test.dir/depend:
-	cd /home/thattori/capstone/F1Tenth/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/thattori/capstone/F1Tenth/velma/src /home/thattori/capstone/F1Tenth/velma/src/serial/tests /home/thattori/capstone/F1Tenth/velma/build /home/thattori/capstone/F1Tenth/velma/build/serial/tests /home/thattori/capstone/F1Tenth/velma/build/serial/tests/CMakeFiles/_run_tests_serial_gtest_serial-test.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/thattori/capstone/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/thattori/capstone/velma/src /home/thattori/capstone/velma/src/serial/tests /home/thattori/capstone/velma/build /home/thattori/capstone/velma/build/serial/tests /home/thattori/capstone/velma/build/serial/tests/CMakeFiles/_run_tests_serial_gtest_serial-test.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : serial/tests/CMakeFiles/_run_tests_serial_gtest_serial-test.dir/depend
 

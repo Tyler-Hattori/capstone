@@ -1,8 +1,8 @@
-# Install script for directory: /home/thattori/capstone/F1Tenth/velma/src/twist_to_ackermann
+# Install script for directory: /home/thattori/capstone/velma/src/twist_to_ackermann
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/thattori/capstone/F1Tenth/velma/install")
+  set(CMAKE_INSTALL_PREFIX "/home/thattori/capstone/velma/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,28 +38,28 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/thattori/capstone/F1Tenth/velma/build/twist_to_ackermann/catkin_generated/safe_execute_install.cmake")
+  include("/home/thattori/capstone/velma/build/twist_to_ackermann/catkin_generated/safe_execute_install.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/thattori/capstone/F1Tenth/velma/build/twist_to_ackermann/catkin_generated/installspace/twist_to_ackermann.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/thattori/capstone/velma/build/twist_to_ackermann/catkin_generated/installspace/twist_to_ackermann.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/twist_to_ackermann/cmake" TYPE FILE FILES
-    "/home/thattori/capstone/F1Tenth/velma/build/twist_to_ackermann/catkin_generated/installspace/twist_to_ackermannConfig.cmake"
-    "/home/thattori/capstone/F1Tenth/velma/build/twist_to_ackermann/catkin_generated/installspace/twist_to_ackermannConfig-version.cmake"
+    "/home/thattori/capstone/velma/build/twist_to_ackermann/catkin_generated/installspace/twist_to_ackermannConfig.cmake"
+    "/home/thattori/capstone/velma/build/twist_to_ackermann/catkin_generated/installspace/twist_to_ackermannConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/twist_to_ackermann" TYPE FILE FILES "/home/thattori/capstone/F1Tenth/velma/src/twist_to_ackermann/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/twist_to_ackermann" TYPE FILE FILES "/home/thattori/capstone/velma/src/twist_to_ackermann/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/twist_to_ackermann" TYPE PROGRAM FILES
-    "/home/thattori/capstone/F1Tenth/velma/src/twist_to_ackermann/scripts/*"
-    "/home/thattori/capstone/F1Tenth/velma/src/twist_to_ackermann/nodes/*"
+    "/home/thattori/capstone/velma/src/twist_to_ackermann/scripts/*"
+    "/home/thattori/capstone/velma/src/twist_to_ackermann/nodes/*"
     )
 endif()
 

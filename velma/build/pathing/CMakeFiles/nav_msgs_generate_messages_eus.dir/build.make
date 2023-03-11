@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/thattori/capstone/F1Tenth/velma/src
+CMAKE_SOURCE_DIR = /home/thattori/capstone/velma/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/thattori/capstone/F1Tenth/velma/build
+CMAKE_BINARY_DIR = /home/thattori/capstone/velma/build
 
 # Utility rule file for nav_msgs_generate_messages_eus.
 
@@ -63,10 +63,10 @@ pathing/CMakeFiles/nav_msgs_generate_messages_eus.dir/build: nav_msgs_generate_m
 .PHONY : pathing/CMakeFiles/nav_msgs_generate_messages_eus.dir/build
 
 pathing/CMakeFiles/nav_msgs_generate_messages_eus.dir/clean:
-	cd /home/thattori/capstone/F1Tenth/velma/build/pathing && $(CMAKE_COMMAND) -P CMakeFiles/nav_msgs_generate_messages_eus.dir/cmake_clean.cmake
+	cd /home/thattori/capstone/velma/build/pathing && $(CMAKE_COMMAND) -P CMakeFiles/nav_msgs_generate_messages_eus.dir/cmake_clean.cmake
 .PHONY : pathing/CMakeFiles/nav_msgs_generate_messages_eus.dir/clean
 
 pathing/CMakeFiles/nav_msgs_generate_messages_eus.dir/depend:
-	cd /home/thattori/capstone/F1Tenth/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/thattori/capstone/F1Tenth/velma/src /home/thattori/capstone/F1Tenth/velma/src/pathing /home/thattori/capstone/F1Tenth/velma/build /home/thattori/capstone/F1Tenth/velma/build/pathing /home/thattori/capstone/F1Tenth/velma/build/pathing/CMakeFiles/nav_msgs_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/thattori/capstone/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/thattori/capstone/velma/src /home/thattori/capstone/velma/src/pathing /home/thattori/capstone/velma/build /home/thattori/capstone/velma/build/pathing /home/thattori/capstone/velma/build/pathing/CMakeFiles/nav_msgs_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : pathing/CMakeFiles/nav_msgs_generate_messages_eus.dir/depend
 

@@ -1,4 +1,4 @@
-prefix=/home/thattori/capstone/F1Tenth/velma/install
+prefix=/home/thattori/capstone/velma/install
 
 Name: twist_to_ackermann
 Description: Description of twist_to_ackermann

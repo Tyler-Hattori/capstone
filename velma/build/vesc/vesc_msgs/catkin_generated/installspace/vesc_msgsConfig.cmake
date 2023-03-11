@@ -67,14 +67,14 @@ set(vesc_msgs_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(vesc_msgs_SOURCE_PREFIX /home/thattori/capstone/F1Tenth/velma/src/vesc/vesc_msgs)
-  set(vesc_msgs_DEVEL_PREFIX /home/thattori/capstone/F1Tenth/velma/devel)
+  set(vesc_msgs_SOURCE_PREFIX /home/thattori/capstone/velma/src/vesc/vesc_msgs)
+  set(vesc_msgs_DEVEL_PREFIX /home/thattori/capstone/velma/devel)
   set(vesc_msgs_INSTALL_PREFIX "")
   set(vesc_msgs_PREFIX ${vesc_msgs_DEVEL_PREFIX})
 else()
   set(vesc_msgs_SOURCE_PREFIX "")
   set(vesc_msgs_DEVEL_PREFIX "")
-  set(vesc_msgs_INSTALL_PREFIX /home/thattori/capstone/F1Tenth/velma/install)
+  set(vesc_msgs_INSTALL_PREFIX /home/thattori/capstone/velma/install)
   set(vesc_msgs_PREFIX ${vesc_msgs_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/thattori/capstone/F1Tenth/velma/install/lib;/home/thattori/F1Tenth/velma/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/thattori/capstone/velma/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

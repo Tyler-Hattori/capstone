@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/thattori/capstone/F1Tenth/velma/devel/lib/libpathing.pdb"
-  "/home/thattori/capstone/F1Tenth/velma/devel/lib/libpathing.so"
+  "/home/thattori/capstone/velma/devel/lib/libpathing.pdb"
+  "/home/thattori/capstone/velma/devel/lib/libpathing.so"
   "CMakeFiles/pathing.dir/src/distance_transform.cpp.o"
   "CMakeFiles/pathing.dir/src/ks_kinematics.cpp.o"
   "CMakeFiles/pathing.dir/src/precompute.cpp.o"

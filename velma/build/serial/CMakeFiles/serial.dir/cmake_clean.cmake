@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/thattori/capstone/F1Tenth/velma/devel/lib/libserial.pdb"
-  "/home/thattori/capstone/F1Tenth/velma/devel/lib/libserial.so"
+  "/home/thattori/capstone/velma/devel/lib/libserial.pdb"
+  "/home/thattori/capstone/velma/devel/lib/libserial.so"
   "CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.o"
   "CMakeFiles/serial.dir/src/impl/unix.cc.o"
   "CMakeFiles/serial.dir/src/serial.cc.o"

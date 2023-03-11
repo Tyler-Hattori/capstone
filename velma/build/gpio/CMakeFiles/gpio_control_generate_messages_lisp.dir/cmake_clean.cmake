@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/thattori/capstone/F1Tenth/velma/devel/share/common-lisp/ros/gpio_control/msg/InputState.lisp"
-  "/home/thattori/capstone/F1Tenth/velma/devel/share/common-lisp/ros/gpio_control/msg/OutputState.lisp"
+  "/home/thattori/capstone/velma/devel/share/common-lisp/ros/gpio_control/msg/InputState.lisp"
+  "/home/thattori/capstone/velma/devel/share/common-lisp/ros/gpio_control/msg/OutputState.lisp"
   "CMakeFiles/gpio_control_generate_messages_lisp"
 )
 

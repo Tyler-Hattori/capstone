@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/thattori/capstone/F1Tenth/velma/src/pathing/src/distance_transform.cpp" "/home/thattori/capstone/F1Tenth/velma/build/pathing/CMakeFiles/pathing.dir/src/distance_transform.cpp.o"
-  "/home/thattori/capstone/F1Tenth/velma/src/pathing/src/ks_kinematics.cpp" "/home/thattori/capstone/F1Tenth/velma/build/pathing/CMakeFiles/pathing.dir/src/ks_kinematics.cpp.o"
-  "/home/thattori/capstone/F1Tenth/velma/src/pathing/src/precompute.cpp" "/home/thattori/capstone/F1Tenth/velma/build/pathing/CMakeFiles/pathing.dir/src/precompute.cpp.o"
-  "/home/thattori/capstone/F1Tenth/velma/src/pathing/src/scan_simulator_2d.cpp" "/home/thattori/capstone/F1Tenth/velma/build/pathing/CMakeFiles/pathing.dir/src/scan_simulator_2d.cpp.o"
-  "/home/thattori/capstone/F1Tenth/velma/src/pathing/src/st_kinematics.cpp" "/home/thattori/capstone/F1Tenth/velma/build/pathing/CMakeFiles/pathing.dir/src/st_kinematics.cpp.o"
+  "/home/thattori/capstone/velma/src/pathing/src/distance_transform.cpp" "/home/thattori/capstone/velma/build/pathing/CMakeFiles/pathing.dir/src/distance_transform.cpp.o"
+  "/home/thattori/capstone/velma/src/pathing/src/ks_kinematics.cpp" "/home/thattori/capstone/velma/build/pathing/CMakeFiles/pathing.dir/src/ks_kinematics.cpp.o"
+  "/home/thattori/capstone/velma/src/pathing/src/precompute.cpp" "/home/thattori/capstone/velma/build/pathing/CMakeFiles/pathing.dir/src/precompute.cpp.o"
+  "/home/thattori/capstone/velma/src/pathing/src/scan_simulator_2d.cpp" "/home/thattori/capstone/velma/build/pathing/CMakeFiles/pathing.dir/src/scan_simulator_2d.cpp.o"
+  "/home/thattori/capstone/velma/src/pathing/src/st_kinematics.cpp" "/home/thattori/capstone/velma/build/pathing/CMakeFiles/pathing.dir/src/st_kinematics.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -22,8 +22,8 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/thattori/capstone/F1Tenth/velma/devel/include"
-  "/home/thattori/capstone/F1Tenth/velma/src/pathing/include"
+  "/home/thattori/capstone/velma/devel/include"
+  "/home/thattori/capstone/velma/src/pathing/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/usr/include/eigen3"

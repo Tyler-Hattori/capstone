@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/thattori/capstone/F1Tenth/velma/src
+CMAKE_SOURCE_DIR = /home/thattori/capstone/velma/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/thattori/capstone/F1Tenth/velma/build
+CMAKE_BINARY_DIR = /home/thattori/capstone/velma/build
 
 # Utility rule file for geometry_msgs_generate_messages_py.
 
@@ -63,10 +63,10 @@ slam/slam_toolbox_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/build: 
 .PHONY : slam/slam_toolbox_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
 
 slam/slam_toolbox_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean:
-	cd /home/thattori/capstone/F1Tenth/velma/build/slam/slam_toolbox_msgs && $(CMAKE_COMMAND) -P CMakeFiles/geometry_msgs_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/thattori/capstone/velma/build/slam/slam_toolbox_msgs && $(CMAKE_COMMAND) -P CMakeFiles/geometry_msgs_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : slam/slam_toolbox_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
 
 slam/slam_toolbox_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/depend:
-	cd /home/thattori/capstone/F1Tenth/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/thattori/capstone/F1Tenth/velma/src /home/thattori/capstone/F1Tenth/velma/src/slam/slam_toolbox_msgs /home/thattori/capstone/F1Tenth/velma/build /home/thattori/capstone/F1Tenth/velma/build/slam/slam_toolbox_msgs /home/thattori/capstone/F1Tenth/velma/build/slam/slam_toolbox_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/thattori/capstone/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/thattori/capstone/velma/src /home/thattori/capstone/velma/src/slam/slam_toolbox_msgs /home/thattori/capstone/velma/build /home/thattori/capstone/velma/build/slam/slam_toolbox_msgs /home/thattori/capstone/velma/build/slam/slam_toolbox_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : slam/slam_toolbox_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/depend
 

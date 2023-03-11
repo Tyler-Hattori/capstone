@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/thattori/capstone/F1Tenth/velma/src/serial/examples/serial_example.cc
+/home/thattori/capstone/velma/src/serial/examples/serial_example.cc
 string
 -
 iostream
@@ -18,9 +18,9 @@ windows.h
 unistd.h
 -
 serial/serial.h
-/home/thattori/capstone/F1Tenth/velma/src/serial/examples/serial/serial.h
+/home/thattori/capstone/velma/src/serial/examples/serial/serial.h
 
-/home/thattori/capstone/F1Tenth/velma/src/serial/include/serial/serial.h
+/home/thattori/capstone/velma/src/serial/include/serial/serial.h
 limits
 -
 vector
@@ -38,7 +38,7 @@ stdexcept
 serial/v8stdint.h
 -
 
-/home/thattori/capstone/F1Tenth/velma/src/serial/include/serial/v8stdint.h
+/home/thattori/capstone/velma/src/serial/include/serial/v8stdint.h
 stddef.h
 -
 stdio.h

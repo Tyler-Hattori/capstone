@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/thattori/capstone/F1Tenth/velma/src/pathing/node/costmaps/frontier_costmap.cpp
+/home/thattori/capstone/velma/src/pathing/node/costmaps/frontier_costmap.cpp
 ros/ros.h
 -
 nav_msgs/OccupancyGrid.h
@@ -14,7 +14,7 @@ nav_msgs/OccupancyGrid.h
 sensor_msgs/LaserScan.h
 -
 math.h
-/home/thattori/capstone/F1Tenth/velma/src/pathing/node/costmaps/math.h
+/home/thattori/capstone/velma/src/pathing/node/costmaps/math.h
 
 /opt/ros/noetic/include/geometry_msgs/Point.h
 string

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/thattori/capstone/F1Tenth/velma/devel/share/roseus/ros/pathing/manifest.l"
-  "/home/thattori/capstone/F1Tenth/velma/devel/share/roseus/ros/pathing/msg/gpio.l"
+  "/home/thattori/capstone/velma/devel/share/roseus/ros/pathing/manifest.l"
+  "/home/thattori/capstone/velma/devel/share/roseus/ros/pathing/msg/gpio.l"
   "CMakeFiles/pathing_generate_messages_eus"
 )
 

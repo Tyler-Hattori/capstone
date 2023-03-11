@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/thattori/capstone/F1Tenth/velma/devel/lib/rplidar_ros/rplidarNodeClient"
-  "/home/thattori/capstone/F1Tenth/velma/devel/lib/rplidar_ros/rplidarNodeClient.pdb"
+  "/home/thattori/capstone/velma/devel/lib/rplidar_ros/rplidarNodeClient"
+  "/home/thattori/capstone/velma/devel/lib/rplidar_ros/rplidarNodeClient.pdb"
   "CMakeFiles/rplidarNodeClient.dir/src/client.cpp.o"
 )
 

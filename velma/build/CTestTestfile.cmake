@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/thattori/capstone/F1Tenth/velma/src
-# Build directory: /home/thattori/capstone/F1Tenth/velma/build
+# Source directory: /home/thattori/capstone/velma/src
+# Build directory: /home/thattori/capstone/velma/build
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

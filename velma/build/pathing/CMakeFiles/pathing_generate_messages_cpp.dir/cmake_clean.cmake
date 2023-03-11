@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/thattori/capstone/F1Tenth/velma/devel/include/pathing/gpio.h"
+  "/home/thattori/capstone/velma/devel/include/pathing/gpio.h"
   "CMakeFiles/pathing_generate_messages_cpp"
 )
 

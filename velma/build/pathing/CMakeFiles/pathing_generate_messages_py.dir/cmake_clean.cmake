@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/pathing/msg/__init__.py"
-  "/home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/pathing/msg/_gpio.py"
+  "/home/thattori/capstone/velma/devel/lib/python3/dist-packages/pathing/msg/__init__.py"
+  "/home/thattori/capstone/velma/devel/lib/python3/dist-packages/pathing/msg/_gpio.py"
   "CMakeFiles/pathing_generate_messages_py"
 )
 

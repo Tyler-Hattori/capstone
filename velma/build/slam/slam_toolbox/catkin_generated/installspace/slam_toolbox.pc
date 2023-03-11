@@ -1,4 +1,4 @@
-prefix=/home/thattori/capstone/F1Tenth/velma/install
+prefix=/home/thattori/capstone/velma/install
 
 Name: slam_toolbox
 Description: Description of slam_toolbox

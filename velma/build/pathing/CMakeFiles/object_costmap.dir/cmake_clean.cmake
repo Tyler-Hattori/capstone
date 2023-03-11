@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/thattori/capstone/F1Tenth/velma/devel/lib/pathing/object_costmap"
-  "/home/thattori/capstone/F1Tenth/velma/devel/lib/pathing/object_costmap.pdb"
+  "/home/thattori/capstone/velma/devel/lib/pathing/object_costmap"
+  "/home/thattori/capstone/velma/devel/lib/pathing/object_costmap.pdb"
   "CMakeFiles/object_costmap.dir/node/costmaps/object_costmap.cpp.o"
 )
 

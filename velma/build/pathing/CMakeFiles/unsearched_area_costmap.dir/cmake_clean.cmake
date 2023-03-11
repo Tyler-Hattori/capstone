@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/thattori/capstone/F1Tenth/velma/devel/lib/pathing/unsearched_area_costmap"
-  "/home/thattori/capstone/F1Tenth/velma/devel/lib/pathing/unsearched_area_costmap.pdb"
+  "/home/thattori/capstone/velma/devel/lib/pathing/unsearched_area_costmap"
+  "/home/thattori/capstone/velma/devel/lib/pathing/unsearched_area_costmap.pdb"
   "CMakeFiles/unsearched_area_costmap.dir/node/costmaps/unsearched_area_costmap.cpp.o"
 )
 

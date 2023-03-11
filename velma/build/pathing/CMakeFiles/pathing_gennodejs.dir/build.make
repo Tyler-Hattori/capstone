@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/thattori/capstone/F1Tenth/velma/src
+CMAKE_SOURCE_DIR = /home/thattori/capstone/velma/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/thattori/capstone/F1Tenth/velma/build
+CMAKE_BINARY_DIR = /home/thattori/capstone/velma/build
 
 # Utility rule file for pathing_gennodejs.
 
@@ -63,10 +63,10 @@ pathing/CMakeFiles/pathing_gennodejs.dir/build: pathing_gennodejs
 .PHONY : pathing/CMakeFiles/pathing_gennodejs.dir/build
 
 pathing/CMakeFiles/pathing_gennodejs.dir/clean:
-	cd /home/thattori/capstone/F1Tenth/velma/build/pathing && $(CMAKE_COMMAND) -P CMakeFiles/pathing_gennodejs.dir/cmake_clean.cmake
+	cd /home/thattori/capstone/velma/build/pathing && $(CMAKE_COMMAND) -P CMakeFiles/pathing_gennodejs.dir/cmake_clean.cmake
 .PHONY : pathing/CMakeFiles/pathing_gennodejs.dir/clean
 
 pathing/CMakeFiles/pathing_gennodejs.dir/depend:
-	cd /home/thattori/capstone/F1Tenth/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/thattori/capstone/F1Tenth/velma/src /home/thattori/capstone/F1Tenth/velma/src/pathing /home/thattori/capstone/F1Tenth/velma/build /home/thattori/capstone/F1Tenth/velma/build/pathing /home/thattori/capstone/F1Tenth/velma/build/pathing/CMakeFiles/pathing_gennodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/thattori/capstone/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/thattori/capstone/velma/src /home/thattori/capstone/velma/src/pathing /home/thattori/capstone/velma/build /home/thattori/capstone/velma/build/pathing /home/thattori/capstone/velma/build/pathing/CMakeFiles/pathing_gennodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : pathing/CMakeFiles/pathing_gennodejs.dir/depend
 

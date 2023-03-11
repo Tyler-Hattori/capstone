@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/vesc_msgs/msg/_VescState.py"
-  "/home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/vesc_msgs/msg/_VescStateStamped.py"
-  "/home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/vesc_msgs/msg/__init__.py"
+  "/home/thattori/capstone/velma/devel/lib/python3/dist-packages/vesc_msgs/msg/_VescState.py"
+  "/home/thattori/capstone/velma/devel/lib/python3/dist-packages/vesc_msgs/msg/_VescStateStamped.py"
+  "/home/thattori/capstone/velma/devel/lib/python3/dist-packages/vesc_msgs/msg/__init__.py"
   "CMakeFiles/vesc_msgs_generate_messages_py"
 )
 

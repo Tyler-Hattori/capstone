@@ -1,8 +1,8 @@
-prefix=/home/thattori/capstone/F1Tenth/velma/devel
+prefix=/home/thattori/capstone/velma/devel
 
 Name: vesc_msgs
 Description: Description of vesc_msgs
 Version: 0.0.1
-Cflags: -I/home/thattori/capstone/F1Tenth/velma/devel/include
+Cflags: -I/home/thattori/capstone/velma/devel/include
 Libs: -L${prefix}/lib 
 Requires: std_msgs message_runtime

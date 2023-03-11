@@ -1,4 +1,4 @@
-prefix=/home/thattori/capstone/F1Tenth/velma/devel
+prefix=/home/thattori/capstone/velma/devel
 
 Name: racecar
 Description: Description of racecar
