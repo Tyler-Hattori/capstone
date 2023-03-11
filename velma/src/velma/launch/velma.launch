@@ -19,10 +19,10 @@
       <include file="$(find pixy2_node)/launch/pixy2.launch"/>
   </group> -->
   
-  <group ns="controllers">
-    <!-- gpio -->
+  <!-- <group ns="controllers">
+     gpio 
       <include file="$(find gpio_control)/launch/gpio.launch"/>
-  </group>
+  </group> -->
     
   <group ns="mapping">
     <!-- slam -->
