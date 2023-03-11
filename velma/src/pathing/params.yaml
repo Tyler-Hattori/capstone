@@ -178,6 +178,13 @@ recall_web_topic: "/controllers/gpio_inputs/eighteen"
 explore_web_topic: "/controllers/gpio_inputs/seven"
 search_web_topic: "/controllers/gpio_inputs/twentynine"
 
+ease_costmap_topic: "/algorithms/navigation/ease_costmap"
+frontier_costmap_topic: "/algorithms/navigation/frontier_costmap"
+object_costmap_topic: "/algorithms/navigation/object_costmap"
+obstacle_costmap_topic: "/algorithms/navigation/obstacle_costmap"
+time_costmap_topic: "/algorithms/navigation/time_costmap"
+unsearched_area_costmap_topic: "/algorithms/navigation/unsearched_area_costmap"
+
 # name of file to write collision log to 
 collision_file: "collision_file"
 
