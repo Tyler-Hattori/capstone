@@ -14,10 +14,10 @@
     <arg name="map_name" value="$(arg map)"/>
   </include>
   
-  <group ns="sensors">
-    <!-- pixy -->
+  <!-- <group ns="sensors">
+     pixy 
       <include file="$(find pixy2_node)/launch/pixy2.launch"/>
-  </group>
+  </group> -->
   
   <group ns="controllers">
     <!-- gpio -->
