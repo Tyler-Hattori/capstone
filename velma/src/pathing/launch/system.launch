@@ -31,7 +31,7 @@
   </group>
 
   <group ns="pathing">
-    <include file="$(find pathing)/launch/mux.launch"/>
+    <include file="$(find pathing)/launch/pathing.launch"/>
   </group>
 
   <group ns="algorithms">
