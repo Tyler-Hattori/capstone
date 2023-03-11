@@ -2,4 +2,4 @@
 source_root_dir = '/home/thattori/capstone/velma/src'
 whitelisted_packages = ''.split(';') if '' != '' else []
 blacklisted_packages = ''.split(';') if '' != '' else []
-underlay_workspaces = '/opt/ros/noetic'.split(';') if '/opt/ros/noetic' != '' else []
+underlay_workspaces = '/home/thattori/capstone/velma/devel;/opt/ros/noetic'.split(';') if '/home/thattori/capstone/velma/devel;/opt/ros/noetic' != '' else []
