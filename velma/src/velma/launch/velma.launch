@@ -9,7 +9,7 @@
   </include>
   
   <!-- planner framework -->
-  <include file="$(find pathing)/launch/pathing.launch">
+  <include file="$(find pathing)/launch/system.launch">
     <arg name="simulate" value="$(arg simulate)"/>
     <arg name="map_name" value="$(arg map)"/>
   </include>
