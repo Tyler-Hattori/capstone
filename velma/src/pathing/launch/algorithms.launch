@@ -19,7 +19,7 @@
     <rosparam command="load" file="$(find pathing)/params.yaml"/>
   </node>
   
-  <group ns="navigation_algorithms">
+  <group ns="navigation">
     <!-- Launch the Recaller Node -->
     <node pkg="pathing" name="retracer" type="recall" output="screen">
       <rosparam command="load" file="$(find pathing)/params.yaml"/>
@@ -35,7 +35,7 @@
       <rosparam command="load" file="$(find pathing)/params.yaml"/>
     </node>
     
-    <group ns="costmap_generators">
+    <group ns="costmap_makers">
       <node pkg="pathing" name="remember_old_locations" type="time_costmap" output="screen">
         <rosparam command="load" file="$(find pathing)/params.yaml"/>
       </node>
