@@ -1,8 +1,8 @@
-# Install script for directory: /home/ubuntu/F1Tenth/velma/src/velma
+# Install script for directory: /home/thattori/capstone/F1Tenth/velma/src/velma
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/ubuntu/F1Tenth/velma/install")
+  set(CMAKE_INSTALL_PREFIX "/home/thattori/capstone/F1Tenth/velma/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ubuntu/F1Tenth/velma/build/velma/catkin_generated/installspace/velma.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/thattori/capstone/F1Tenth/velma/build/velma/catkin_generated/installspace/velma.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/velma/cmake" TYPE FILE FILES
-    "/home/ubuntu/F1Tenth/velma/build/velma/catkin_generated/installspace/velmaConfig.cmake"
-    "/home/ubuntu/F1Tenth/velma/build/velma/catkin_generated/installspace/velmaConfig-version.cmake"
+    "/home/thattori/capstone/F1Tenth/velma/build/velma/catkin_generated/installspace/velmaConfig.cmake"
+    "/home/thattori/capstone/F1Tenth/velma/build/velma/catkin_generated/installspace/velmaConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/velma" TYPE FILE FILES "/home/ubuntu/F1Tenth/velma/src/velma/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/velma" TYPE FILE FILES "/home/thattori/capstone/F1Tenth/velma/src/velma/package.xml")
 endif()
 

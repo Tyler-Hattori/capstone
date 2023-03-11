@@ -1,8 +1,8 @@
-# Install script for directory: /home/ubuntu/F1Tenth/velma/src/pixy/pixy2_node
+# Install script for directory: /home/thattori/capstone/F1Tenth/velma/src/pixy/pixy2_node
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/ubuntu/F1Tenth/velma/install")
+  set(CMAKE_INSTALL_PREFIX "/home/thattori/capstone/F1Tenth/velma/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ubuntu/F1Tenth/velma/build/pixy/pixy2_node/catkin_generated/installspace/pixy2_node.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/thattori/capstone/F1Tenth/velma/build/pixy/pixy2_node/catkin_generated/installspace/pixy2_node.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pixy2_node/cmake" TYPE FILE FILES
-    "/home/ubuntu/F1Tenth/velma/build/pixy/pixy2_node/catkin_generated/installspace/pixy2_nodeConfig.cmake"
-    "/home/ubuntu/F1Tenth/velma/build/pixy/pixy2_node/catkin_generated/installspace/pixy2_nodeConfig-version.cmake"
+    "/home/thattori/capstone/F1Tenth/velma/build/pixy/pixy2_node/catkin_generated/installspace/pixy2_nodeConfig.cmake"
+    "/home/thattori/capstone/F1Tenth/velma/build/pixy/pixy2_node/catkin_generated/installspace/pixy2_nodeConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pixy2_node" TYPE FILE FILES "/home/ubuntu/F1Tenth/velma/src/pixy/pixy2_node/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pixy2_node" TYPE FILE FILES "/home/thattori/capstone/F1Tenth/velma/src/pixy/pixy2_node/package.xml")
 endif()
 

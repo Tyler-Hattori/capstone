@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package format="2">
+  <!-- EDIT: Package name, version description -->
+  <name>twist_to_ackermann</name>
+  <version>0.0.0</version>
+  <description>The ros_python_pkg package</description>
+
+  <!-- EDIT: Maintainer and author's name and email -->
+  <maintainer email="daniel.kennedy.m1@gmail.com">Daniel Kennedy</maintainer>
+  <author email="daniel.kennedy.m1@gmail.com">Daniel Kennedy</author>
+
+  <!-- EDIT: License -->
+  <license>GNU General Public License Version 3</license>
+
+  <!-- Required for all packages -->
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <!-- Required for all Python packages -->
+  <depend>rospy</depend>
+
+  <!-- EDIT: Add/change depend tags to specify what this package depends on. -->
+  <!-- Valid keys are any Catkin packages in this workspace's src/ directory, -->
+  <!-- any installed ROS package, or any ROS-recognized system dependency -->
+  <!-- (see this link for the current list: https://github.com/ros/rosdistro/blob/master/rosdep/base.yaml)-->
+  <depend>std_msgs</depend>
+
+  <export>
+  </export>
+</package>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites tests="4" failures="0" disabled="0" errors="0" time="0.508" timestamp="2023-01-15T14:32:16" name="AllTests">
-  <testsuite name="SerialTests" tests="4" failures="0" disabled="0" errors="0" time="0.507" timestamp="2023-01-15T14:32:16">
-    <testcase name="readWorks" status="run" result="completed" time="0.003" timestamp="2023-01-15T14:32:16" classname="SerialTests" />
-    <testcase name="writeWorks" status="run" result="completed" time="0.001" timestamp="2023-01-15T14:32:16" classname="SerialTests" />
-    <testcase name="timeoutWorks" status="run" result="completed" time="0.251" timestamp="2023-01-15T14:32:16" classname="SerialTests" />
-    <testcase name="partialRead" status="run" result="completed" time="0.252" timestamp="2023-01-15T14:32:16" classname="SerialTests" />
+<testsuites tests="4" failures="0" disabled="0" errors="0" time="0.505" timestamp="2023-03-10T12:56:36" name="AllTests">
+  <testsuite name="SerialTests" tests="4" failures="0" disabled="0" errors="0" time="0.505" timestamp="2023-03-10T12:56:36">
+    <testcase name="readWorks" status="run" result="completed" time="0.002" timestamp="2023-03-10T12:56:36" classname="SerialTests" />
+    <testcase name="writeWorks" status="run" result="completed" time="0.001" timestamp="2023-03-10T12:56:36" classname="SerialTests" />
+    <testcase name="timeoutWorks" status="run" result="completed" time="0.251" timestamp="2023-03-10T12:56:36" classname="SerialTests" />
+    <testcase name="partialRead" status="run" result="completed" time="0.251" timestamp="2023-03-10T12:56:37" classname="SerialTests" />
   </testsuite>
 </testsuites>

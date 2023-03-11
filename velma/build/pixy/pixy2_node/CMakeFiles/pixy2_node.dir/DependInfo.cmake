@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ubuntu/F1Tenth/velma/src/pixy/pixy2_node/src/pixy2_node.cpp" "/home/ubuntu/F1Tenth/velma/build/pixy/pixy2_node/CMakeFiles/pixy2_node.dir/src/pixy2_node.cpp.o"
+  "/home/thattori/capstone/F1Tenth/velma/src/pixy/pixy2_node/src/pixy2_node.cpp" "/home/thattori/capstone/F1Tenth/velma/build/pixy/pixy2_node/CMakeFiles/pixy2_node.dir/src/pixy2_node.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,11 +17,11 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/ubuntu/F1Tenth/velma/src/pixy/pixy2_node/pixy2/src/common/inc"
-  "/home/ubuntu/F1Tenth/velma/src/pixy/pixy2_node/pixy2/src/host/arduino/libraries/Pixy2"
-  "/home/ubuntu/F1Tenth/velma/src/pixy/pixy2_node/pixy2/src/host/libpixyusb2/include"
+  "/home/thattori/capstone/F1Tenth/velma/src/pixy/pixy2_node/pixy2/src/common/inc"
+  "/home/thattori/capstone/F1Tenth/velma/src/pixy/pixy2_node/pixy2/src/host/arduino/libraries/Pixy2"
+  "/home/thattori/capstone/F1Tenth/velma/src/pixy/pixy2_node/pixy2/src/host/libpixyusb2/include"
   "/usr/include/libusb-1.0"
-  "/home/ubuntu/F1Tenth/velma/devel/include"
+  "/home/thattori/capstone/F1Tenth/velma/devel/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   )

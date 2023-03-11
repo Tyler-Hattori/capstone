@@ -2,11 +2,13 @@
 <launch>
   <arg name="racecar_version" default="racecar-v2" />
   <arg name="run_camera" default="false"/>
+  <arg name="simulate" />
 
 
-  <include file="$(find racecar)/launch/includes/$(arg racecar_version)-teleop.launch.xml">
+  <include file="$(find racecar)/launch/includes/$(arg racecar_version)-teleop.launch.xml" if="$(eval arg('simulate') == 'no' or arg('simulate') == 'map')">
     <arg name="racecar_version" value="$(arg racecar_version)" />
     <arg name="run_camera" value="$(arg run_camera)" />
+    <arg name="simulate" value="$(arg simulate)" />
   </include>
 
 </launch>

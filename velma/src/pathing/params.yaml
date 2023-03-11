@@ -1,0 +1,197 @@
+# The distance between the front and
+# rear axle of the racecar
+wheelbase: 0.3302 # meters
+# width of racecar
+width: 0.2032 # meters
+
+# steering delay
+buffer_length: 5
+
+# Limits on the speed and steering angle
+max_speed: 7. #  meters/second
+max_steering_angle: 0.4189 # radians
+max_accel: 7.51 # meters/second^2
+max_decel: 8.26 # meters/second^2
+max_steering_vel: 3.2 # radians/second
+friction_coeff: 0.523 # - (complete estimate)
+height_cg: 0.074 # m (roughly measured to be 3.25 in)
+l_cg2rear: 0.17145 # m (decently measured to be 6.75 in)
+l_cg2front: 0.15875 # m (decently measured to be 6.25 in)
+C_S_front: 4.718 #.79 # 1/rad ? (estimated weight/4)
+C_S_rear: 5.4562 #.79 # 1/rad ? (estimated weight/4)
+mass: 3.47 # kg (measured on car 'lidart')
+moment_inertia: .04712 # kg m^2 (estimated as a rectangle with width and height of car and evenly distributed mass, then shifted to account for center of mass location)
+
+# The rate at which the pose and the lidar publish
+update_lidar_rate: 0.001
+
+# Lidar simulation parameters
+scan_beams: 1080
+scan_field_of_view: 6.2831853 #4.71 # radians
+
+
+# The distance from the center of the
+# rear axis (base_link) to the lidar
+scan_distance_to_base_link: 0.275 # meters
+
+# The standard deviation of the noise applied
+# to the lidar simulation
+scan_std_dev: 0.01 # meters
+
+# The probability threshold for points
+# in the occupancy grid to be considered "free".
+# Used for the lidar simulator.
+map_free_threshold: 0.8
+
+# Time to collision cutoff value
+ttc_threshold: 0.01
+
+# Indices for mux controller
+mux_size: 9
+joy_mux_idx: 0
+key_mux_idx: 1
+web_mux_idx: 2
+random_walker_mux_idx: 3
+guarder_mux_idx: 4
+wall_follower_mux_idx: 5
+gap_follower_mux_idx: 6
+navigator_mux_idx: 8
+
+#indices for nav mux controller
+nav_mux_size: 5
+returner_nav_mux_idx: 0
+navigator_nav_mux_idx: 1
+recaller_nav_mux_idx: 2
+explorer_nav_mux_idx: 3
+searcher_nav_mux_idx: 4
+
+# Enables joystick if true
+joy: true
+
+# Joystick indices
+joy_speed_axis: 1
+joy_angle_axis: 3
+joy_max_speed: 2. # meters/second
+joy_button_idx: 4  # LB button
+key_button_idx: 6 # not sure 
+web_button_idx: 7
+brake_button_idx: 0 # A button
+random_walk_button_idx: 1 # ? button
+guard_button_idx: 8
+wall_follow_button_idx: 9
+log_button_idx: 10
+navigator_button_idx: 14
+recall_button_idx: 11
+return_button_idx: 5 # RB button
+explore_button_idx: 12
+search_button_idx: 13
+new_button_idx: -1
+
+# Keyboard characters for toggling mux
+joy_key_char: "j"
+keyboard_key_char: "k"
+web_key_char: "o"
+brake_key_char: "b"
+guard_key_char: "c"
+random_walk_key_char: "x"
+wall_follow_key_char: "p"
+gap_follow_key_char: "g"
+log_key_char: "l"
+navigator_key_char: "n"
+recall_key_char: "r"
+return_key_char: "h"
+explore_key_char: "e"
+search_key_char: "f"
+new_key_char: "z"
+
+# Web Interface strings for toggling mux
+joy_web_char: "joystick"
+keyboard_web_char: "keyboard"
+web_web_char: "web"
+brake_web_char: "brake"
+guard_web_char: "guard"
+random_walk_web_char: "wander"
+wall_follow_web_char: "patrol"
+gap_follow_web_char: "advance"
+log_web_char: "log"
+return_web_char: "return"
+recall_web_char: "recall"
+explore_web_char: "explore"
+search_web_char: "search"
+
+# Keyboard driving params
+keyboard_speed: 1.8  # meters/second
+keyboard_steer_ang: .2  # radians
+
+# Web Interface driving params
+web_speed: 1.8  # meters/second
+web_steer_ang: .2  # radians
+
+# obstacle parameters
+obstacle_size: 2
+
+# The names of topics to listen and publish to
+joy_topic: "/joy"
+drive_topic: "/vesc/low_level/ackermann_cmd_mux/input/drive"
+map_topic: "/map"
+distance_transform_topic: "/dt"
+scan_topic: "/scan"
+pose_topic: "/pose"
+ground_truth_pose_topic: "/gt_pose"
+odom_topic: "/odom"
+pose_rviz_topic: "/initialpose"
+keyboard_topic: "/key"
+mux_topic: "/pathing/mux"
+nav_mux_topic: "/pathing/nav_mux"
+
+# Topic names of various drive channels
+rand_drive_topic: "/rand_drive"
+guard_drive_topic: "/guard_drive"
+wall_follow_drive_topic: "/wall_follow_drive"
+gap_follow_drive_topic: "/gap_follow_drive"
+navigate_drive_topic: "/nav_drive"
+
+# Topic names of various nav channels
+navigate_nav_topic: "/navigate_goal"
+return_nav_topic: "/initialpose"
+recall_nav_topic: "/recall_goal"
+explore_nav_topic: "/explore_goal"
+search_nav_topic: "/search_goal"
+nav_goal_topic: "/pathing/move_base_simple/goal"
+
+# Topic names to be used by the web interface
+web_topic: "/web"
+joy_web_topic: "/controllers/gpio_inputs/twentyone"
+key_web_topic: "/controllers/gpio_inputs/twentytwo"
+web_web_topic: "/controllers/gpio_inputs/twentythree"
+forward_web_topic: "/controllers/gpio_inputs/thirtyfive"
+backward_web_topic: "/controllers/gpio_inputs/thirtysix"
+left_web_topic: "/controllers/gpio_inputs/thirtyseven"
+right_web_topic: "/controllers/gpio_inputs/thirtyeight"
+wander_web_topic: "/controllers/gpio_inputs/eleven"
+guard_web_topic: "/controllers/gpio_inputs/twelve"
+patrol_web_topic: "/controllers/gpio_inputs/thirteen"
+advance_web_topic: "/controllers/gpio_inputs/fifteen"
+return_web_topic: "/controllers/gpio_inputs/sixteen"
+log_web_topic: "/controllers/gpio_inputs/twentyfour"
+recall_web_topic: "/controllers/gpio_inputs/eighteen"
+explore_web_topic: "/controllers/gpio_inputs/seven"
+search_web_topic: "/controllers/gpio_inputs/twentynine"
+
+# name of file to write collision log to 
+collision_file: "collision_file"
+
+# The names of the transformation frames published to
+map_frame: "map"
+base_frame: "base_link"
+scan_frame: "laser"
+odom_frame: "odom"
+
+broadcast_transform: true
+publish_ground_truth_pose: true
+
+time_cm_weight: 1
+ease_cm_weight: 1
+object_cm_weight: 10
+unsearched_area_cm_weight: 3
+frontier_cm_weight: 5

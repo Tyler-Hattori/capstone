@@ -1,22 +1,3 @@
-# Functioning Nodes and Node Groups
+# src folder contains all of velma's packages and functionalities
 
-- [X] lidar
-- [X] pixy
-- [X] vesc
-- [X] pathing control
-- [X] wall folllow
-- [X] random drive
-- [ ] gap follow
-- [ ] emergency brake
-- [ ] navigation
-- [ ] search 1
-- [ ] search 2
-- [ ] search 3
-- [ ] search 4
-- [ ] search 5
-
-# To-do
-
-- change pubs/subs of sensors and simulator nodes
-- implement navigation stack
-- tune parameters
+Help doc: https://docs.google.com/document/d/1EF-VlbZGtAWc8r-4DLCur6MXpBo_N-rj0NQGE0oAthc/edit#

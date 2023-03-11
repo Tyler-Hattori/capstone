@@ -43,61 +43,61 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/F1Tenth/velma/src
+CMAKE_SOURCE_DIR = /home/thattori/capstone/F1Tenth/velma/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/F1Tenth/velma/build
+CMAKE_BINARY_DIR = /home/thattori/capstone/F1Tenth/velma/build
 
 # Utility rule file for pixy2_msgs_generate_messages_py.
 
 # Include the progress variables for this target.
 include pixy/pixy2_msgs/CMakeFiles/pixy2_msgs_generate_messages_py.dir/progress.make
 
-pixy/pixy2_msgs/CMakeFiles/pixy2_msgs_generate_messages_py: /home/ubuntu/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_PixyBlock.py
-pixy/pixy2_msgs/CMakeFiles/pixy2_msgs_generate_messages_py: /home/ubuntu/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_PixyData.py
-pixy/pixy2_msgs/CMakeFiles/pixy2_msgs_generate_messages_py: /home/ubuntu/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_Servo.py
-pixy/pixy2_msgs/CMakeFiles/pixy2_msgs_generate_messages_py: /home/ubuntu/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_PixyResolution.py
-pixy/pixy2_msgs/CMakeFiles/pixy2_msgs_generate_messages_py: /home/ubuntu/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/__init__.py
+pixy/pixy2_msgs/CMakeFiles/pixy2_msgs_generate_messages_py: /home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_PixyBlock.py
+pixy/pixy2_msgs/CMakeFiles/pixy2_msgs_generate_messages_py: /home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_PixyData.py
+pixy/pixy2_msgs/CMakeFiles/pixy2_msgs_generate_messages_py: /home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_Servo.py
+pixy/pixy2_msgs/CMakeFiles/pixy2_msgs_generate_messages_py: /home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_PixyResolution.py
+pixy/pixy2_msgs/CMakeFiles/pixy2_msgs_generate_messages_py: /home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/__init__.py
 
 
-/home/ubuntu/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_PixyBlock.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/ubuntu/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_PixyBlock.py: /home/ubuntu/F1Tenth/velma/src/pixy/pixy2_msgs/msg/PixyBlock.msg
-/home/ubuntu/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_PixyBlock.py: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/F1Tenth/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG pixy2_msgs/PixyBlock"
-	cd /home/ubuntu/F1Tenth/velma/build/pixy/pixy2_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ubuntu/F1Tenth/velma/src/pixy/pixy2_msgs/msg/PixyBlock.msg -Ipixy2_msgs:/home/ubuntu/F1Tenth/velma/src/pixy/pixy2_msgs/msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p pixy2_msgs -o /home/ubuntu/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg
+/home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_PixyBlock.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_PixyBlock.py: /home/thattori/capstone/F1Tenth/velma/src/pixy/pixy2_msgs/msg/PixyBlock.msg
+/home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_PixyBlock.py: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thattori/capstone/F1Tenth/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG pixy2_msgs/PixyBlock"
+	cd /home/thattori/capstone/F1Tenth/velma/build/pixy/pixy2_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/thattori/capstone/F1Tenth/velma/src/pixy/pixy2_msgs/msg/PixyBlock.msg -Ipixy2_msgs:/home/thattori/capstone/F1Tenth/velma/src/pixy/pixy2_msgs/msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p pixy2_msgs -o /home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg
 
-/home/ubuntu/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_PixyData.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/ubuntu/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_PixyData.py: /home/ubuntu/F1Tenth/velma/src/pixy/pixy2_msgs/msg/PixyData.msg
-/home/ubuntu/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_PixyData.py: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
-/home/ubuntu/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_PixyData.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/ubuntu/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_PixyData.py: /home/ubuntu/F1Tenth/velma/src/pixy/pixy2_msgs/msg/PixyBlock.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/F1Tenth/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG pixy2_msgs/PixyData"
-	cd /home/ubuntu/F1Tenth/velma/build/pixy/pixy2_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ubuntu/F1Tenth/velma/src/pixy/pixy2_msgs/msg/PixyData.msg -Ipixy2_msgs:/home/ubuntu/F1Tenth/velma/src/pixy/pixy2_msgs/msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p pixy2_msgs -o /home/ubuntu/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg
+/home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_PixyData.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_PixyData.py: /home/thattori/capstone/F1Tenth/velma/src/pixy/pixy2_msgs/msg/PixyData.msg
+/home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_PixyData.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_PixyData.py: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
+/home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_PixyData.py: /home/thattori/capstone/F1Tenth/velma/src/pixy/pixy2_msgs/msg/PixyBlock.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thattori/capstone/F1Tenth/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG pixy2_msgs/PixyData"
+	cd /home/thattori/capstone/F1Tenth/velma/build/pixy/pixy2_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/thattori/capstone/F1Tenth/velma/src/pixy/pixy2_msgs/msg/PixyData.msg -Ipixy2_msgs:/home/thattori/capstone/F1Tenth/velma/src/pixy/pixy2_msgs/msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p pixy2_msgs -o /home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg
 
-/home/ubuntu/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_Servo.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/ubuntu/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_Servo.py: /home/ubuntu/F1Tenth/velma/src/pixy/pixy2_msgs/msg/Servo.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/F1Tenth/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python from MSG pixy2_msgs/Servo"
-	cd /home/ubuntu/F1Tenth/velma/build/pixy/pixy2_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ubuntu/F1Tenth/velma/src/pixy/pixy2_msgs/msg/Servo.msg -Ipixy2_msgs:/home/ubuntu/F1Tenth/velma/src/pixy/pixy2_msgs/msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p pixy2_msgs -o /home/ubuntu/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg
+/home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_Servo.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_Servo.py: /home/thattori/capstone/F1Tenth/velma/src/pixy/pixy2_msgs/msg/Servo.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thattori/capstone/F1Tenth/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python from MSG pixy2_msgs/Servo"
+	cd /home/thattori/capstone/F1Tenth/velma/build/pixy/pixy2_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/thattori/capstone/F1Tenth/velma/src/pixy/pixy2_msgs/msg/Servo.msg -Ipixy2_msgs:/home/thattori/capstone/F1Tenth/velma/src/pixy/pixy2_msgs/msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p pixy2_msgs -o /home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg
 
-/home/ubuntu/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_PixyResolution.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/ubuntu/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_PixyResolution.py: /home/ubuntu/F1Tenth/velma/src/pixy/pixy2_msgs/msg/PixyResolution.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/F1Tenth/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python from MSG pixy2_msgs/PixyResolution"
-	cd /home/ubuntu/F1Tenth/velma/build/pixy/pixy2_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ubuntu/F1Tenth/velma/src/pixy/pixy2_msgs/msg/PixyResolution.msg -Ipixy2_msgs:/home/ubuntu/F1Tenth/velma/src/pixy/pixy2_msgs/msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p pixy2_msgs -o /home/ubuntu/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg
+/home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_PixyResolution.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_PixyResolution.py: /home/thattori/capstone/F1Tenth/velma/src/pixy/pixy2_msgs/msg/PixyResolution.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thattori/capstone/F1Tenth/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python from MSG pixy2_msgs/PixyResolution"
+	cd /home/thattori/capstone/F1Tenth/velma/build/pixy/pixy2_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/thattori/capstone/F1Tenth/velma/src/pixy/pixy2_msgs/msg/PixyResolution.msg -Ipixy2_msgs:/home/thattori/capstone/F1Tenth/velma/src/pixy/pixy2_msgs/msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p pixy2_msgs -o /home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg
 
-/home/ubuntu/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/ubuntu/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/__init__.py: /home/ubuntu/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_PixyBlock.py
-/home/ubuntu/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/__init__.py: /home/ubuntu/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_PixyData.py
-/home/ubuntu/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/__init__.py: /home/ubuntu/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_Servo.py
-/home/ubuntu/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/__init__.py: /home/ubuntu/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_PixyResolution.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/F1Tenth/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python msg __init__.py for pixy2_msgs"
-	cd /home/ubuntu/F1Tenth/velma/build/pixy/pixy2_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/ubuntu/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg --initpy
+/home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/__init__.py: /home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_PixyBlock.py
+/home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/__init__.py: /home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_PixyData.py
+/home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/__init__.py: /home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_Servo.py
+/home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/__init__.py: /home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_PixyResolution.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thattori/capstone/F1Tenth/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python msg __init__.py for pixy2_msgs"
+	cd /home/thattori/capstone/F1Tenth/velma/build/pixy/pixy2_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg --initpy
 
 pixy2_msgs_generate_messages_py: pixy/pixy2_msgs/CMakeFiles/pixy2_msgs_generate_messages_py
-pixy2_msgs_generate_messages_py: /home/ubuntu/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_PixyBlock.py
-pixy2_msgs_generate_messages_py: /home/ubuntu/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_PixyData.py
-pixy2_msgs_generate_messages_py: /home/ubuntu/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_Servo.py
-pixy2_msgs_generate_messages_py: /home/ubuntu/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_PixyResolution.py
-pixy2_msgs_generate_messages_py: /home/ubuntu/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/__init__.py
+pixy2_msgs_generate_messages_py: /home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_PixyBlock.py
+pixy2_msgs_generate_messages_py: /home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_PixyData.py
+pixy2_msgs_generate_messages_py: /home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_Servo.py
+pixy2_msgs_generate_messages_py: /home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/_PixyResolution.py
+pixy2_msgs_generate_messages_py: /home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs/msg/__init__.py
 pixy2_msgs_generate_messages_py: pixy/pixy2_msgs/CMakeFiles/pixy2_msgs_generate_messages_py.dir/build.make
 
 .PHONY : pixy2_msgs_generate_messages_py
@@ -108,10 +108,10 @@ pixy/pixy2_msgs/CMakeFiles/pixy2_msgs_generate_messages_py.dir/build: pixy2_msgs
 .PHONY : pixy/pixy2_msgs/CMakeFiles/pixy2_msgs_generate_messages_py.dir/build
 
 pixy/pixy2_msgs/CMakeFiles/pixy2_msgs_generate_messages_py.dir/clean:
-	cd /home/ubuntu/F1Tenth/velma/build/pixy/pixy2_msgs && $(CMAKE_COMMAND) -P CMakeFiles/pixy2_msgs_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/thattori/capstone/F1Tenth/velma/build/pixy/pixy2_msgs && $(CMAKE_COMMAND) -P CMakeFiles/pixy2_msgs_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : pixy/pixy2_msgs/CMakeFiles/pixy2_msgs_generate_messages_py.dir/clean
 
 pixy/pixy2_msgs/CMakeFiles/pixy2_msgs_generate_messages_py.dir/depend:
-	cd /home/ubuntu/F1Tenth/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/F1Tenth/velma/src /home/ubuntu/F1Tenth/velma/src/pixy/pixy2_msgs /home/ubuntu/F1Tenth/velma/build /home/ubuntu/F1Tenth/velma/build/pixy/pixy2_msgs /home/ubuntu/F1Tenth/velma/build/pixy/pixy2_msgs/CMakeFiles/pixy2_msgs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/thattori/capstone/F1Tenth/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/thattori/capstone/F1Tenth/velma/src /home/thattori/capstone/F1Tenth/velma/src/pixy/pixy2_msgs /home/thattori/capstone/F1Tenth/velma/build /home/thattori/capstone/F1Tenth/velma/build/pixy/pixy2_msgs /home/thattori/capstone/F1Tenth/velma/build/pixy/pixy2_msgs/CMakeFiles/pixy2_msgs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : pixy/pixy2_msgs/CMakeFiles/pixy2_msgs_generate_messages_py.dir/depend
 

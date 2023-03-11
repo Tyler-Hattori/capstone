@@ -1,8 +1,8 @@
-# Install script for directory: /home/ubuntu/F1Tenth/velma/src/pixy/pixy2_msgs
+# Install script for directory: /home/thattori/capstone/F1Tenth/velma/src/pixy/pixy2_msgs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/ubuntu/F1Tenth/velma/install")
+  set(CMAKE_INSTALL_PREFIX "/home/thattori/capstone/F1Tenth/velma/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,57 +39,57 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pixy2_msgs/msg" TYPE FILE FILES
-    "/home/ubuntu/F1Tenth/velma/src/pixy/pixy2_msgs/msg/PixyBlock.msg"
-    "/home/ubuntu/F1Tenth/velma/src/pixy/pixy2_msgs/msg/PixyData.msg"
-    "/home/ubuntu/F1Tenth/velma/src/pixy/pixy2_msgs/msg/Servo.msg"
-    "/home/ubuntu/F1Tenth/velma/src/pixy/pixy2_msgs/msg/PixyResolution.msg"
+    "/home/thattori/capstone/F1Tenth/velma/src/pixy/pixy2_msgs/msg/PixyBlock.msg"
+    "/home/thattori/capstone/F1Tenth/velma/src/pixy/pixy2_msgs/msg/PixyData.msg"
+    "/home/thattori/capstone/F1Tenth/velma/src/pixy/pixy2_msgs/msg/Servo.msg"
+    "/home/thattori/capstone/F1Tenth/velma/src/pixy/pixy2_msgs/msg/PixyResolution.msg"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pixy2_msgs/cmake" TYPE FILE FILES "/home/ubuntu/F1Tenth/velma/build/pixy/pixy2_msgs/catkin_generated/installspace/pixy2_msgs-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pixy2_msgs/cmake" TYPE FILE FILES "/home/thattori/capstone/F1Tenth/velma/build/pixy/pixy2_msgs/catkin_generated/installspace/pixy2_msgs-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/ubuntu/F1Tenth/velma/devel/include/pixy2_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/thattori/capstone/F1Tenth/velma/devel/include/pixy2_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pixy2_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/thattori/capstone/F1Tenth/velma/devel/share/roseus/ros/pixy2_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/ubuntu/F1Tenth/velma/devel/share/common-lisp/ros/pixy2_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/thattori/capstone/F1Tenth/velma/devel/share/common-lisp/ros/pixy2_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/ubuntu/F1Tenth/velma/devel/share/gennodejs/ros/pixy2_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/thattori/capstone/F1Tenth/velma/devel/share/gennodejs/ros/pixy2_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/ubuntu/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs")
+  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/ubuntu/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/pixy2_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ubuntu/F1Tenth/velma/build/pixy/pixy2_msgs/catkin_generated/installspace/pixy2_msgs.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/thattori/capstone/F1Tenth/velma/build/pixy/pixy2_msgs/catkin_generated/installspace/pixy2_msgs.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pixy2_msgs/cmake" TYPE FILE FILES "/home/ubuntu/F1Tenth/velma/build/pixy/pixy2_msgs/catkin_generated/installspace/pixy2_msgs-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pixy2_msgs/cmake" TYPE FILE FILES "/home/thattori/capstone/F1Tenth/velma/build/pixy/pixy2_msgs/catkin_generated/installspace/pixy2_msgs-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pixy2_msgs/cmake" TYPE FILE FILES
-    "/home/ubuntu/F1Tenth/velma/build/pixy/pixy2_msgs/catkin_generated/installspace/pixy2_msgsConfig.cmake"
-    "/home/ubuntu/F1Tenth/velma/build/pixy/pixy2_msgs/catkin_generated/installspace/pixy2_msgsConfig-version.cmake"
+    "/home/thattori/capstone/F1Tenth/velma/build/pixy/pixy2_msgs/catkin_generated/installspace/pixy2_msgsConfig.cmake"
+    "/home/thattori/capstone/F1Tenth/velma/build/pixy/pixy2_msgs/catkin_generated/installspace/pixy2_msgsConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pixy2_msgs" TYPE FILE FILES "/home/ubuntu/F1Tenth/velma/src/pixy/pixy2_msgs/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pixy2_msgs" TYPE FILE FILES "/home/thattori/capstone/F1Tenth/velma/src/pixy/pixy2_msgs/package.xml")
 endif()
 

@@ -3,13 +3,14 @@
   <arg name="racecar_version" />
   <arg name="sensors_config"
        default="$(find racecar)/config/$(arg racecar_version)/sensors.yaml" />
+  <arg name="sim_lidar" />
 
   <rosparam file="$(arg sensors_config)" command="load" />
 
   <!-- laser -->
-  <include file="$(find rplidar_ros)/launch/rplidar_s2.launch"/>
-<!-- Set the port to connect to here -->
-  <param name="port" type="string" value="/dev/sensors/rplidar"/> 
+  <include file="$(find rplidar_ros)/launch/rplidar_s2.launch" if="$(eval arg('sim_lidar') == 'no')" >
+    <arg name="port" value="/dev/sensors/rplidar"/> 
+  </include>
 
   <!-- imu -->
   <!--node pkg="razor_imu_9dof" type="imu_node.py" name="imu_node" /-->

@@ -1,8 +1,0 @@
-prefix=/home/ubuntu/F1Tenth/basic/install
-
-Name: racecar_control
-Description: Description of racecar_control
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites tests="2" failures="0" disabled="0" errors="0" time="1.948" timestamp="2023-01-15T14:32:13" name="AllTests">
-  <testsuite name="timer_tests" tests="2" failures="0" disabled="0" errors="0" time="1.948" timestamp="2023-01-15T14:32:13">
-    <testcase name="short_intervals" status="run" result="completed" time="0.935" timestamp="2023-01-15T14:32:13" classname="timer_tests" />
-    <testcase name="overlapping_long_intervals" status="run" result="completed" time="1.012" timestamp="2023-01-15T14:32:14" classname="timer_tests" />
+<testsuites tests="2" failures="1" disabled="0" errors="0" time="1.955" timestamp="2023-03-10T12:56:34" name="AllTests">
+  <testsuite name="timer_tests" tests="2" failures="1" disabled="0" errors="0" time="1.954" timestamp="2023-03-10T12:56:34">
+    <testcase name="short_intervals" status="run" result="completed" time="0.941" timestamp="2023-03-10T12:56:34" classname="timer_tests">
+      <failure message="/home/ubuntu/F1Tenth/velma/src/serial/tests/unit/unix_timer_tests.cc:24&#x0A;The difference between r+1 and 0 is 2, which exceeds 1, where&#x0A;r+1 evaluates to -2,&#x0A;0 evaluates to 0, and&#x0A;1 evaluates to 1." type=""><![CDATA[/home/ubuntu/F1Tenth/velma/src/serial/tests/unit/unix_timer_tests.cc:24
+The difference between r+1 and 0 is 2, which exceeds 1, where
+r+1 evaluates to -2,
+0 evaluates to 0, and
+1 evaluates to 1.]]></failure>
+    </testcase>
+    <testcase name="overlapping_long_intervals" status="run" result="completed" time="1.011" timestamp="2023-03-10T12:56:35" classname="timer_tests" />
   </testsuite>
 </testsuites>

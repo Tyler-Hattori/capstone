@@ -1,0 +1,20 @@
+<launch>
+  <!-- Launch the mux node with the parameters from params.yaml -->
+  <node pkg="pathing" name="mux_controller" type="mux" output="screen">
+    <rosparam command="load" file="$(find pathing)/params.yaml"/>
+  </node>
+
+  <!-- Launch the nav mux node with the parameters from params.yaml -->
+  <node pkg="pathing" name="nav_mux_controller" type="nav_mux" output="screen">
+    <rosparam command="load" file="$(find pathing)/params.yaml"/>
+  </node>
+
+  <!-- Launch the behavior controller node with the parameters from params.yaml -->
+  <node pkg="pathing" name="behavior_controller" type="behavior_controller" output="screen">
+    <rosparam command="load" file="$(find pathing)/params.yaml"/>
+  </node>
+  
+  <!-- navigation -->
+  <include file="$(find velma_nav)/move_base.launch"/>
+  <node pkg="twist_to_ackermann" name="twist_to_ackermann" type="twist_to_ackermann" output="screen"/>
+</launch>

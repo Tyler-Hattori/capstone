@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/F1Tenth/velma/src
+CMAKE_SOURCE_DIR = /home/thattori/capstone/F1Tenth/velma/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/F1Tenth/velma/build
+CMAKE_BINARY_DIR = /home/thattori/capstone/F1Tenth/velma/build
 
 # Utility rule file for libpixyusb2_build_step.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/ubuntu/F1Tenth/velma/build
 include pixy/pixy2_node/CMakeFiles/libpixyusb2_build_step.dir/progress.make
 
 pixy/pixy2_node/CMakeFiles/libpixyusb2_build_step:
-	cd /home/ubuntu/F1Tenth/velma/src/pixy/pixy2_node/pixy2/scripts && /home/ubuntu/F1Tenth/velma/src/pixy/pixy2_node/pixy2/scripts/build_libpixyusb2.sh
+	cd /home/thattori/capstone/F1Tenth/velma/src/pixy/pixy2_node/pixy2/scripts && /home/thattori/capstone/F1Tenth/velma/src/pixy/pixy2_node/pixy2/scripts/build_libpixyusb2.sh
 
 libpixyusb2_build_step: pixy/pixy2_node/CMakeFiles/libpixyusb2_build_step
 libpixyusb2_build_step: pixy/pixy2_node/CMakeFiles/libpixyusb2_build_step.dir/build.make
@@ -67,10 +67,10 @@ pixy/pixy2_node/CMakeFiles/libpixyusb2_build_step.dir/build: libpixyusb2_build_s
 .PHONY : pixy/pixy2_node/CMakeFiles/libpixyusb2_build_step.dir/build
 
 pixy/pixy2_node/CMakeFiles/libpixyusb2_build_step.dir/clean:
-	cd /home/ubuntu/F1Tenth/velma/build/pixy/pixy2_node && $(CMAKE_COMMAND) -P CMakeFiles/libpixyusb2_build_step.dir/cmake_clean.cmake
+	cd /home/thattori/capstone/F1Tenth/velma/build/pixy/pixy2_node && $(CMAKE_COMMAND) -P CMakeFiles/libpixyusb2_build_step.dir/cmake_clean.cmake
 .PHONY : pixy/pixy2_node/CMakeFiles/libpixyusb2_build_step.dir/clean
 
 pixy/pixy2_node/CMakeFiles/libpixyusb2_build_step.dir/depend:
-	cd /home/ubuntu/F1Tenth/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/F1Tenth/velma/src /home/ubuntu/F1Tenth/velma/src/pixy/pixy2_node /home/ubuntu/F1Tenth/velma/build /home/ubuntu/F1Tenth/velma/build/pixy/pixy2_node /home/ubuntu/F1Tenth/velma/build/pixy/pixy2_node/CMakeFiles/libpixyusb2_build_step.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/thattori/capstone/F1Tenth/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/thattori/capstone/F1Tenth/velma/src /home/thattori/capstone/F1Tenth/velma/src/pixy/pixy2_node /home/thattori/capstone/F1Tenth/velma/build /home/thattori/capstone/F1Tenth/velma/build/pixy/pixy2_node /home/thattori/capstone/F1Tenth/velma/build/pixy/pixy2_node/CMakeFiles/libpixyusb2_build_step.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : pixy/pixy2_node/CMakeFiles/libpixyusb2_build_step.dir/depend
 

@@ -1,4 +1,4 @@
-prefix=/home/ubuntu/F1Tenth/velma/install
+prefix=/home/thattori/capstone/F1Tenth/velma/install
 
 Name: vesc_msgs
 Description: Description of vesc_msgs

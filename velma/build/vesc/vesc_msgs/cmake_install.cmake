@@ -1,8 +1,8 @@
-# Install script for directory: /home/ubuntu/F1Tenth/velma/src/vesc/vesc_msgs
+# Install script for directory: /home/thattori/capstone/F1Tenth/velma/src/vesc/vesc_msgs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/ubuntu/F1Tenth/velma/install")
+  set(CMAKE_INSTALL_PREFIX "/home/thattori/capstone/F1Tenth/velma/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,55 +39,55 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/vesc_msgs/msg" TYPE FILE FILES
-    "/home/ubuntu/F1Tenth/velma/src/vesc/vesc_msgs/msg/VescState.msg"
-    "/home/ubuntu/F1Tenth/velma/src/vesc/vesc_msgs/msg/VescStateStamped.msg"
+    "/home/thattori/capstone/F1Tenth/velma/src/vesc/vesc_msgs/msg/VescState.msg"
+    "/home/thattori/capstone/F1Tenth/velma/src/vesc/vesc_msgs/msg/VescStateStamped.msg"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/vesc_msgs/cmake" TYPE FILE FILES "/home/ubuntu/F1Tenth/velma/build/vesc/vesc_msgs/catkin_generated/installspace/vesc_msgs-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/vesc_msgs/cmake" TYPE FILE FILES "/home/thattori/capstone/F1Tenth/velma/build/vesc/vesc_msgs/catkin_generated/installspace/vesc_msgs-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/ubuntu/F1Tenth/velma/devel/include/vesc_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/thattori/capstone/F1Tenth/velma/devel/include/vesc_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/vesc_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/thattori/capstone/F1Tenth/velma/devel/share/roseus/ros/vesc_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/ubuntu/F1Tenth/velma/devel/share/common-lisp/ros/vesc_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/thattori/capstone/F1Tenth/velma/devel/share/common-lisp/ros/vesc_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/ubuntu/F1Tenth/velma/devel/share/gennodejs/ros/vesc_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/thattori/capstone/F1Tenth/velma/devel/share/gennodejs/ros/vesc_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/ubuntu/F1Tenth/velma/devel/lib/python3/dist-packages/vesc_msgs")
+  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/vesc_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/ubuntu/F1Tenth/velma/devel/lib/python3/dist-packages/vesc_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/thattori/capstone/F1Tenth/velma/devel/lib/python3/dist-packages/vesc_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ubuntu/F1Tenth/velma/build/vesc/vesc_msgs/catkin_generated/installspace/vesc_msgs.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/thattori/capstone/F1Tenth/velma/build/vesc/vesc_msgs/catkin_generated/installspace/vesc_msgs.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/vesc_msgs/cmake" TYPE FILE FILES "/home/ubuntu/F1Tenth/velma/build/vesc/vesc_msgs/catkin_generated/installspace/vesc_msgs-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/vesc_msgs/cmake" TYPE FILE FILES "/home/thattori/capstone/F1Tenth/velma/build/vesc/vesc_msgs/catkin_generated/installspace/vesc_msgs-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/vesc_msgs/cmake" TYPE FILE FILES
-    "/home/ubuntu/F1Tenth/velma/build/vesc/vesc_msgs/catkin_generated/installspace/vesc_msgsConfig.cmake"
-    "/home/ubuntu/F1Tenth/velma/build/vesc/vesc_msgs/catkin_generated/installspace/vesc_msgsConfig-version.cmake"
+    "/home/thattori/capstone/F1Tenth/velma/build/vesc/vesc_msgs/catkin_generated/installspace/vesc_msgsConfig.cmake"
+    "/home/thattori/capstone/F1Tenth/velma/build/vesc/vesc_msgs/catkin_generated/installspace/vesc_msgsConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/vesc_msgs" TYPE FILE FILES "/home/ubuntu/F1Tenth/velma/src/vesc/vesc_msgs/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/vesc_msgs" TYPE FILE FILES "/home/thattori/capstone/F1Tenth/velma/src/vesc/vesc_msgs/package.xml")
 endif()
 

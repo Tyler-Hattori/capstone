@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/F1Tenth/velma/src
+CMAKE_SOURCE_DIR = /home/thattori/capstone/F1Tenth/velma/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/F1Tenth/velma/build
+CMAKE_BINARY_DIR = /home/thattori/capstone/F1Tenth/velma/build
 
 # Utility rule file for diagnostic_msgs_generate_messages_nodejs.
 
@@ -63,10 +63,10 @@ joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/bui
 .PHONY : joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/build
 
 joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/clean:
-	cd /home/ubuntu/F1Tenth/velma/build/joystick_drivers/joy && $(CMAKE_COMMAND) -P CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/thattori/capstone/F1Tenth/velma/build/joystick_drivers/joy && $(CMAKE_COMMAND) -P CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/clean
 
 joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/depend:
-	cd /home/ubuntu/F1Tenth/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/F1Tenth/velma/src /home/ubuntu/F1Tenth/velma/src/joystick_drivers/joy /home/ubuntu/F1Tenth/velma/build /home/ubuntu/F1Tenth/velma/build/joystick_drivers/joy /home/ubuntu/F1Tenth/velma/build/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/thattori/capstone/F1Tenth/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/thattori/capstone/F1Tenth/velma/src /home/thattori/capstone/F1Tenth/velma/src/joystick_drivers/joy /home/thattori/capstone/F1Tenth/velma/build /home/thattori/capstone/F1Tenth/velma/build/joystick_drivers/joy /home/thattori/capstone/F1Tenth/velma/build/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/depend
 

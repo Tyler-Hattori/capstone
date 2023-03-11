@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/F1Tenth/velma/devel/lib/vesc_ackermann/ackermann_to_vesc_node"
-  "/home/ubuntu/F1Tenth/velma/devel/lib/vesc_ackermann/ackermann_to_vesc_node.pdb"
+  "/home/thattori/capstone/F1Tenth/velma/devel/lib/vesc_ackermann/ackermann_to_vesc_node"
+  "/home/thattori/capstone/F1Tenth/velma/devel/lib/vesc_ackermann/ackermann_to_vesc_node.pdb"
   "CMakeFiles/ackermann_to_vesc_node.dir/src/ackermann_to_vesc.cpp.o"
   "CMakeFiles/ackermann_to_vesc_node.dir/src/ackermann_to_vesc_node.cpp.o"
 )

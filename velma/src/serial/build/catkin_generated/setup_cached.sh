@@ -7,8 +7,9 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/ubuntu/F1Tenth/velma/src/serial/build/devel:$CMAKE_PREFIX_PATH"
-export LD_LIBRARY_PATH="/home/ubuntu/F1Tenth/velma/src/serial/build/devel/lib:$LD_LIBRARY_PATH"
-export PKG_CONFIG_PATH="/home/ubuntu/F1Tenth/velma/src/serial/build/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
-export ROSLISP_PACKAGE_DIRECTORIES="/home/ubuntu/F1Tenth/velma/src/serial/build/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
-export ROS_PACKAGE_PATH="/home/ubuntu/F1Tenth/velma/src/serial:$ROS_PACKAGE_PATH"
+export CMAKE_PREFIX_PATH='/home/ubuntu/F1Tenth/velma/src/serial/build/devel:/opt/ros/noetic'
+export LD_LIBRARY_PATH='/home/ubuntu/F1Tenth/velma/src/serial/build/devel/lib:/opt/ros/noetic/lib'
+export PKG_CONFIG_PATH='/home/ubuntu/F1Tenth/velma/src/serial/build/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig'
+export PYTHONPATH='/opt/ros/noetic/lib/python3/dist-packages'
+export ROSLISP_PACKAGE_DIRECTORIES='/home/ubuntu/F1Tenth/velma/src/serial/build/devel/share/common-lisp'
+export ROS_PACKAGE_PATH='/home/ubuntu/F1Tenth/velma/src/serial:/opt/ros/noetic/share'

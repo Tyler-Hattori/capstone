@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "roscpp;diagnostic_updater;sensor_msgs".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "joy"
-PROJECT_SPACE_DIR = "/home/ubuntu/F1Tenth/velma/devel"
+PROJECT_SPACE_DIR = "/home/thattori/capstone/F1Tenth/velma/devel"
 PROJECT_VERSION = "1.12.0"

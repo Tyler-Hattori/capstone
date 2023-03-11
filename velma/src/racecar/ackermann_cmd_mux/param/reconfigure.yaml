@@ -12,6 +12,11 @@ subscribers:
     timeout:     0.5
     priority:    1
     short_desc:  "Navigation stack controller"
+  - name:        "Drive command"
+    topic:       "input/drive"
+    timeout:     10
+    priority:    5
+    short_desc:  "Ackermann drive stamped messages from one of velma's several path planners" 
   - name:        "Safety controller"
     topic:       "input/safety"
     timeout:     0.1

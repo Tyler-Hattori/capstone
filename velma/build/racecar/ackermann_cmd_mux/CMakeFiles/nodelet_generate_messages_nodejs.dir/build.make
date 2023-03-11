@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/F1Tenth/velma/src
+CMAKE_SOURCE_DIR = /home/thattori/capstone/F1Tenth/velma/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/F1Tenth/velma/build
+CMAKE_BINARY_DIR = /home/thattori/capstone/F1Tenth/velma/build
 
 # Utility rule file for nodelet_generate_messages_nodejs.
 
@@ -63,10 +63,10 @@ racecar/ackermann_cmd_mux/CMakeFiles/nodelet_generate_messages_nodejs.dir/build:
 .PHONY : racecar/ackermann_cmd_mux/CMakeFiles/nodelet_generate_messages_nodejs.dir/build
 
 racecar/ackermann_cmd_mux/CMakeFiles/nodelet_generate_messages_nodejs.dir/clean:
-	cd /home/ubuntu/F1Tenth/velma/build/racecar/ackermann_cmd_mux && $(CMAKE_COMMAND) -P CMakeFiles/nodelet_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/thattori/capstone/F1Tenth/velma/build/racecar/ackermann_cmd_mux && $(CMAKE_COMMAND) -P CMakeFiles/nodelet_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : racecar/ackermann_cmd_mux/CMakeFiles/nodelet_generate_messages_nodejs.dir/clean
 
 racecar/ackermann_cmd_mux/CMakeFiles/nodelet_generate_messages_nodejs.dir/depend:
-	cd /home/ubuntu/F1Tenth/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/F1Tenth/velma/src /home/ubuntu/F1Tenth/velma/src/racecar/ackermann_cmd_mux /home/ubuntu/F1Tenth/velma/build /home/ubuntu/F1Tenth/velma/build/racecar/ackermann_cmd_mux /home/ubuntu/F1Tenth/velma/build/racecar/ackermann_cmd_mux/CMakeFiles/nodelet_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/thattori/capstone/F1Tenth/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/thattori/capstone/F1Tenth/velma/src /home/thattori/capstone/F1Tenth/velma/src/racecar/ackermann_cmd_mux /home/thattori/capstone/F1Tenth/velma/build /home/thattori/capstone/F1Tenth/velma/build/racecar/ackermann_cmd_mux /home/thattori/capstone/F1Tenth/velma/build/racecar/ackermann_cmd_mux/CMakeFiles/nodelet_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : racecar/ackermann_cmd_mux/CMakeFiles/nodelet_generate_messages_nodejs.dir/depend
 

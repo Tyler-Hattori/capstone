@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- These two arguments come from the CLI -->
+  <arg name="simulate"/>
+  <arg name="map_name"/>
+  
+  <group ns="controllers">
+    <include file="$(find pathing)/launch/pathing_controllers.launch"/>
+  </group>
+
+  <!-- Will launch a simulated map and lidar if the CLI requests it -->
+  <group ns="simulation">
+    <!-- Launch a map from the maps folder as instructed from the command line -->
+    <arg name="map" default="$(find pathing)/tracks/$(arg map_name)/$(arg map_name)_map.yaml"/>
+    <node pkg="map_server" name="map_server" type="map_server" args="$(arg map)" if="$(eval arg('simulate') == 'all' or arg('simulate') == 'map')">
+      <remap from="/simulation/map" to="/map"/>
+    </node>
+
+    <!-- Simulate only the lidar -->
+    <node pkg="pathing" name="simulator" type="sim_lidar" output="screen" if="$(eval arg('simulate') == 'map')" >
+      <rosparam command="load" file="$(find pathing)/params.yaml"/>
+    </node>
+    
+    <!-- Simulate everything-->
+    <node pkg="pathing" name="simulator" type="sim_car" output="screen" if="$(eval arg('simulate') == 'all')" >
+      <rosparam command="load" file="$(find pathing)/params.yaml"/>
+    </node>
+    
+    <!-- Launch the racecar model -->
+    <include file="$(find pathing)/launch/racecar_model.launch"/>
+  </group>
+
+  <group ns="pathing">
+    <include file="$(find pathing)/launch/mux.launch"/>
+  </group>
+
+  <group ns="algorithms">
+    <include file="$(find pathing)/launch/algorithms.launch"/>
+  </group>
+    
+  <!-- Launch node to convert rviz user nav goal to pose with covariance (where covariance is set to 0) -->
+  <node pkg="pathing" name="pose_to_posewithcovariance" type="pose_to_posewithcovariance" output="screen">
+    <rosparam command="load" file="$(find pathing)/params.yaml"/>
+  </node>
+</launch>

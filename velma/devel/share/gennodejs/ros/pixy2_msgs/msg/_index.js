@@ -1,14 +1,14 @@
 
 "use strict";
 
-let PixyData = require('./PixyData.js');
-let PixyResolution = require('./PixyResolution.js');
-let Servo = require('./Servo.js');
 let PixyBlock = require('./PixyBlock.js');
+let PixyResolution = require('./PixyResolution.js');
+let PixyData = require('./PixyData.js');
+let Servo = require('./Servo.js');
 
 module.exports = {
-  PixyData: PixyData,
-  PixyResolution: PixyResolution,
-  Servo: Servo,
   PixyBlock: PixyBlock,
+  PixyResolution: PixyResolution,
+  PixyData: PixyData,
+  Servo: Servo,
 };

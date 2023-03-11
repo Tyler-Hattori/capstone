@@ -1,10 +1,10 @@
 
 "use strict";
 
-let OutputState = require('./OutputState.js');
 let InputState = require('./InputState.js');
+let OutputState = require('./OutputState.js');
 
 module.exports = {
-  OutputState: OutputState,
   InputState: InputState,
+  OutputState: OutputState,
 };

@@ -4,17 +4,17 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ubuntu/F1Tenth/velma/src/lidar/sdk/src/arch/linux/net_serial.cpp" "/home/ubuntu/F1Tenth/velma/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.o"
-  "/home/ubuntu/F1Tenth/velma/src/lidar/sdk/src/arch/linux/net_socket.cpp" "/home/ubuntu/F1Tenth/velma/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_socket.cpp.o"
-  "/home/ubuntu/F1Tenth/velma/src/lidar/sdk/src/arch/linux/timer.cpp" "/home/ubuntu/F1Tenth/velma/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/timer.cpp.o"
-  "/home/ubuntu/F1Tenth/velma/src/lidar/sdk/src/hal/thread.cpp" "/home/ubuntu/F1Tenth/velma/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/hal/thread.cpp.o"
-  "/home/ubuntu/F1Tenth/velma/src/lidar/sdk/src/rplidar_driver.cpp" "/home/ubuntu/F1Tenth/velma/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/rplidar_driver.cpp.o"
-  "/home/ubuntu/F1Tenth/velma/src/lidar/sdk/src/sl_crc.cpp" "/home/ubuntu/F1Tenth/velma/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/sl_crc.cpp.o"
-  "/home/ubuntu/F1Tenth/velma/src/lidar/sdk/src/sl_lidar_driver.cpp" "/home/ubuntu/F1Tenth/velma/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/sl_lidar_driver.cpp.o"
-  "/home/ubuntu/F1Tenth/velma/src/lidar/sdk/src/sl_serial_channel.cpp" "/home/ubuntu/F1Tenth/velma/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/sl_serial_channel.cpp.o"
-  "/home/ubuntu/F1Tenth/velma/src/lidar/sdk/src/sl_tcp_channel.cpp" "/home/ubuntu/F1Tenth/velma/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/sl_tcp_channel.cpp.o"
-  "/home/ubuntu/F1Tenth/velma/src/lidar/sdk/src/sl_udp_channel.cpp" "/home/ubuntu/F1Tenth/velma/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/sl_udp_channel.cpp.o"
-  "/home/ubuntu/F1Tenth/velma/src/lidar/src/node.cpp" "/home/ubuntu/F1Tenth/velma/build/lidar/CMakeFiles/rplidarNode.dir/src/node.cpp.o"
+  "/home/thattori/capstone/F1Tenth/velma/src/lidar/sdk/src/arch/linux/net_serial.cpp" "/home/thattori/capstone/F1Tenth/velma/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.o"
+  "/home/thattori/capstone/F1Tenth/velma/src/lidar/sdk/src/arch/linux/net_socket.cpp" "/home/thattori/capstone/F1Tenth/velma/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_socket.cpp.o"
+  "/home/thattori/capstone/F1Tenth/velma/src/lidar/sdk/src/arch/linux/timer.cpp" "/home/thattori/capstone/F1Tenth/velma/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/timer.cpp.o"
+  "/home/thattori/capstone/F1Tenth/velma/src/lidar/sdk/src/hal/thread.cpp" "/home/thattori/capstone/F1Tenth/velma/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/hal/thread.cpp.o"
+  "/home/thattori/capstone/F1Tenth/velma/src/lidar/sdk/src/rplidar_driver.cpp" "/home/thattori/capstone/F1Tenth/velma/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/rplidar_driver.cpp.o"
+  "/home/thattori/capstone/F1Tenth/velma/src/lidar/sdk/src/sl_crc.cpp" "/home/thattori/capstone/F1Tenth/velma/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/sl_crc.cpp.o"
+  "/home/thattori/capstone/F1Tenth/velma/src/lidar/sdk/src/sl_lidar_driver.cpp" "/home/thattori/capstone/F1Tenth/velma/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/sl_lidar_driver.cpp.o"
+  "/home/thattori/capstone/F1Tenth/velma/src/lidar/sdk/src/sl_serial_channel.cpp" "/home/thattori/capstone/F1Tenth/velma/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/sl_serial_channel.cpp.o"
+  "/home/thattori/capstone/F1Tenth/velma/src/lidar/sdk/src/sl_tcp_channel.cpp" "/home/thattori/capstone/F1Tenth/velma/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/sl_tcp_channel.cpp.o"
+  "/home/thattori/capstone/F1Tenth/velma/src/lidar/sdk/src/sl_udp_channel.cpp" "/home/thattori/capstone/F1Tenth/velma/build/lidar/CMakeFiles/rplidarNode.dir/sdk/src/sl_udp_channel.cpp.o"
+  "/home/thattori/capstone/F1Tenth/velma/src/lidar/src/node.cpp" "/home/thattori/capstone/F1Tenth/velma/build/lidar/CMakeFiles/rplidarNode.dir/src/node.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -27,8 +27,8 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/ubuntu/F1Tenth/velma/src/lidar/./sdk/include"
-  "/home/ubuntu/F1Tenth/velma/src/lidar/./sdk/src"
+  "/home/thattori/capstone/F1Tenth/velma/src/lidar/./sdk/include"
+  "/home/thattori/capstone/F1Tenth/velma/src/lidar/./sdk/src"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   )

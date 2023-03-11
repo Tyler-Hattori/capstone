@@ -1,4 +1,4 @@
-prefix=/home/ubuntu/F1Tenth/velma/devel
+prefix=/home/thattori/capstone/F1Tenth/velma/devel
 
 Name: rplidar_ros
 Description: Description of rplidar_ros

@@ -37,8 +37,6 @@ string
 -
 gtest/gtest.h
 /home/ubuntu/F1Tenth/velma/src/serial/tests/gtest/gtest.h
-boost/bind.hpp
--
 serial/serial.h
 /home/ubuntu/F1Tenth/velma/src/serial/tests/serial/serial.h
 pty.h

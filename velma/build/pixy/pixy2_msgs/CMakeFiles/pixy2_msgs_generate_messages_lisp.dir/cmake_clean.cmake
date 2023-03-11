@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/F1Tenth/velma/devel/share/common-lisp/ros/pixy2_msgs/msg/PixyBlock.lisp"
-  "/home/ubuntu/F1Tenth/velma/devel/share/common-lisp/ros/pixy2_msgs/msg/PixyData.lisp"
-  "/home/ubuntu/F1Tenth/velma/devel/share/common-lisp/ros/pixy2_msgs/msg/PixyResolution.lisp"
-  "/home/ubuntu/F1Tenth/velma/devel/share/common-lisp/ros/pixy2_msgs/msg/Servo.lisp"
+  "/home/thattori/capstone/F1Tenth/velma/devel/share/common-lisp/ros/pixy2_msgs/msg/PixyBlock.lisp"
+  "/home/thattori/capstone/F1Tenth/velma/devel/share/common-lisp/ros/pixy2_msgs/msg/PixyData.lisp"
+  "/home/thattori/capstone/F1Tenth/velma/devel/share/common-lisp/ros/pixy2_msgs/msg/PixyResolution.lisp"
+  "/home/thattori/capstone/F1Tenth/velma/devel/share/common-lisp/ros/pixy2_msgs/msg/Servo.lisp"
   "CMakeFiles/pixy2_msgs_generate_messages_lisp"
 )
 

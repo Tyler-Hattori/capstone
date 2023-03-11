@@ -1,8 +1,8 @@
-# Install script for directory: /home/ubuntu/F1Tenth/velma/src/serial/tests
+# Install script for directory: /home/thattori/capstone/F1Tenth/velma/src/serial/tests
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/ubuntu/F1Tenth/velma/install")
+  set(CMAKE_INSTALL_PREFIX "/home/thattori/capstone/F1Tenth/velma/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

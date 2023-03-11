@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/F1Tenth/velma/src
+CMAKE_SOURCE_DIR = /home/thattori/capstone/F1Tenth/velma/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/F1Tenth/velma/build
+CMAKE_BINARY_DIR = /home/thattori/capstone/F1Tenth/velma/build
 
 # Utility rule file for pixy2_msgs_genlisp.
 
@@ -63,10 +63,10 @@ pixy/pixy2_msgs/CMakeFiles/pixy2_msgs_genlisp.dir/build: pixy2_msgs_genlisp
 .PHONY : pixy/pixy2_msgs/CMakeFiles/pixy2_msgs_genlisp.dir/build
 
 pixy/pixy2_msgs/CMakeFiles/pixy2_msgs_genlisp.dir/clean:
-	cd /home/ubuntu/F1Tenth/velma/build/pixy/pixy2_msgs && $(CMAKE_COMMAND) -P CMakeFiles/pixy2_msgs_genlisp.dir/cmake_clean.cmake
+	cd /home/thattori/capstone/F1Tenth/velma/build/pixy/pixy2_msgs && $(CMAKE_COMMAND) -P CMakeFiles/pixy2_msgs_genlisp.dir/cmake_clean.cmake
 .PHONY : pixy/pixy2_msgs/CMakeFiles/pixy2_msgs_genlisp.dir/clean
 
 pixy/pixy2_msgs/CMakeFiles/pixy2_msgs_genlisp.dir/depend:
-	cd /home/ubuntu/F1Tenth/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/F1Tenth/velma/src /home/ubuntu/F1Tenth/velma/src/pixy/pixy2_msgs /home/ubuntu/F1Tenth/velma/build /home/ubuntu/F1Tenth/velma/build/pixy/pixy2_msgs /home/ubuntu/F1Tenth/velma/build/pixy/pixy2_msgs/CMakeFiles/pixy2_msgs_genlisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/thattori/capstone/F1Tenth/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/thattori/capstone/F1Tenth/velma/src /home/thattori/capstone/F1Tenth/velma/src/pixy/pixy2_msgs /home/thattori/capstone/F1Tenth/velma/build /home/thattori/capstone/F1Tenth/velma/build/pixy/pixy2_msgs /home/thattori/capstone/F1Tenth/velma/build/pixy/pixy2_msgs/CMakeFiles/pixy2_msgs_genlisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : pixy/pixy2_msgs/CMakeFiles/pixy2_msgs_genlisp.dir/depend
 

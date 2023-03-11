@@ -14,8 +14,8 @@ template <typename T>
 inline bool getRequiredParam(const ros::NodeHandle& nh, std::string name, T& value);
 
 VescToOdom::VescToOdom(ros::NodeHandle nh, ros::NodeHandle private_nh) :
-  odom_frame_("odom"), base_frame_("base_link"),
-  use_servo_cmd_(true), publish_tf_(false), x_(0.0), y_(0.0), yaw_(0.0)
+  odom_frame_("odom"), base_frame_("base_footprint"),
+  use_servo_cmd_(true), publish_tf_(true), x_(0.0), y_(0.0), yaw_(0.0)
 {
   // get ROS parameters
   private_nh.param("odom_frame", odom_frame_, odom_frame_);
@@ -36,12 +36,12 @@ VescToOdom::VescToOdom(ros::NodeHandle nh, ros::NodeHandle private_nh) :
   private_nh.param("publish_tf", publish_tf_, publish_tf_);
 
   // create odom publisher
-  odom_pub_ = nh.advertise<nav_msgs::Odometry>("odom", 10);
+  odom_pub_ = nh.advertise<nav_msgs::Odometry>("/odom", 10);
 
   // create tf broadcaster
-  if (publish_tf_) {
+  //if (publish_tf_) {
     tf_pub_.reset(new tf::TransformBroadcaster);
-  }
+  //}
 
   // subscribe to vesc state and. optionally, servo command
   vesc_state_sub_ = nh.subscribe("sensors/core", 10, &VescToOdom::vescStateCallback, this);
@@ -53,15 +53,14 @@ VescToOdom::VescToOdom(ros::NodeHandle nh, ros::NodeHandle private_nh) :
 
 void VescToOdom::vescStateCallback(const vesc_msgs::VescStateStamped::ConstPtr& state)
 {
+  ROS_INFO("vescStateCallback ran");
   // check that we have a last servo command if we are depending on it for angular velocity
-  if (use_servo_cmd_ && !last_servo_cmd_)
+  if (use_servo_cmd_ && !last_servo_cmd_) {
     return;
+  }
 
   // convert to engineering units
-  double current_speed = ( -state->state.speed - speed_to_erpm_offset_ ) / speed_to_erpm_gain_;
-  if (std::fabs(current_speed) < 0.05){
-    current_speed = 0.0;
-  }
+  double current_speed = ( state->state.speed - speed_to_erpm_offset_ ) / speed_to_erpm_gain_;
   double current_steering_angle(0.0), current_angular_velocity(0.0);
   if (use_servo_cmd_) {
     current_steering_angle =
@@ -117,7 +116,7 @@ void VescToOdom::vescStateCallback(const vesc_msgs::VescStateStamped::ConstPtr& 
   // Velocity uncertainty
   /** @todo Think about velocity uncertainty */
 
-  if (publish_tf_) {
+  //if (publish_tf_) {
     geometry_msgs::TransformStamped tf;
     tf.header.frame_id = odom_frame_;
     tf.child_frame_id = base_frame_;
@@ -129,7 +128,7 @@ void VescToOdom::vescStateCallback(const vesc_msgs::VescStateStamped::ConstPtr& 
     if (ros::ok()) {
       tf_pub_->sendTransform(tf);
     }
-  }
+  //}
 
   if (ros::ok()) {
     odom_pub_.publish(odom);
