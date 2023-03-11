@@ -39,13 +39,22 @@ private:
 public:
   Search() {
     n = ros::NodeHandle("~");
+    
+    std::String time_costmap, ease_costmap, object_costmap, obstacle_costmap, unsearched_area_costmap, frontier_costmap
+    n.getParam("time_costmap_topic", time_costmap);
+    n.getParam("ease_costmap_topic", ease_costmap);
+    n.getParam("object_costmap_topic", object_costmap);
+    n.getParam("obstacle_costmap_topic", obstacle_costmap);
+    n.getParam("unsearched_area_costmap_topic", unsearched_area_costmap);
+    n.getParam("frontier_costmap_topic", frontier_costmap);
+      
     nav_goal = n.advertise<geometry_msgs::PoseWithCovarianceStamped>("/search_goal", 1000);
-    unsearched_area_cm = n.subscribe("unsearched_area_costmap", 1000, &Search::unsearched_area_cm_callback, this);
-    time_cm = n.subscribe("time_costmap", 1000, &Search::time_cm_callback, this);
-    ease_cm = n.subscribe("ease_costmap", 1000, &Search::ease_cm_callback, this);
-    object_cm = n.subscribe("object_costmap", 1000, &Search::object_cm_callback, this);
-    obstacle_cm = n.subscribe("obstacle_costmap", 1000, &Search::obstacle_cm_callback, this);
-    frontier_cm = n.subscribe("frontier_costmap", 1000, &Search::frontier_cm_callback, this);
+    unsearched_area_cm = n.subscribe(unsearched_area_costmap, 1000, &Search::unsearched_area_cm_callback, this);
+    time_cm = n.subscribe(time_costmap, 1000, &Search::time_cm_callback, this);
+    ease_cm = n.subscribe(ease_costmap, 1000, &Search::ease_cm_callback, this);
+    object_cm = n.subscribe(object_costmap, 1000, &Search::object_cm_callback, this);
+    obstacle_cm = n.subscribe(obstacle_costmap, 1000, &Search::obstacle_cm_callback, this);
+    frontier_cm = n.subscribe(frontier_costmap, 1000, &Search::frontier_cm_callback, this);
     
     n.getParam("time_cm_weight", time_cm_weight);
     n.getParam("ease_cm_weight", ease_cm_weight);
