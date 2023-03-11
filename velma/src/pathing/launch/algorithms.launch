@@ -29,13 +29,14 @@
     <node pkg="pathing" name="explorer" type="explore" output="screen">
       <rosparam command="load" file="$(find pathing)/params.yaml"/>
     </node>
-
-    <!-- Launch the Searcher Node -->
-    <node pkg="pathing" name="searcher" type="search" output="screen">
-      <rosparam command="load" file="$(find pathing)/params.yaml"/>
-    </node>
     
     <group ns="search">
+      <!-- Launch the Searcher Node -->
+      <node pkg="pathing" name="searcher" type="search" output="screen">
+        <rosparam command="load" file="$(find pathing)/params.yaml"/>
+      </node>
+      
+      <!-- Launch the Costmap generators -->
       <node pkg="pathing" name="remember_old_locations" type="time_costmap" output="screen">
         <rosparam command="load" file="$(find pathing)/params.yaml"/>
       </node>
