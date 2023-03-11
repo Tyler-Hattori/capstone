@@ -63,6 +63,9 @@ if(DEFINED CATKIN_DEVEL_PREFIX)
   add_message_files(
     FILES
     gpio.msg
+    PixyBlock.msg
+    PixyResolution.msg
+    PixyData.msg
   )
 
   generate_messages(
