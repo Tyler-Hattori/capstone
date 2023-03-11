@@ -16,7 +16,11 @@ private:
 public:
   ObstacleCostmap() {
     n = ros::NodeHandle("~");
-    obstacle_cm = n.advertise<nav_msgs::OccupancyGrid>("/algorithms/navigation_algoritms/obstacle_costmap", 1000);
+      
+    std::string costmap_topic;
+    n.getParam("obstacle_costmap_topic", costmap_topic);
+      
+    obstacle_cm = n.advertise<nav_msgs::OccupancyGrid>(costmap_topic, 1000);
     map = n.subscribe("/map", 1000, &ObstacleCostmap::map_callback, this);
   }
   
