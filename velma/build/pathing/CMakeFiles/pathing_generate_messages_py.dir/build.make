@@ -54,6 +54,9 @@ CMAKE_BINARY_DIR = /home/thattori/capstone/velma/build
 include pathing/CMakeFiles/pathing_generate_messages_py.dir/progress.make
 
 pathing/CMakeFiles/pathing_generate_messages_py: /home/thattori/capstone/velma/devel/lib/python3/dist-packages/pathing/msg/_gpio.py
+pathing/CMakeFiles/pathing_generate_messages_py: /home/thattori/capstone/velma/devel/lib/python3/dist-packages/pathing/msg/_PixyBlock.py
+pathing/CMakeFiles/pathing_generate_messages_py: /home/thattori/capstone/velma/devel/lib/python3/dist-packages/pathing/msg/_PixyResolution.py
+pathing/CMakeFiles/pathing_generate_messages_py: /home/thattori/capstone/velma/devel/lib/python3/dist-packages/pathing/msg/_PixyData.py
 pathing/CMakeFiles/pathing_generate_messages_py: /home/thattori/capstone/velma/devel/lib/python3/dist-packages/pathing/msg/__init__.py
 
 
@@ -63,13 +66,38 @@ pathing/CMakeFiles/pathing_generate_messages_py: /home/thattori/capstone/velma/d
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG pathing/gpio"
 	cd /home/thattori/capstone/velma/build/pathing && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/thattori/capstone/velma/src/pathing/msg/gpio.msg -Ipathing:/home/thattori/capstone/velma/src/pathing/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p pathing -o /home/thattori/capstone/velma/devel/lib/python3/dist-packages/pathing/msg
 
+/home/thattori/capstone/velma/devel/lib/python3/dist-packages/pathing/msg/_PixyBlock.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/thattori/capstone/velma/devel/lib/python3/dist-packages/pathing/msg/_PixyBlock.py: /home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg
+/home/thattori/capstone/velma/devel/lib/python3/dist-packages/pathing/msg/_PixyBlock.py: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG pathing/PixyBlock"
+	cd /home/thattori/capstone/velma/build/pathing && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg -Ipathing:/home/thattori/capstone/velma/src/pathing/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p pathing -o /home/thattori/capstone/velma/devel/lib/python3/dist-packages/pathing/msg
+
+/home/thattori/capstone/velma/devel/lib/python3/dist-packages/pathing/msg/_PixyResolution.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/thattori/capstone/velma/devel/lib/python3/dist-packages/pathing/msg/_PixyResolution.py: /home/thattori/capstone/velma/src/pathing/msg/PixyResolution.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python from MSG pathing/PixyResolution"
+	cd /home/thattori/capstone/velma/build/pathing && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/thattori/capstone/velma/src/pathing/msg/PixyResolution.msg -Ipathing:/home/thattori/capstone/velma/src/pathing/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p pathing -o /home/thattori/capstone/velma/devel/lib/python3/dist-packages/pathing/msg
+
+/home/thattori/capstone/velma/devel/lib/python3/dist-packages/pathing/msg/_PixyData.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/thattori/capstone/velma/devel/lib/python3/dist-packages/pathing/msg/_PixyData.py: /home/thattori/capstone/velma/src/pathing/msg/PixyData.msg
+/home/thattori/capstone/velma/devel/lib/python3/dist-packages/pathing/msg/_PixyData.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thattori/capstone/velma/devel/lib/python3/dist-packages/pathing/msg/_PixyData.py: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
+/home/thattori/capstone/velma/devel/lib/python3/dist-packages/pathing/msg/_PixyData.py: /home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python from MSG pathing/PixyData"
+	cd /home/thattori/capstone/velma/build/pathing && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/thattori/capstone/velma/src/pathing/msg/PixyData.msg -Ipathing:/home/thattori/capstone/velma/src/pathing/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p pathing -o /home/thattori/capstone/velma/devel/lib/python3/dist-packages/pathing/msg
+
 /home/thattori/capstone/velma/devel/lib/python3/dist-packages/pathing/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/thattori/capstone/velma/devel/lib/python3/dist-packages/pathing/msg/__init__.py: /home/thattori/capstone/velma/devel/lib/python3/dist-packages/pathing/msg/_gpio.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python msg __init__.py for pathing"
+/home/thattori/capstone/velma/devel/lib/python3/dist-packages/pathing/msg/__init__.py: /home/thattori/capstone/velma/devel/lib/python3/dist-packages/pathing/msg/_PixyBlock.py
+/home/thattori/capstone/velma/devel/lib/python3/dist-packages/pathing/msg/__init__.py: /home/thattori/capstone/velma/devel/lib/python3/dist-packages/pathing/msg/_PixyResolution.py
+/home/thattori/capstone/velma/devel/lib/python3/dist-packages/pathing/msg/__init__.py: /home/thattori/capstone/velma/devel/lib/python3/dist-packages/pathing/msg/_PixyData.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python msg __init__.py for pathing"
 	cd /home/thattori/capstone/velma/build/pathing && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/thattori/capstone/velma/devel/lib/python3/dist-packages/pathing/msg --initpy
 
 pathing_generate_messages_py: pathing/CMakeFiles/pathing_generate_messages_py
 pathing_generate_messages_py: /home/thattori/capstone/velma/devel/lib/python3/dist-packages/pathing/msg/_gpio.py
+pathing_generate_messages_py: /home/thattori/capstone/velma/devel/lib/python3/dist-packages/pathing/msg/_PixyBlock.py
+pathing_generate_messages_py: /home/thattori/capstone/velma/devel/lib/python3/dist-packages/pathing/msg/_PixyResolution.py
+pathing_generate_messages_py: /home/thattori/capstone/velma/devel/lib/python3/dist-packages/pathing/msg/_PixyData.py
 pathing_generate_messages_py: /home/thattori/capstone/velma/devel/lib/python3/dist-packages/pathing/msg/__init__.py
 pathing_generate_messages_py: pathing/CMakeFiles/pathing_generate_messages_py.dir/build.make
 

@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "pathing: 1 messages, 0 services")
+message(STATUS "pathing: 4 messages, 0 services")
 
 set(MSG_I_FLAGS "-Ipathing:/home/thattori/capstone/velma/src/pathing/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg;-Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg;-Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg;-Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg")
 
@@ -22,6 +22,21 @@ add_custom_target(_pathing_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "pathing" "/home/thattori/capstone/velma/src/pathing/msg/gpio.msg" "std_msgs/Header"
 )
 
+get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg" NAME_WE)
+add_custom_target(_pathing_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "pathing" "/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg" "sensor_msgs/RegionOfInterest"
+)
+
+get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/PixyResolution.msg" NAME_WE)
+add_custom_target(_pathing_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "pathing" "/home/thattori/capstone/velma/src/pathing/msg/PixyResolution.msg" ""
+)
+
+get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/PixyData.msg" NAME_WE)
+add_custom_target(_pathing_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "pathing" "/home/thattori/capstone/velma/src/pathing/msg/PixyData.msg" "std_msgs/Header:sensor_msgs/RegionOfInterest:pathing/PixyBlock"
+)
+
 #
 #  langs = gencpp;geneus;genlisp;gennodejs;genpy
 #
@@ -32,6 +47,24 @@ _generate_msg_cpp(pathing
   "/home/thattori/capstone/velma/src/pathing/msg/gpio.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/pathing
+)
+_generate_msg_cpp(pathing
+  "/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/pathing
+)
+_generate_msg_cpp(pathing
+  "/home/thattori/capstone/velma/src/pathing/msg/PixyResolution.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/pathing
+)
+_generate_msg_cpp(pathing
+  "/home/thattori/capstone/velma/src/pathing/msg/PixyData.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/pathing
 )
 
@@ -51,6 +84,12 @@ add_dependencies(pathing_generate_messages pathing_generate_messages_cpp)
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/gpio.msg" NAME_WE)
 add_dependencies(pathing_generate_messages_cpp _pathing_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg" NAME_WE)
+add_dependencies(pathing_generate_messages_cpp _pathing_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/PixyResolution.msg" NAME_WE)
+add_dependencies(pathing_generate_messages_cpp _pathing_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/PixyData.msg" NAME_WE)
+add_dependencies(pathing_generate_messages_cpp _pathing_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(pathing_gencpp)
@@ -65,6 +104,24 @@ _generate_msg_eus(pathing
   "/home/thattori/capstone/velma/src/pathing/msg/gpio.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/pathing
+)
+_generate_msg_eus(pathing
+  "/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/pathing
+)
+_generate_msg_eus(pathing
+  "/home/thattori/capstone/velma/src/pathing/msg/PixyResolution.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/pathing
+)
+_generate_msg_eus(pathing
+  "/home/thattori/capstone/velma/src/pathing/msg/PixyData.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/pathing
 )
 
@@ -84,6 +141,12 @@ add_dependencies(pathing_generate_messages pathing_generate_messages_eus)
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/gpio.msg" NAME_WE)
 add_dependencies(pathing_generate_messages_eus _pathing_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg" NAME_WE)
+add_dependencies(pathing_generate_messages_eus _pathing_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/PixyResolution.msg" NAME_WE)
+add_dependencies(pathing_generate_messages_eus _pathing_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/PixyData.msg" NAME_WE)
+add_dependencies(pathing_generate_messages_eus _pathing_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(pathing_geneus)
@@ -98,6 +161,24 @@ _generate_msg_lisp(pathing
   "/home/thattori/capstone/velma/src/pathing/msg/gpio.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/pathing
+)
+_generate_msg_lisp(pathing
+  "/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/pathing
+)
+_generate_msg_lisp(pathing
+  "/home/thattori/capstone/velma/src/pathing/msg/PixyResolution.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/pathing
+)
+_generate_msg_lisp(pathing
+  "/home/thattori/capstone/velma/src/pathing/msg/PixyData.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/pathing
 )
 
@@ -117,6 +198,12 @@ add_dependencies(pathing_generate_messages pathing_generate_messages_lisp)
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/gpio.msg" NAME_WE)
 add_dependencies(pathing_generate_messages_lisp _pathing_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg" NAME_WE)
+add_dependencies(pathing_generate_messages_lisp _pathing_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/PixyResolution.msg" NAME_WE)
+add_dependencies(pathing_generate_messages_lisp _pathing_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/PixyData.msg" NAME_WE)
+add_dependencies(pathing_generate_messages_lisp _pathing_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(pathing_genlisp)
@@ -131,6 +218,24 @@ _generate_msg_nodejs(pathing
   "/home/thattori/capstone/velma/src/pathing/msg/gpio.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/pathing
+)
+_generate_msg_nodejs(pathing
+  "/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/pathing
+)
+_generate_msg_nodejs(pathing
+  "/home/thattori/capstone/velma/src/pathing/msg/PixyResolution.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/pathing
+)
+_generate_msg_nodejs(pathing
+  "/home/thattori/capstone/velma/src/pathing/msg/PixyData.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/pathing
 )
 
@@ -150,6 +255,12 @@ add_dependencies(pathing_generate_messages pathing_generate_messages_nodejs)
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/gpio.msg" NAME_WE)
 add_dependencies(pathing_generate_messages_nodejs _pathing_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg" NAME_WE)
+add_dependencies(pathing_generate_messages_nodejs _pathing_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/PixyResolution.msg" NAME_WE)
+add_dependencies(pathing_generate_messages_nodejs _pathing_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/PixyData.msg" NAME_WE)
+add_dependencies(pathing_generate_messages_nodejs _pathing_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(pathing_gennodejs)
@@ -164,6 +275,24 @@ _generate_msg_py(pathing
   "/home/thattori/capstone/velma/src/pathing/msg/gpio.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/pathing
+)
+_generate_msg_py(pathing
+  "/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/pathing
+)
+_generate_msg_py(pathing
+  "/home/thattori/capstone/velma/src/pathing/msg/PixyResolution.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/pathing
+)
+_generate_msg_py(pathing
+  "/home/thattori/capstone/velma/src/pathing/msg/PixyData.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/pathing
 )
 
@@ -182,6 +311,12 @@ add_dependencies(pathing_generate_messages pathing_generate_messages_py)
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/gpio.msg" NAME_WE)
+add_dependencies(pathing_generate_messages_py _pathing_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg" NAME_WE)
+add_dependencies(pathing_generate_messages_py _pathing_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/PixyResolution.msg" NAME_WE)
+add_dependencies(pathing_generate_messages_py _pathing_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/PixyData.msg" NAME_WE)
 add_dependencies(pathing_generate_messages_py _pathing_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

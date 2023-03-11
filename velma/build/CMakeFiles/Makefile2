@@ -346,15 +346,18 @@ pathing/clean: pathing/CMakeFiles/pathing_genlisp.dir/clean
 pathing/clean: pathing/CMakeFiles/pathing_geneus.dir/clean
 pathing/clean: pathing/CMakeFiles/pathing_generate_messages_eus.dir/clean
 pathing/clean: pathing/CMakeFiles/pathing_gencpp.dir/clean
-pathing/clean: pathing/CMakeFiles/_pathing_generate_messages_check_deps_gpio.dir/clean
-pathing/clean: pathing/CMakeFiles/nav_msgs_generate_messages_py.dir/clean
 pathing/clean: pathing/CMakeFiles/pathing_generate_messages_cpp.dir/clean
+pathing/clean: pathing/CMakeFiles/_pathing_generate_messages_check_deps_gpio.dir/clean
+pathing/clean: pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyResolution.dir/clean
+pathing/clean: pathing/CMakeFiles/nav_msgs_generate_messages_py.dir/clean
 pathing/clean: pathing/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/clean
+pathing/clean: pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData.dir/clean
 pathing/clean: pathing/CMakeFiles/actionlib_msgs_generate_messages_py.dir/clean
 pathing/clean: pathing/CMakeFiles/actionlib_generate_messages_cpp.dir/clean
 pathing/clean: pathing/CMakeFiles/tf2_msgs_generate_messages_eus.dir/clean
 pathing/clean: pathing/CMakeFiles/visualization_msgs_generate_messages_py.dir/clean
 pathing/clean: pathing/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/clean
+pathing/clean: pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyBlock.dir/clean
 pathing/clean: pathing/CMakeFiles/pathing.dir/clean
 pathing/clean: pathing/CMakeFiles/object_costmap.dir/clean
 pathing/clean: pathing/CMakeFiles/actionlib_generate_messages_lisp.dir/clean
@@ -978,7 +981,7 @@ gtest/googlemock/CMakeFiles/gmock.dir/clean:
 gtest/googletest/CMakeFiles/gtest_main.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest_main.dir/build.make gtest/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest_main.dir/build.make gtest/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=18 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=17 "Built target gtest_main"
 .PHONY : gtest/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1005,7 +1008,7 @@ gtest/googletest/CMakeFiles/gtest_main.dir/clean:
 gtest/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=17 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=16 "Built target gtest"
 .PHONY : gtest/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1059,7 +1062,7 @@ joystick_drivers/joystick_drivers/CMakeFiles/_catkin_empty_exported_target.dir/c
 serial/CMakeFiles/serial_example.dir/all: serial/CMakeFiles/serial.dir/all
 	$(MAKE) -f serial/CMakeFiles/serial_example.dir/build.make serial/CMakeFiles/serial_example.dir/depend
 	$(MAKE) -f serial/CMakeFiles/serial_example.dir/build.make serial/CMakeFiles/serial_example.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=47 "Built target serial_example"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=51 "Built target serial_example"
 .PHONY : serial/CMakeFiles/serial_example.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1086,7 +1089,7 @@ serial/CMakeFiles/serial_example.dir/clean:
 serial/CMakeFiles/serial.dir/all:
 	$(MAKE) -f serial/CMakeFiles/serial.dir/build.make serial/CMakeFiles/serial.dir/depend
 	$(MAKE) -f serial/CMakeFiles/serial.dir/build.make serial/CMakeFiles/serial.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=43,44 "Built target serial"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=47,48 "Built target serial"
 .PHONY : serial/CMakeFiles/serial.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1114,7 +1117,7 @@ serial/tests/CMakeFiles/serial-test.dir/all: gtest/googletest/CMakeFiles/gtest.d
 serial/tests/CMakeFiles/serial-test.dir/all: serial/CMakeFiles/serial.dir/all
 	$(MAKE) -f serial/tests/CMakeFiles/serial-test.dir/build.make serial/tests/CMakeFiles/serial-test.dir/depend
 	$(MAKE) -f serial/tests/CMakeFiles/serial-test.dir/build.make serial/tests/CMakeFiles/serial-test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=45 "Built target serial-test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=49 "Built target serial-test"
 .PHONY : serial/tests/CMakeFiles/serial-test.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1364,7 +1367,7 @@ serial/tests/CMakeFiles/serial-test-timer.dir/all: gtest/googletest/CMakeFiles/g
 serial/tests/CMakeFiles/serial-test-timer.dir/all: serial/CMakeFiles/serial.dir/all
 	$(MAKE) -f serial/tests/CMakeFiles/serial-test-timer.dir/build.make serial/tests/CMakeFiles/serial-test-timer.dir/depend
 	$(MAKE) -f serial/tests/CMakeFiles/serial-test-timer.dir/build.make serial/tests/CMakeFiles/serial-test-timer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=46 "Built target serial-test-timer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=50 "Built target serial-test-timer"
 .PHONY : serial/tests/CMakeFiles/serial-test-timer.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1457,7 +1460,7 @@ slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages_py.dir/all
 slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages_py.dir/all: slam/slam_toolbox_msgs/CMakeFiles/_slam_toolbox_msgs_generate_messages_check_deps_SerializePoseGraph.dir/all
 	$(MAKE) -f slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages_py.dir/build.make slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages_py.dir/depend
 	$(MAKE) -f slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages_py.dir/build.make slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=69,70,71,72,73,74 "Built target slam_toolbox_msgs_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=71,72,73,74,75,76 "Built target slam_toolbox_msgs_generate_messages_py"
 .PHONY : slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1516,7 +1519,7 @@ slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_geneus.dir/all: slam/slam_to
 
 # Build rule for subdir invocation for target.
 slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_geneus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_geneus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
 .PHONY : slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_geneus.dir/rule
@@ -1597,7 +1600,7 @@ slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_gennodejs.dir/all: slam/slam
 
 # Build rule for subdir invocation for target.
 slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_gennodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_gennodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
 .PHONY : slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_gennodejs.dir/rule
@@ -1739,12 +1742,12 @@ slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages_eus.dir/al
 slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages_eus.dir/all: slam/slam_toolbox_msgs/CMakeFiles/_slam_toolbox_msgs_generate_messages_check_deps_SerializePoseGraph.dir/all
 	$(MAKE) -f slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages_eus.dir/build.make slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages_eus.dir/depend
 	$(MAKE) -f slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages_eus.dir/build.make slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=53,54,55,56,57,58 "Built target slam_toolbox_msgs_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=57,58,59,60,61 "Built target slam_toolbox_msgs_generate_messages_eus"
 .PHONY : slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
 .PHONY : slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages_eus.dir/rule
@@ -1886,7 +1889,7 @@ slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages_cpp.dir/al
 slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages_cpp.dir/all: slam/slam_toolbox_msgs/CMakeFiles/_slam_toolbox_msgs_generate_messages_check_deps_SerializePoseGraph.dir/all
 	$(MAKE) -f slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages_cpp.dir/build.make slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages_cpp.dir/depend
 	$(MAKE) -f slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages_cpp.dir/build.make slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=48,49,50,51,52 "Built target slam_toolbox_msgs_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=52,53,54,55,56 "Built target slam_toolbox_msgs_generate_messages_cpp"
 .PHONY : slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1952,7 +1955,7 @@ slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages_lisp.dir/a
 slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages_lisp.dir/all: slam/slam_toolbox_msgs/CMakeFiles/_slam_toolbox_msgs_generate_messages_check_deps_SerializePoseGraph.dir/all
 	$(MAKE) -f slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages_lisp.dir/build.make slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages_lisp.dir/depend
 	$(MAKE) -f slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages_lisp.dir/build.make slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=59,60,61,62,63 "Built target slam_toolbox_msgs_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=62,63,64,65,66 "Built target slam_toolbox_msgs_generate_messages_lisp"
 .PHONY : slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2015,7 +2018,7 @@ slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages.dir/all: s
 
 # Build rule for subdir invocation for target.
 slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 25
 	$(MAKE) -f CMakeFiles/Makefile2 slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
 .PHONY : slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages.dir/rule
@@ -2103,12 +2106,12 @@ slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages_nodejs.dir
 slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages_nodejs.dir/all: slam/slam_toolbox_msgs/CMakeFiles/_slam_toolbox_msgs_generate_messages_check_deps_SerializePoseGraph.dir/all
 	$(MAKE) -f slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages_nodejs.dir/build.make slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages_nodejs.dir/depend
 	$(MAKE) -f slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages_nodejs.dir/build.make slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=64,65,66,67,68 "Built target slam_toolbox_msgs_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=67,68,69,70 "Built target slam_toolbox_msgs_generate_messages_nodejs"
 .PHONY : slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
 .PHONY : slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages_nodejs.dir/rule
@@ -2517,7 +2520,7 @@ vesc/vesc_msgs/CMakeFiles/vesc_msgs_genpy.dir/all: vesc/vesc_msgs/CMakeFiles/ves
 
 # Build rule for subdir invocation for target.
 vesc/vesc_msgs/CMakeFiles/vesc_msgs_genpy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 vesc/vesc_msgs/CMakeFiles/vesc_msgs_genpy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
 .PHONY : vesc/vesc_msgs/CMakeFiles/vesc_msgs_genpy.dir/rule
@@ -2627,7 +2630,7 @@ vesc/vesc_msgs/CMakeFiles/vesc_msgs_geneus.dir/all: vesc/vesc_msgs/CMakeFiles/ve
 
 # Build rule for subdir invocation for target.
 vesc/vesc_msgs/CMakeFiles/vesc_msgs_geneus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 vesc/vesc_msgs/CMakeFiles/vesc_msgs_geneus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
 .PHONY : vesc/vesc_msgs/CMakeFiles/vesc_msgs_geneus.dir/rule
@@ -2651,12 +2654,12 @@ vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_py.dir/all: vesc/vesc_msgs
 vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_py.dir/all: vesc/vesc_msgs/CMakeFiles/_vesc_msgs_generate_messages_check_deps_VescStateStamped.dir/all
 	$(MAKE) -f vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_py.dir/build.make vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_py.dir/depend
 	$(MAKE) -f vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_py.dir/build.make vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=97,98 "Built target vesc_msgs_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=98 "Built target vesc_msgs_generate_messages_py"
 .PHONY : vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
 .PHONY : vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_py.dir/rule
@@ -2707,7 +2710,7 @@ vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_lisp.dir/all: vesc/vesc_ms
 vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_lisp.dir/all: vesc/vesc_msgs/CMakeFiles/_vesc_msgs_generate_messages_check_deps_VescStateStamped.dir/all
 	$(MAKE) -f vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_lisp.dir/build.make vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_lisp.dir/depend
 	$(MAKE) -f vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_lisp.dir/build.make vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=95 "Built target vesc_msgs_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=96 "Built target vesc_msgs_generate_messages_lisp"
 .PHONY : vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2763,12 +2766,12 @@ vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_eus.dir/all: vesc/vesc_msg
 vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_eus.dir/all: vesc/vesc_msgs/CMakeFiles/_vesc_msgs_generate_messages_check_deps_VescStateStamped.dir/all
 	$(MAKE) -f vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_eus.dir/build.make vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_eus.dir/depend
 	$(MAKE) -f vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_eus.dir/build.make vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=94 "Built target vesc_msgs_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=94,95 "Built target vesc_msgs_generate_messages_eus"
 .PHONY : vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
 .PHONY : vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_eus.dir/rule
@@ -2792,7 +2795,7 @@ vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_nodejs.dir/all: vesc/vesc_
 vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_nodejs.dir/all: vesc/vesc_msgs/CMakeFiles/_vesc_msgs_generate_messages_check_deps_VescStateStamped.dir/all
 	$(MAKE) -f vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_nodejs.dir/build.make vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_nodejs.dir/depend
 	$(MAKE) -f vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_nodejs.dir/build.make vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=96 "Built target vesc_msgs_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=97 "Built target vesc_msgs_generate_messages_nodejs"
 .PHONY : vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2936,7 +2939,7 @@ gpio/CMakeFiles/gpio_control_generate_messages.dir/all: gpio/CMakeFiles/gpio_con
 
 # Build rule for subdir invocation for target.
 gpio/CMakeFiles/gpio_control_generate_messages.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 gpio/CMakeFiles/gpio_control_generate_messages.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
 .PHONY : gpio/CMakeFiles/gpio_control_generate_messages.dir/rule
@@ -2960,12 +2963,12 @@ gpio/CMakeFiles/gpio_control_generate_messages_cpp.dir/all: gpio/CMakeFiles/_gpi
 gpio/CMakeFiles/gpio_control_generate_messages_cpp.dir/all: gpio/CMakeFiles/_gpio_control_generate_messages_check_deps_OutputState.dir/all
 	$(MAKE) -f gpio/CMakeFiles/gpio_control_generate_messages_cpp.dir/build.make gpio/CMakeFiles/gpio_control_generate_messages_cpp.dir/depend
 	$(MAKE) -f gpio/CMakeFiles/gpio_control_generate_messages_cpp.dir/build.make gpio/CMakeFiles/gpio_control_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=11 "Built target gpio_control_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num= "Built target gpio_control_generate_messages_cpp"
 .PHONY : gpio/CMakeFiles/gpio_control_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 gpio/CMakeFiles/gpio_control_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 gpio/CMakeFiles/gpio_control_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
 .PHONY : gpio/CMakeFiles/gpio_control_generate_messages_cpp.dir/rule
@@ -2992,7 +2995,7 @@ gpio/CMakeFiles/gpio_control_gencpp.dir/all: gpio/CMakeFiles/gpio_control_genera
 
 # Build rule for subdir invocation for target.
 gpio/CMakeFiles/gpio_control_gencpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 gpio/CMakeFiles/gpio_control_gencpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
 .PHONY : gpio/CMakeFiles/gpio_control_gencpp.dir/rule
@@ -3232,7 +3235,7 @@ gpio/CMakeFiles/gpio_control_generate_messages_nodejs.dir/all: gpio/CMakeFiles/_
 gpio/CMakeFiles/gpio_control_generate_messages_nodejs.dir/all: gpio/CMakeFiles/_gpio_control_generate_messages_check_deps_OutputState.dir/all
 	$(MAKE) -f gpio/CMakeFiles/gpio_control_generate_messages_nodejs.dir/build.make gpio/CMakeFiles/gpio_control_generate_messages_nodejs.dir/depend
 	$(MAKE) -f gpio/CMakeFiles/gpio_control_generate_messages_nodejs.dir/build.make gpio/CMakeFiles/gpio_control_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=15 "Built target gpio_control_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=14 "Built target gpio_control_generate_messages_nodejs"
 .PHONY : gpio/CMakeFiles/gpio_control_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3288,7 +3291,7 @@ gpio/CMakeFiles/gpio_control_generate_messages_eus.dir/all: gpio/CMakeFiles/_gpi
 gpio/CMakeFiles/gpio_control_generate_messages_eus.dir/all: gpio/CMakeFiles/_gpio_control_generate_messages_check_deps_OutputState.dir/all
 	$(MAKE) -f gpio/CMakeFiles/gpio_control_generate_messages_eus.dir/build.make gpio/CMakeFiles/gpio_control_generate_messages_eus.dir/depend
 	$(MAKE) -f gpio/CMakeFiles/gpio_control_generate_messages_eus.dir/build.make gpio/CMakeFiles/gpio_control_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=12,13 "Built target gpio_control_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=11,12 "Built target gpio_control_generate_messages_eus"
 .PHONY : gpio/CMakeFiles/gpio_control_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3317,7 +3320,7 @@ gpio/CMakeFiles/gpio_control_generate_messages_lisp.dir/all: gpio/CMakeFiles/_gp
 gpio/CMakeFiles/gpio_control_generate_messages_lisp.dir/all: gpio/CMakeFiles/_gpio_control_generate_messages_check_deps_OutputState.dir/all
 	$(MAKE) -f gpio/CMakeFiles/gpio_control_generate_messages_lisp.dir/build.make gpio/CMakeFiles/gpio_control_generate_messages_lisp.dir/depend
 	$(MAKE) -f gpio/CMakeFiles/gpio_control_generate_messages_lisp.dir/build.make gpio/CMakeFiles/gpio_control_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=14 "Built target gpio_control_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=13 "Built target gpio_control_generate_messages_lisp"
 .PHONY : gpio/CMakeFiles/gpio_control_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3373,7 +3376,7 @@ gpio/CMakeFiles/gpio_control_generate_messages_py.dir/all: gpio/CMakeFiles/_gpio
 gpio/CMakeFiles/gpio_control_generate_messages_py.dir/all: gpio/CMakeFiles/_gpio_control_generate_messages_check_deps_OutputState.dir/all
 	$(MAKE) -f gpio/CMakeFiles/gpio_control_generate_messages_py.dir/build.make gpio/CMakeFiles/gpio_control_generate_messages_py.dir/depend
 	$(MAKE) -f gpio/CMakeFiles/gpio_control_generate_messages_py.dir/build.make gpio/CMakeFiles/gpio_control_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=16 "Built target gpio_control_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=15 "Built target gpio_control_generate_messages_py"
 .PHONY : gpio/CMakeFiles/gpio_control_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3508,12 +3511,12 @@ racecar/ackermann_cmd_mux/CMakeFiles/nodelet_generate_messages_eus.dir/clean:
 racecar/ackermann_cmd_mux/CMakeFiles/ackermann_cmd_mux_nodelet.dir/all: racecar/ackermann_cmd_mux/CMakeFiles/ackermann_cmd_mux_gencfg.dir/all
 	$(MAKE) -f racecar/ackermann_cmd_mux/CMakeFiles/ackermann_cmd_mux_nodelet.dir/build.make racecar/ackermann_cmd_mux/CMakeFiles/ackermann_cmd_mux_nodelet.dir/depend
 	$(MAKE) -f racecar/ackermann_cmd_mux/CMakeFiles/ackermann_cmd_mux_nodelet.dir/build.make racecar/ackermann_cmd_mux/CMakeFiles/ackermann_cmd_mux_nodelet.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=1,2 "Built target ackermann_cmd_mux_nodelet"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=1 "Built target ackermann_cmd_mux_nodelet"
 .PHONY : racecar/ackermann_cmd_mux/CMakeFiles/ackermann_cmd_mux_nodelet.dir/all
 
 # Build rule for subdir invocation for target.
 racecar/ackermann_cmd_mux/CMakeFiles/ackermann_cmd_mux_nodelet.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 racecar/ackermann_cmd_mux/CMakeFiles/ackermann_cmd_mux_nodelet.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
 .PHONY : racecar/ackermann_cmd_mux/CMakeFiles/ackermann_cmd_mux_nodelet.dir/rule
@@ -4345,12 +4348,12 @@ joystick_drivers/joy/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean:
 joystick_drivers/joy/CMakeFiles/joy_node.dir/all:
 	$(MAKE) -f joystick_drivers/joy/CMakeFiles/joy_node.dir/build.make joystick_drivers/joy/CMakeFiles/joy_node.dir/depend
 	$(MAKE) -f joystick_drivers/joy/CMakeFiles/joy_node.dir/build.make joystick_drivers/joy/CMakeFiles/joy_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=19,20 "Built target joy_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=18 "Built target joy_node"
 .PHONY : joystick_drivers/joy/CMakeFiles/joy_node.dir/all
 
 # Build rule for subdir invocation for target.
 joystick_drivers/joy/CMakeFiles/joy_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 joystick_drivers/joy/CMakeFiles/joy_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
 .PHONY : joystick_drivers/joy/CMakeFiles/joy_node.dir/rule
@@ -4372,7 +4375,7 @@ joystick_drivers/joy/CMakeFiles/joy_node.dir/clean:
 lidar/CMakeFiles/rplidarNodeClient.dir/all:
 	$(MAKE) -f lidar/CMakeFiles/rplidarNodeClient.dir/build.make lidar/CMakeFiles/rplidarNodeClient.dir/depend
 	$(MAKE) -f lidar/CMakeFiles/rplidarNodeClient.dir/build.make lidar/CMakeFiles/rplidarNodeClient.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=42 "Built target rplidarNodeClient"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=46 "Built target rplidarNodeClient"
 .PHONY : lidar/CMakeFiles/rplidarNodeClient.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4399,12 +4402,12 @@ lidar/CMakeFiles/rplidarNodeClient.dir/clean:
 lidar/CMakeFiles/rplidarNode.dir/all:
 	$(MAKE) -f lidar/CMakeFiles/rplidarNode.dir/build.make lidar/CMakeFiles/rplidarNode.dir/depend
 	$(MAKE) -f lidar/CMakeFiles/rplidarNode.dir/build.make lidar/CMakeFiles/rplidarNode.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=36,37,38,39,40,41 "Built target rplidarNode"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=41,42,43,44,45 "Built target rplidarNode"
 .PHONY : lidar/CMakeFiles/rplidarNode.dir/all
 
 # Build rule for subdir invocation for target.
 lidar/CMakeFiles/rplidarNode.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 lidar/CMakeFiles/rplidarNode.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
 .PHONY : lidar/CMakeFiles/rplidarNode.dir/rule
@@ -4427,7 +4430,7 @@ pathing/CMakeFiles/time_costmap.dir/all: pathing/CMakeFiles/pathing_generate_mes
 pathing/CMakeFiles/time_costmap.dir/all: pathing/CMakeFiles/pathing.dir/all
 	$(MAKE) -f pathing/CMakeFiles/time_costmap.dir/build.make pathing/CMakeFiles/time_costmap.dir/depend
 	$(MAKE) -f pathing/CMakeFiles/time_costmap.dir/build.make pathing/CMakeFiles/time_costmap.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=79 "Built target time_costmap"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num= "Built target time_costmap"
 .PHONY : pathing/CMakeFiles/time_costmap.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4455,12 +4458,12 @@ pathing/CMakeFiles/obstacle_costmap.dir/all: pathing/CMakeFiles/pathing_generate
 pathing/CMakeFiles/obstacle_costmap.dir/all: pathing/CMakeFiles/pathing.dir/all
 	$(MAKE) -f pathing/CMakeFiles/obstacle_costmap.dir/build.make pathing/CMakeFiles/obstacle_costmap.dir/depend
 	$(MAKE) -f pathing/CMakeFiles/obstacle_costmap.dir/build.make pathing/CMakeFiles/obstacle_costmap.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=28 "Built target obstacle_costmap"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=26 "Built target obstacle_costmap"
 .PHONY : pathing/CMakeFiles/obstacle_costmap.dir/all
 
 # Build rule for subdir invocation for target.
 pathing/CMakeFiles/obstacle_costmap.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/obstacle_costmap.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
 .PHONY : pathing/CMakeFiles/obstacle_costmap.dir/rule
@@ -4488,7 +4491,7 @@ pathing/CMakeFiles/frontier_costmap.dir/all: pathing/CMakeFiles/pathing.dir/all
 
 # Build rule for subdir invocation for target.
 pathing/CMakeFiles/frontier_costmap.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/frontier_costmap.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
 .PHONY : pathing/CMakeFiles/frontier_costmap.dir/rule
@@ -4515,7 +4518,7 @@ pathing/CMakeFiles/pathing_genpy.dir/all: pathing/CMakeFiles/pathing_generate_me
 
 # Build rule for subdir invocation for target.
 pathing/CMakeFiles/pathing_genpy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/pathing_genpy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
 .PHONY : pathing/CMakeFiles/pathing_genpy.dir/rule
@@ -4537,15 +4540,18 @@ pathing/CMakeFiles/pathing_genpy.dir/clean:
 pathing/CMakeFiles/pathing_generate_messages_py.dir/all: slam/slam_toolbox_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/all
 pathing/CMakeFiles/pathing_generate_messages_py.dir/all: joystick_drivers/joy/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
 pathing/CMakeFiles/pathing_generate_messages_py.dir/all: pathing/CMakeFiles/_pathing_generate_messages_check_deps_gpio.dir/all
+pathing/CMakeFiles/pathing_generate_messages_py.dir/all: pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyResolution.dir/all
 pathing/CMakeFiles/pathing_generate_messages_py.dir/all: pathing/CMakeFiles/nav_msgs_generate_messages_py.dir/all
+pathing/CMakeFiles/pathing_generate_messages_py.dir/all: pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData.dir/all
+pathing/CMakeFiles/pathing_generate_messages_py.dir/all: pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyBlock.dir/all
 	$(MAKE) -f pathing/CMakeFiles/pathing_generate_messages_py.dir/build.make pathing/CMakeFiles/pathing_generate_messages_py.dir/depend
 	$(MAKE) -f pathing/CMakeFiles/pathing_generate_messages_py.dir/build.make pathing/CMakeFiles/pathing_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=35 "Built target pathing_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=38,39,40 "Built target pathing_generate_messages_py"
 .PHONY : pathing/CMakeFiles/pathing_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 pathing/CMakeFiles/pathing_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/pathing_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
 .PHONY : pathing/CMakeFiles/pathing_generate_messages_py.dir/rule
@@ -4567,15 +4573,18 @@ pathing/CMakeFiles/pathing_generate_messages_py.dir/clean:
 pathing/CMakeFiles/pathing_generate_messages_nodejs.dir/all: slam/slam_toolbox_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
 pathing/CMakeFiles/pathing_generate_messages_nodejs.dir/all: joystick_drivers/joy/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
 pathing/CMakeFiles/pathing_generate_messages_nodejs.dir/all: pathing/CMakeFiles/_pathing_generate_messages_check_deps_gpio.dir/all
+pathing/CMakeFiles/pathing_generate_messages_nodejs.dir/all: pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyResolution.dir/all
+pathing/CMakeFiles/pathing_generate_messages_nodejs.dir/all: pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData.dir/all
+pathing/CMakeFiles/pathing_generate_messages_nodejs.dir/all: pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyBlock.dir/all
 pathing/CMakeFiles/pathing_generate_messages_nodejs.dir/all: pathing/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/all
 	$(MAKE) -f pathing/CMakeFiles/pathing_generate_messages_nodejs.dir/build.make pathing/CMakeFiles/pathing_generate_messages_nodejs.dir/depend
 	$(MAKE) -f pathing/CMakeFiles/pathing_generate_messages_nodejs.dir/build.make pathing/CMakeFiles/pathing_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=34 "Built target pathing_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=36,37 "Built target pathing_generate_messages_nodejs"
 .PHONY : pathing/CMakeFiles/pathing_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 pathing/CMakeFiles/pathing_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/pathing_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
 .PHONY : pathing/CMakeFiles/pathing_generate_messages_nodejs.dir/rule
@@ -4602,7 +4611,7 @@ pathing/CMakeFiles/pathing_genlisp.dir/all: pathing/CMakeFiles/pathing_generate_
 
 # Build rule for subdir invocation for target.
 pathing/CMakeFiles/pathing_genlisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/pathing_genlisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
 .PHONY : pathing/CMakeFiles/pathing_genlisp.dir/rule
@@ -4629,7 +4638,7 @@ pathing/CMakeFiles/pathing_geneus.dir/all: pathing/CMakeFiles/pathing_generate_m
 
 # Build rule for subdir invocation for target.
 pathing/CMakeFiles/pathing_geneus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/pathing_geneus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
 .PHONY : pathing/CMakeFiles/pathing_geneus.dir/rule
@@ -4651,15 +4660,18 @@ pathing/CMakeFiles/pathing_geneus.dir/clean:
 pathing/CMakeFiles/pathing_generate_messages_eus.dir/all: slam/slam_toolbox_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/all
 pathing/CMakeFiles/pathing_generate_messages_eus.dir/all: joystick_drivers/joy/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
 pathing/CMakeFiles/pathing_generate_messages_eus.dir/all: pathing/CMakeFiles/_pathing_generate_messages_check_deps_gpio.dir/all
+pathing/CMakeFiles/pathing_generate_messages_eus.dir/all: pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyResolution.dir/all
+pathing/CMakeFiles/pathing_generate_messages_eus.dir/all: pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData.dir/all
+pathing/CMakeFiles/pathing_generate_messages_eus.dir/all: pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyBlock.dir/all
 pathing/CMakeFiles/pathing_generate_messages_eus.dir/all: pathing/CMakeFiles/nav_msgs_generate_messages_eus.dir/all
 	$(MAKE) -f pathing/CMakeFiles/pathing_generate_messages_eus.dir/build.make pathing/CMakeFiles/pathing_generate_messages_eus.dir/depend
 	$(MAKE) -f pathing/CMakeFiles/pathing_generate_messages_eus.dir/build.make pathing/CMakeFiles/pathing_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=33 "Built target pathing_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=32,33 "Built target pathing_generate_messages_eus"
 .PHONY : pathing/CMakeFiles/pathing_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 pathing/CMakeFiles/pathing_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/pathing_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
 .PHONY : pathing/CMakeFiles/pathing_generate_messages_eus.dir/rule
@@ -4686,7 +4698,7 @@ pathing/CMakeFiles/pathing_gencpp.dir/all: pathing/CMakeFiles/pathing_generate_m
 
 # Build rule for subdir invocation for target.
 pathing/CMakeFiles/pathing_gencpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/pathing_gencpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
 .PHONY : pathing/CMakeFiles/pathing_gencpp.dir/rule
@@ -4700,6 +4712,39 @@ pathing_gencpp: pathing/CMakeFiles/pathing_gencpp.dir/rule
 pathing/CMakeFiles/pathing_gencpp.dir/clean:
 	$(MAKE) -f pathing/CMakeFiles/pathing_gencpp.dir/build.make pathing/CMakeFiles/pathing_gencpp.dir/clean
 .PHONY : pathing/CMakeFiles/pathing_gencpp.dir/clean
+
+#=============================================================================
+# Target rules for target pathing/CMakeFiles/pathing_generate_messages_cpp.dir
+
+# All Build rule for target.
+pathing/CMakeFiles/pathing_generate_messages_cpp.dir/all: slam/slam_toolbox_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+pathing/CMakeFiles/pathing_generate_messages_cpp.dir/all: joystick_drivers/joy/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
+pathing/CMakeFiles/pathing_generate_messages_cpp.dir/all: pathing/CMakeFiles/_pathing_generate_messages_check_deps_gpio.dir/all
+pathing/CMakeFiles/pathing_generate_messages_cpp.dir/all: pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyResolution.dir/all
+pathing/CMakeFiles/pathing_generate_messages_cpp.dir/all: pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData.dir/all
+pathing/CMakeFiles/pathing_generate_messages_cpp.dir/all: pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyBlock.dir/all
+pathing/CMakeFiles/pathing_generate_messages_cpp.dir/all: pathing/CMakeFiles/nav_msgs_generate_messages_cpp.dir/all
+	$(MAKE) -f pathing/CMakeFiles/pathing_generate_messages_cpp.dir/build.make pathing/CMakeFiles/pathing_generate_messages_cpp.dir/depend
+	$(MAKE) -f pathing/CMakeFiles/pathing_generate_messages_cpp.dir/build.make pathing/CMakeFiles/pathing_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=30,31 "Built target pathing_generate_messages_cpp"
+.PHONY : pathing/CMakeFiles/pathing_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+pathing/CMakeFiles/pathing_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/pathing_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
+.PHONY : pathing/CMakeFiles/pathing_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+pathing_generate_messages_cpp: pathing/CMakeFiles/pathing_generate_messages_cpp.dir/rule
+
+.PHONY : pathing_generate_messages_cpp
+
+# clean rule for target.
+pathing/CMakeFiles/pathing_generate_messages_cpp.dir/clean:
+	$(MAKE) -f pathing/CMakeFiles/pathing_generate_messages_cpp.dir/build.make pathing/CMakeFiles/pathing_generate_messages_cpp.dir/clean
+.PHONY : pathing/CMakeFiles/pathing_generate_messages_cpp.dir/clean
 
 #=============================================================================
 # Target rules for target pathing/CMakeFiles/_pathing_generate_messages_check_deps_gpio.dir
@@ -4729,6 +4774,33 @@ pathing/CMakeFiles/_pathing_generate_messages_check_deps_gpio.dir/clean:
 .PHONY : pathing/CMakeFiles/_pathing_generate_messages_check_deps_gpio.dir/clean
 
 #=============================================================================
+# Target rules for target pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyResolution.dir
+
+# All Build rule for target.
+pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyResolution.dir/all:
+	$(MAKE) -f pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyResolution.dir/build.make pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyResolution.dir/depend
+	$(MAKE) -f pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyResolution.dir/build.make pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyResolution.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num= "Built target _pathing_generate_messages_check_deps_PixyResolution"
+.PHONY : pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyResolution.dir/all
+
+# Build rule for subdir invocation for target.
+pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyResolution.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyResolution.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
+.PHONY : pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyResolution.dir/rule
+
+# Convenience name for target.
+_pathing_generate_messages_check_deps_PixyResolution: pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyResolution.dir/rule
+
+.PHONY : _pathing_generate_messages_check_deps_PixyResolution
+
+# clean rule for target.
+pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyResolution.dir/clean:
+	$(MAKE) -f pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyResolution.dir/build.make pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyResolution.dir/clean
+.PHONY : pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyResolution.dir/clean
+
+#=============================================================================
 # Target rules for target pathing/CMakeFiles/nav_msgs_generate_messages_py.dir
 
 # All Build rule for target.
@@ -4756,36 +4828,6 @@ pathing/CMakeFiles/nav_msgs_generate_messages_py.dir/clean:
 .PHONY : pathing/CMakeFiles/nav_msgs_generate_messages_py.dir/clean
 
 #=============================================================================
-# Target rules for target pathing/CMakeFiles/pathing_generate_messages_cpp.dir
-
-# All Build rule for target.
-pathing/CMakeFiles/pathing_generate_messages_cpp.dir/all: slam/slam_toolbox_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-pathing/CMakeFiles/pathing_generate_messages_cpp.dir/all: joystick_drivers/joy/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
-pathing/CMakeFiles/pathing_generate_messages_cpp.dir/all: pathing/CMakeFiles/_pathing_generate_messages_check_deps_gpio.dir/all
-pathing/CMakeFiles/pathing_generate_messages_cpp.dir/all: pathing/CMakeFiles/nav_msgs_generate_messages_cpp.dir/all
-	$(MAKE) -f pathing/CMakeFiles/pathing_generate_messages_cpp.dir/build.make pathing/CMakeFiles/pathing_generate_messages_cpp.dir/depend
-	$(MAKE) -f pathing/CMakeFiles/pathing_generate_messages_cpp.dir/build.make pathing/CMakeFiles/pathing_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=32 "Built target pathing_generate_messages_cpp"
-.PHONY : pathing/CMakeFiles/pathing_generate_messages_cpp.dir/all
-
-# Build rule for subdir invocation for target.
-pathing/CMakeFiles/pathing_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 1
-	$(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/pathing_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
-.PHONY : pathing/CMakeFiles/pathing_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-pathing_generate_messages_cpp: pathing/CMakeFiles/pathing_generate_messages_cpp.dir/rule
-
-.PHONY : pathing_generate_messages_cpp
-
-# clean rule for target.
-pathing/CMakeFiles/pathing_generate_messages_cpp.dir/clean:
-	$(MAKE) -f pathing/CMakeFiles/pathing_generate_messages_cpp.dir/build.make pathing/CMakeFiles/pathing_generate_messages_cpp.dir/clean
-.PHONY : pathing/CMakeFiles/pathing_generate_messages_cpp.dir/clean
-
-#=============================================================================
 # Target rules for target pathing/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir
 
 # All Build rule for target.
@@ -4811,6 +4853,33 @@ tf2_msgs_generate_messages_nodejs: pathing/CMakeFiles/tf2_msgs_generate_messages
 pathing/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/clean:
 	$(MAKE) -f pathing/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build.make pathing/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/clean
 .PHONY : pathing/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/clean
+
+#=============================================================================
+# Target rules for target pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData.dir
+
+# All Build rule for target.
+pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData.dir/all:
+	$(MAKE) -f pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData.dir/build.make pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData.dir/depend
+	$(MAKE) -f pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData.dir/build.make pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num= "Built target _pathing_generate_messages_check_deps_PixyData"
+.PHONY : pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData.dir/all
+
+# Build rule for subdir invocation for target.
+pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
+.PHONY : pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData.dir/rule
+
+# Convenience name for target.
+_pathing_generate_messages_check_deps_PixyData: pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData.dir/rule
+
+.PHONY : _pathing_generate_messages_check_deps_PixyData
+
+# clean rule for target.
+pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData.dir/clean:
+	$(MAKE) -f pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData.dir/build.make pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData.dir/clean
+.PHONY : pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData.dir/clean
 
 #=============================================================================
 # Target rules for target pathing/CMakeFiles/actionlib_msgs_generate_messages_py.dir
@@ -4948,13 +5017,40 @@ pathing/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/clean:
 .PHONY : pathing/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/clean
 
 #=============================================================================
+# Target rules for target pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyBlock.dir
+
+# All Build rule for target.
+pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyBlock.dir/all:
+	$(MAKE) -f pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyBlock.dir/build.make pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyBlock.dir/depend
+	$(MAKE) -f pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyBlock.dir/build.make pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyBlock.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num= "Built target _pathing_generate_messages_check_deps_PixyBlock"
+.PHONY : pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyBlock.dir/all
+
+# Build rule for subdir invocation for target.
+pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyBlock.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyBlock.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
+.PHONY : pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyBlock.dir/rule
+
+# Convenience name for target.
+_pathing_generate_messages_check_deps_PixyBlock: pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyBlock.dir/rule
+
+.PHONY : _pathing_generate_messages_check_deps_PixyBlock
+
+# clean rule for target.
+pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyBlock.dir/clean:
+	$(MAKE) -f pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyBlock.dir/build.make pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyBlock.dir/clean
+.PHONY : pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyBlock.dir/clean
+
+#=============================================================================
 # Target rules for target pathing/CMakeFiles/pathing.dir
 
 # All Build rule for target.
 pathing/CMakeFiles/pathing.dir/all:
 	$(MAKE) -f pathing/CMakeFiles/pathing.dir/build.make pathing/CMakeFiles/pathing.dir/depend
 	$(MAKE) -f pathing/CMakeFiles/pathing.dir/build.make pathing/CMakeFiles/pathing.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=29,30,31 "Built target pathing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=27,28,29 "Built target pathing"
 .PHONY : pathing/CMakeFiles/pathing.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4982,12 +5078,12 @@ pathing/CMakeFiles/object_costmap.dir/all: pathing/CMakeFiles/pathing_generate_m
 pathing/CMakeFiles/object_costmap.dir/all: pathing/CMakeFiles/pathing.dir/all
 	$(MAKE) -f pathing/CMakeFiles/object_costmap.dir/build.make pathing/CMakeFiles/object_costmap.dir/depend
 	$(MAKE) -f pathing/CMakeFiles/object_costmap.dir/build.make pathing/CMakeFiles/object_costmap.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=27 "Built target object_costmap"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=25 "Built target object_costmap"
 .PHONY : pathing/CMakeFiles/object_costmap.dir/all
 
 # Build rule for subdir invocation for target.
 pathing/CMakeFiles/object_costmap.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/object_costmap.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
 .PHONY : pathing/CMakeFiles/object_costmap.dir/rule
@@ -5041,7 +5137,7 @@ pathing/CMakeFiles/pathing_gennodejs.dir/all: pathing/CMakeFiles/pathing_generat
 
 # Build rule for subdir invocation for target.
 pathing/CMakeFiles/pathing_gennodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/pathing_gennodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
 .PHONY : pathing/CMakeFiles/pathing_gennodejs.dir/rule
@@ -5096,7 +5192,7 @@ pathing/CMakeFiles/ease_costmap.dir/all: pathing/CMakeFiles/pathing.dir/all
 
 # Build rule for subdir invocation for target.
 pathing/CMakeFiles/ease_costmap.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/ease_costmap.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
 .PHONY : pathing/CMakeFiles/ease_costmap.dir/rule
@@ -5524,12 +5620,12 @@ pathing/CMakeFiles/unsearched_area_costmap.dir/all: pathing/CMakeFiles/pathing_g
 pathing/CMakeFiles/unsearched_area_costmap.dir/all: pathing/CMakeFiles/pathing.dir/all
 	$(MAKE) -f pathing/CMakeFiles/unsearched_area_costmap.dir/build.make pathing/CMakeFiles/unsearched_area_costmap.dir/depend
 	$(MAKE) -f pathing/CMakeFiles/unsearched_area_costmap.dir/build.make pathing/CMakeFiles/unsearched_area_costmap.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=83 "Built target unsearched_area_costmap"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=84 "Built target unsearched_area_costmap"
 .PHONY : pathing/CMakeFiles/unsearched_area_costmap.dir/all
 
 # Build rule for subdir invocation for target.
 pathing/CMakeFiles/unsearched_area_costmap.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/unsearched_area_costmap.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
 .PHONY : pathing/CMakeFiles/unsearched_area_costmap.dir/rule
@@ -5551,15 +5647,18 @@ pathing/CMakeFiles/unsearched_area_costmap.dir/clean:
 pathing/CMakeFiles/pathing_generate_messages_lisp.dir/all: slam/slam_toolbox_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
 pathing/CMakeFiles/pathing_generate_messages_lisp.dir/all: joystick_drivers/joy/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
 pathing/CMakeFiles/pathing_generate_messages_lisp.dir/all: pathing/CMakeFiles/_pathing_generate_messages_check_deps_gpio.dir/all
+pathing/CMakeFiles/pathing_generate_messages_lisp.dir/all: pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyResolution.dir/all
+pathing/CMakeFiles/pathing_generate_messages_lisp.dir/all: pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData.dir/all
+pathing/CMakeFiles/pathing_generate_messages_lisp.dir/all: pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyBlock.dir/all
 pathing/CMakeFiles/pathing_generate_messages_lisp.dir/all: pathing/CMakeFiles/nav_msgs_generate_messages_lisp.dir/all
 	$(MAKE) -f pathing/CMakeFiles/pathing_generate_messages_lisp.dir/build.make pathing/CMakeFiles/pathing_generate_messages_lisp.dir/depend
 	$(MAKE) -f pathing/CMakeFiles/pathing_generate_messages_lisp.dir/build.make pathing/CMakeFiles/pathing_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num= "Built target pathing_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=34,35 "Built target pathing_generate_messages_lisp"
 .PHONY : pathing/CMakeFiles/pathing_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 pathing/CMakeFiles/pathing_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/pathing_generate_messages_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
 .PHONY : pathing/CMakeFiles/pathing_generate_messages_lisp.dir/rule
@@ -5617,7 +5716,7 @@ pathing/CMakeFiles/pathing_generate_messages.dir/all: pathing/CMakeFiles/pathing
 
 # Build rule for subdir invocation for target.
 pathing/CMakeFiles/pathing_generate_messages.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 11
 	$(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/pathing_generate_messages.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
 .PHONY : pathing/CMakeFiles/pathing_generate_messages.dir/rule
@@ -5640,12 +5739,12 @@ slam/slam_toolbox/CMakeFiles/merge_maps_kinematic.dir/all: slam/slam_toolbox/CMa
 slam/slam_toolbox/CMakeFiles/merge_maps_kinematic.dir/all: slam/slam_toolbox/lib/karto_sdk/CMakeFiles/kartoSlamToolbox.dir/all
 	$(MAKE) -f slam/slam_toolbox/CMakeFiles/merge_maps_kinematic.dir/build.make slam/slam_toolbox/CMakeFiles/merge_maps_kinematic.dir/depend
 	$(MAKE) -f slam/slam_toolbox/CMakeFiles/merge_maps_kinematic.dir/build.make slam/slam_toolbox/CMakeFiles/merge_maps_kinematic.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=26 "Built target merge_maps_kinematic"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=24 "Built target merge_maps_kinematic"
 .PHONY : slam/slam_toolbox/CMakeFiles/merge_maps_kinematic.dir/all
 
 # Build rule for subdir invocation for target.
 slam/slam_toolbox/CMakeFiles/merge_maps_kinematic.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 slam/slam_toolbox/CMakeFiles/merge_maps_kinematic.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
 .PHONY : slam/slam_toolbox/CMakeFiles/merge_maps_kinematic.dir/rule
@@ -5669,7 +5768,7 @@ slam/slam_toolbox/CMakeFiles/lifelong_slam_toolbox_node.dir/all: slam/slam_toolb
 slam/slam_toolbox/CMakeFiles/lifelong_slam_toolbox_node.dir/all: slam/slam_toolbox/lib/karto_sdk/CMakeFiles/kartoSlamToolbox.dir/all
 	$(MAKE) -f slam/slam_toolbox/CMakeFiles/lifelong_slam_toolbox_node.dir/build.make slam/slam_toolbox/CMakeFiles/lifelong_slam_toolbox_node.dir/depend
 	$(MAKE) -f slam/slam_toolbox/CMakeFiles/lifelong_slam_toolbox_node.dir/build.make slam/slam_toolbox/CMakeFiles/lifelong_slam_toolbox_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=23 "Built target lifelong_slam_toolbox_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=21 "Built target lifelong_slam_toolbox_node"
 .PHONY : slam/slam_toolbox/CMakeFiles/lifelong_slam_toolbox_node.dir/all
 
 # Build rule for subdir invocation for target.
@@ -5697,7 +5796,7 @@ slam/slam_toolbox/CMakeFiles/lifelong_slam_toolbox.dir/all: slam/slam_toolbox/CM
 slam/slam_toolbox/CMakeFiles/lifelong_slam_toolbox.dir/all: slam/slam_toolbox/lib/karto_sdk/CMakeFiles/kartoSlamToolbox.dir/all
 	$(MAKE) -f slam/slam_toolbox/CMakeFiles/lifelong_slam_toolbox.dir/build.make slam/slam_toolbox/CMakeFiles/lifelong_slam_toolbox.dir/depend
 	$(MAKE) -f slam/slam_toolbox/CMakeFiles/lifelong_slam_toolbox.dir/build.make slam/slam_toolbox/CMakeFiles/lifelong_slam_toolbox.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=22 "Built target lifelong_slam_toolbox"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num= "Built target lifelong_slam_toolbox"
 .PHONY : slam/slam_toolbox/CMakeFiles/lifelong_slam_toolbox.dir/all
 
 # Build rule for subdir invocation for target.
@@ -5731,7 +5830,7 @@ slam/slam_toolbox/CMakeFiles/async_slam_toolbox_node.dir/all: slam/slam_toolbox/
 
 # Build rule for subdir invocation for target.
 slam/slam_toolbox/CMakeFiles/async_slam_toolbox_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 slam/slam_toolbox/CMakeFiles/async_slam_toolbox_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
 .PHONY : slam/slam_toolbox/CMakeFiles/async_slam_toolbox_node.dir/rule
@@ -5755,12 +5854,12 @@ slam/slam_toolbox/CMakeFiles/localization_slam_toolbox_node.dir/all: slam/slam_t
 slam/slam_toolbox/CMakeFiles/localization_slam_toolbox_node.dir/all: slam/slam_toolbox/lib/karto_sdk/CMakeFiles/kartoSlamToolbox.dir/all
 	$(MAKE) -f slam/slam_toolbox/CMakeFiles/localization_slam_toolbox_node.dir/build.make slam/slam_toolbox/CMakeFiles/localization_slam_toolbox_node.dir/depend
 	$(MAKE) -f slam/slam_toolbox/CMakeFiles/localization_slam_toolbox_node.dir/build.make slam/slam_toolbox/CMakeFiles/localization_slam_toolbox_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=25 "Built target localization_slam_toolbox_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=23 "Built target localization_slam_toolbox_node"
 .PHONY : slam/slam_toolbox/CMakeFiles/localization_slam_toolbox_node.dir/all
 
 # Build rule for subdir invocation for target.
 slam/slam_toolbox/CMakeFiles/localization_slam_toolbox_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 slam/slam_toolbox/CMakeFiles/localization_slam_toolbox_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
 .PHONY : slam/slam_toolbox/CMakeFiles/localization_slam_toolbox_node.dir/rule
@@ -5868,7 +5967,7 @@ slam/slam_toolbox/CMakeFiles/ceres_solver_plugin.dir/all: slam/slam_toolbox/lib/
 
 # Build rule for subdir invocation for target.
 slam/slam_toolbox/CMakeFiles/ceres_solver_plugin.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 slam/slam_toolbox/CMakeFiles/ceres_solver_plugin.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
 .PHONY : slam/slam_toolbox/CMakeFiles/ceres_solver_plugin.dir/rule
@@ -5896,7 +5995,7 @@ slam/slam_toolbox/CMakeFiles/async_slam_toolbox.dir/all: slam/slam_toolbox/lib/k
 
 # Build rule for subdir invocation for target.
 slam/slam_toolbox/CMakeFiles/async_slam_toolbox.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 slam/slam_toolbox/CMakeFiles/async_slam_toolbox.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
 .PHONY : slam/slam_toolbox/CMakeFiles/async_slam_toolbox.dir/rule
@@ -5973,12 +6072,12 @@ slam/slam_toolbox/CMakeFiles/sync_slam_toolbox.dir/all: slam/slam_toolbox/CMakeF
 slam/slam_toolbox/CMakeFiles/sync_slam_toolbox.dir/all: slam/slam_toolbox/lib/karto_sdk/CMakeFiles/kartoSlamToolbox.dir/all
 	$(MAKE) -f slam/slam_toolbox/CMakeFiles/sync_slam_toolbox.dir/build.make slam/slam_toolbox/CMakeFiles/sync_slam_toolbox.dir/depend
 	$(MAKE) -f slam/slam_toolbox/CMakeFiles/sync_slam_toolbox.dir/build.make slam/slam_toolbox/CMakeFiles/sync_slam_toolbox.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=77 "Built target sync_slam_toolbox"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=79 "Built target sync_slam_toolbox"
 .PHONY : slam/slam_toolbox/CMakeFiles/sync_slam_toolbox.dir/all
 
 # Build rule for subdir invocation for target.
 slam/slam_toolbox/CMakeFiles/sync_slam_toolbox.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 slam/slam_toolbox/CMakeFiles/sync_slam_toolbox.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
 .PHONY : slam/slam_toolbox/CMakeFiles/sync_slam_toolbox.dir/rule
@@ -6002,12 +6101,12 @@ slam/slam_toolbox/CMakeFiles/sync_slam_toolbox_node.dir/all: slam/slam_toolbox/C
 slam/slam_toolbox/CMakeFiles/sync_slam_toolbox_node.dir/all: slam/slam_toolbox/lib/karto_sdk/CMakeFiles/kartoSlamToolbox.dir/all
 	$(MAKE) -f slam/slam_toolbox/CMakeFiles/sync_slam_toolbox_node.dir/build.make slam/slam_toolbox/CMakeFiles/sync_slam_toolbox_node.dir/depend
 	$(MAKE) -f slam/slam_toolbox/CMakeFiles/sync_slam_toolbox_node.dir/build.make slam/slam_toolbox/CMakeFiles/sync_slam_toolbox_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=78 "Built target sync_slam_toolbox_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=80 "Built target sync_slam_toolbox_node"
 .PHONY : slam/slam_toolbox/CMakeFiles/sync_slam_toolbox_node.dir/all
 
 # Build rule for subdir invocation for target.
 slam/slam_toolbox/CMakeFiles/sync_slam_toolbox_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 slam/slam_toolbox/CMakeFiles/sync_slam_toolbox_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
 .PHONY : slam/slam_toolbox/CMakeFiles/sync_slam_toolbox_node.dir/rule
@@ -6029,12 +6128,12 @@ slam/slam_toolbox/CMakeFiles/sync_slam_toolbox_node.dir/clean:
 slam/slam_toolbox/CMakeFiles/toolbox_common.dir/all: slam/slam_toolbox/lib/karto_sdk/CMakeFiles/kartoSlamToolbox.dir/all
 	$(MAKE) -f slam/slam_toolbox/CMakeFiles/toolbox_common.dir/build.make slam/slam_toolbox/CMakeFiles/toolbox_common.dir/depend
 	$(MAKE) -f slam/slam_toolbox/CMakeFiles/toolbox_common.dir/build.make slam/slam_toolbox/CMakeFiles/toolbox_common.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=80,81,82 "Built target toolbox_common"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=81,82,83 "Built target toolbox_common"
 .PHONY : slam/slam_toolbox/CMakeFiles/toolbox_common.dir/all
 
 # Build rule for subdir invocation for target.
 slam/slam_toolbox/CMakeFiles/toolbox_common.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 slam/slam_toolbox/CMakeFiles/toolbox_common.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
 .PHONY : slam/slam_toolbox/CMakeFiles/toolbox_common.dir/rule
@@ -6057,12 +6156,12 @@ slam/slam_toolbox/CMakeFiles/localization_slam_toolbox.dir/all: slam/slam_toolbo
 slam/slam_toolbox/CMakeFiles/localization_slam_toolbox.dir/all: slam/slam_toolbox/lib/karto_sdk/CMakeFiles/kartoSlamToolbox.dir/all
 	$(MAKE) -f slam/slam_toolbox/CMakeFiles/localization_slam_toolbox.dir/build.make slam/slam_toolbox/CMakeFiles/localization_slam_toolbox.dir/depend
 	$(MAKE) -f slam/slam_toolbox/CMakeFiles/localization_slam_toolbox.dir/build.make slam/slam_toolbox/CMakeFiles/localization_slam_toolbox.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=24 "Built target localization_slam_toolbox"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=22 "Built target localization_slam_toolbox"
 .PHONY : slam/slam_toolbox/CMakeFiles/localization_slam_toolbox.dir/all
 
 # Build rule for subdir invocation for target.
 slam/slam_toolbox/CMakeFiles/localization_slam_toolbox.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 slam/slam_toolbox/CMakeFiles/localization_slam_toolbox.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
 .PHONY : slam/slam_toolbox/CMakeFiles/localization_slam_toolbox.dir/rule
@@ -6084,12 +6183,12 @@ slam/slam_toolbox/CMakeFiles/localization_slam_toolbox.dir/clean:
 slam/slam_toolbox/lib/karto_sdk/CMakeFiles/kartoSlamToolbox.dir/all:
 	$(MAKE) -f slam/slam_toolbox/lib/karto_sdk/CMakeFiles/kartoSlamToolbox.dir/build.make slam/slam_toolbox/lib/karto_sdk/CMakeFiles/kartoSlamToolbox.dir/depend
 	$(MAKE) -f slam/slam_toolbox/lib/karto_sdk/CMakeFiles/kartoSlamToolbox.dir/build.make slam/slam_toolbox/lib/karto_sdk/CMakeFiles/kartoSlamToolbox.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=21 "Built target kartoSlamToolbox"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=19,20 "Built target kartoSlamToolbox"
 .PHONY : slam/slam_toolbox/lib/karto_sdk/CMakeFiles/kartoSlamToolbox.dir/all
 
 # Build rule for subdir invocation for target.
 slam/slam_toolbox/lib/karto_sdk/CMakeFiles/kartoSlamToolbox.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 slam/slam_toolbox/lib/karto_sdk/CMakeFiles/kartoSlamToolbox.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
 .PHONY : slam/slam_toolbox/lib/karto_sdk/CMakeFiles/kartoSlamToolbox.dir/rule
@@ -6381,7 +6480,7 @@ slam/slam_toolbox_rviz/CMakeFiles/map_msgs_generate_messages_nodejs.dir/clean:
 slam/slam_toolbox_rviz/CMakeFiles/slam_toolbox_rviz.dir/all: slam/slam_toolbox_msgs/CMakeFiles/slam_toolbox_msgs_generate_messages_cpp.dir/all
 	$(MAKE) -f slam/slam_toolbox_rviz/CMakeFiles/slam_toolbox_rviz.dir/build.make slam/slam_toolbox_rviz/CMakeFiles/slam_toolbox_rviz.dir/depend
 	$(MAKE) -f slam/slam_toolbox_rviz/CMakeFiles/slam_toolbox_rviz.dir/build.make slam/slam_toolbox_rviz/CMakeFiles/slam_toolbox_rviz.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=75,76 "Built target slam_toolbox_rviz"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=77,78 "Built target slam_toolbox_rviz"
 .PHONY : slam/slam_toolbox_rviz/CMakeFiles/slam_toolbox_rviz.dir/all
 
 # Build rule for subdir invocation for target.
@@ -6477,7 +6576,7 @@ vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/all: slam/slam_toolbox
 vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/all: slam/slam_toolbox/CMakeFiles/tf_generate_messages_py.dir/all
 	$(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/depend
 	$(MAKE) -f vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/build.make vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=84,85,86 "Built target vesc_ackermann_nodelet"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=85,86,87 "Built target vesc_ackermann_nodelet"
 .PHONY : vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/all
 
 # Build rule for subdir invocation for target.
@@ -6573,12 +6672,12 @@ vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/all: slam/slam_toolbox
 vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/all: slam/slam_toolbox/CMakeFiles/tf_generate_messages_py.dir/all
 	$(MAKE) -f vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/build.make vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/depend
 	$(MAKE) -f vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/build.make vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=3 "Built target ackermann_to_vesc_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=2,3 "Built target ackermann_to_vesc_node"
 .PHONY : vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/all
 
 # Build rule for subdir invocation for target.
 vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
 .PHONY : vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/rule
@@ -6726,12 +6825,12 @@ vesc/vesc_driver/CMakeFiles/vesc_driver_nodelet.dir/all: racecar/ackermann_cmd_m
 vesc/vesc_driver/CMakeFiles/vesc_driver_nodelet.dir/all: racecar/ackermann_cmd_mux/CMakeFiles/bond_generate_messages_lisp.dir/all
 	$(MAKE) -f vesc/vesc_driver/CMakeFiles/vesc_driver_nodelet.dir/build.make vesc/vesc_driver/CMakeFiles/vesc_driver_nodelet.dir/depend
 	$(MAKE) -f vesc/vesc_driver/CMakeFiles/vesc_driver_nodelet.dir/build.make vesc/vesc_driver/CMakeFiles/vesc_driver_nodelet.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=90,91,92 "Built target vesc_driver_nodelet"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=91,92 "Built target vesc_driver_nodelet"
 .PHONY : vesc/vesc_driver/CMakeFiles/vesc_driver_nodelet.dir/all
 
 # Build rule for subdir invocation for target.
 vesc/vesc_driver/CMakeFiles/vesc_driver_nodelet.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 10
 	$(MAKE) -f CMakeFiles/Makefile2 vesc/vesc_driver/CMakeFiles/vesc_driver_nodelet.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
 .PHONY : vesc/vesc_driver/CMakeFiles/vesc_driver_nodelet.dir/rule
@@ -6783,7 +6882,7 @@ vesc/vesc_driver/CMakeFiles/vesc_driver_node.dir/all: racecar/ackermann_cmd_mux/
 vesc/vesc_driver/CMakeFiles/vesc_driver_node.dir/all: racecar/ackermann_cmd_mux/CMakeFiles/bond_generate_messages_lisp.dir/all
 	$(MAKE) -f vesc/vesc_driver/CMakeFiles/vesc_driver_node.dir/build.make vesc/vesc_driver/CMakeFiles/vesc_driver_node.dir/depend
 	$(MAKE) -f vesc/vesc_driver/CMakeFiles/vesc_driver_node.dir/build.make vesc/vesc_driver/CMakeFiles/vesc_driver_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=87,88,89 "Built target vesc_driver_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=88,89,90 "Built target vesc_driver_node"
 .PHONY : vesc/vesc_driver/CMakeFiles/vesc_driver_node.dir/all
 
 # Build rule for subdir invocation for target.

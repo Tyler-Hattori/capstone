@@ -1,4 +1,7 @@
 file(REMOVE_RECURSE
+  "/home/thattori/capstone/velma/devel/include/pathing/PixyBlock.h"
+  "/home/thattori/capstone/velma/devel/include/pathing/PixyData.h"
+  "/home/thattori/capstone/velma/devel/include/pathing/PixyResolution.h"
   "/home/thattori/capstone/velma/devel/include/pathing/gpio.h"
   "CMakeFiles/pathing_generate_messages_cpp"
 )

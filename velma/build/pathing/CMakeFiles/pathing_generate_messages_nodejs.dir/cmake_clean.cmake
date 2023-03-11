@@ -1,4 +1,7 @@
 file(REMOVE_RECURSE
+  "/home/thattori/capstone/velma/devel/share/gennodejs/ros/pathing/msg/PixyBlock.js"
+  "/home/thattori/capstone/velma/devel/share/gennodejs/ros/pathing/msg/PixyData.js"
+  "/home/thattori/capstone/velma/devel/share/gennodejs/ros/pathing/msg/PixyResolution.js"
   "/home/thattori/capstone/velma/devel/share/gennodejs/ros/pathing/msg/gpio.js"
   "CMakeFiles/pathing_generate_messages_nodejs"
 )

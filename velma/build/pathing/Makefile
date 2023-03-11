@@ -318,6 +318,21 @@ pathing_gencpp/fast:
 .PHONY : pathing_gencpp/fast
 
 # Convenience name for target.
+pathing/CMakeFiles/pathing_generate_messages_cpp.dir/rule:
+	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/pathing_generate_messages_cpp.dir/rule
+.PHONY : pathing/CMakeFiles/pathing_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+pathing_generate_messages_cpp: pathing/CMakeFiles/pathing_generate_messages_cpp.dir/rule
+
+.PHONY : pathing_generate_messages_cpp
+
+# fast build rule for target.
+pathing_generate_messages_cpp/fast:
+	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing_generate_messages_cpp.dir/build.make pathing/CMakeFiles/pathing_generate_messages_cpp.dir/build
+.PHONY : pathing_generate_messages_cpp/fast
+
+# Convenience name for target.
 pathing/CMakeFiles/_pathing_generate_messages_check_deps_gpio.dir/rule:
 	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/_pathing_generate_messages_check_deps_gpio.dir/rule
 .PHONY : pathing/CMakeFiles/_pathing_generate_messages_check_deps_gpio.dir/rule
@@ -331,6 +346,21 @@ _pathing_generate_messages_check_deps_gpio: pathing/CMakeFiles/_pathing_generate
 _pathing_generate_messages_check_deps_gpio/fast:
 	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/_pathing_generate_messages_check_deps_gpio.dir/build.make pathing/CMakeFiles/_pathing_generate_messages_check_deps_gpio.dir/build
 .PHONY : _pathing_generate_messages_check_deps_gpio/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyResolution.dir/rule:
+	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyResolution.dir/rule
+.PHONY : pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyResolution.dir/rule
+
+# Convenience name for target.
+_pathing_generate_messages_check_deps_PixyResolution: pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyResolution.dir/rule
+
+.PHONY : _pathing_generate_messages_check_deps_PixyResolution
+
+# fast build rule for target.
+_pathing_generate_messages_check_deps_PixyResolution/fast:
+	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyResolution.dir/build.make pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyResolution.dir/build
+.PHONY : _pathing_generate_messages_check_deps_PixyResolution/fast
 
 # Convenience name for target.
 pathing/CMakeFiles/nav_msgs_generate_messages_py.dir/rule:
@@ -348,21 +378,6 @@ nav_msgs_generate_messages_py/fast:
 .PHONY : nav_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-pathing/CMakeFiles/pathing_generate_messages_cpp.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/pathing_generate_messages_cpp.dir/rule
-.PHONY : pathing/CMakeFiles/pathing_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-pathing_generate_messages_cpp: pathing/CMakeFiles/pathing_generate_messages_cpp.dir/rule
-
-.PHONY : pathing_generate_messages_cpp
-
-# fast build rule for target.
-pathing_generate_messages_cpp/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing_generate_messages_cpp.dir/build.make pathing/CMakeFiles/pathing_generate_messages_cpp.dir/build
-.PHONY : pathing_generate_messages_cpp/fast
-
-# Convenience name for target.
 pathing/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule:
 	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
 .PHONY : pathing/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
@@ -376,6 +391,21 @@ tf2_msgs_generate_messages_nodejs: pathing/CMakeFiles/tf2_msgs_generate_messages
 tf2_msgs_generate_messages_nodejs/fast:
 	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build.make pathing/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build
 .PHONY : tf2_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData.dir/rule:
+	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData.dir/rule
+.PHONY : pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData.dir/rule
+
+# Convenience name for target.
+_pathing_generate_messages_check_deps_PixyData: pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData.dir/rule
+
+.PHONY : _pathing_generate_messages_check_deps_PixyData
+
+# fast build rule for target.
+_pathing_generate_messages_check_deps_PixyData/fast:
+	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData.dir/build.make pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData.dir/build
+.PHONY : _pathing_generate_messages_check_deps_PixyData/fast
 
 # Convenience name for target.
 pathing/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule:
@@ -451,6 +481,21 @@ tf2_msgs_generate_messages_cpp: pathing/CMakeFiles/tf2_msgs_generate_messages_cp
 tf2_msgs_generate_messages_cpp/fast:
 	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make pathing/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
 .PHONY : tf2_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyBlock.dir/rule:
+	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyBlock.dir/rule
+.PHONY : pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyBlock.dir/rule
+
+# Convenience name for target.
+_pathing_generate_messages_check_deps_PixyBlock: pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyBlock.dir/rule
+
+.PHONY : _pathing_generate_messages_check_deps_PixyBlock
+
+# fast build rule for target.
+_pathing_generate_messages_check_deps_PixyBlock/fast:
+	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyBlock.dir/build.make pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyBlock.dir/build
+.PHONY : _pathing_generate_messages_check_deps_PixyBlock/fast
 
 # Convenience name for target.
 pathing/CMakeFiles/pathing.dir/rule:
@@ -1143,10 +1188,12 @@ help:
 	@echo "... pathing_geneus"
 	@echo "... pathing_generate_messages_eus"
 	@echo "... pathing_gencpp"
-	@echo "... _pathing_generate_messages_check_deps_gpio"
-	@echo "... nav_msgs_generate_messages_py"
 	@echo "... pathing_generate_messages_cpp"
+	@echo "... _pathing_generate_messages_check_deps_gpio"
+	@echo "... _pathing_generate_messages_check_deps_PixyResolution"
+	@echo "... nav_msgs_generate_messages_py"
 	@echo "... tf2_msgs_generate_messages_nodejs"
+	@echo "... _pathing_generate_messages_check_deps_PixyData"
 	@echo "... actionlib_msgs_generate_messages_py"
 	@echo "... actionlib_generate_messages_cpp"
 	@echo "... rebuild_cache"
@@ -1154,6 +1201,7 @@ help:
 	@echo "... install"
 	@echo "... visualization_msgs_generate_messages_py"
 	@echo "... tf2_msgs_generate_messages_cpp"
+	@echo "... _pathing_generate_messages_check_deps_PixyBlock"
 	@echo "... pathing"
 	@echo "... object_costmap"
 	@echo "... actionlib_generate_messages_lisp"

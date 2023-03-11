@@ -1,4 +1,7 @@
 file(REMOVE_RECURSE
+  "/home/thattori/capstone/velma/devel/share/common-lisp/ros/pathing/msg/PixyBlock.lisp"
+  "/home/thattori/capstone/velma/devel/share/common-lisp/ros/pathing/msg/PixyData.lisp"
+  "/home/thattori/capstone/velma/devel/share/common-lisp/ros/pathing/msg/PixyResolution.lisp"
   "/home/thattori/capstone/velma/devel/share/common-lisp/ros/pathing/msg/gpio.lisp"
   "CMakeFiles/pathing_generate_messages_lisp"
 )

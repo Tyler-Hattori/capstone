@@ -61,7 +61,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pathing/msg" TYPE FILE FILES "/home/thattori/capstone/velma/src/pathing/msg/gpio.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pathing/msg" TYPE FILE FILES
+    "/home/thattori/capstone/velma/src/pathing/msg/gpio.msg"
+    "/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg"
+    "/home/thattori/capstone/velma/src/pathing/msg/PixyResolution.msg"
+    "/home/thattori/capstone/velma/src/pathing/msg/PixyData.msg"
+    )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

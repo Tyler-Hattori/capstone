@@ -2001,6 +2001,19 @@ pathing_gencpp/fast:
 .PHONY : pathing_gencpp/fast
 
 #=============================================================================
+# Target rules for targets named pathing_generate_messages_cpp
+
+# Build rule for target.
+pathing_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pathing_generate_messages_cpp
+.PHONY : pathing_generate_messages_cpp
+
+# fast build rule for target.
+pathing_generate_messages_cpp/fast:
+	$(MAKE) -f pathing/CMakeFiles/pathing_generate_messages_cpp.dir/build.make pathing/CMakeFiles/pathing_generate_messages_cpp.dir/build
+.PHONY : pathing_generate_messages_cpp/fast
+
+#=============================================================================
 # Target rules for targets named _pathing_generate_messages_check_deps_gpio
 
 # Build rule for target.
@@ -2012,6 +2025,19 @@ _pathing_generate_messages_check_deps_gpio: cmake_check_build_system
 _pathing_generate_messages_check_deps_gpio/fast:
 	$(MAKE) -f pathing/CMakeFiles/_pathing_generate_messages_check_deps_gpio.dir/build.make pathing/CMakeFiles/_pathing_generate_messages_check_deps_gpio.dir/build
 .PHONY : _pathing_generate_messages_check_deps_gpio/fast
+
+#=============================================================================
+# Target rules for targets named _pathing_generate_messages_check_deps_PixyResolution
+
+# Build rule for target.
+_pathing_generate_messages_check_deps_PixyResolution: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _pathing_generate_messages_check_deps_PixyResolution
+.PHONY : _pathing_generate_messages_check_deps_PixyResolution
+
+# fast build rule for target.
+_pathing_generate_messages_check_deps_PixyResolution/fast:
+	$(MAKE) -f pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyResolution.dir/build.make pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyResolution.dir/build
+.PHONY : _pathing_generate_messages_check_deps_PixyResolution/fast
 
 #=============================================================================
 # Target rules for targets named nav_msgs_generate_messages_py
@@ -2027,19 +2053,6 @@ nav_msgs_generate_messages_py/fast:
 .PHONY : nav_msgs_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named pathing_generate_messages_cpp
-
-# Build rule for target.
-pathing_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pathing_generate_messages_cpp
-.PHONY : pathing_generate_messages_cpp
-
-# fast build rule for target.
-pathing_generate_messages_cpp/fast:
-	$(MAKE) -f pathing/CMakeFiles/pathing_generate_messages_cpp.dir/build.make pathing/CMakeFiles/pathing_generate_messages_cpp.dir/build
-.PHONY : pathing_generate_messages_cpp/fast
-
-#=============================================================================
 # Target rules for targets named tf2_msgs_generate_messages_nodejs
 
 # Build rule for target.
@@ -2051,6 +2064,19 @@ tf2_msgs_generate_messages_nodejs: cmake_check_build_system
 tf2_msgs_generate_messages_nodejs/fast:
 	$(MAKE) -f pathing/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build.make pathing/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build
 .PHONY : tf2_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named _pathing_generate_messages_check_deps_PixyData
+
+# Build rule for target.
+_pathing_generate_messages_check_deps_PixyData: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _pathing_generate_messages_check_deps_PixyData
+.PHONY : _pathing_generate_messages_check_deps_PixyData
+
+# fast build rule for target.
+_pathing_generate_messages_check_deps_PixyData/fast:
+	$(MAKE) -f pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData.dir/build.make pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData.dir/build
+.PHONY : _pathing_generate_messages_check_deps_PixyData/fast
 
 #=============================================================================
 # Target rules for targets named actionlib_msgs_generate_messages_py
@@ -2116,6 +2142,19 @@ tf2_msgs_generate_messages_cpp: cmake_check_build_system
 tf2_msgs_generate_messages_cpp/fast:
 	$(MAKE) -f pathing/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make pathing/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
 .PHONY : tf2_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named _pathing_generate_messages_check_deps_PixyBlock
+
+# Build rule for target.
+_pathing_generate_messages_check_deps_PixyBlock: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _pathing_generate_messages_check_deps_PixyBlock
+.PHONY : _pathing_generate_messages_check_deps_PixyBlock
+
+# fast build rule for target.
+_pathing_generate_messages_check_deps_PixyBlock/fast:
+	$(MAKE) -f pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyBlock.dir/build.make pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyBlock.dir/build
+.PHONY : _pathing_generate_messages_check_deps_PixyBlock/fast
 
 #=============================================================================
 # Target rules for targets named pathing
@@ -3103,15 +3142,18 @@ help:
 	@echo "... pathing_geneus"
 	@echo "... pathing_generate_messages_eus"
 	@echo "... pathing_gencpp"
-	@echo "... _pathing_generate_messages_check_deps_gpio"
-	@echo "... nav_msgs_generate_messages_py"
 	@echo "... pathing_generate_messages_cpp"
+	@echo "... _pathing_generate_messages_check_deps_gpio"
+	@echo "... _pathing_generate_messages_check_deps_PixyResolution"
+	@echo "... nav_msgs_generate_messages_py"
 	@echo "... tf2_msgs_generate_messages_nodejs"
+	@echo "... _pathing_generate_messages_check_deps_PixyData"
 	@echo "... actionlib_msgs_generate_messages_py"
 	@echo "... actionlib_generate_messages_cpp"
 	@echo "... tf2_msgs_generate_messages_eus"
 	@echo "... visualization_msgs_generate_messages_py"
 	@echo "... tf2_msgs_generate_messages_cpp"
+	@echo "... _pathing_generate_messages_check_deps_PixyBlock"
 	@echo "... pathing"
 	@echo "... object_costmap"
 	@echo "... actionlib_generate_messages_lisp"

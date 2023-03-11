@@ -254,10 +254,12 @@
 /home/thattori/capstone/velma/build/pathing/CMakeFiles/pathing_geneus.dir
 /home/thattori/capstone/velma/build/pathing/CMakeFiles/pathing_generate_messages_eus.dir
 /home/thattori/capstone/velma/build/pathing/CMakeFiles/pathing_gencpp.dir
-/home/thattori/capstone/velma/build/pathing/CMakeFiles/_pathing_generate_messages_check_deps_gpio.dir
-/home/thattori/capstone/velma/build/pathing/CMakeFiles/nav_msgs_generate_messages_py.dir
 /home/thattori/capstone/velma/build/pathing/CMakeFiles/pathing_generate_messages_cpp.dir
+/home/thattori/capstone/velma/build/pathing/CMakeFiles/_pathing_generate_messages_check_deps_gpio.dir
+/home/thattori/capstone/velma/build/pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyResolution.dir
+/home/thattori/capstone/velma/build/pathing/CMakeFiles/nav_msgs_generate_messages_py.dir
 /home/thattori/capstone/velma/build/pathing/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir
+/home/thattori/capstone/velma/build/pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData.dir
 /home/thattori/capstone/velma/build/pathing/CMakeFiles/actionlib_msgs_generate_messages_py.dir
 /home/thattori/capstone/velma/build/pathing/CMakeFiles/actionlib_generate_messages_cpp.dir
 /home/thattori/capstone/velma/build/pathing/CMakeFiles/rebuild_cache.dir
@@ -265,6 +267,7 @@
 /home/thattori/capstone/velma/build/pathing/CMakeFiles/install.dir
 /home/thattori/capstone/velma/build/pathing/CMakeFiles/visualization_msgs_generate_messages_py.dir
 /home/thattori/capstone/velma/build/pathing/CMakeFiles/tf2_msgs_generate_messages_cpp.dir
+/home/thattori/capstone/velma/build/pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyBlock.dir
 /home/thattori/capstone/velma/build/pathing/CMakeFiles/pathing.dir
 /home/thattori/capstone/velma/build/pathing/CMakeFiles/object_costmap.dir
 /home/thattori/capstone/velma/build/pathing/CMakeFiles/actionlib_generate_messages_lisp.dir

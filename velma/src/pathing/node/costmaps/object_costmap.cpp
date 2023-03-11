@@ -39,10 +39,10 @@ public:
   void odom_callback(const nav_msgs::Odometry & cm) {
     
   }
-  void bucket_callback(const pixy2_msgs::PixyData & cm) {
+  void bucket_callback(const pathing::PixyData & cm) {
     
   }
-  void pixy_resolution_callback(const pixy2_msgs::PixyResolution & cm) {
+  void pixy_resolution_callback(const pathing::PixyResolution & cm) {
     
   }
 };
