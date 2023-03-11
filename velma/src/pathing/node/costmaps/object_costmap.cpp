@@ -2,8 +2,8 @@
 
 #include <nav_msgs/OccupancyGrid.h>
 #include <nav_msgs/Odometry.h>
-#include <pixy2_msgs/PixyData.h>
-#include <pixy2_msgs/PixyResolution.h>
+#include <pathing/PixyData.h>
+#include <pathing/PixyResolution.h>
 
 #include "math.h"
 
