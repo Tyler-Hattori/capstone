@@ -40,7 +40,7 @@ public:
   Search() {
     n = ros::NodeHandle("~");
     
-    std::String time_costmap, ease_costmap, object_costmap, obstacle_costmap, unsearched_area_costmap, frontier_costmap
+    std::String time_costmap, ease_costmap, object_costmap, obstacle_costmap, unsearched_area_costmap, frontier_costmap;
     n.getParam("time_costmap_topic", time_costmap);
     n.getParam("ease_costmap_topic", ease_costmap);
     n.getParam("object_costmap_topic", object_costmap);
