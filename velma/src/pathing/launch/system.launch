@@ -5,7 +5,7 @@
   <arg name="map_name"/>
   
   <group ns="controllers">
-    <include file="$(find pathing)/launch/pathing_controllers.launch"/>
+    <include file="$(find pathing)/launch/controllers.launch"/>
   </group>
 
   <!-- Will launch a simulated map and lidar if the CLI requests it -->
