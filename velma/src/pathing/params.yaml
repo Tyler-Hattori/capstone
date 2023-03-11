@@ -200,5 +200,6 @@ publish_ground_truth_pose: true
 time_cm_weight: 1
 ease_cm_weight: 1
 object_cm_weight: 10
+obstacle_cm_weight: 1
 unsearched_area_cm_weight: 3
 frontier_cm_weight: 5
