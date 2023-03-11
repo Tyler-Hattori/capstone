@@ -18,7 +18,11 @@ private:
 public:
   TimeCostmap() {
     n = ros::NodeHandle("~");
-    time_cm = n.advertise<nav_msgs::OccupancyGrid>("/algorithms/navigation_algoritms/time_costmap", 1000);
+      
+    std::string costmap_topic;
+    n.getParam("time_costmap_topic", costmap_topic);
+      
+    time_cm = n.advertise<nav_msgs::OccupancyGrid>(costmap_topic, 1000);
     odom = n.subscribe("/odom", 1000, &TimeCostmap::odom_callback, this);
     map = n.subscribe("/map", 1000, &TimeCostmap::map_callback, this);
   }
