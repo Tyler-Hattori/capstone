@@ -22,7 +22,7 @@ public:
     std::string costmap_topic;
     n.getParam("frontier_costmap_topic", costmap_topic);
       
-    ease_cm = n.advertise<nav_msgs::OccupancyGrid>(costmap_topic, 1000);
+    frontier_cm = n.advertise<nav_msgs::OccupancyGrid>(costmap_topic, 1000);
     laser = n.subscribe("/scan", 1000, &FrontierCostmap::laser_callback, this);
     map = n.subscribe("/map", 1000, &FrontierCostmap::map_callback, this);
   }
