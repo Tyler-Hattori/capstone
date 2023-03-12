@@ -22,7 +22,7 @@ public:
     n.getParam("indicator_topic", indicator_topic);
     n.getParam("proximity_topic", proximity_topic);
     n.getParam("drive_topic", drive_topic);
-    n.getParam("laser_topic", laser_topic);
+    n.getParam("scan_topic", laser_topic);
     
     indicator = n.advertise<std_msgs::String>(indicator_topic, 100);
     proximity = n.advertise<std_msgs::String>(proximity_topic, 100);
