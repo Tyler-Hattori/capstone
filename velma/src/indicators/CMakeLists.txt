@@ -37,6 +37,7 @@ install(DIRECTORY include/${PROJECT_NAME}
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
+if(DEFINED CATKIN_DEVEL_PREFIX)
 find_package(catkin REQUIRED COMPONENTS
   ackermann_msgs
   geometry_msgs
