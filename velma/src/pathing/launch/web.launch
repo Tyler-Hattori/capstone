@@ -1,5 +1,0 @@
-<launch>
-  <node pkg="pathing" name="web" type="gpio" output="screen">
-    <rosparam command="load" file="$(find pathing)/params.yaml"/>
-  </node>
-</launch>
