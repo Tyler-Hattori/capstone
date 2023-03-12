@@ -16,11 +16,13 @@ add_message_files(
     gpiowrite.msg
   )
 
-#generate_messages(
-#  DEPENDENCIES
-#  std_msgs
-#  nav_msgs
-#  )
+generate_messages(
+  DEPENDENCIES
+  std_msgs
+  nav_msgs
+  ackermann_msgs
+  geometry_msgs
+  )
 
 catkin_package(
  # INCLUDE_DIRS include
