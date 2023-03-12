@@ -1,16 +1,16 @@
 <launch>
-  <!-- interface control pins -->
+  <!-- interface control pins 
   <node pkg="gpio_control" type="gpio_control_node" name="joystick_bool" args="--device pi --input 21" output="screen"/>
   <node pkg="gpio_control" type="gpio_control_node" name="keyboard_bool" args="--device pi --input 22" output="screen"/>
   <node pkg="gpio_control" type="gpio_control_node" name="web_bool" args="--device pi --input 23" output="screen"/>
   
-  <!-- manual control pins -->
+   manual control pins 
   <node pkg="gpio_control" type="gpio_control_node" name="forward" args="--device pi --input 35" output="screen"/>
   <node pkg="gpio_control" type="gpio_control_node" name="back" args="--device pi --input 36" output="screen"/>
   <node pkg="gpio_control" type="gpio_control_node" name="left" args="--device pi --input 37" output="screen"/>
   <node pkg="gpio_control" type="gpio_control_node" name="right" args="--device pi --input 38" output="screen"/>
 
-  <!-- path planner pins -->
+   path planner pins 
   <node pkg="gpio_control" type="gpio_control_node" name="wander" args="--device pi --input 11" output="screen"/>
   <node pkg="gpio_control" type="gpio_control_node" name="puppy_guard" args="--device pi --input 12" output="screen"/>
   <node pkg="gpio_control" type="gpio_control_node" name="patrol" args="--device pi --input 13" output="screen"/>
@@ -19,7 +19,13 @@
   <node pkg="gpio_control" type="gpio_control_node" name="log" args="--device pi --input 24" output="screen"/>
   <node pkg="gpio_control" type="gpio_control_node" name="recall" args="--device pi --input 18" output="screen"/>
   <node pkg="gpio_control" type="gpio_control_node" name="explore" args="--device pi --input 7" output="screen"/>
-  <node pkg="gpio_control" type="gpio_control_node" name="search" args="--device pi --input 29" output="screen"/>
+  <node pkg="gpio_control" type="gpio_control_node" name="search" args="--device pi --input 29" output="screen"/> -->
+  
+  <!-- Read Node -->
+  <node pkg="gpio_control" type="gpio_control_node" name="read_pin_states" args="--device pi --input 11 12 13 15 16" output="screen"/>
+  
+  <!-- Write Node -->
+  <node pkg="gpio_control" type="gpio_control_node" name="write_pin_states" args="--device pi --output 11 12 13 15 16" output="screen"/>
   
   <include file="$(find pathing)/launch/web.launch"/>
 </launch>
