@@ -7,5 +7,12 @@
   <node pkg="gpio_control" type="gpio_control_node" name="tail_lights" args="--device pi --output " output="screen"/>
   
   <!-- Node to read drive messages -->
-  <node pkg="indicators" type="operator" name="led_operator" output="screen"/>
+  <node pkg="led_control" type="indicator" name="indicator_leds_operator" output="screen"/>
+  
+  <!-- Node to sense close obstacles -->
+  <node pkg="led_control" type="blind_spot" name="blind_spot_leds_operator" output="screen"/>
+  
+  <!-- LED Interface -->
+  <node pkg="led_control" type="led_interface" name="led_interface" output="screen"/>
+  
 </launch>
