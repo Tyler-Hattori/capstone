@@ -1,7 +1,7 @@
 #include <ros/ros.h>
 
 #include <ackermann_msgs/AckermannDriveStamped.h>
-#include <pathing/gpiowrite.h>
+#include <led_control/gpiowrite.h>
 
 class IndicatorNode {
   
