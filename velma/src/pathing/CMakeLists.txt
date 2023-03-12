@@ -62,8 +62,8 @@ if(DEFINED CATKIN_DEVEL_PREFIX)
   
   add_message_files(
     FILES
-    gpioinput.msg
-    gpiooutput.msg
+    gpioread.msg
+    gpiowrite.msg
     PixyBlock.msg
     PixyResolution.msg
     PixyData.msg
