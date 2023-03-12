@@ -18,8 +18,8 @@ private:
   
   ros::Publisher log;
   
-  ros::publisher c0;
-  ros::publisher c1;
+  ros::Publisher c0;
+  ros::Publisher c1;
   
   ros::Publisher forward;
   ros::Publisher backward;
@@ -74,7 +74,7 @@ private:
   bool brake;
   
 public:
-  LEDInterface () {
+  ManualLEDs () {
     n = ros::NodeHandle("~");
     
     std::string p0_topic, p1_topic, p2_topic, p3_topic;
@@ -97,7 +97,7 @@ public:
     
     int joy_speed_axis, joy_angle_axis;
     n.getParam("joy_speed_axis", joy_speed_axis);
-    n.getParam("joy_angle_axis", joy_angle_axis;
+    n.getParam("joy_angle_axis", joy_angle_axis);
     
     // Get button indices
     n.getParam("joy_button_idx", joy_button_idx);
@@ -150,8 +150,8 @@ public:
     n.getParam("joy_topic", joy_topic);
     n.getParam("key_topic", key_topic);
     
-    joy = n.subscribe(joy_topic, 10, &LEDInterface::joy_callback, this);
-    key = n.subscribe(key_topic, 10, &LEDInterface::key_callback, this);
+    joy = n.subscribe(joy_topic, 10, &ManualLEDs::joy_callback, this);
+    key = n.subscribe(key_topic, 10, &ManualLEDs::key_callback, this);
     
     active_controller = "";
                
