@@ -26,10 +26,10 @@ public:
     n.getParam("brake_lights_topic", brake_lights_topic);
     n.getParam("reverse_lights_topic", reverse_lights_topic);
     
-    left_blinker = n.advertise<pathing::gpiowrite>(left_blinker_topic, 100);
-    right_blinker = n.advertise<pathing::gpiowrite>(right_blinker_topic, 100);
-    brake_lights = n.advertise<pathing::gpiowrite>(brake_lights_topic, 100);
-    reverse_lights = n.advertise<pathing::gpiowrite>(reverse_lights_topic, 100);
+    left_blinker = n.advertise<led_control::gpiowrite>(left_blinker_topic, 100);
+    right_blinker = n.advertise<led_control::gpiowrite>(right_blinker_topic, 100);
+    brake_lights = n.advertise<led_control::gpiowrite>(brake_lights_topic, 100);
+    reverse_lights = n.advertise<led_control::gpiowrite>(reverse_lights_topic, 100);
     drive_sub = n.subscribe(drive_topic, 10, &IndicatorNode::drive_callback, this);
     
     output.reserve(5);
@@ -46,8 +46,8 @@ public:
   }
   
   void publish() {
-    pathing::gpiowrite on;
-    pathing::gpiowrite off;
+    led_control::gpiowrite on;
+    led_control::gpiowrite off;
     
     on.state = true;
     off.state = false;
