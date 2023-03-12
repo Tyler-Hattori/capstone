@@ -1,10 +1,21 @@
 <launch>
-  <!-- Interface Pins -->
-  <node pkg="gpio_control" type="gpio_control_node" name="tail_light" args="--device pi --output " output="screen"/>
-  <node pkg="gpio_control" type="gpio_control_node" name="left_blinker" args="--device pi --output " output="screen"/>
-  <node pkg="gpio_control" type="gpio_control_node" name="right_blinker" args="--device pi --output " output="screen"/>
-  <node pkg="gpio_control" type="gpio_control_node" name="reverse_light" args="--device pi --output " output="screen"/>
-  <node pkg="gpio_control" type="gpio_control_node" name="tail_lights" args="--device pi --output " output="screen"/>
+  <!-- Controller Pins -->
+  <node pkg="gpio_control" type="gpio_control_node" name="controller_leds" args="--device pi --output 11 12" output="screen"/>
+  
+  <!-- Logging Pin -->
+  <node pkg="gpio_control" type="gpio_control_node" name="log_mode_led" args="--device pi --output 13" output="screen"/>
+  
+  <!-- Pathing Pins -->
+  <node pkg="gpio_control" type="gpio_control_node" name="pathing_leds" args="--device pi --output 21 22 23 24" output="screen"/>
+  
+  <!-- Indicator Pins -->
+  <node pkg="gpio_control" type="gpio_control_node" name="indicator_leds" args="--device pi --output 35 36 37 38 40" output="screen"/>
+  
+  <!-- <node pkg="gpio_control" type="gpio_control_node" name="left_blinker" args="--device pi --output 35" output="screen"/>
+  <node pkg="gpio_control" type="gpio_control_node" name="right_blinker" args="--device pi --output 36" output="screen"/>
+  <node pkg="gpio_control" type="gpio_control_node" name="brake_lights" args="--device pi --output 37" output="screen"/>
+  <node pkg="gpio_control" type="gpio_control_node" name="reverse_lights" args="--device pi --output 38" output="screen"/>
+  <node pkg="gpio_control" type="gpio_control_node" name="head_lights" args="--device pi --output 40" output="screen"/> -->
   
   <!-- Node to read drive messages -->
   <node pkg="led_control" type="indicator" name="indicator_leds_operator" output="screen"/>
