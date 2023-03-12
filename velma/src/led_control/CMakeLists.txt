@@ -11,19 +11,6 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
 )
 
-#add_message_files (
-#  FILES
-#  
-#)
-
-generate_messages(
-   DEPENDENCIES
-   ackermann_msgs
-   geometry_msgs
-   nav_msgs
-   std_msgs
-)
-
 catkin_package(
  # INCLUDE_DIRS include
   #LIBRARIES indicators
@@ -31,11 +18,15 @@ catkin_package(
 #  DEPENDS system_lib
 )
 
+include_directories(
+  ${catkin_INLUDE_DIRS}
+)
+
  # Add the nodes
   file(GLOB NODE_SRC_FILES node/*.cpp)
   foreach(_node_file ${NODE_SRC_FILES})
       get_filename_component(_node_name ${_node_file} NAME_WE)
       add_executable(${_node_name} ${_node_file})
-      target_link_libraries(${_node_name} ${LIBS})
+      #target_link_libraries(${_node_name} ${LIBS})
       add_dependencies(${_node_name} led_control_generate_messages_cpp)
   endforeach()
