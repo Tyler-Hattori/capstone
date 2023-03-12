@@ -24,6 +24,8 @@
   <node pkg="led_control" type="blind_spot" name="blind_spot_leds_operator" output="screen"/>
   
   <!-- LED Interface -->
-  <node pkg="led_control" type="led_interface" name="led_interface" output="screen"/>
+  <node pkg="led_control" type="led_interface" name="led_interface" output="screen">
+    <rosparam command="load" file="$(find led_control)/params.yaml"/>
+  </node>
   
 </launch>
