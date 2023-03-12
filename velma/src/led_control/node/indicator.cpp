@@ -66,11 +66,11 @@ public:
   }
   
   void drive_callback(const ackermann_msgs::AckermannDriveStamped & msg) {
-    if (msg.drive.steering_angle > .1 && !output[0]) publish("left_blinker") {
+    if (msg.drive.steering_angle > .1 && !output[0]) {
       output[0] = true;
       publish();
     }
-    if (msg.drive.steering_angle < -0.1 && !output[1]) publish("right_blinker"){
+    if (msg.drive.steering_angle < -0.1 && !output[1]) {
       output[1] = true;
       publish();
     }
