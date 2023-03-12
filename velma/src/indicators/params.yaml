@@ -1,0 +1,18 @@
+w0_controller_topic: "/controllers/gpio_outputs/eleven"
+w1_controller_topic: "/controllers/gpio_outputs/twelve"
+
+w0_logging_topic: "/controllers/gpio_outputs/thirteen"
+
+w0_pathing_topic: "/controllers/gpio_outputs/twentyone"
+w1_pathing_topic: "/controllers/gpio_outputs/twentytwo"
+w2_pathing_topic: "/controllers/gpio_outputs/twentythree"
+w3_pathing_topic: "/controllers/gpio_outputs/twentyfour"
+
+left_signal_topic: "/controllers/gpio_outputs/thirtyfive"
+right_signal_topic: "/controllers/gpio_outputs/thirtysix"
+brake_lights_topic: "/controllers/gpio_outputs/thirtyseven"
+reverse_lights_topic: "/controllers/gpio_outputs/thirtyeight"
+headlights_topic: "/controllers/gpio_outputs/forty"
+
+w0_blind_spot_topic: "/controllers/gpio_outputs/eighteen"
+w1_blind_spot_topic: "/controllers/gpio_outputs/nineteen"
