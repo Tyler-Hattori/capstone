@@ -144,6 +144,7 @@ keyboard_topic: "/key"
 mux_topic: "/pathing/mux"
 nav_mux_topic: "/pathing/nav_mux"
 indicator_topic: "/indicator"
+proximity_topic: "/proximity"
 
 # Topic names of various drive channels
 rand_drive_topic: "/rand_drive"
