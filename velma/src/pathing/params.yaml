@@ -132,7 +132,7 @@ obstacle_size: 2
 
 # The names of topics to listen and publish to
 joy_topic: "/joy"
-drive_topic: "/vesc/low_level/ackermann_cmd_mux/input/drive"
+drive_topic: "/drive"
 map_topic: "/map"
 distance_transform_topic: "/dt"
 scan_topic: "/scan"
