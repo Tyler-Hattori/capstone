@@ -11,6 +11,9 @@
   <!-- Indicator Pins -->
   <node pkg="gpio_control" type="gpio_control_node" name="indicator_leds" args="--device pi --output 35 36 37 38 40" output="screen"/>
   
+  <!-- Blind Spot Pins -->
+  <node pkg="gpio_control" type="gpio_control_node" name="blind_spot_leds" args="--device pi --output 18 19" output="screen"/>
+  
   <!-- <node pkg="gpio_control" type="gpio_control_node" name="left_blinker" args="--device pi --output 35" output="screen"/>
   <node pkg="gpio_control" type="gpio_control_node" name="right_blinker" args="--device pi --output 36" output="screen"/>
   <node pkg="gpio_control" type="gpio_control_node" name="brake_lights" args="--device pi --output 37" output="screen"/>
@@ -28,7 +31,7 @@
   </node>
   
   <!-- LED Interface -->
-  <node pkg="led_control" type="pathing" name="pathing_leds_operator" output="screen">
+  <node pkg="led_control" type="manual" name="user_selection_leds_operator" output="screen">
     <rosparam command="load" file="$(find pathing)/params.yaml"/>
   </node>
   
