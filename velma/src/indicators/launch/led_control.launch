@@ -18,14 +18,18 @@
   <node pkg="gpio_control" type="gpio_control_node" name="head_lights" args="--device pi --output 40" output="screen"/> -->
   
   <!-- Node to read drive messages -->
-  <node pkg="led_control" type="indicator" name="indicator_leds_operator" output="screen"/>
+  <node pkg="led_control" type="indicator" name="indicator_leds_operator" output="screen">
+    <rosparam command="load" file="$(find pathing)/params.yaml"/>
+  </node>
   
   <!-- Node to sense close obstacles -->
-  <node pkg="led_control" type="blind_spot" name="blind_spot_leds_operator" output="screen"/>
+  <node pkg="led_control" type="blind_spot" name="blind_spot_leds_operator" output="screen">
+    <rosparam command="load" file="$(find pathing)/params.yaml"/>
+  </node>
   
   <!-- LED Interface -->
   <node pkg="led_control" type="led_interface" name="led_interface" output="screen">
-    <rosparam command="load" file="$(find led_control)/params.yaml"/>
+    <rosparam command="load" file="$(find pathing)/params.yaml"/>
   </node>
   
 </launch>
