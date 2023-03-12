@@ -2,6 +2,7 @@
 
 #include <std_msgs/String.h>
 #include <led_control/gpiowrite.h>
+#include <sensor_msgs/Joy.h>
 
 class ManualLEDs {
 private:
@@ -20,12 +21,12 @@ private:
   ros::publisher c0;
   ros::publisher c1;
   
-  ros::publisher forward;
-  ros::publisher backward;
-  ros::publisher left;
-  ros::publisher right;
+  ros::Publisher forward;
+  ros::Publisher backward;
+  ros::Publisher left;
+  ros::Publisher right;
   
-  ros::publisher brake_lights;
+  ros::Publisher brake_lights;
   
   std::string active_controller;
   
@@ -70,7 +71,7 @@ private:
   std::string explore_key_char;
   std::string search_key_char;
   
-  std::bool brake;
+  bool brake;
   
 public:
   LEDInterface () {
@@ -130,20 +131,20 @@ public:
     n.getParam("explore_key_char", explore_key_char);
     n.getParam("search_key_char", search_key_char);
     
-    p0 = n.advertise<pathing::gpiowrite>(p0_topic, 100);
-    p1 = n.advertise<pathing::gpiowrite>(p1_topic, 100);
-    p2 = n.advertise<pathing::gpiowrite>(p2_topic, 100);
-    p3 = n.advertise<pathing::gpiowrite>(p3_topic, 100);
-    log = n.advertise<pathing::gpiowrite>(log_topic, 100);
-    c0 = n.advertise<pathing::gpiowrite>(c0_topic, 100);
-    c1 = n.advertise<pathing::gpiowrite>(c1_topic, 100);
+    p0 = n.advertise<led_control::gpiowrite>(p0_topic, 100);
+    p1 = n.advertise<led_control::gpiowrite>(p1_topic, 100);
+    p2 = n.advertise<led_control::gpiowrite>(p2_topic, 100);
+    p3 = n.advertise<led_control::gpiowrite>(p3_topic, 100);
+    log = n.advertise<led_control::gpiowrite>(log_topic, 100);
+    c0 = n.advertise<led_control::gpiowrite>(c0_topic, 100);
+    c1 = n.advertise<led_control::gpiowrite>(c1_topic, 100);
                
-    forward = n.advertise<pathing::gpiowrite>(forward_topic, 100);
-    backward = n.advertise<pathing::gpiowrite>(backward_topic, 100);
-    left = n.advertise<pathing::gpiowrite>(left_topic, 100);
-    right = n.advertise<pathing::gpiowrite>(right_topic, 100);
+    forward = n.advertise<led_control::gpiowrite>(forward_topic, 100);
+    backward = n.advertise<led_control::gpiowrite>(backward_topic, 100);
+    left = n.advertise<led_control::gpiowrite>(left_topic, 100);
+    right = n.advertise<led_control::gpiowrite>(right_topic, 100);
     
-    brake_lights = n.advertise<pathing::gpiowrite>(brake_lights_topic, 100);
+    brake_lights = n.advertise<led_control::gpiowrite>(brake_lights_topic, 100);
     
     std::string joy_topic, key_topic;
     n.getParam("joy_topic", joy_topic);
