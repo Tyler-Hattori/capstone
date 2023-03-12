@@ -4,7 +4,7 @@
 #include <pathing/gpiowrite.h>
 #include <std_msgs/Int8MultiArray.h>
 
-class ControlInterface {
+class LEDInterface {
 private:
   ros::NodeHandle n;
   
@@ -79,7 +79,7 @@ private:
   std::string search_web_char;
   
 public:
-  ControlInterface () {
+  LEDInterface () {
     n = ros::NodeHandle("~");
     
     std::string w0_topic, w1_topic, w2_topic, w3_topic, w4_topic;
@@ -106,10 +106,10 @@ public:
     n.getParam("indicator_topic", indicator_topic);
     n.getParam("proximity_topic", proximity_topic);
     
-    joy = n.subscribe(joy_topic, 10, &ControlInterface::joy_callback, this);
-    key = n.subscribe(key_topic, 10, &ControlInterface::key_callback, this);
-    indicator = n.subscribe(indicator_topic, 10, &ControlInterface::indicator_callback, this);
-    proximity = n.subscribe(proximity_topic, 10, &ControlInterface::proximity_callback, this);
+    joy = n.subscribe(joy_topic, 10, &LEDInterface::joy_callback, this);
+    key = n.subscribe(key_topic, 10, &LEDInterface::key_callback, this);
+    indicator = n.subscribe(indicator_topic, 10, &LEDInterface::indicator_callback, this);
+    proximity = n.subscribe(proximity_topic, 10, &LEDInterface::proximity_callback, this);
   }
   
   void publish() {
@@ -288,8 +288,8 @@ public:
 };
 
 int main(int argc, char** argv) {
-    ros::init(argc, argv, "control_interface");
-    ControlInterface teenager;
+    ros::init(argc, argv, "led_interface");
+    LEDInterface teenager;
     ros::spin();
     return 0;
 }
