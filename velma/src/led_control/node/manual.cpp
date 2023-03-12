@@ -182,19 +182,19 @@ public:
       c1.publish(on);
     }
     else if (active_controller == "joy") {
-      if (msg.axis[joy_speed_axis] > 0.05) { 
+      if (msg.axes[joy_speed_axis] > 0.05) { 
         forward.publish(on);
         backward.publish(off);
       }
-      else if (msg.axis[joy_speed_axis] < -0.05) {
+      else if (msg.axes[joy_speed_axis] < -0.05) {
         backward.publish(on);
         forward.publish(off);
       }
-      if (msg.axis[joy_angle_axis] > 0.05) { 
+      if (msg.axes[joy_angle_axis] > 0.05) { 
         left.publish(on);
         right.publish(off);
       }
-      else if (msg.axis[joy_angle_axis] < -0.05) { 
+      else if (msg.axes[joy_angle_axis] < -0.05) { 
         right.publish(on);
         left.publish(off);
       }
@@ -324,7 +324,7 @@ public:
         p2.publish(on);
         p3.publish(off);
       }
-      else if (msg.buttons[log_button_idx]) { 
+      else if (msg.data == log_key_char) { 
         log.publish(on);
       }
       else if (msg.data == navigate_key_char) {
