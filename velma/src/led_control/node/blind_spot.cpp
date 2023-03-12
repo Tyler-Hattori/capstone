@@ -1,7 +1,7 @@
 #include <ros/ros.h>
 
 #include <sensor_msgs/LaserScan.h>
-#include <pathing/gpiowrite.h>
+#include <led_control/gpiowrite.h>
 
 class BlindSpotNode {
   
