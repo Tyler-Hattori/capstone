@@ -1,8 +1,7 @@
 #include <ros/ros.h>
 
 #include <std_msgs/String.h>
-#include <pathing/gpiowrite.h>
-#include <std_msgs/Int8MultiArray.h>
+#include <led_control/gpiowrite.h>
 
 class ManualLEDs {
 private:
