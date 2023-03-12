@@ -19,7 +19,7 @@ catkin_package(
 )
 
 include_directories(
-  ${catkin_INLUDE_DIRS}
+  ${catkin_INCLUDE_DIRS}
 )
 
  # Add the nodes
