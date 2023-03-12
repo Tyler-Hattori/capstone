@@ -52,7 +52,7 @@ if __name__ == '__main__':
     rospy.init_node('twist_to_ackermann')
         
     twist_cmd_topic = '/pathing/cmd_vel' 
-    ackermann_cmd_topic = '/pathing/navigate_drive')
+    ackermann_cmd_topic = '/pathing/navigate_drive'
     wheelbase = rospy.get_param('~wheelbase', 1.0)
     frame_id = rospy.get_param('~frame_id', 'odom')
     message_type = rospy.get_param('~message_type', 'ackermann_drive') # ackermann_drive or ackermann_drive_stamped
