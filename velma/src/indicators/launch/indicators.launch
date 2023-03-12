@@ -1,0 +1,11 @@
+<launch>
+  <!-- Interface Pins -->
+  <node pkg="gpio_control" type="gpio_control_node" name="tail_light" args="--device pi --output " output="screen"/>
+  <node pkg="gpio_control" type="gpio_control_node" name="left_blinker" args="--device pi --output " output="screen"/>
+  <node pkg="gpio_control" type="gpio_control_node" name="right_blinker" args="--device pi --output " output="screen"/>
+  <node pkg="gpio_control" type="gpio_control_node" name="reverse_light" args="--device pi --output " output="screen"/>
+  <node pkg="gpio_control" type="gpio_control_node" name="tail_lights" args="--device pi --output " output="screen"/>
+  
+  <!-- Node to read drive messages -->
+  <node pkg="indicators" type="operator" name="led_operator" output="screen"/>
+</launch>
