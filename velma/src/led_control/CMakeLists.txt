@@ -9,12 +9,13 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
+  pathing
 )
 
 catkin_package(
  # INCLUDE_DIRS include
   #LIBRARIES indicators
-  CATKIN_DEPENDS ackermann_msgs geometry_msgs nav_msgs roscpp rospy std_msgs
+  CATKIN_DEPENDS ackermann_msgs geometry_msgs nav_msgs roscpp rospy std_msgs pathing
 #  DEPENDS system_lib
 )
 
