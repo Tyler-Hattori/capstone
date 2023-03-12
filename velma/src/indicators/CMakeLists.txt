@@ -4,6 +4,36 @@ project(indicators)
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
 
+set(CMAKE_CXX_STANDARD 11)
+
+if(NOT CMAKE_BUILD_TYPE)
+  set (CMAKE_BUILD_TYPE Release)
+endif()
+
+set(CMAKE_CXX_FLAGS "-Wall -Wextra")
+set(CMAKE_CXX_FLAGS_DEBUG "-g") 
+set(CMAKE_CXX_FLAGS_RELEASE "-O3")
+
+find_package(Eigen3)
+
+######################################
+# Compile the library >
+######################################
+
+# Add includes
+include_directories(include)
+file(GLOB SRC_FILES src/*.cpp)
+add_library(${PROJECT_NAME} ${SRC_FILES})
+target_link_libraries(${PROJECT_NAME} ${LIBS})
+set(LIBS ${LIBS} ${PROJECT_NAME})
+
+# Install the library to CMAKE_INSTALL_PREFIX
+# which defaults to /usr/local
+install(TARGETS ${PROJECT_NAME}
+        DESTINATION lib)
+install(DIRECTORY include/${PROJECT_NAME}
+        DESTINATION include)
+
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
@@ -72,10 +102,13 @@ find_package(catkin REQUIRED COMPONENTS
 # )
 
 ## Generate added messages and services with any dependencies listed here
-# generate_messages(
-#   DEPENDENCIES
-#   ackermann_msgs#   geometry_msgs#   nav_msgs#   std_msgs
-# )
+ generate_messages(
+   DEPENDENCIES
+   ackermann_msgs
+   geometry_msgs
+   nav_msgs
+   std_msgs
+ )
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -107,22 +140,28 @@ find_package(catkin REQUIRED COMPONENTS
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES indicators
-#  CATKIN_DEPENDS ackermann_msgs geometry_msgs message_generation nav_msgs roscpp rospy std_msgs
+  INCLUDE_DIRS include
+  LIBRARIES indicators
+  CATKIN_DEPENDS message_runtime ackermann_msgs geometry_msgs message_generation nav_msgs roscpp rospy std_msgs
 #  DEPENDS system_lib
 )
-
+set(LIBS ${LIBS} ${catkin_LIBRARIES})
 ###########
 ## Build ##
 ###########
 
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
-include_directories(
-# include
-  ${catkin_INCLUDE_DIRS}
-)
+include_directories(include ${catkin_INCLUDE_DIRS})
+
+ # Add the nodes
+  file(GLOB NODE_SRC_FILES node/*.cpp)
+  foreach(_node_file ${NODE_SRC_FILES})
+      get_filename_component(_node_name ${_node_file} NAME_WE)
+      add_executable(${_node_name} ${_node_file})
+      target_link_libraries(${_node_name} ${LIBS})
+      add_dependencies(${_node_name} indicators_generate_messages_cpp)
+  endforeach()
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
@@ -208,3 +247,13 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+# Install the library
+  install(TARGETS ${PROJECT_NAME}
+      ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+      LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+      RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+  )
+  install(DIRECTORY include/${PROJECT_NAME}/
+      DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
+  )
+endif()
