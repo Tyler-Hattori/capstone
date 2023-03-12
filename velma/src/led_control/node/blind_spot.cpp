@@ -26,10 +26,10 @@ public:
     n.getParam("back_left_sensor_topic", back_left_topic);
     n.getParam("back_right_sensor_topic", back_right_topic);
     
-    front_left = n.advertise<pathing::gpiowrite>(front_left_topic, 100);
-    front_right = n.advertise<pathing::gpiowrite>(front_right_topic, 100);
-    back_left = n.advertise<pathing::gpiowrite>(back_left_topic, 100);
-    back_right = n.advertise<pathing::gpiowrite>(back_right_topic, 100);
+    front_left = n.advertise<led_control::gpiowrite>(front_left_topic, 100);
+    front_right = n.advertise<led_control::gpiowrite>(front_right_topic, 100);
+    back_left = n.advertise<led_control::gpiowrite>(back_left_topic, 100);
+    back_right = n.advertise<led_control::gpiowrite>(back_right_topic, 100);
     laser_sub = n.subscribe(scan_topic, 10, &BlindSpotNode::laser_callback, this);
     
     output.reserve(4);
@@ -45,8 +45,8 @@ public:
   }
   
   void publish() {
-    pathing::gpiowrite on;
-    pathing::gpiowrite off;
+    led_control::gpiowrite on;
+    led_control::gpiowrite off;
     
     on.state = true;
     off.state = false;
