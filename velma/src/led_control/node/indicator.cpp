@@ -3,7 +3,7 @@
 #include <ackermann_msgs/AckermannDriveStamped.h>
 #include <led_control/gpiowrite.h>
 
-class IndicatorNode {
+class IndicatorLEDs {
   
 private:
   ros::NodeHandle n;
@@ -16,7 +16,7 @@ private:
   std::vector<bool> output;
   
 public:
-  IndicatorNode () {
+  IndicatorLEDs () {
     n = ros::NodeHandle("~");
     
     std::string drive_topic, left_blinker_topic, right_blinker_topic, brake_lights_topic, reverse_lights_topic;
@@ -30,7 +30,7 @@ public:
     right_blinker = n.advertise<led_control::gpiowrite>(right_blinker_topic, 100);
     brake_lights = n.advertise<led_control::gpiowrite>(brake_lights_topic, 100);
     reverse_lights = n.advertise<led_control::gpiowrite>(reverse_lights_topic, 100);
-    drive_sub = n.subscribe(drive_topic, 10, &IndicatorNode::drive_callback, this);
+    drive_sub = n.subscribe(drive_topic, 10, &IndicatorLEDs::drive_callback, this);
     
     output.reserve(5);
     for (int i = 0; i < 5; i++) {
@@ -87,7 +87,7 @@ public:
 
 int main(int argc, char** argv) {
     ros::init(argc, argv, "indicator_node");
-    IndicatorNode indicator;
+    IndicatorLEDs indicator;
     ros::spin();
     return 0;
 }
