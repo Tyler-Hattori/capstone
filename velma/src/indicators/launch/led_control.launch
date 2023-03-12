@@ -28,7 +28,7 @@
   </node>
   
   <!-- LED Interface -->
-  <node pkg="led_control" type="led_interface" name="led_interface" output="screen">
+  <node pkg="led_control" type="pathing" name="pathing_leds_operator" output="screen">
     <rosparam command="load" file="$(find pathing)/params.yaml"/>
   </node>
   
