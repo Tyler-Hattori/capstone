@@ -9,13 +9,23 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
-  pathing
 )
+
+add_message_files(
+    FILES
+    gpiowrite.msg
+  )
+
+#generate_messages(
+#  DEPENDENCIES
+#  std_msgs
+#  nav_msgs
+#  )
 
 catkin_package(
  # INCLUDE_DIRS include
   #LIBRARIES indicators
-  CATKIN_DEPENDS ackermann_msgs geometry_msgs nav_msgs roscpp rospy std_msgs pathing
+  CATKIN_DEPENDS ackermann_msgs geometry_msgs nav_msgs roscpp rospy std_msgs
 #  DEPENDS system_lib
 )
 
