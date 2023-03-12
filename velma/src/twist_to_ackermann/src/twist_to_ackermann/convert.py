@@ -49,7 +49,7 @@ def cmd_callback(data):
 if __name__ == '__main__': 
   try:
     
-    rospy.init_node('cmd_vel_to_ackermann_drive')
+    rospy.init_node('twist_to_ackermann')
         
     twist_cmd_topic = rospy.get_param('~twist_cmd_topic', '/cmd_vel') 
     ackermann_cmd_topic = rospy.get_param('~ackermann_cmd_topic', '/ackermann_cmd')
@@ -63,7 +63,7 @@ if __name__ == '__main__':
     else:
       pub = rospy.Publisher(ackermann_cmd_topic, AckermannDriveStamped, queue_size=1)
     
-    rospy.loginfo("Node 'cmd_vel_to_ackermann_drive' started.\nListening to %s, publishing to %s. Frame id: %s, wheelbase: %f", "/cmd_vel", ackermann_cmd_topic, frame_id, wheelbase)
+    rospy.loginfo("Node 'twist_to_ackermann' started.\nListening to %s, publishing to %s. Frame id: %s, wheelbase: %f", "/cmd_vel", ackermann_cmd_topic, frame_id, wheelbase)
     
     rospy.spin()
     
