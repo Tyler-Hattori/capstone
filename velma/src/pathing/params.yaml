@@ -102,7 +102,6 @@ recall_key_char: "r"
 return_key_char: "h"
 explore_key_char: "e"
 search_key_char: "f"
-new_key_char: "z"
 
 # Web Interface strings for toggling mux
 joy_web_char: "joystick"
