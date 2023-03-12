@@ -1,7 +1,7 @@
 #include <ros/ros.h>
 
 #include <std_msgs/String.h>
-#include <pathing/gpio.h>
+#include <pathing/gpioread.h>
 #include <std_msgs/Int8MultiArray.h>
 
 class ControlInterface {
@@ -151,35 +151,35 @@ public:
     output.publish(msg);
   }
   
-  void r0_callback(const pathing::gpio & msg) {
+  void r0_callback(const pathing::gpioread & msg) {
     if (msg.state != prev_r0){
       prev_r0 = msg.state;
       input[0] = msg.state; 
       publish();
     }
   }
-  void r1_callback(const pathing::gpio & msg) {
+  void r1_callback(const pathing::gpioread & msg) {
     if (msg.state != prev_r1){
       prev_r1 = msg.state;
       input[1] = msg.state; 
       publish();
     }
   }
-  void r2_callback(const pathing::gpio & msg) {
+  void r2_callback(const pathing::gpioread & msg) {
     if (msg.state != prev_r2){
       prev_r2 = msg.state;
       input[2] = msg.state; 
       publish();
     }
   }
-  void r3_callback(const pathing::gpio & msg) {
+  void r3_callback(const pathing::gpioread & msg) {
     if (msg.state != prev_r3){
       prev_r3 = msg.state;
       input[3] = msg.state; 
       publish();
     }
   }
-  void r4_callback(const pathing::gpio & msg) {
+  void r4_callback(const pathing::gpioread & msg) {
     if (msg.state != prev_r4){
       prev_r4 = msg.state;
       input[4] = msg.state; 
