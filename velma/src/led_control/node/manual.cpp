@@ -160,8 +160,8 @@ public:
                
   //  WIP
   void joy_callback(const sensor_msgs::Joy & msg) { //  WIP
-    pathing::gpiowrite on;
-    pathing::gpiowrite off;
+    led_control::gpiowrite on;
+    led_control::gpiowrite off;
     on.state = true;
     off.state = false;
     brake = false;
@@ -264,8 +264,8 @@ public:
     else brake_lights.publish(off);
   }
   void key_callback(const std_msgs::String & msg) {
-    pathing::gpiowrite on;
-    pathing::gpiowrite off;
+    led_control::gpiowrite on;
+    led_control::gpiowrite off;
     on.state = true;
     off.state = false;
     
