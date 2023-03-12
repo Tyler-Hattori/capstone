@@ -2,12 +2,14 @@
 
 #include <std_msgs/String.h>
 #include <pathing/gpio.h>
+#include <std_msgs/Int8MultiArray.h>
 
-class WebInterface {
+class ControlInterface {
 private:
   ros::NodeHandle n;
   ros::Publisher output;
-  ros::Subscriber joy_sub;
+  
+  /*ros::Subscriber joy_sub;
   ros::Subscriber key_sub;
   ros::Subscriber web_sub;
   ros::Subscriber forward_sub;
@@ -23,9 +25,15 @@ private:
   ros::Subscriber return_sub;
   ros::Subscriber recall_sub;
   ros::Subscriber explore_sub;
-  ros::Subscriber search_sub;
+  ros::Subscriber search_sub; */
   
-  bool prev_joy;
+  ros::Subscriber r0;
+  ros::Subscriber r1;
+  ros::Subscriber r2;
+  ros::Subscriber r3;
+  ros::Subscriber r4;
+  
+  /*bool prev_joy;
   bool prev_key;
   bool prev_web;
   bool prev_forward;
@@ -41,13 +49,21 @@ private:
   bool prev_return;
   bool prev_recall;
   bool prev_explore;
-  bool prev_search;
+  bool prev_search; */
+  
+  bool prev_r0;
+  bool prev_r1;
+  bool prev_r2;
+  bool prev_r3;
+  bool prev_r4;
+  
+  std::vector<bool> input;
   
 public:
-  WebInterface () {
+  ControlInterface () {
     n = ros::NodeHandle("~");
     
-    std::string output_topic, joy_topic, key_topic, web_topic, forward_topic, backward_topic, left_topic, right_topic, brake_topic, wander_topic, guard_topic, patrol_topic, advance_topic, return_topic, log_topic, recall_topic, explore_topic, search_topic;
+    /* std::string output_topic, joy_topic, key_topic, web_topic, forward_topic, backward_topic, left_topic, right_topic, brake_topic, wander_topic, guard_topic, patrol_topic, advance_topic, return_topic, log_topic, recall_topic, explore_topic, search_topic;
     n.getParam("web_topic", output_topic);
     n.getParam("joy_web_topic", joy_topic);
     n.getParam("key_web_topic", key_topic);
@@ -65,26 +81,44 @@ public:
     n.getParam("log_web_topic", log_topic);
     n.getParam("recall_web_topic", recall_topic);
     n.getParam("explore_web_topic", explore_topic);
-    n.getParam("search_web_topic", search_topic);
+    n.getParam("search_web_topic", search_topic); */
+    
+    std::string r0_topic, r1_topic, r2_topic, r3_topic, r4_topic;
+    n.getParam("r0_topic", r0_topic);
+    n.getParam("r1_topic", r1_topic);
+    n.getParam("r2_topic", r2_topic);
+    n.getParam("r3_topic", r3_topic);
+    n.getParam("r4_topic", r4_topic);
     
     output = n.advertise<std_msgs::String>(output_topic, 100);
-    joy_sub = n.subscribe(joy_topic, 10, &WebInterface::joy_callback, this);
-    key_sub = n.subscribe(key_topic, 10, &WebInterface::key_callback, this);
-    web_sub = n.subscribe(web_topic, 10, &WebInterface::web_callback, this);
-    forward_sub = n.subscribe(forward_topic, 10, &WebInterface::forward_callback, this);
-    backward_sub = n.subscribe(backward_topic, 10, &WebInterface::backward_callback, this);
-    left_sub = n.subscribe(left_topic, 10, &WebInterface::left_callback, this);
-    right_sub = n.subscribe(right_topic, 10, &WebInterface::right_callback, this);
-    brake_sub = n.subscribe(brake_topic, 10, &WebInterface::brake_callback, this);
-    wander_sub = n.subscribe(wander_topic, 10, &WebInterface::wander_callback, this);
-    guard_sub = n.subscribe(guard_topic, 10, &WebInterface::guard_callback, this);
-    patrol_sub = n.subscribe(patrol_topic, 10, &WebInterface::patrol_callback, this);
-    advance_sub = n.subscribe(advance_topic, 10, &WebInterface::advance_callback, this);
-    return_sub = n.subscribe(return_topic, 10, &WebInterface::return_callback, this);
-    log_sub = n.subscribe(log_topic, 10, &WebInterface::log_callback, this);
-    recall_sub = n.subscribe(recall_topic, 10, &WebInterface::recall_callback, this);
-    explore_sub = n.subscribe(explore_topic, 10, &WebInterface::explore_callback, this);
-    search_sub = n.subscribe(search_topic, 10, &WebInterface::search_callback, this);
+    intput.reserve(5);
+    for (int i = 0; i < 5; i++) {
+      input[i] = false;
+    }
+    
+    r0 = n.subscribe(r0_topic, 10, &ControlInterface::r0_callback, this);
+    r1 = n.subscribe(r1_topic, 10, &ControlInterface::r1_callback, this);
+    r2 = n.subscribe(r2_topic, 10, &ControlInterface::r2_callback, this);
+    r3 = n.subscribe(r3_topic, 10, &ControlInterface::r3_callback, this);
+    r4 = n.subscribe(r4_topic, 10, &ControlInterface::r4_callback, this);
+    
+    /*joy_sub = n.subscribe(joy_topic, 10, &ControlInterface::joy_callback, this);
+    key_sub = n.subscribe(key_topic, 10, &ControlInterface::key_callback, this);
+    web_sub = n.subscribe(web_topic, 10, &ControlInterface::web_callback, this);
+    forward_sub = n.subscribe(forward_topic, 10, &ControlInterface::forward_callback, this);
+    backward_sub = n.subscribe(backward_topic, 10, &ControlInterface::backward_callback, this);
+    left_sub = n.subscribe(left_topic, 10, &ControlInterface::left_callback, this);
+    right_sub = n.subscribe(right_topic, 10, &ControlInterface::right_callback, this);
+    brake_sub = n.subscribe(brake_topic, 10, &ControlInterface::brake_callback, this);
+    wander_sub = n.subscribe(wander_topic, 10, &ControlInterface::wander_callback, this);
+    guard_sub = n.subscribe(guard_topic, 10, &ControlInterface::guard_callback, this);
+    patrol_sub = n.subscribe(patrol_topic, 10, &ControlInterface::patrol_callback, this);
+    advance_sub = n.subscribe(advance_topic, 10, &ControlInterface::advance_callback, this);
+    return_sub = n.subscribe(return_topic, 10, &ControlInterface::return_callback, this);
+    log_sub = n.subscribe(log_topic, 10, &ControlInterface::log_callback, this);
+    recall_sub = n.subscribe(recall_topic, 10, &ControlInterface::recall_callback, this);
+    explore_sub = n.subscribe(explore_topic, 10, &ControlInterface::explore_callback, this);
+    search_sub = n.subscribe(search_topic, 10, &ControlInterface::search_callback, this);
     
     prev_joy = false;
     prev_key = false;
@@ -102,14 +136,58 @@ public:
     prev_return = false;
     prev_recall = false;
     prev_explore = true;
-    prev_search = false;
+    prev_search = false; */
+    
+    prev_r0 = false;
+    prev_r1 = false;
+    prev_r2 = false;
+    prev_r3 = true;
+    prev_r4 = false;
   }
   
-  void publish(const std_msgs::String msg) {
+  void publish() {
+    std::string msg;
+    
     output.publish(msg);
   }
   
-  void joy_callback(const pathing::gpio & msg) {
+  void r0_callback(const pathing::gpio & msg) {
+    if (msg.state != prev_r0){
+      prev_r0 = msg.state;
+      input[0] = msg.state; 
+      publish();
+    }
+  }
+  void r1_callback(const pathing::gpio & msg) {
+    if (msg.state != prev_r1){
+      prev_r1 = msg.state;
+      input[1] = msg.state; 
+      publish();
+    }
+  }
+  void r2_callback(const pathing::gpio & msg) {
+    if (msg.state != prev_r2){
+      prev_r2 = msg.state;
+      input[2] = msg.state; 
+      publish();
+    }
+  }
+  void r3_callback(const pathing::gpio & msg) {
+    if (msg.state != prev_r3){
+      prev_r3 = msg.state;
+      input[3] = msg.state; 
+      publish();
+    }
+  }
+  void r4_callback(const pathing::gpio & msg) {
+    if (msg.state != prev_r4){
+      prev_r4 = msg.state;
+      input[4] = msg.state; 
+      publish();
+    }
+  }
+  
+  /* void joy_callback(const pathing::gpio & msg) {
     if (msg.state != prev_joy){
       prev_joy = msg.state;
       std_msgs::String output;
@@ -244,12 +322,12 @@ public:
       output.data = "search";
       publish(output);
     }
-  }
+  } */
 };
 
 int main(int argc, char** argv) {
-    ros::init(argc, argv, "web_interface");
-    WebInterface teenager;
+    ros::init(argc, argv, "control_interface");
+    ControlInterface teenager;
     ros::spin();
     return 0;
 }
