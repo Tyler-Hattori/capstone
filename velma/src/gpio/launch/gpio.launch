@@ -21,11 +21,32 @@
   <node pkg="gpio_control" type="gpio_control_node" name="explore" args="--device pi --input 7" output="screen"/>
   <node pkg="gpio_control" type="gpio_control_node" name="search" args="--device pi --input 29" output="screen"/> -->
   
-  <!-- Read Node -->
-  <node pkg="gpio_control" type="gpio_control_node" name="read_pin_states" args="--device pi --input 11 12 13 15 16" output="screen"/>
+  <!-- Read controller pins -->
+  <node pkg="gpio_control" type="gpio_control_node" name="read_controller_pins" args="--device pi --input 11 12" output="screen"/>
   
-  <!-- Write Node -->
-  <node pkg="gpio_control" type="gpio_control_node" name="write_pin_states" args="--device pi --output 11 12 13 15 16" output="screen"/>
+  <!-- Read pathing pins -->
+  <node pkg="gpio_control" type="gpio_control_node" name="read_pathing_pins" args="--device pi --input 21 22 23 24" output="screen"/>
+  
+  <!-- Read logging pin -->
+  <node pkg="gpio_control" type="gpio_control_node" name="read_logging_pin" args="--device pi --input 13" output="screen"/>
+  
+  <!-- Write controller pins -->
+  <node pkg="gpio_control" type="gpio_control_node" name="write_controller_pins" args="--device pi --output 11 12" output="screen"/>
+  
+  <!-- Write pathing pins -->
+  <node pkg="gpio_control" type="gpio_control_node" name="write_pathing_pins" args="--device pi --output 21 22 23 24" output="screen"/>
+  
+  <!-- Write logging pin -->
+  <node pkg="gpio_control" type="gpio_control_node" name="write_logging_pin" args="--device pi --output 13" output="screen"/>
+  
+  <!-- Write indicator pins -->
+  <node pkg="gpio_control" type="gpio_control_node" name="write_indicator_pins" args="--device pi --output 35 36 37 38 40" output="screen"/>
+  
+  <!-- Write blind spot pins -->
+  <node pkg="gpio_control" type="gpio_control_node" name="write_blind_spot_pins" args="--device pi --output 18 19" output="screen"/>
+  
+  <!-- Write seaching indicator pins -->
+  <node pkg="gpio_control" type="gpio_control_node" name="write_object_detection_pins" args="--device pi --output 26 29" output="screen"/>
   
   <include file="$(find pathing)/launch/web.launch"/>
 </launch>
