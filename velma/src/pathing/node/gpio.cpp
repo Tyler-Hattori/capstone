@@ -27,11 +27,15 @@ private:
   ros::Subscriber explore_sub;
   ros::Subscriber search_sub; */
   
-  ros::Subscriber r0;
-  ros::Subscriber r1;
-  ros::Subscriber r2;
-  ros::Subscriber r3;
-  ros::Subscriber r4;
+  ros::Subscriber r0_controller;
+  ros::Subscriber r1_controller;
+  
+  ros::Subscriber r0_logging;
+  
+  ros::Subscriber r0_pathing;
+  ros::Subscriber r1_pathing;
+  ros::Subscriber r2_pathing;
+  ros::Subscriber r3_pathing;
   
   /*bool prev_joy;
   bool prev_key;
@@ -51,13 +55,33 @@ private:
   bool prev_explore;
   bool prev_search; */
   
-  bool prev_r0;
-  bool prev_r1;
-  bool prev_r2;
-  bool prev_r3;
-  bool prev_r4;
+  /*bool prev_r0_controller;
+  bool prev_r1_controller;
+  bool prev_r0_logging;
+  bool prev_r0_pathing;
+  bool prev_r1_pathing;
+  bool prev_r2_pathing;
+  bool prev_r3_pathing;*/
   
-  std::vector<bool> input;
+  std::vector<bool> controller;
+  std::bool logger;
+  std::vector<bool> pather;
+  
+  // Web indices
+  std::string joy_web_char;
+  std::string keyboard_web_char;
+  std::string web_web_char;
+  std::string brake_web_char;
+  std::string random_walk_web_char;
+  std::string guard_web_char;
+  std::string wall_follow_web_char;
+  std::string gap_follow_web_char;
+  std::string log_web_char;
+  std::string recall_web_char;
+  std::string return_web_char;
+  std::string navigate_web_char;
+  std::string explore_web_char;
+  std::string search_web_char;
   
 public:
   ControlInterface () {
@@ -83,24 +107,41 @@ public:
     n.getParam("explore_web_topic", explore_topic);
     n.getParam("search_web_topic", search_topic); */
     
-    std::string r0_topic, r1_topic, r2_topic, r3_topic, r4_topic;
-    n.getParam("r0_topic", r0_topic);
-    n.getParam("r1_topic", r1_topic);
-    n.getParam("r2_topic", r2_topic);
-    n.getParam("r3_topic", r3_topic);
-    n.getParam("r4_topic", r4_topic);
+    std::string output_topic
+    n.getParam("web_topic", output_topic);
+    
+    std::string r0_controller_topic, r1_controller_topic;
+    std::string r0_logging_topic;
+    std::string r0_pathing_topic, r1_pathing_topic, r2_pathing_topic, r3_pathing_topic;
+    n.getParam("r0_controller_topic", r0_controller_topic);
+    n.getParam("r1_controller_topic", r1_controller_topic);
+    n.getParam("r0_logging_topic", r0_logging_topic);
+    n.getParam("r0_pathing_topic", r0_pathing_topic);
+    n.getParam("r1_pathing_topic", r1_pathing_topic);
+    n.getParam("r2_pathing_topic", r2_pathing_topic);
+    n.getParam("r3_pathing_topic", r3_pathing_topic);
     
     output = n.advertise<std_msgs::String>(output_topic, 100);
-    intput.reserve(5);
-    for (int i = 0; i < 5; i++) {
+    
+    controller.reserve(2);
+    for (int i = 0; i < 2; i++) {
       input[i] = false;
     }
     
-    r0 = n.subscribe(r0_topic, 10, &ControlInterface::r0_callback, this);
-    r1 = n.subscribe(r1_topic, 10, &ControlInterface::r1_callback, this);
-    r2 = n.subscribe(r2_topic, 10, &ControlInterface::r2_callback, this);
-    r3 = n.subscribe(r3_topic, 10, &ControlInterface::r3_callback, this);
-    r4 = n.subscribe(r4_topic, 10, &ControlInterface::r4_callback, this);
+    pather.reserve(4);
+    for (int i = 0; i < 4; i++) {
+      input[i] = false;
+    }
+    
+    logger = false;
+    
+    r0_controller = n.subscribe(r0_controller_topic, 10, &ControlInterface::r0_controller_callback, this);
+    r1_controller = n.subscribe(r1_controller_topic, 10, &ControlInterface::r1_controller_callback, this);
+    r0_logging = n.subscribe(r0_logging_topic, 10, &ControlInterface::r0_logging_callback, this);
+    r0_pathing = n.subscribe(r0_pathing_topic, 10, &ControlInterface::r0_pathing_callback, this);
+    r1_pathing = n.subscribe(r1_pathing_topic, 10, &ControlInterface::r1_pathing_callback, this);
+    r2_pathing = n.subscribe(r2_pathing_topic, 10, &ControlInterface::r2_pathing_callback, this);
+    r3_pathing = n.subscribe(r3_pathing_topic, 10, &ControlInterface::r3_pathing_callback, this);
     
     /*joy_sub = n.subscribe(joy_topic, 10, &ControlInterface::joy_callback, this);
     key_sub = n.subscribe(key_topic, 10, &ControlInterface::key_callback, this);
@@ -138,51 +179,91 @@ public:
     prev_explore = true;
     prev_search = false; */
     
-    prev_r0 = false;
-    prev_r1 = false;
-    prev_r2 = false;
-    prev_r3 = true;
-    prev_r4 = false;
+    /*prev_r0_controller = false;
+    prev_r1_controller = false;
+    prev_r0_logging = false;
+    prev_r0_pathing = false;
+    prev_r1_pathing = false;
+    prev_r2_pathing = false;
+    prev_r3_pathing = false;*/
+    
+    // Get web indices
+    n.getParam("joy_web_char", joy_web_char);
+    n.getParam("keyboard_web_char", keyboard_web_char);
+    n.getParam("web_web_char", web_web_char);
+    n.getParam("brake_web_char", brake_web_char);
+    n.getParam("random_walk_web_char", random_walk_web_char);
+    n.getParam("guard_web_char", guard_web_char);
+    n.getParam("wall_follow_web_char", wall_follow_web_char);
+    n.getParam("gap_follow_web_char", gap_follow_web_char);
+    n.getParam("log_web_char", log_web_char);
+    n.getParam("recall_web_char", recall_web_char);
+    n.getParam("return_web_char", return_web_char);
+    n.getParam("navigate_web_char", navigate_web_char);
+    n.getParam("explore_web_char", explore_web_char);
+    n.getParam("search_web_char", search_web_char);
   }
   
   void publish() {
     std::string msg;
     
+    if (!controller[0] && !controller[1]) msg = joy_web_char;
+    else if (controller[0] && !controller[1]) msg = keyboard_web_char;
+    else if (!controller[0] && controller[1]) msg = web_web_char;
+    else if (logger) msg = log_web_char;
+    else if (!pather[0] && !pather[1] && !pather[2] && !pather[3]) msg = brake_web_char;
+    else if (pather[0] && !pather[1] && !pather[2] && !pather[3]) msg = guard_web_char;
+    else if (!pather[0] && pather[1] && !pather[2] && !pather[3]) msg = random_walk_web_char;
+    else if (pather[0] && pather[1] && !pather[2] && !pather[3]) msg = wall_follow_web_char;
+    else if (!pather[0] && !pather[1] && pather[2] && !pather[3]) msg = gap_follow_web_char;
+    else if (pather[0] && !pather[1] && pather[2] && !pather[3]) msg = return_web_char;
+    else if (!pather[0] && pather[1] && pather[2] && !pather[3]) msg = recall_web_char;
+    else if (pather[0] && pather[1] && pather[2] && !pather[3]) msg = navigate_web_char;
+    else if (!pather[0] && !pather[1] && !pather[2] && pather[3]) msg = explore_web_char;
+    else if (pather[0] && !pather[1] && !pather[2] && pather[3]) msg = search_web_char;
+    
     output.publish(msg);
   }
   
-  void r0_callback(const pathing::gpioread & msg) {
-    if (msg.state != prev_r0){
-      prev_r0 = msg.state;
-      input[0] = msg.state; 
+  void r0_controller_callback(const pathing::gpioread & msg) {
+    if (msg.state != controller[0]){
+      controller[0] = msg.state; 
       publish();
     }
   }
-  void r1_callback(const pathing::gpioread & msg) {
-    if (msg.state != prev_r1){
-      prev_r1 = msg.state;
-      input[1] = msg.state; 
+  void r1_controller_callback(const pathing::gpioread & msg) {
+    if (msg.state != controller[1]){
+      controller[1] = msg.state; 
       publish();
     }
   }
-  void r2_callback(const pathing::gpioread & msg) {
-    if (msg.state != prev_r2){
-      prev_r2 = msg.state;
-      input[2] = msg.state; 
+  void r0_logging_callback(const pathing::gpioread & msg) {
+    if (msg.state != logger){
+      logger = msg.state
       publish();
     }
   }
-  void r3_callback(const pathing::gpioread & msg) {
-    if (msg.state != prev_r3){
-      prev_r3 = msg.state;
-      input[3] = msg.state; 
+  void r0_pathing_callback(const pathing::gpioread & msg) {
+    if (msg.state != pather[0]){
+      pather[0] = msg.state; 
       publish();
     }
   }
-  void r4_callback(const pathing::gpioread & msg) {
-    if (msg.state != prev_r4){
-      prev_r4 = msg.state;
-      input[4] = msg.state; 
+  void r1_pathing_callback(const pathing::gpioread & msg) {
+    if (msg.state != pather[1]){
+      pather[1] = msg.state; 
+      publish();
+    }
+  }
+  void r2_pathing_callback(const pathing::gpioread & msg) {
+    if (msg.state != pather[2]){
+      pather[2] = msg.state; 
+      publish();
+    }
+  }
+  void r3_pathing_callback(const pathing::gpioread & msg) {
+    if (msg.state != pather[3]){
+      pather[3] = msg.state; 
       publish();
     }
   }
