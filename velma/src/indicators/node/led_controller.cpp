@@ -11,6 +11,7 @@ private:
   ros::Subscriber joy;
   ros::Subscriber key;
   ros::Subscriber indicator;
+  ros::Subscriber proximity;
   
   ros::Publisher w0;
   ros::Publisher w1;
@@ -21,60 +22,65 @@ private:
   std::vector<bool> input;
   
   int joy_button_idx;
-    int key_button_idx;
-    int web_button_idx;
-    int forward_button_idx;
-    int backward_button_idx;
-    int left_button_idx;
-    int right_button_idx;
-    int brake_button_idx;
-    int random_walk_button_idx;
-    int guard_button_idx;
-    int wall_follow_button_idx;
-    int gap_follow_button_idx;
-    int log_button_idx;
-    int recall_button_idx;
-    int return_button_idx;
-    int navigate_button_idx;
-    int explore_button_idx;
-    int search_button_idx;
+  int key_button_idx;
+  int web_button_idx;
+  int forward_button_idx;
+  int backward_button_idx;
+  int left_button_idx;
+  int right_button_idx;
+  int brake_button_idx;
+  int random_walk_button_idx;
+  int guard_button_idx;
+  int wall_follow_button_idx;
+  int gap_follow_button_idx;
+  int log_button_idx;
+  int recall_button_idx;
+  int return_button_idx;
+  int navigate_button_idx;
+  int explore_button_idx;
+  int search_button_idx;
     
   std::string joy_key_char;
-    std::string keyboard_key_char;
-    std::string web_key_char;
-    std::string brake_key_char;
-    std::string random_walk_key_char;
-    std::string guard_key_char;
-    std::string wall_follow_key_char;
-    std::string gap_follow_key_char;
-    std::string log_key_char;
-    std::string recall_key_char;
-    std::string return_key_char;
-    std::string navigate_key_char;
-    std::string explore_key_char;
-    std::string search_key_char;
+  std::string keyboard_key_char;
+  std::string web_key_char;
+  std::string brake_key_char;
+  std::string forward_key_char;
+  std::string backward_key_char;
+  std::string left_key_char;
+  std::string right_key_char;
+  std::string random_walk_key_char;
+  std::string guard_key_char;
+  std::string wall_follow_key_char;
+  std::string gap_follow_key_char;
+  std::string log_key_char;
+  std::string recall_key_char;
+  std::string return_key_char;
+  std::string navigate_key_char;
+  std::string explore_key_char;
+  std::string search_key_char;
     
   std::string joy_web_char;
-    std::string keyboard_web_char;
-    std::string web_web_char;
-    std::string brake_web_char;
-    std::string random_walk_web_char;
-    std::string guard_web_char;
-    std::string wall_follow_web_char;
-    std::string gap_follow_web_char;
-    std::string log_web_char;
-    std::string recall_web_char;
-    std::string return_web_char;
-    std::string navigate_web_char;
-    std::string explore_web_char;
-    std::string search_web_char;
-
+  std::string keyboard_web_char;
+  std::string web_web_char;
+  std::string brake_web_char;
+  std::string forward_web_char;
+  std::string backward_web_char;
+  std::string left_web_char;
+  std::string right_web_char;
+  std::string random_walk_web_char;
+  std::string guard_web_char;
+  std::string wall_follow_web_char;
+  std::string gap_follow_web_char;
+  std::string log_web_char;
+  std::string recall_web_char;
+  std::string return_web_char;
+  std::string navigate_web_char;
+  std::string explore_web_char;
+  std::string search_web_char;
   
 public:
   ControlInterface () {
     n = ros::NodeHandle("~");
-    
-    
     
     std::string w0_topic, w1_topic, w2_topic, w3_topic, w4_topic;
     n.getParam("w0_topic", w0_topic);
@@ -94,9 +100,16 @@ public:
       input[i] = false;
     }
     
+    std::string joy_topic, key_topic, indicator_topic, proximity_topic;
+    n.getParam("joy_topic", joy_topic);
+    n.getParam("key_topic", key_topic);
+    n.getParam("indicator_topic", indicator_topic);
+    n.getParam("proximity_topic", proximity_topic);
+    
     joy = n.subscribe(joy_topic, 10, &ControlInterface::joy_callback, this);
     key = n.subscribe(key_topic, 10, &ControlInterface::key_callback, this);
     indicator = n.subscribe(indicator_topic, 10, &ControlInterface::indicator_callback, this);
+    proximity = n.subscribe(proximity_topic, 10, &ControlInterface::proximity_callback, this);
   }
   
   void publish() {
