@@ -16,17 +16,16 @@
   
   <!-- <group ns="sensors">
      pixy 
-      <include file="$(find pixy2_node)/launch/pixy2.launch"/>
-  </group> -->
-  
-  <!-- <group ns="controllers">
-     gpio 
-      <include file="$(find gpio_control)/launch/gpio.launch"/>
+     <include file="$(find pixy2_node)/launch/pixy2.launch"/>
   </group> -->
     
   <group ns="mapping">
     <!-- slam -->
-      <include file="$(find slam_toolbox)/launch/online_async.launch"/>
+    <include file="$(find slam_toolbox)/launch/online_async.launch"/>
+  </group>
+  
+  <group ns="led_control">
+    <include file="$(find led_control)/launch/led_control.launch"/>
   </group>
   
   <!-- rviz --> 
