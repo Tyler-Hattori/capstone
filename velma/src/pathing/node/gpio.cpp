@@ -64,7 +64,7 @@ private:
   bool prev_r3_pathing;*/
   
   std::vector<bool> controller;
-  std::bool logger;
+  bool logger;
   std::vector<bool> pather;
   
   // Web indices
@@ -107,7 +107,7 @@ public:
     n.getParam("explore_web_topic", explore_topic);
     n.getParam("search_web_topic", search_topic); */
     
-    std::string output_topic
+    std::string output_topic;
     n.getParam("web_topic", output_topic);
     
     std::string r0_controller_topic, r1_controller_topic;
@@ -125,12 +125,12 @@ public:
     
     controller.reserve(2);
     for (int i = 0; i < 2; i++) {
-      input[i] = false;
+      controller[i] = false;
     }
     
     pather.reserve(4);
     for (int i = 0; i < 4; i++) {
-      input[i] = false;
+      pather[i] = false;
     }
     
     logger = false;
