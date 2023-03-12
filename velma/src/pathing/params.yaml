@@ -178,6 +178,18 @@ recall_web_topic: "/controllers/gpio_inputs/eighteen"
 explore_web_topic: "/controllers/gpio_inputs/seven"
 search_web_topic: "/controllers/gpio_inputs/twentynine"
 
+r0_topic: "/controllers/gpio_inputs/eleven"
+r1_topic: "/controllers/gpio_inputs/twelve"
+r2_topic: "/controllers/gpio_inputs/thirteen"
+r3_topic: "/controllers/gpio_inputs/fifteen"
+r4_topic: "/controllers/gpio_intputs/sixteen"
+
+w0_topic: "/controllers/gpio_outputs/eleven"
+w1_topic: "/controllers/gpio_outputs/twelve"
+w2_topic: "/controllers/gpio_outputs/thirteen"
+w3_topic: "/controllers/gpio_outputs/fifteen"
+w4_topic: "/controllers/gpio_outputs/sixteen"
+
 ease_costmap_topic: "/algorithms/navigation/search/ease_costmap"
 frontier_costmap_topic: "/algorithms/navigation/search/frontier_costmap"
 object_costmap_topic: "/algorithms/navigation/search/object_costmap"
