@@ -143,6 +143,7 @@ pose_rviz_topic: "/initialpose"
 keyboard_topic: "/key"
 mux_topic: "/pathing/mux"
 nav_mux_topic: "/pathing/nav_mux"
+indicator_topic: "/indicator"
 
 # Topic names of various drive channels
 rand_drive_topic: "/rand_drive"
