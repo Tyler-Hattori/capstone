@@ -127,6 +127,7 @@ private:
     double beginning_seconds;
     int collision_count=0;
 
+    std::string active_controller;
 
 public:
     BehaviorController() {
@@ -213,7 +214,6 @@ public:
         n.getParam("wall_follow_web_char", wall_follow_web_char);
         n.getParam("gap_follow_web_char", gap_follow_web_char);
         n.getParam("log_web_char", log_web_char);
-        
         n.getParam("recall_web_char", recall_web_char);
         n.getParam("return_web_char", return_web_char);
         n.getParam("navigate_web_char", navigate_web_char);
@@ -268,6 +268,7 @@ public:
         collision_file.open(ros::package::getPath("simulator") + "/logs/" + filename + ".txt");
         beginning_seconds = ros::Time::now().toSec();
 
+        active_controller = "key";
     }
 
     /// ---------------------- GENERAL HELPER FUNCTIONS ----------------------
@@ -429,182 +430,89 @@ public:
     /// ---------------------- CALLBACK FUNCTIONS ----------------------
 
     void joy_callback(const sensor_msgs::Joy & msg) {
-        // Changing mux_controller:
         if (msg.buttons[joy_button_idx]) { 
-            // joystick
             toggle_mux(joy_mux_idx, "Joystick");
+            active_controller = "joy";
         }
-        if (msg.buttons[web_button_idx]) { 
-            // web interface
+        else if (msg.buttons[web_button_idx]) { 
             toggle_mux(web_mux_idx, "Web Interface");
+            active_controller = "web";
         }
-        if (msg.buttons[key_button_idx]) { 
-            // keyboard
+        else if (msg.buttons[key_button_idx]) { 
             toggle_mux(key_mux_idx, "Keyboard");
+            active_controller = "key";
         }
-        else if (msg.buttons[brake_button_idx]) { 
-            // emergency brake 
-            brake();
-        }
-        else if (msg.buttons[random_walk_button_idx]) { 
-            // random walker
-            toggle_mux(random_walker_mux_idx, "Random Walker");
-        }
-        else if (msg.buttons[guard_button_idx]) { 
-            // puppy guarder
-            toggle_mux(guarder_mux_idx, "Puppy Guarder");
-        }
-        else if (msg.buttons[wall_follow_button_idx]) { 
-            // wall follower
-            toggle_mux(wall_follower_mux_idx, "Wall Follower");
-        }
-        else if (msg.buttons[gap_follow_button_idx]) { 
-            // gap follower
-            toggle_mux(gap_follower_mux_idx, "Gap Follower");
-        }
-        else if (msg.buttons[log_button_idx]) { 
-            // toggle waypoint logging mode
-            toggle_logger_mode();
-        }
-        else if (msg.buttons[navigate_button_idx]) {
-            // nav
-            toggle_nav_mux(navigator_nav_mux_idx, "Custom Navigation");
-        }
-        else if (msg.buttons[return_button_idx]) {
-            // return to driveway
-            toggle_nav_mux(returner_nav_mux_idx, "Returner");
-        }
-        else if (msg.buttons[recall_button_idx]) {
-            // waypoint pursuer
-            toggle_nav_mux(recaller_nav_mux_idx, "Memory");
-        }
-        else if (msg.buttons[explore_button_idx]) {
-            // explorer
-            toggle_nav_mux(explorer_nav_mux_idx, "Explorer");
-        }
-        else if (msg.buttons[search_button_idx]) {
-            // searcher
-            toggle_nav_mux(searcher_nav_mux_idx, "Searcher");
+        
+        if (active_controller == "joy"){
+            if (msg.buttons[brake_button_idx]) brake();
+            else if (msg.buttons[random_walk_button_idx]) toggle_mux(random_walker_mux_idx, "Random Walker");
+            else if (msg.buttons[guard_button_idx]) toggle_mux(guarder_mux_idx, "Puppy Guarder");
+            else if (msg.buttons[wall_follow_button_idx]) toggle_mux(wall_follower_mux_idx, "Patroller");
+            else if (msg.buttons[gap_follow_button_idx]) toggle_mux(gap_follower_mux_idx, "Advancer");
+            else if (msg.buttons[log_button_idx]) toggle_logger_mode();
+            else if (msg.buttons[navigate_button_idx]) toggle_nav_mux(navigator_nav_mux_idx, "Custom Navigation");
+            else if (msg.buttons[return_button_idx]) toggle_nav_mux(returner_nav_mux_idx, "Returner");
+            else if (msg.buttons[recall_button_idx]) toggle_nav_mux(recaller_nav_mux_idx, "Memory");
+            else if (msg.buttons[explore_button_idx]) toggle_nav_mux(explorer_nav_mux_idx, "Explorer");
+            else if (msg.buttons[search_button_idx]) toggle_nav_mux(searcher_nav_mux_idx, "Searcher");
         }
     }
     
     void web_callback(const std_msgs::String & msg) {
-        // Changing mux controller:
         if (msg.data == joy_web_char) {
-            // joystick
             toggle_mux(joy_mux_idx, "Joystick");
+            active_controller = "joy";
         }
         else if (msg.data == web_web_char) {
-            // keyboard
             toggle_mux(web_mux_idx, "Web Interface");
+            active_controller = "web";
         }
         else if (msg.data == keyboard_web_char) {
-            // keyboard
             toggle_mux(key_mux_idx, "Keyboard");
+            active_controller = "key";
         }
-        else if (msg.data == brake_web_char) {
-            // emergency brake 
-            brake();
-        }
-        else if (msg.data == random_walk_web_char) {
-            // random walker
-            toggle_mux(random_walker_mux_idx, "Random Walker");
-        }
-        else if (msg.data == guard_web_char) {
-            // guarder
-            toggle_mux(guarder_mux_idx, "Guarder");
-        }
-        else if (msg.data == wall_follow_web_char) {
-            // wall follower
-            toggle_mux(wall_follower_mux_idx, "Wall Follower");
-        }
-        else if (msg.data == gap_follow_web_char) {
-            // gap follower
-            toggle_mux(gap_follower_mux_idx, "Gap Follower");
-        }
-        else if (msg.data == log_web_char) {
-            // toggle waypoint logging mode
-            toggle_logger_mode();
-        }
-        else if (msg.data == navigate_web_char) {
-            // nav
-            toggle_nav_mux(navigator_nav_mux_idx, "Custom Navigation");
-        }
-        else if (msg.data == return_web_char) {
-            // return to driveway
-            toggle_nav_mux(returner_nav_mux_idx, "Returner");
-        }
-        else if (msg.data == recall_web_char) {
-            // waypoint pursuer
-            toggle_nav_mux(recaller_nav_mux_idx, "Memory");
-        }
-        else if (msg.data == explore_web_char) {
-            // explorer
-            toggle_nav_mux(explorer_nav_mux_idx, "Explorer");
-        }
-        else if (msg.data == search_web_char) {
-            // searcher
-            toggle_nav_mux(searcher_nav_mux_idx, "Searcher");
+        
+        if (active_controller == "web") {
+            if (msg.data == brake_web_char) brake();
+            else if (msg.data == random_walk_web_char) toggle_mux(random_walker_mux_idx, "Random Walker");
+            else if (msg.data == guard_web_char) toggle_mux(guarder_mux_idx, "Guarder");
+            else if (msg.data == wall_follow_web_char) toggle_mux(wall_follower_mux_idx, "Wall Follower");
+            else if (msg.data == gap_follow_web_char) toggle_mux(gap_follower_mux_idx, "Gap Follower");
+            else if (msg.data == log_web_char) toggle_logger_mode();
+            else if (msg.data == navigate_web_char) toggle_nav_mux(navigator_nav_mux_idx, "Custom Navigation");
+            else if (msg.data == return_web_char) toggle_nav_mux(returner_nav_mux_idx, "Returner");
+            else if (msg.data == recall_web_char) toggle_nav_mux(recaller_nav_mux_idx, "Memory");
+            else if (msg.data == explore_web_char) toggle_nav_mux(explorer_nav_mux_idx, "Explorer");
+            else if (msg.data == search_web_char) toggle_nav_mux(searcher_nav_mux_idx, "Searcher");
         }
     }
 
     void key_callback(const std_msgs::String & msg) {
-        // Changing mux controller:
         if (msg.data == joy_key_char) {
-            // joystick
             toggle_mux(joy_mux_idx, "Joystick");
+            active_controller = "joy";
         }
         else if (msg.data == web_key_char) {
-            // keyboard
             toggle_mux(web_mux_idx, "Web Interface");
+            active_controller = "web";
         }
         else if (msg.data == keyboard_key_char) {
-            // keyboard
             toggle_mux(key_mux_idx, "Keyboard");
+            active_controller = "key";
         }
-        else if (msg.data == brake_key_char) {
-            // emergency brake 
-            brake();
-        }
-        else if (msg.data == random_walk_key_char) {
-            // random walker
-            toggle_mux(random_walker_mux_idx, "Random Walker");
-        }
-        else if (msg.data == guard_key_char) {
-            // guarder
-            toggle_mux(guarder_mux_idx, "Guarder");
-        }
-        else if (msg.data == wall_follow_key_char) {
-            // wall follower
-            toggle_mux(wall_follower_mux_idx, "Wall Follower");
-        }
-        else if (msg.data == gap_follow_key_char) {
-            // gap follower
-            toggle_mux(gap_follower_mux_idx, "Gap Follower");
-        }
-        else if (msg.data == log_key_char) {
-            // toggle waypoint logging mode
-            toggle_logger_mode();
-        }
-        else if (msg.data == navigate_key_char) {
-            // nav
-            toggle_nav_mux(navigator_nav_mux_idx, "Custom Navigation");
-        }
-        else if (msg.data == return_key_char) {
-            // return to driveway
-            toggle_nav_mux(returner_nav_mux_idx, "Returner");
-        }
-        else if (msg.data == recall_key_char) {
-            // waypoint pursuer
-            toggle_nav_mux(recaller_nav_mux_idx, "Memory");
-        }
-        else if (msg.data == explore_key_char) {
-            // explorer
-            toggle_nav_mux(explorer_nav_mux_idx, "Explorer");
-        }
-        else if (msg.data == search_key_char) {
-            // searcher
-            toggle_nav_mux(searcher_nav_mux_idx, "Searcher");
+        
+        if (active_controller == "key") {
+            if (msg.data == brake_key_char) brake();
+            else if (msg.data == random_walk_key_char) toggle_mux(random_walker_mux_idx, "Random Walker");
+            else if (msg.data == guard_key_char) toggle_mux(guarder_mux_idx, "Guarder");
+            else if (msg.data == wall_follow_key_char) toggle_mux(wall_follower_mux_idx, "Wall Follower");
+            else if (msg.data == gap_follow_key_char) toggle_mux(gap_follower_mux_idx, "Gap Follower");
+            else if (msg.data == log_key_char) toggle_logger_mode();
+            else if (msg.data == navigate_key_char) toggle_nav_mux(navigator_nav_mux_idx, "Custom Navigation");
+            else if (msg.data == return_key_char) toggle_nav_mux(returner_nav_mux_idx, "Returner");
+            else if (msg.data == recall_key_char) toggle_nav_mux(recaller_nav_mux_idx, "Memory");
+            else if (msg.data == explore_key_char) toggle_nav_mux(explorer_nav_mux_idx, "Explorer");
+            else if (msg.data == search_key_char) toggle_nav_mux(searcher_nav_mux_idx, "Searcher");
         }
     }
 
