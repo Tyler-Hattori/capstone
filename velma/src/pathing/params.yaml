@@ -80,7 +80,7 @@ random_walk_button_idx: 1 # ? button
 guard_button_idx: 8
 wall_follow_button_idx: 9
 log_button_idx: 10
-navigator_button_idx: 14
+navigate_button_idx: 14
 recall_button_idx: 11
 return_button_idx: 5 # RB button
 explore_button_idx: 12
@@ -97,7 +97,7 @@ random_walk_key_char: "x"
 wall_follow_key_char: "p"
 gap_follow_key_char: "g"
 log_key_char: "l"
-navigator_key_char: "n"
+navigate_key_char: "n"
 recall_key_char: "r"
 return_key_char: "h"
 explore_key_char: "e"
