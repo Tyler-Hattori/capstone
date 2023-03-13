@@ -72,6 +72,8 @@ private:
   std::string search_key_char;
   
   bool brake;
+  bool manual;
+  bool manual_interrupt;
   
 public:
   ManualLEDs () {
@@ -156,47 +158,57 @@ public:
     active_controller = "";
                
     brake = false;
+    manual = false;
+    manual_interrupt = false;
   }
                
-  //  WIP
-  void joy_callback(const sensor_msgs::Joy & msg) { //  WIP
+  void joy_callback(const sensor_msgs::Joy & msg) {
     led_control::gpiowrite on;
     led_control::gpiowrite off;
     on.state = true;
     off.state = false;
     brake = false;
+    manual = false;
+    manual_interrupt = false;
     
     if (msg.buttons[joy_button_idx]) { 
       active_controller = "joy";
       c0.publish(off);
       c1.publish(off);
+      manual = true;
     }
     else if (msg.buttons[key_button_idx]) { 
       active_controller = "key";
       c0.publish(on);
       c1.publish(off);
+      manual = true;
     }
     else if (msg.buttons[web_button_idx]) { 
       active_controller = "web";
       c0.publish(off);
       c1.publish(on);
+      manual = true;
     }
     else if (active_controller == "joy") {
       if (msg.axes[joy_speed_axis] > 0.05) { 
         forward.publish(on);
         backward.publish(off);
+        manual_interrupt = true;
       }
       else if (msg.axes[joy_speed_axis] < -0.05) {
         backward.publish(on);
         forward.publish(off);
+        manual_interrupt = true;
       }
       if (msg.axes[joy_angle_axis] > 0.05) { 
         left.publish(on);
         right.publish(off);
+        manual_interrupt = true;
       }
       else if (msg.axes[joy_angle_axis] < -0.05) { 
         right.publish(on);
         left.publish(off);
+        manual_interrupt = true;
       }
       if (msg.buttons[brake_button_idx]) {
         brake = true;
@@ -262,66 +274,95 @@ public:
     
     if (brake) brake_lights.publish(on);
     else brake_lights.publish(off);
+    
+    if (!manual_interrupt) {
+      forward.publish(off);
+      backward.publish(off);
+      left.publish(off);
+      right.publish(off);
+    }
+    
+    if (manual) {
+      p0.publish(on);
+      p1.publish(on);
+      p2.publish(on);
+      p3.publish(on);
+    }
   }
+  
   void key_callback(const std_msgs::String & msg) {
     led_control::gpiowrite on;
     led_control::gpiowrite off;
     on.state = true;
     off.state = false;
+    brake = false;
+    manual = false;
+    manual_interrupt = false;
     
     if (msg.data == joy_key_char) { 
       active_controller = "joy";
       c0.publish(off);
       c1.publish(off);
+      manual = true;
     }
     else if (msg.data == keyboard_key_char) { 
       active_controller = "key";
       c0.publish(on);
       c1.publish(off);
+      manual = true;
     }
     else if (msg.data == web_key_char) { 
       active_controller = "web";
       c0.publish(off);
       c1.publish(on);
+      manual = true;
     }
     else if (active_controller == "key") {
       if (msg.data == "w") { 
         forward.publish(on);
+        backward.publish(off);
+        manual_interrupt = true;
       }
-      if (msg.data == "s") {
+      else if (msg.data == "s") {
         backward.publish(on);
+        forward.publish(off);
+        manual_interrupt = true;
       }
       if (msg.data == "a") { 
         left.publish(on);
+        right.publish(off);
+        manual_interrupt = true;
       }
-      if (msg.data == "d") { 
+      else if (msg.data == "d") { 
         right.publish(on);
+        left.publish(off);
+        manual_interrupt = true;
       }
-      else if (msg.data == brake_key_char) {
-        brake_lights.publish(on);
+      if (msg.data == brake_key_char) {
+        brake = true;
       }
       else if (msg.data == random_walk_key_char) { 
         p0.publish(off);
         p1.publish(off);
-        p2.publish(on);
+        p2.publish(off);
         p3.publish(off);
       }
       else if (msg.data == guard_key_char) { 
         p0.publish(on);
         p1.publish(off);
-        p2.publish(on);
+        p2.publish(off);
         p3.publish(off);
       }
       else if (msg.data == wall_follow_key_char) { 
         p0.publish(off);
         p1.publish(on);
-        p2.publish(on);
+        p2.publish(off);
         p3.publish(off);
       }
       else if (msg.data == gap_follow_key_char) { 
         p0.publish(on);
         p1.publish(on);
-        p2.publish(on);
+        p2.publish(off);
         p3.publish(off);
       }
       else if (msg.data == log_key_char) { 
@@ -330,33 +371,50 @@ public:
       else if (msg.data == navigate_key_char) {
         p0.publish(off);
         p1.publish(off);
-        p2.publish(off);
-        p3.publish(on);
+        p2.publish(on);
+        p3.publish(off);
       }
       else if (msg.data == return_key_char) {
         p0.publish(on);
         p1.publish(off);
-        p2.publish(off);
-        p3.publish(on);
+        p2.publish(on);
+        p3.publish(off);
       }
       else if (msg.data == recall_key_char) {
         p0.publish(off);
         p1.publish(on);
-        p2.publish(off);
-        p3.publish(on);
+        p2.publish(on);
+        p3.publish(off);
       }
       else if (msg.data == explore_key_char) {
         p0.publish(on);
         p1.publish(on);
-        p2.publish(off);
-        p3.publish(on);
+        p2.publish(on);
+        p3.publish(off);
       }
       else if (msg.data == search_key_char) {
         p0.publish(off);
         p1.publish(off);
-        p2.publish(on);
+        p2.publish(off);
         p3.publish(on);
       }
+    }
+    
+    if (brake) brake_lights.publish(on);
+    else brake_lights.publish(off);
+    
+    if (!manual_interrupt) {
+      forward.publish(off);
+      backward.publish(off);
+      left.publish(off);
+      right.publish(off);
+    }
+    
+    if (manual) {
+      p0.publish(on);
+      p1.publish(on);
+      p2.publish(on);
+      p3.publish(on);
     }
   }
 };
