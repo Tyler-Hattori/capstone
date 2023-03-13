@@ -27,7 +27,7 @@ generate_messages(
   )
 
 catkin_package(
- # INCLUDE_DIRS include
+  INCLUDE_DIRS include
   #LIBRARIES indicators
   CATKIN_DEPENDS message_runtime ackermann_msgs geometry_msgs nav_msgs roscpp rospy std_msgs
 #  DEPENDS system_lib
@@ -43,7 +43,3 @@ include_directories(include ${catkin_INCLUDE_DIRS})
       target_link_libraries(${_node_name} ${LIBS})
       add_dependencies(${_node_name} led_control_generate_messages_cpp)
   endforeach()
-
-target_link_libraries(${PROJECT_NAME}
- ${catkin_LIBRARIES}
- )
