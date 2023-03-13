@@ -16,7 +16,7 @@ private:
   std::vector<bool> output;
   
 public:
-  IndicatorNode () {
+  BlindSpotNode () {
     n = ros::NodeHandle("~");
     
     std::string scan_topic, front_left_topic, front_right_topic, back_left_topic, back_right_topic;
