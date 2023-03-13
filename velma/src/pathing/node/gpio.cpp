@@ -205,7 +205,7 @@ public:
   }
   
   void publish() {
-    std::string msg;
+    std_msgs::String msg;
     
     if (!controller[0] && !controller[1]) msg = joy_web_char;
     else if (controller[0] && !controller[1]) msg = keyboard_web_char;
