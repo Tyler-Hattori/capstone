@@ -40,6 +40,6 @@ include_directories(
   foreach(_node_file ${NODE_SRC_FILES})
       get_filename_component(_node_name ${_node_file} NAME_WE)
       add_executable(${_node_name} ${_node_file})
-      #target_link_libraries(${_node_name} ${LIBS})
+      target_link_libraries(${_node_name} ${LIBS})
       #add_dependencies(${_node_name} led_control_generate_messages_cpp)
   endforeach()
