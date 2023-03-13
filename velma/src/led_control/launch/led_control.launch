@@ -14,6 +14,12 @@
   <!-- Blind Spot Pins -->
   <node pkg="gpio_control" type="gpio_control_node" name="blind_spot_leds" args="--device pi --output 18 19" output="screen"/>
   
+  <!-- Manual Command Pins -->
+  <node pkg="gpio_control" type="gpio_control_node" name="manual_command_leds" args="--device pi --output 31 32 33 16" output="screen"/>
+  
+  <!-- Object Detection Pins -->
+  <node pkg="gpio_control" type="gpio_control_node" name="search_detection_leds" args="--device pi --output 26 29" output="screen"/>
+  
   <!-- Node to read drive messages -->
   <node pkg="led_control" type="indicator" name="indicator_leds_operator" output="screen">
     <rosparam command="load" file="$(find pathing)/params.yaml"/>
