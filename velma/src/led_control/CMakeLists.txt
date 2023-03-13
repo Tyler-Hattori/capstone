@@ -35,11 +35,14 @@ catkin_package(
 
 include_directories(include ${catkin_INCLUDE_DIRS})
 
- # Add the nodes
-  file(GLOB NODE_SRC_FILES node/*.cpp)
-  foreach(_node_file ${NODE_SRC_FILES})
-      get_filename_component(_node_name ${_node_file} NAME_WE)
-      add_executable(${_node_name} ${_node_file})
-      target_link_libraries(${_node_name} ${LIBS})
-      add_dependencies(${_node_name} led_control_generate_messages_cpp)
-  endforeach()
+add_executable(indicator node/indicator.cpp)
+target_link_libraries(indicator ${catkin_LIBRARIES})
+add_dependencies(indicator led_control_generate_messages_cpp)
+
+add_executable(blind_spot node/blind_spot.cpp)
+target_link_libraries(blind_spot ${catkin_LIBRARIES})
+add_dependencies(blind_spot led_control_generate_messages_cpp)
+
+add_executable(manual node/manual.cpp)
+target_link_libraries(manual ${catkin_LIBRARIES})
+add_dependencies(manual led_control_generate_messages_cpp)
