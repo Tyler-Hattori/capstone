@@ -46,6 +46,6 @@ include_directories(
       add_dependencies(${_node_name} led_control_generate_messages_cpp)
   endforeach()
 
-target_link_libraries(${PROJECT_NAME}_node
+target_link_libraries(${PROJECT_NAME}
  ${catkin_LIBRARIES}
  )
