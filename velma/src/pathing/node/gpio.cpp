@@ -207,20 +207,20 @@ public:
   void publish() {
     std_msgs::String msg;
     
-    if (!controller[0] && !controller[1]) msg = joy_web_char;
-    else if (controller[0] && !controller[1]) msg = keyboard_web_char;
-    else if (!controller[0] && controller[1]) msg = web_web_char;
-    else if (logger) msg = log_web_char;
-    else if (!pather[0] && !pather[1] && !pather[2] && !pather[3]) msg = brake_web_char;
-    else if (pather[0] && !pather[1] && !pather[2] && !pather[3]) msg = guard_web_char;
-    else if (!pather[0] && pather[1] && !pather[2] && !pather[3]) msg = random_walk_web_char;
-    else if (pather[0] && pather[1] && !pather[2] && !pather[3]) msg = wall_follow_web_char;
-    else if (!pather[0] && !pather[1] && pather[2] && !pather[3]) msg = gap_follow_web_char;
-    else if (pather[0] && !pather[1] && pather[2] && !pather[3]) msg = return_web_char;
-    else if (!pather[0] && pather[1] && pather[2] && !pather[3]) msg = recall_web_char;
-    else if (pather[0] && pather[1] && pather[2] && !pather[3]) msg = navigate_web_char;
-    else if (!pather[0] && !pather[1] && !pather[2] && pather[3]) msg = explore_web_char;
-    else if (pather[0] && !pather[1] && !pather[2] && pather[3]) msg = search_web_char;
+    if (!controller[0] && !controller[1]) msg.data = joy_web_char;
+    else if (controller[0] && !controller[1]) msg.data = keyboard_web_char;
+    else if (!controller[0] && controller[1]) msg.data = web_web_char;
+    else if (logger) msg.data = log_web_char;
+    else if (!pather[0] && !pather[1] && !pather[2] && !pather[3]) msg.data = brake_web_char;
+    else if (pather[0] && !pather[1] && !pather[2] && !pather[3]) msg.data = guard_web_char;
+    else if (!pather[0] && pather[1] && !pather[2] && !pather[3]) msg.data = random_walk_web_char;
+    else if (pather[0] && pather[1] && !pather[2] && !pather[3]) msg.data = wall_follow_web_char;
+    else if (!pather[0] && !pather[1] && pather[2] && !pather[3]) msg.data = gap_follow_web_char;
+    else if (pather[0] && !pather[1] && pather[2] && !pather[3]) msg.data = return_web_char;
+    else if (!pather[0] && pather[1] && pather[2] && !pather[3]) msg.data = recall_web_char;
+    else if (pather[0] && pather[1] && pather[2] && !pather[3]) msg.data = navigate_web_char;
+    else if (!pather[0] && !pather[1] && !pather[2] && pather[3]) msg.data = explore_web_char;
+    else if (pather[0] && !pather[1] && !pather[2] && pather[3]) msg.data = search_web_char;
     
     output.publish(msg);
   }
