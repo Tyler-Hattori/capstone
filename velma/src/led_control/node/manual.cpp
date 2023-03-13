@@ -16,7 +16,7 @@ private:
   ros::Publisher p2;
   ros::Publisher p3;
   
-  ros::Publisher log;
+  ros::Publisher l0;
   
   ros::Publisher c0;
   ros::Publisher c1;
@@ -78,7 +78,7 @@ public:
     n = ros::NodeHandle("~");
     
     std::string p0_topic, p1_topic, p2_topic, p3_topic;
-    std::string log_topic;
+    std::string l0_topic;
     std::string c0_topic, c1_topic;
     std::string brake_lights_topic;
     std::string forward_topic, backward_topic, left_topic, right_topic;
@@ -86,7 +86,7 @@ public:
     n.getParam("w1_pathing_topic", p1_topic);
     n.getParam("w2_pathing_topic", p2_topic);
     n.getParam("w3_pathing_topic", p3_topic);
-    n.getParam("w0_logging_topic", log_topic);
+    n.getParam("w0_logging_topic", l0_topic);
     n.getParam("w0_controller_topic", c0_topic);
     n.getParam("w1_controller_topic", c1_topic);
     n.getParam("brake_lights_topic", brake_lights_topic);
@@ -135,7 +135,7 @@ public:
     p1 = n.advertise<led_control::gpiowrite>(p1_topic, 100);
     p2 = n.advertise<led_control::gpiowrite>(p2_topic, 100);
     p3 = n.advertise<led_control::gpiowrite>(p3_topic, 100);
-    log = n.advertise<led_control::gpiowrite>(log_topic, 100);
+    l0 = n.advertise<led_control::gpiowrite>(l0_topic, 100);
     c0 = n.advertise<led_control::gpiowrite>(c0_topic, 100);
     c1 = n.advertise<led_control::gpiowrite>(c1_topic, 100);
                
@@ -226,7 +226,7 @@ public:
         p3.publish(off);
       }
       else if (msg.buttons[log_button_idx]) { 
-        log.publish(on);
+        l0.publish(on);
       }
       else if (msg.buttons[navigate_button_idx]) {
         p0.publish(off);
@@ -325,7 +325,7 @@ public:
         p3.publish(off);
       }
       else if (msg.data == log_key_char) { 
-        log.publish(on);
+        l0.publish(on);
       }
       else if (msg.data == navigate_key_char) {
         p0.publish(off);
