@@ -27,7 +27,7 @@ generate_messages(
   )
 
 catkin_package(
-  INCLUDE_DIRS include
+  # INCLUDE_DIRS include
   #LIBRARIES led_control
   CATKIN_DEPENDS roscpp message_runtime ackermann_msgs geometry_msgs nav_msgs rospy std_msgs
 #  DEPENDS system_lib
