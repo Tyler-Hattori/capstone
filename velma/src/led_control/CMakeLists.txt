@@ -28,8 +28,8 @@ generate_messages(
 
 catkin_package(
   INCLUDE_DIRS include
-  #LIBRARIES indicators
-  CATKIN_DEPENDS message_runtime ackermann_msgs geometry_msgs nav_msgs roscpp rospy std_msgs
+  #LIBRARIES led_control
+  CATKIN_DEPENDS roscpp message_runtime ackermann_msgs geometry_msgs nav_msgs rospy std_msgs
 #  DEPENDS system_lib
 )
 
