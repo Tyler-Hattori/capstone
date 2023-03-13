@@ -239,7 +239,7 @@ public:
   }
   void r0_logging_callback(const pathing::gpioread & msg) {
     if (msg.state != logger){
-      logger = msg.state
+      logger = msg.state;
       publish();
     }
   }
