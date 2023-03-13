@@ -33,9 +33,7 @@ catkin_package(
 #  DEPENDS system_lib
 )
 
-include_directories(
-  ${catkin_INCLUDE_DIRS}
-)
+include_directories(include ${catkin_INCLUDE_DIRS})
 
  # Add the nodes
   file(GLOB NODE_SRC_FILES node/*.cpp)
