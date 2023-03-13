@@ -140,6 +140,12 @@ public:
     l0 = n.advertise<led_control::gpiowrite>(l0_topic, 100);
     c0 = n.advertise<led_control::gpiowrite>(c0_topic, 100);
     c1 = n.advertise<led_control::gpiowrite>(c1_topic, 100);
+    
+    led_control::gpiowrite init;
+    init.state = "false";
+    c0.publish(init);
+    init.state = "true";
+    c1.publish(init);
                
     forward = n.advertise<led_control::gpiowrite>(forward_topic, 100);
     backward = n.advertise<led_control::gpiowrite>(backward_topic, 100);
