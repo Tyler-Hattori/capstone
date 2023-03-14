@@ -25,7 +25,7 @@
   </group>
   
   <group ns="led_control">
-    <!-- setup gpio output pins -->
+    <!-- indicator network -->
     <include file="$(find led_control)/launch/led_control.launch" if"$(eval arg('simulate') == 'no')"/>
   </group>
   
