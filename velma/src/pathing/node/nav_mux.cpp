@@ -152,6 +152,7 @@ void NavChannel::nav_callback(const geometry_msgs::PoseWithCovarianceStamped & m
     geometry_msgs::PoseStamped pose;
     std_msgs::Header header;
     header.stamp = ros::Time::now();
+    header.frame_id = msg.header.frame_id;
     pose.header = header;
     pose.pose = msg.pose.pose;
     
