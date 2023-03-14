@@ -952,3 +952,45 @@ make[1]: Leaving directory '/home/thattori/capstone/velma/build/CMakeFiles/CMake
 
 
 
+Determining if files linux/joystick.h exist passed with the following output:
+Change Dir: /home/thattori/capstone/velma/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_02bdf/fast && /usr/bin/make -f CMakeFiles/cmTC_02bdf.dir/build.make CMakeFiles/cmTC_02bdf.dir/build
+make[1]: Entering directory '/home/thattori/capstone/velma/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_02bdf.dir/HAVE_LINUX_JOYSTICK_H.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_02bdf.dir/HAVE_LINUX_JOYSTICK_H.c.o   -c /home/thattori/capstone/velma/build/CMakeFiles/CheckIncludeFiles/HAVE_LINUX_JOYSTICK_H.c
+Linking C executable cmTC_02bdf
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_02bdf.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_02bdf.dir/HAVE_LINUX_JOYSTICK_H.c.o  -o cmTC_02bdf 
+make[1]: Leaving directory '/home/thattori/capstone/velma/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function sgemm_ exists passed with the following output:
+Change Dir: /home/thattori/capstone/velma/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_a7278/fast && /usr/bin/make -f CMakeFiles/cmTC_a7278.dir/build.make CMakeFiles/cmTC_a7278.dir/build
+make[1]: Entering directory '/home/thattori/capstone/velma/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a7278.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=sgemm_   -o CMakeFiles/cmTC_a7278.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a7278
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a7278.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=sgemm_    CMakeFiles/cmTC_a7278.dir/CheckFunctionExists.c.o  -o cmTC_a7278  /usr/lib/x86_64-linux-gnu/libblas.so 
+make[1]: Leaving directory '/home/thattori/capstone/velma/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function cheev_ exists passed with the following output:
+Change Dir: /home/thattori/capstone/velma/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_85609/fast && /usr/bin/make -f CMakeFiles/cmTC_85609.dir/build.make CMakeFiles/cmTC_85609.dir/build
+make[1]: Entering directory '/home/thattori/capstone/velma/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_85609.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cheev_   -o CMakeFiles/cmTC_85609.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_85609
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_85609.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=cheev_    CMakeFiles/cmTC_85609.dir/CheckFunctionExists.c.o  -o cmTC_85609  /usr/lib/x86_64-linux-gnu/liblapack.so /usr/lib/x86_64-linux-gnu/libblas.so 
+make[1]: Leaving directory '/home/thattori/capstone/velma/build/CMakeFiles/CMakeTmp'
+
+
+
