@@ -55,7 +55,7 @@ if __name__ == '__main__':
     ackermann_cmd_topic = '/pathing/navigate_drive'
     wheelbase = rospy.get_param('~wheelbase', 1.0)
     frame_id = rospy.get_param('~frame_id', 'odom')
-    message_type = rospy.get_param('~message_type', 'ackermann_drive') # ackermann_drive or ackermann_drive_stamped
+    message_type = rospy.get_param('~message_type', 'ackermann_drive_stamped') # ackermann_drive or ackermann_drive_stamped
     
     rospy.Subscriber(twist_cmd_topic, Twist, cmd_callback, queue_size=1)
     if message_type == 'ackermann_drive':
