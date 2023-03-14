@@ -6,7 +6,7 @@
   
   <group ns="controllers">
     <include file="$(find pathing)/launch/controllers.launch">
-      <arg name="simulate" value="$(arg('simulate"))"/>
+      <arg name="simulate" value="$(arg simulate)"/>
     </include>
   </group>
 
