@@ -135,10 +135,10 @@ public:
 
         // General navigation channel
         int navigator_mux_idx;
-        std::string navigator_drive_topic;
-        n.getParam("navigator_drive_topic", navigator_drive_topic);
+        std::string navigate_drive_topic;
+        n.getParam("navigate_drive_topic", navigate_drive_topic);
         n.getParam("navigator_mux_idx", navigator_mux_idx);
-        add_channel(navigator_drive_topic, drive_topic, navigator_mux_idx);
+        add_channel(navigate_drive_topic, drive_topic, navigator_mux_idx);
     }
 
     void add_channel(std::string channel_name, std::string drive_topic, int mux_idx_) {
