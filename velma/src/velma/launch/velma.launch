@@ -14,19 +14,20 @@
     <arg name="map_name" value="$(arg map)"/>
   </include>
   
-  <!-- <group ns="sensors">
-     pixy 
-     <include file="$(find pixy2_node)/launch/pixy2.launch"/>
-  </group> -->
+  <group ns="sensors">
+      <!-- pixy -->
+     <include file="$(find pixy2_node)/launch/pixy2.launch" if"$(eval arg('simulate') == 'no')"/>
+  </group>
     
   <group ns="mapping">
     <!-- slam -->
     <include file="$(find slam_toolbox)/launch/online_async.launch"/>
   </group>
   
-  <!-- <group ns="led_control">
-    <include file="$(find led_control)/launch/led_control.launch"/>
-  </group> -->
+  <group ns="led_control">
+    <!-- setup gpio output pins -->
+    <include file="$(find led_control)/launch/led_control.launch" if"$(eval arg('simulate') == 'no')"/>
+  </group>
   
   <!-- rviz --> 
   <node pkg="rviz" type="rviz" name="rviz" args="-d $(find velma)/launch/velma.rviz" output="screen"/>
