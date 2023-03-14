@@ -336,7 +336,7 @@ public:
         pub_pose_transform(timestamp);
 
         /// Publish the steering angle as a transformation so the wheels move
-        pub_steer_ang_transform(timestamp);
+        // pub_steer_ang_transform(timestamp);
 
         // Make an odom message as well and publish it
         pub_odom(timestamp);
