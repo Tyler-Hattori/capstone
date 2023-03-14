@@ -142,9 +142,9 @@ public:
     c1 = n.advertise<led_control::gpiowrite>(c1_topic, 100);
     
     led_control::gpiowrite init;
-    init.state = "false";
+    init.state = false;
     c0.publish(init);
-    init.state = "true";
+    init.state = true;
     c1.publish(init);
                
     forward = n.advertise<led_control::gpiowrite>(forward_topic, 100);
