@@ -150,7 +150,7 @@ rand_drive_topic: "/rand_drive"
 guard_drive_topic: "/guard_drive"
 wall_follow_drive_topic: "/wall_follow_drive"
 gap_follow_drive_topic: "/gap_follow_drive"
-navigate_drive_topic: "/nav_drive"
+navigate_drive_topic: "/pathing/navigate_drive"
 
 # Topic names of various nav channels
 navigate_nav_topic: "/navigate_goal"
