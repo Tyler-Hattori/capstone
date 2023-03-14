@@ -16,7 +16,7 @@
   
   <group ns="sensors">
       <!-- pixy -->
-     <include file="$(find pixy2_node)/launch/pixy2.launch" if"$(eval arg('simulate') == 'no')"/>
+     <include file="$(find pixy2_node)/launch/pixy2.launch" if="$(eval arg('simulate') == 'no')"/>
   </group>
     
   <group ns="mapping">
@@ -26,7 +26,7 @@
   
   <group ns="led_control">
     <!-- indicator network -->
-    <include file="$(find led_control)/launch/led_control.launch" if"$(eval arg('simulate') == 'no')"/>
+    <include file="$(find led_control)/launch/led_control.launch" if="$(eval arg('simulate') == 'no')"/>
   </group>
   
   <!-- rviz --> 
