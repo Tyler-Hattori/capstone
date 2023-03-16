@@ -13,7 +13,7 @@
   <!-- Will launch a simulated map and lidar if the CLI requests it -->
   <group ns="simulation">
     <!-- Launch a map from the maps folder as instructed from the command line -->
-    <arg name="map" default="$(find pathing)/tracks/$(arg map_name)/$(arg map_name)_map.yaml"/>
+    <arg name="map" default="$(find pathing)/maps/$(arg map_name)/$(arg map_name)_map.yaml"/>
     <node pkg="map_server" name="map_server" type="map_server" args="$(arg map)" if="$(eval arg('simulate') == 'all' or arg('simulate') == 'map')">
       <remap from="/simulation/map" to="/map"/>
     </node>
