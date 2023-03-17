@@ -73,7 +73,6 @@ all: slam/slam_toolbox_rviz/all
 all: vesc/vesc_ackermann/all
 all: vesc/vesc_driver/all
 all: navigation/all
-all: waypoint_logger/all
 
 .PHONY : all
 
@@ -98,7 +97,6 @@ preinstall: slam/slam_toolbox_rviz/preinstall
 preinstall: vesc/vesc_ackermann/preinstall
 preinstall: vesc/vesc_driver/preinstall
 preinstall: navigation/preinstall
-preinstall: waypoint_logger/preinstall
 
 .PHONY : preinstall
 
@@ -128,7 +126,6 @@ clean: slam/slam_toolbox_rviz/clean
 clean: vesc/vesc_ackermann/clean
 clean: vesc/vesc_driver/clean
 clean: navigation/clean
-clean: waypoint_logger/clean
 
 .PHONY : clean
 
@@ -833,24 +830,6 @@ vesc/vesc_msgs/clean: vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_eus.
 vesc/vesc_msgs/clean: vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_nodejs.dir/clean
 
 .PHONY : vesc/vesc_msgs/clean
-
-#=============================================================================
-# Directory level rules for directory waypoint_logger
-
-# Recursive "all" directory target.
-waypoint_logger/all:
-
-.PHONY : waypoint_logger/all
-
-# Recursive "preinstall" directory target.
-waypoint_logger/preinstall:
-
-.PHONY : waypoint_logger/preinstall
-
-# Recursive "clean" directory target.
-waypoint_logger/clean:
-
-.PHONY : waypoint_logger/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/doxygen.dir

@@ -150,7 +150,6 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/thattori/capstone/velma/build/vesc/vesc_ackermann/cmake_install.cmake")
   include("/home/thattori/capstone/velma/build/vesc/vesc_driver/cmake_install.cmake")
   include("/home/thattori/capstone/velma/build/navigation/cmake_install.cmake")
-  include("/home/thattori/capstone/velma/build/waypoint_logger/cmake_install.cmake")
 
 endif()
 

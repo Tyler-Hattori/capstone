@@ -64,12 +64,6 @@ nav_msgs/Odometry.h
 geometry_msgs/TransformStamped.h
 -
 
-/home/thattori/capstone/velma/src/vesc/vesc_ackermann/src/vesc_to_odom_node.cpp
-ros/ros.h
--
-vesc_ackermann/vesc_to_odom.h
-/home/thattori/capstone/velma/src/vesc/vesc_ackermann/src/vesc_ackermann/vesc_to_odom.h
-
 /opt/ros/noetic/include/geometry_msgs/Point.h
 string
 -

@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/thattori/capstone/velma/build
 include pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData.dir/progress.make
 
 pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData:
-	cd /home/thattori/capstone/velma/build/pathing && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py pathing /home/thattori/capstone/velma/src/pathing/msg/PixyData.msg sensor_msgs/RegionOfInterest:std_msgs/Header:pathing/PixyBlock
+	cd /home/thattori/capstone/velma/build/pathing && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py pathing /home/thattori/capstone/velma/src/pathing/msg/PixyData.msg pathing/PixyBlock:std_msgs/Header:sensor_msgs/RegionOfInterest
 
 _pathing_generate_messages_check_deps_PixyData: pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData
 _pathing_generate_messages_check_deps_PixyData: pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData.dir/build.make

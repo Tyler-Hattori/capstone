@@ -39,7 +39,7 @@ add_custom_target(_pathing_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/PixyData.msg" NAME_WE)
 add_custom_target(_pathing_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "pathing" "/home/thattori/capstone/velma/src/pathing/msg/PixyData.msg" "sensor_msgs/RegionOfInterest:std_msgs/Header:pathing/PixyBlock"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "pathing" "/home/thattori/capstone/velma/src/pathing/msg/PixyData.msg" "pathing/PixyBlock:std_msgs/Header:sensor_msgs/RegionOfInterest"
 )
 
 #
@@ -75,7 +75,7 @@ _generate_msg_cpp(pathing
 _generate_msg_cpp(pathing
   "/home/thattori/capstone/velma/src/pathing/msg/PixyData.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg"
+  "/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/pathing
 )
 
@@ -140,7 +140,7 @@ _generate_msg_eus(pathing
 _generate_msg_eus(pathing
   "/home/thattori/capstone/velma/src/pathing/msg/PixyData.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg"
+  "/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/pathing
 )
 
@@ -205,7 +205,7 @@ _generate_msg_lisp(pathing
 _generate_msg_lisp(pathing
   "/home/thattori/capstone/velma/src/pathing/msg/PixyData.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg"
+  "/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/pathing
 )
 
@@ -270,7 +270,7 @@ _generate_msg_nodejs(pathing
 _generate_msg_nodejs(pathing
   "/home/thattori/capstone/velma/src/pathing/msg/PixyData.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg"
+  "/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/pathing
 )
 
@@ -335,7 +335,7 @@ _generate_msg_py(pathing
 _generate_msg_py(pathing
   "/home/thattori/capstone/velma/src/pathing/msg/PixyData.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg"
+  "/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/pathing
 )
 

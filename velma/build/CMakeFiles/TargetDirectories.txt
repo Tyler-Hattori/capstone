@@ -421,10 +421,3 @@
 /home/thattori/capstone/velma/build/navigation/CMakeFiles/move_base_msgs_generate_messages_cpp.dir
 /home/thattori/capstone/velma/build/navigation/CMakeFiles/move_base_msgs_generate_messages_py.dir
 /home/thattori/capstone/velma/build/navigation/CMakeFiles/move_base_gencfg.dir
-/home/thattori/capstone/velma/build/waypoint_logger/CMakeFiles/install/strip.dir
-/home/thattori/capstone/velma/build/waypoint_logger/CMakeFiles/install/local.dir
-/home/thattori/capstone/velma/build/waypoint_logger/CMakeFiles/install.dir
-/home/thattori/capstone/velma/build/waypoint_logger/CMakeFiles/list_install_components.dir
-/home/thattori/capstone/velma/build/waypoint_logger/CMakeFiles/rebuild_cache.dir
-/home/thattori/capstone/velma/build/waypoint_logger/CMakeFiles/edit_cache.dir
-/home/thattori/capstone/velma/build/waypoint_logger/CMakeFiles/test.dir

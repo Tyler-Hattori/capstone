@@ -1,2 +1,2 @@
-gpio:joystick_drivers/joy:joystick_drivers/joystick_drivers:led_control:lidar:navigation:pathing:racecar/ackermann_cmd_mux:racecar/racecar:serial:slam/slam_toolbox:slam/slam_toolbox_msgs:slam/slam_toolbox_rviz:twist_to_ackermann:velma:vesc/vesc:vesc/vesc_ackermann:vesc/vesc_driver:vesc/vesc_msgs:waypoint_logger
+gpio:joystick_drivers/joy:joystick_drivers/joystick_drivers:led_control:lidar:navigation:pathing:racecar/ackermann_cmd_mux:racecar/racecar:serial:slam/slam_toolbox:slam/slam_toolbox_msgs:slam/slam_toolbox_rviz:twist_to_ackermann:velma:vesc/vesc:vesc/vesc_ackermann:vesc/vesc_driver:vesc/vesc_msgs
 -DCATKIN_DEVEL_PREFIX=/home/thattori/capstone/velma/devel -DCMAKE_INSTALL_PREFIX=/home/thattori/capstone/velma/install -G Unix Makefiles
