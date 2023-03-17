@@ -1,19 +1,20 @@
 #include <ros/ros.h>
 
 #include <geometry_msgs/PoseWithCovarianceStamped.h>
-#include <sensor_msgs/LaserScan.h>
 #include <geometry_msgs/Point.h>
 #include <pathing/waypoints.h>
+#include <nav_msgs/Odometry.h>
 
 #include <std_msgs/Float32.h>
 #include <std_msgs/Float64.h>
+#include <std_msgs/Bool.h>
 
 #include "math.h"
 
 struct Point {
     float x;
     float y;
-}
+};
 
 class Log {
     
