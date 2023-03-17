@@ -1,1 +1,1 @@
-PoseWithCovarianceStamped[] waypoints
+geometry_msgs/PoseWithCovarianceStamped[] waypoints
