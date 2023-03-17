@@ -89,7 +89,7 @@ if(DEFINED CATKIN_DEVEL_PREFIX)
   
 
   # Add the nodes
-  file(GLOB NODE_SRC_FILES node/*.cpp node/costmaps/*.cpp)
+  file(GLOB NODE_SRC_FILES node/*.cpp node/costmaps/*.cpp node/algorithms/*.cpp)
   foreach(_node_file ${NODE_SRC_FILES})
       get_filename_component(_node_name ${_node_file} NAME_WE)
       add_executable(${_node_name} ${_node_file})
