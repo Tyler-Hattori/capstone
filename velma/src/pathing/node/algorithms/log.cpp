@@ -80,7 +80,7 @@ public:
   void publish_waypoints() {
     pathing::waypoints msg;
       
-    for (int i = 0; i < waypoints.size(); i++) {
+    for (int i = 0; i < int(waypoints.size()); i++) {
       geometry_msgs::PoseWithCovarianceStamped waypoint;
       waypoint.pose.pose.position.x = waypoints[i].x;
       waypoint.pose.pose.position.y = waypoints[i].y;
