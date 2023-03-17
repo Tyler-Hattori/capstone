@@ -79,7 +79,6 @@ public:
   
   void publish_waypoints() {
     pathing::waypoints msg;
-    # geometry_msgs::PoseWithCovarianceStamped points[waypoints.size()];
       
     for (int i = 0; i < waypoints.size(); i++) {
       geometry_msgs::PoseWithCovarianceStamped waypoint;
