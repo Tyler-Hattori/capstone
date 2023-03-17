@@ -1,0 +1,1 @@
+PoseWithCovarianceStamped[] waypoints

@@ -28,6 +28,7 @@ private:
 
     ros::Publisher mux_pub;
     ros::Publisher nav_mux_pub;
+    ros::Publisher log_pub;
 
     // Mux indices
     int joy_mux_idx;
@@ -147,6 +148,8 @@ public:
         // Make a publisher for mux messages
         mux_pub = n.advertise<std_msgs::Int32MultiArray>(mux_topic, 10);
         nav_mux_pub = n.advertise<std_msgs::Int32MultiArray>(nav_mux_topic, 10);
+        
+        log_pub = n.advertise<std_msgs::Bool>("/log_bool", 10);
 
         // Start subscribers to listen to laser scan, joy, IMU, and odom messages
         laser_sub = n.subscribe(scan_topic, 1, &BehaviorController::laser_callback, this);
@@ -403,12 +406,14 @@ public:
         if (log) {
             ROS_INFO("Logging mode deactivated. To retrace path, hit 'r'");
             log = false;
-            // Store log to file
         }
         else {
             ROS_INFO("Logging mode activated. Beginning to log the car's path");
             log = true;
         }
+        std_msgs::Bool log_msg;
+        log_msg.data = log;
+        log_pub.publish(log_msg);
     }
 
     void brake() {

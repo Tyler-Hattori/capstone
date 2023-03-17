@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/thattori/capstone/velma/src/pathing/msg/gpioread.msg;/home/thattori/capstone/velma/src/pathing/msg/gpiowrite.msg;/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg;/home/thattori/capstone/velma/src/pathing/msg/PixyResolution.msg;/home/thattori/capstone/velma/src/pathing/msg/PixyData.msg"
+messages_str = "/home/thattori/capstone/velma/src/pathing/msg/gpioread.msg;/home/thattori/capstone/velma/src/pathing/msg/gpiowrite.msg;/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg;/home/thattori/capstone/velma/src/pathing/msg/PixyResolution.msg;/home/thattori/capstone/velma/src/pathing/msg/PixyData.msg;/home/thattori/capstone/velma/src/pathing/msg/waypoints.msg"
 services_str = ""
 pkg_name = "pathing"
 dependencies_str = "std_msgs;nav_msgs;sensor_msgs"

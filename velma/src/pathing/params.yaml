@@ -131,7 +131,7 @@ obstacle_size: 2
 
 # The names of topics to listen and publish to
 joy_topic: "/joy"
-drive_topic: "/drive"
+drive_topic: "/vesc/low_level/ackermann_cmd_mux/input/drive"
 map_topic: "/map"
 distance_transform_topic: "/dt"
 scan_topic: "/scan"
@@ -224,6 +224,9 @@ object_costmap_topic: "/algorithms/navigation/search/object_costmap"
 obstacle_costmap_topic: "/algorithms/navigation/search/obstacle_costmap"
 time_costmap_topic: "/algorithms/navigation/search/time_costmap"
 unsearched_area_costmap_topic: "/algorithms/navigation/search/unsearched_area_costmap"
+
+waypoints_topic: "/logged_points"
+distance_between_waypoints: 3
 
 # name of file to write collision log to 
 collision_file: "collision_file"

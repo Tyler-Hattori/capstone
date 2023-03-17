@@ -67,6 +67,7 @@ if(DEFINED CATKIN_DEVEL_PREFIX)
     PixyBlock.msg
     PixyResolution.msg
     PixyData.msg
+    waypoints.msg
   )
 
   generate_messages(
