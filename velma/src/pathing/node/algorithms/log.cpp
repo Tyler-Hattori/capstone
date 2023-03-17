@@ -56,7 +56,7 @@ public:
     if (log) {
       pos.x = msg.pose.pose.position.x;
       pos.y = msg.pose.pose.position.y;
-      double dist = sqrt( pow(pos.x-last_logged_point.x,2) + pow(pos.y-last_logged_point.y,2) + pow(pos.z-last_logged_point.z,2) );
+      double dist = sqrt( pow(pos.x-last_logged_point.x,2) + pow(pos.y-last_logged_point.y,2) );
         
       if (dist >= distance_between_waypoints) {
         waypoints.push_back(pos);
@@ -78,13 +78,17 @@ public:
   }
   
   void publish_waypoints() {
-    geometry_msgs::PoseWithCovarianceStamped[waypoints.size()] msg;
+    pathing::waypoints msg;
+    geometry_msgs::PoseWithCovarianceStamped points[waypoints.size()];
+      
     for (int i = 0; i < waypoints.size; i++) {
       geometry_msgs::PoseWithCovarianceStamped waypoint;
       waypoint.pose.pose.position.x = waypoints[i].x;
       waypoint.pose.pose.position.y = waypoints[i].y;
-      msg[i] = waypoint;
+      points[i] = waypoint;
     }
+      
+    msg.waypoints = points;
     waypoints_pub.publish(msg);
   }
 
