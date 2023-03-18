@@ -1,7 +1,8 @@
 <!-- -*- mode: XML -*- -->
 <launch>
   <arg name="simulate" default="no" />
-  <arg name="map" default="Austin" />
+  <arg name="map" default="maze1" />
+  <arg name="track" default="Austin" />
   
   <!-- vesc, lidar, tf -->
   <include file="$(find racecar)/launch/teleop.launch">
@@ -12,6 +13,7 @@
   <include file="$(find pathing)/launch/system.launch">
     <arg name="simulate" value="$(arg simulate)"/>
     <arg name="map_name" value="$(arg map)"/>
+    <arg name="track_name" value="$(arg track)"/>
   </include>
   
   <group ns="sensors">
