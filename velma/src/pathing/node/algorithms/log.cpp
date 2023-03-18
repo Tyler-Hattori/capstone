@@ -41,7 +41,7 @@ public:
     
     n.getParam("distance_between_waypoints", distance_between_waypoints);
     
-    waypoints_pub = n.advertise<pathing::waypoints>(waypoints_topic, 1000);
+    waypoints_pub = n.advertise<pathing::waypoints>("logged_points", 1000);
     log_command_sub = n.subscribe("/log_command", 1, &Log::log_command_callback, this);
     odom_sub = n.subscribe(odom_topic, 1, &Log::odom_callback, this);
     
