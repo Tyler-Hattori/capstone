@@ -62,7 +62,7 @@ public:
         
         while (!point_reached) {
             pub.publish(output);
-            double dist = sqrt( pow(loc.x-point.pose.position.x,2) + pow(loc.y-point.pose.position.y,2) );
+            double dist = sqrt( pow(loc.x-point.pose.pose.position.x,2) + pow(loc.y-point.pose.pose.position.y,2) );
             if (dist <= pursuing_accuracy) point_reached = true;
         }
     }
