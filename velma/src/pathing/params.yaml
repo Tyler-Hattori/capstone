@@ -227,6 +227,7 @@ unsearched_area_costmap_topic: "/algorithms/navigation/search/unsearched_area_co
 
 waypoints_topic: "/logged_points"
 distance_between_waypoints: 3
+pursuing_accuracy: 0.5
 
 # name of file to write collision log to 
 collision_file: "collision_file"
