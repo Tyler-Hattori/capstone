@@ -401,7 +401,9 @@ public:
             change_controller(navigator_mux_idx);
         }
         
-        if (driver_name == "Recaller") log_pub.publish("publish");
+        std_msgs::String log_msg;
+        log_msg.data = "publish";
+        if (driver_name == "Recaller") log_pub.publish(log_msg);
     }
     
     void toggle_logger_mode() {
