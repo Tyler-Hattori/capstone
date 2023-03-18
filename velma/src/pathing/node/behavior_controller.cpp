@@ -400,19 +400,22 @@ public:
             change_nav_controller(nav_mux_idx);
             change_controller(navigator_mux_idx);
         }
+        
+        if (driver_name == "Recaller") log_pub.publish("publish");
     }
     
     void toggle_logger_mode() {
+        std_msgs::String log_msg;
         if (log) {
             ROS_INFO("Logging mode deactivated. To retrace path, hit 'r'");
-            log = false;
+            command = "store";
         }
         else {
             ROS_INFO("Logging mode activated. Beginning to log the car's path");
             log = true;
+            command = "start";
         }
-        std_msgs::Bool log_msg;
-        log_msg.data = log;
+        log_msg.data = command;
         log_pub.publish(log_msg);
     }
 
@@ -457,7 +460,7 @@ public:
             else if (msg.buttons[log_button_idx]) toggle_logger_mode();
             else if (msg.buttons[navigate_button_idx]) toggle_nav_mux(navigator_nav_mux_idx, "Custom Navigation");
             else if (msg.buttons[return_button_idx]) toggle_nav_mux(returner_nav_mux_idx, "Returner");
-            else if (msg.buttons[recall_button_idx]) toggle_nav_mux(recaller_nav_mux_idx, "Memory");
+            else if (msg.buttons[recall_button_idx]) toggle_nav_mux(recaller_nav_mux_idx, "Recaller");
             else if (msg.buttons[explore_button_idx]) toggle_nav_mux(explorer_nav_mux_idx, "Explorer");
             else if (msg.buttons[search_button_idx]) toggle_nav_mux(searcher_nav_mux_idx, "Searcher");
         }
@@ -486,7 +489,7 @@ public:
             else if (msg.data == log_web_char) toggle_logger_mode();
             else if (msg.data == navigate_web_char) toggle_nav_mux(navigator_nav_mux_idx, "Custom Navigation");
             else if (msg.data == return_web_char) toggle_nav_mux(returner_nav_mux_idx, "Returner");
-            else if (msg.data == recall_web_char) toggle_nav_mux(recaller_nav_mux_idx, "Memory");
+            else if (msg.data == recall_web_char) toggle_nav_mux(recaller_nav_mux_idx, "Recaller");
             else if (msg.data == explore_web_char) toggle_nav_mux(explorer_nav_mux_idx, "Explorer");
             else if (msg.data == search_web_char) toggle_nav_mux(searcher_nav_mux_idx, "Searcher");
         }
@@ -515,7 +518,7 @@ public:
             else if (msg.data == log_key_char) toggle_logger_mode();
             else if (msg.data == navigate_key_char) toggle_nav_mux(navigator_nav_mux_idx, "Custom Navigation");
             else if (msg.data == return_key_char) toggle_nav_mux(returner_nav_mux_idx, "Returner");
-            else if (msg.data == recall_key_char) toggle_nav_mux(recaller_nav_mux_idx, "Memory");
+            else if (msg.data == recall_key_char) toggle_nav_mux(recaller_nav_mux_idx, "Recaller");
             else if (msg.data == explore_key_char) toggle_nav_mux(explorer_nav_mux_idx, "Explorer");
             else if (msg.data == search_key_char) toggle_nav_mux(searcher_nav_mux_idx, "Searcher");
         }
