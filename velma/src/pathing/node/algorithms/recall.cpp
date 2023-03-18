@@ -3,38 +3,66 @@
 #include <geometry_msgs/PoseWithCovarianceStamped.h>
 #include <sensor_msgs/LaserScan.h>
 #include <pathing/waypoints.h>
+#include <nav_msgs/Odometry.h>
 
 #include <std_msgs/Float32.h>
 #include <std_msgs/Float64.h>
 
 #include "math.h"
 
+struct Point {
+    float x;
+    float y;
+};
+
 class Recall {
     
 private:
-    ros::NodeHandle n_;
+    ros::NodeHandle n;
     ros::Publisher pub;
     ros::Subscriber waypoints_sub;
+    ros::Subscriber odom_sub;
+    
+    int pursuing_accuracy;
+    
+    Point loc;
     
 public:
     Recall() {
-        std::string waypoints_topic;
+        std::string waypoints_topic, odom_topic;
         n.getParam("waypoints_topic", waypoints_topic);
-        pub = n_.advertise<geometry_msgs::PoseWithCovarianceStamped>("/recall_goal", 1000);
-        waypoints_sub = n_.subscribe(waypoints_topic, 1000, &Recall::waypoints_callback, this);
+        n.getParam("odom_topic", odom_topic);
+        pub = n.advertise<geometry_msgs::PoseWithCovarianceStamped>("/recall_goal", 1000);
+        waypoints_sub = n.subscribe(waypoints_topic, 1, &Recall::waypoints_callback, this);
+        odom_sub = n.subscribe(odom_topic, 1, &Recall::odom_callback, this);
+        
+        n.getParam("pursuing_accuracy", pursuing_accuracy);
+        
+        loc. x = 0.0; loc.y = 0.0;
     }
 
     void waypoints_callback(const pathing::waypoints& waypoints) {
-        for (int i = 0; i < waypoints.size(); i++) {
+        for (int = 0; i < waypoints.waypoints.size(); i++) {
             navigate_to_point(waypoints.waypoints[i]);
         }
     }
+    
+    void odom_callback(const nav_msgs::Odometry& msg) {
+        loc.x = msg.pose.pose.position.x;
+        loc.y = msg.pose.pose.position.y;
+    }
 
     void navigate_to_point(const geometry_msgs::PoseWithCovarianceStamped& point) {
+        point_reached = false;
         geometry_msgs::PoseWithCovarianceStamped output;
         output.pose.position.x = point.pose.posiiton.x;
         output.pose.position.y = point.pose.posiiton.y;
-        pub_.publish(output);
+        
+        while (!point_reached) {
+            pub_.publish(output);
+            double dist = sqrt( pow(loc.x-point.pose.position.x,2) + pow(loc.y-point.pose.position.y,2) );
+            if (dist <= pursuing_accuracy) point_reached = true;
+        }
     }
 
 };
