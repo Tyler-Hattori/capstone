@@ -19,6 +19,11 @@
     <rosparam command="load" file="$(find pathing)/params.yaml"/>
   </node>
   
+  <!-- Launch the Logger Node -->
+  <node pkg="pathing" name="logger" type="log" output="screen">
+    <rosparam command="load" file="$(find pathing)/params.yaml"/>
+  </node>
+  
   <group ns="navigation">
     <!-- Launch the Recaller Node -->
     <node pkg="pathing" name="retracer" type="recall" output="screen">
