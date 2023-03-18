@@ -7,7 +7,7 @@
 
 #include <std_msgs/Float32.h>
 #include <std_msgs/Float64.h>
-#include <std_msgs/Bool.h>
+#include <std_msgs/String.h>
 
 #include "math.h"
 
@@ -21,11 +21,12 @@ class Log {
 private:
   ros::NodeHandle n;
   ros::Publisher waypoints_pub;
-  ros::Subscriber log_bool;
+  ros::Subscriber log_command;
   ros::Subscriber odom_sub;
   
   Point last_logged_point;
   Point pos;
+  std::string log_command;
   bool log;
   
   double distance_between_waypoints;
@@ -41,12 +42,13 @@ public:
     n.getParam("distance_between_waypoints", distance_between_waypoints);
     
     waypoints_pub = n.advertise<pathing::waypoints>(waypoints_topic, 1000);
-    log_bool = n.subscribe("/log_bool", 1, &Log::log_bool_callback, this);
+    log_command = n.subscribe("/log_command", 1, &Log::log_command_callback, this);
     odom_sub = n.subscribe(odom_topic, 1, &Log::odom_callback, this);
     
     last_logged_point.x = 0.0; last_logged_point.y = 0.0; 
     pos.x = 0.0; pos.y = 0.0; 
     
+    log_command = "";
     log = false;
     
     waypoints.reserve(0);
@@ -66,14 +68,19 @@ public:
     }
   }
 
-  void log_bool_callback(const std_msgs::Bool& msg) {
-    log = msg.data;
-    if (log) {
+  void log_command_callback(const std_msgs::String& msg) {
+    log_command = msg.data;
+    if (log_command == "start") {
       waypoints.clear();
       last_logged_point = pos;
+      log = true;
     }
-    else {
+    else if (log_command == "publish") {
       publish_waypoints();
+      log = false;
+    }
+    else if (log_command == "store") {
+      log = false;
     }
   }
   
