@@ -42,7 +42,7 @@ public:
     }
 
     void waypoints_callback(const pathing::waypoints& waypoints) {
-        for (int = 0; i < waypoints.waypoints.size(); i++) {
+        for (int i = 0; i < waypoints.waypoints.size(); i++) {
             navigate_to_point(waypoints.waypoints[i]);
         }
     }
