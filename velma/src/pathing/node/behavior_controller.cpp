@@ -406,6 +406,7 @@ public:
     
     void toggle_logger_mode() {
         std_msgs::String log_msg;
+        std::string command;
         if (log) {
             ROS_INFO("Logging mode deactivated. To retrace path, hit 'r'");
             command = "store";
