@@ -24,6 +24,7 @@ private:
     ros::Subscriber odom_sub;
     
     int pursuing_accuracy;
+    bool point_reached;
     
     Point loc;
     
@@ -37,6 +38,7 @@ public:
         odom_sub = n.subscribe(odom_topic, 1, &Recall::odom_callback, this);
         
         n.getParam("pursuing_accuracy", pursuing_accuracy);
+        point_reached = false;
         
         loc. x = 0.0; loc.y = 0.0;
     }
@@ -55,11 +57,11 @@ public:
     void navigate_to_point(const geometry_msgs::PoseWithCovarianceStamped& point) {
         point_reached = false;
         geometry_msgs::PoseWithCovarianceStamped output;
-        output.pose.position.x = point.pose.posiiton.x;
-        output.pose.position.y = point.pose.posiiton.y;
+        output.pose.pose.position.x = point.pose.pose.posiiton.x;
+        output.pose.pose.position.y = point.pose.pose.posiiton.y;
         
         while (!point_reached) {
-            pub_.publish(output);
+            pub.publish(output);
             double dist = sqrt( pow(loc.x-point.pose.position.x,2) + pow(loc.y-point.pose.position.y,2) );
             if (dist <= pursuing_accuracy) point_reached = true;
         }
