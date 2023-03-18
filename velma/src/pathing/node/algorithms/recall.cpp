@@ -44,7 +44,7 @@ public:
     }
 
     void waypoints_callback(const pathing::waypoints& waypoints) {
-        for (int i = 0; i < waypoints.waypoints.size(); i++) {
+        for (int i = 0; i < int(waypoints.waypoints.size()); i++) {
             navigate_to_point(waypoints.waypoints[i]);
         }
     }
@@ -57,8 +57,8 @@ public:
     void navigate_to_point(const geometry_msgs::PoseWithCovarianceStamped& point) {
         point_reached = false;
         geometry_msgs::PoseWithCovarianceStamped output;
-        output.pose.pose.position.x = point.pose.pose.posiiton.x;
-        output.pose.pose.position.y = point.pose.pose.posiiton.y;
+        output.pose.pose.position.x = point.pose.pose.position.x;
+        output.pose.pose.position.y = point.pose.pose.position.y;
         
         while (!point_reached) {
             pub.publish(output);
