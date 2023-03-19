@@ -34,7 +34,7 @@ public:
         n.getParam("waypoints_topic", waypoints_topic);
         n.getParam("odom_topic", odom_topic);
         pub = n.advertise<geometry_msgs::PoseWithCovarianceStamped>("/recall_goal", 1000);
-        waypoints_sub = n.subscribe("/logged_points", 1, &Recall::waypoints_callback, this);
+        waypoints_sub = n.subscribe("/algorithms/logged_points", 1, &Recall::waypoints_callback, this);
         odom_sub = n.subscribe(odom_topic, 1, &Recall::odom_callback, this);
         
         n.getParam("pursuing_accuracy", pursuing_accuracy);
