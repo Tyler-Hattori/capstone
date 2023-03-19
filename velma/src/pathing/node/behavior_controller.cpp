@@ -149,7 +149,7 @@ public:
         mux_pub = n.advertise<std_msgs::Int32MultiArray>(mux_topic, 10);
         nav_mux_pub = n.advertise<std_msgs::Int32MultiArray>(nav_mux_topic, 10);
         
-        log_pub = n.advertise<std_msgs::String>("/log_command", 10);
+        log_pub = n.advertise<std_msgs::String>("/pathing/log_command", 10);
 
         // Start subscribers to listen to laser scan, joy, IMU, and odom messages
         laser_sub = n.subscribe(scan_topic, 1, &BehaviorController::laser_callback, this);
