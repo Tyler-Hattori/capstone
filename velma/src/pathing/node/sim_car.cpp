@@ -157,7 +157,7 @@ public:
         n.getParam("buffer_length", buffer_length);
 
         // Get the transformation frame names
-        n.getParam("map_frame", map_frame);
+        n.getParam("odom_frame", map_frame);
         n.getParam("base_frame", base_frame);
         n.getParam("scan_frame", scan_frame);
 
