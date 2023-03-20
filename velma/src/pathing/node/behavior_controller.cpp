@@ -6,6 +6,7 @@
 #include <sensor_msgs/Joy.h>
 #include <sensor_msgs/LaserScan.h>
 #include <nav_msgs/Odometry.h>
+#include <nav_msgs/OccupancyGrid.h>
 #include <sensor_msgs/Imu.h>
 #include <std_msgs/String.h>
 
