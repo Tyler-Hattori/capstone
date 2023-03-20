@@ -29,6 +29,8 @@ private:
     ros::Publisher mux_pub;
     ros::Publisher nav_mux_pub;
     ros::Publisher log_pub;
+    
+    ros::Publisher map_pub;
 
     // Mux indices
     int joy_mux_idx;
@@ -86,6 +88,7 @@ private:
     std::string navigate_key_char;
     std::string explore_key_char;
     std::string search_key_char;
+    std::string map_clear_key_char;
     
     // Web indices
     std::string joy_web_char;
@@ -136,7 +139,7 @@ public:
         n = ros::NodeHandle("~");
 
         // get topic names
-        std::string scan_topic, odom_topic, joy_topic, keyboard_topic, web_topic, mux_topic, nav_mux_topic; 
+        std::string scan_topic, odom_topic, joy_topic, keyboard_topic, web_topic, mux_topic, nav_mux_topic, map_topic; 
         n.getParam("scan_topic", scan_topic);
         n.getParam("odom_topic", odom_topic);
         n.getParam("joy_topic", joy_topic);
@@ -144,12 +147,13 @@ public:
         n.getParam("nav_mux_topic", nav_mux_topic);
         n.getParam("keyboard_topic", keyboard_topic);
         n.getParam("web_topic", web_topic);
+        n.getParam("map_topic", map_topic);
 
         // Make a publisher for mux messages
         mux_pub = n.advertise<std_msgs::Int32MultiArray>(mux_topic, 10);
         nav_mux_pub = n.advertise<std_msgs::Int32MultiArray>(nav_mux_topic, 10);
-        
         log_pub = n.advertise<std_msgs::String>("/pathing/log_command", 10);
+        map_pub = n.advertise<nav_msgs::OccupancyGrid>(map_topic, 10);
 
         // Start subscribers to listen to laser scan, joy, IMU, and odom messages
         laser_sub = n.subscribe(scan_topic, 1, &BehaviorController::laser_callback, this);
@@ -524,6 +528,10 @@ public:
             else if (msg.data == recall_key_char) toggle_nav_mux(recaller_nav_mux_idx, "Recaller");
             else if (msg.data == explore_key_char) toggle_nav_mux(explorer_nav_mux_idx, "Explorer");
             else if (msg.data == search_key_char) toggle_nav_mux(searcher_nav_mux_idx, "Searcher");
+            else if (msg.data == map_clear_key_char) {
+                nav_msgs::OccupancyGrid blank_map;
+                map_pub.publish(blank_map);
+            }
         }
     }
 
