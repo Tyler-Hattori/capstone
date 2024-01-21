@@ -13,5 +13,3 @@ second, the 'simulator' directory contains the full code that was used to launch
 third, the 'velma' directory contains the full code that will be used for our final project. it is a work in progress.
 
 the misc directory contains any extra files and the source code for each of the hardware drivers.
-
-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
