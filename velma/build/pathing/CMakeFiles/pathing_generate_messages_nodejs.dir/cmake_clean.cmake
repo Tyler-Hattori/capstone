@@ -1,9 +1,11 @@
 file(REMOVE_RECURSE
-  "/home/thattori/capstone/velma/devel/share/gennodejs/ros/pathing/msg/PixyBlock.js"
-  "/home/thattori/capstone/velma/devel/share/gennodejs/ros/pathing/msg/PixyData.js"
-  "/home/thattori/capstone/velma/devel/share/gennodejs/ros/pathing/msg/PixyResolution.js"
-  "/home/thattori/capstone/velma/devel/share/gennodejs/ros/pathing/msg/gpioread.js"
-  "/home/thattori/capstone/velma/devel/share/gennodejs/ros/pathing/msg/gpiowrite.js"
+  "/home/ubuntu/F1Tenth/velma/devel/share/gennodejs/ros/pathing/msg/PixyBlock.js"
+  "/home/ubuntu/F1Tenth/velma/devel/share/gennodejs/ros/pathing/msg/PixyData.js"
+  "/home/ubuntu/F1Tenth/velma/devel/share/gennodejs/ros/pathing/msg/PixyResolution.js"
+  "/home/ubuntu/F1Tenth/velma/devel/share/gennodejs/ros/pathing/msg/gpioread.js"
+  "/home/ubuntu/F1Tenth/velma/devel/share/gennodejs/ros/pathing/msg/gpiowrite.js"
+  "/home/ubuntu/F1Tenth/velma/devel/share/gennodejs/ros/pathing/msg/seenPoints.js"
+  "/home/ubuntu/F1Tenth/velma/devel/share/gennodejs/ros/pathing/msg/waypoints.js"
   "CMakeFiles/pathing_generate_messages_nodejs"
 )
 

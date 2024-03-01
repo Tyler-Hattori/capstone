@@ -1,6 +1,5 @@
 #include <ros/ros.h>
 
-#include <geometry_msgs/PoseWithCovarianceStamped.h>
 #include <geometry_msgs/PoseStamped.h>
 #include <std_msgs/Bool.h>
 #include <std_msgs/Header.h>
@@ -15,6 +14,8 @@ private:
     ros::NodeHandle n;
     ros::Subscriber mux_sub;
     ros::Publisher nav_pub;
+    
+    ros::Publisher return_pub;
 
     // Mux controller array
     std::vector<bool> mux_controller;
@@ -28,16 +29,20 @@ private:
 
     // For printing
     std::vector<bool> prev_mux;
+    
+    int return_mux_index;
 
 public:
     NavMux() {
         n = ros::NodeHandle("~");
 
-        std::string nav_topic, mux_topic;
+        std::string nav_topic, mux_topic, return_goal_topic;
         n.getParam("nav_goal_topic", nav_topic);
         n.getParam("nav_mux_topic", mux_topic);
+        n.getParam("return_nav_topic", return_goal_topic);
 
         nav_pub = n.advertise<geometry_msgs::PoseStamped>(nav_topic, 10);
+        return_pub = n.advertise<geometry_msgs::PoseStamped>("/return_goal", 10);
         mux_sub = n.subscribe(mux_topic, 1, &NavMux::mux_callback, this);
       
         n.getParam("nav_mux_size", mux_size);
@@ -52,6 +57,13 @@ public:
 
         // A channel contains a subscriber to the given nav topic and a publisher to the main nav topic
         channels = std::vector<NavChannel*>();
+        
+        // Roomba
+        int random_walker_nav_mux_idx;
+        std::string random_walker_nav_topic;
+        n.getParam("random_walker_nav_topic", random_walker_nav_topic);
+        n.getParam("wanderer_nav_mux_idx", random_walker_nav_mux_idx);
+        add_channel(random_walker_nav_topic, nav_topic, random_walker_nav_mux_idx);
         
         // Navigator
         int navigator_mux_idx;
@@ -69,10 +81,10 @@ public:
         
         // Returner
         int returner_mux_idx;
-        std::string return_nav_topic;
-        n.getParam("return_nav_topic", return_nav_topic);
+        std::string return_nav_topic = "/return_goal";
         n.getParam("returner_nav_mux_idx", returner_mux_idx);
         add_channel(return_nav_topic, nav_topic, returner_mux_idx);
+        return_mux_index = returner_mux_idx;
 
         // Explorer
         int explorer_mux_idx;
@@ -94,18 +106,6 @@ public:
         channels.push_back(new_channel);    
     }
 
-    void publish_to_nav(double desired_x, double desired_y) {
-        std_msgs::Header header;
-        header.stamp = ros::Time::now();
-        
-        geometry_msgs::PoseStamped nav_st_msg;
-        nav_st_msg.header = header;
-        nav_st_msg.pose.position.x = desired_x;
-        nav_st_msg.pose.position.y = desired_y;
-
-        nav_pub.publish(nav_st_msg);
-    }
-
     void mux_callback(const std_msgs::Int32MultiArray & msg) {
         // reset mux member variable every time it's published
         for (int i = 0; i < mux_size; i++) {
@@ -121,6 +121,18 @@ public:
             anything_on = anything_on || mux_controller[i];
         }
         if (changed) {
+            if (mux_controller[return_mux_index]) {
+                geometry_msgs::PoseStamped pose;
+                pose.header.stamp = ros::Time::now();
+                pose.header.frame_id = "map";
+                pose.pose.position.x = 0.01;
+                pose.pose.position.y = 0.01;
+                pose.pose.orientation.w = 1.0;
+                pose.pose.orientation.x = 0.0;
+                pose.pose.orientation.y = 0.0;
+                pose.pose.orientation.z = 0.0;
+                return_pub.publish(pose);
+            }
             std::cout << "NAV MUX: " << std::endl;
             for (int i = 0; i < mux_size; i++) {
                 std::cout << mux_controller[i] << std::endl;
@@ -129,7 +141,16 @@ public:
             std::cout << std::endl;
         }
         if (!anything_on) {
-            publish_to_nav(0.0,0.0);
+            /*geometry_msgs::PoseStamped pose;
+            pose.header.stamp = ros::Time::now();
+            pose.header.frame_id = "map";
+            pose.pose.position.x = 0.0;
+            pose.pose.position.y = 0.0;
+            pose.pose.orientation.w = 1.0;
+            pose.pose.orientation.x = 0.0;
+            pose.pose.orientation.y = 0.0;
+            pose.pose.orientation.z = 0.0;
+            nav_pub.publish(pose);*/
         }
     }
 };
@@ -143,21 +164,14 @@ NavChannel::NavChannel() {
 }
 
 NavChannel::NavChannel(std::string channel_name, std::string nav_topic, int mux_idx_, NavMux* mux) 
-: mux_idx(mux_idx_), mp_mux(mux) {
+: nav_mux_idx(mux_idx_), mp_nav_mux(mux) {
     nav_pub = mux->n.advertise<geometry_msgs::PoseStamped>(nav_topic, 10);
     channel_sub = mux->n.subscribe(channel_name, 1, &NavChannel::nav_callback, this);
 }
 
-void NavChannel::nav_callback(const geometry_msgs::PoseWithCovarianceStamped & msg) {
-    geometry_msgs::PoseStamped pose;
-    std_msgs::Header header;
-    header.stamp = ros::Time::now();
-    header.frame_id = msg.header.frame_id;
-    pose.header = header;
-    pose.pose = msg.pose.pose;
-    
-    if (mp_mux->mux_controller[this->mux_idx]) {
-        nav_pub.publish(pose);
+void NavChannel::nav_callback(const geometry_msgs::PoseStamped & msg) {
+    if (mp_nav_mux->mux_controller[this->nav_mux_idx]) {
+        nav_pub.publish(msg);
     }
 }
 

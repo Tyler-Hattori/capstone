@@ -1,10 +1,12 @@
 file(REMOVE_RECURSE
-  "/home/thattori/capstone/velma/devel/share/roseus/ros/pathing/manifest.l"
-  "/home/thattori/capstone/velma/devel/share/roseus/ros/pathing/msg/PixyBlock.l"
-  "/home/thattori/capstone/velma/devel/share/roseus/ros/pathing/msg/PixyData.l"
-  "/home/thattori/capstone/velma/devel/share/roseus/ros/pathing/msg/PixyResolution.l"
-  "/home/thattori/capstone/velma/devel/share/roseus/ros/pathing/msg/gpioread.l"
-  "/home/thattori/capstone/velma/devel/share/roseus/ros/pathing/msg/gpiowrite.l"
+  "/home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/manifest.l"
+  "/home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg/PixyBlock.l"
+  "/home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg/PixyData.l"
+  "/home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg/PixyResolution.l"
+  "/home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg/gpioread.l"
+  "/home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg/gpiowrite.l"
+  "/home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg/seenPoints.l"
+  "/home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg/waypoints.l"
   "CMakeFiles/pathing_generate_messages_eus"
 )
 

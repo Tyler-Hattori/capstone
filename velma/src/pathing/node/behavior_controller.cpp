@@ -21,7 +21,6 @@ class BehaviorController {
 private:
     ros::NodeHandle n;
 
-    ros::Subscriber joy_sub;
     ros::Subscriber key_sub;
     ros::Subscriber web_sub;
     ros::Subscriber laser_sub;
@@ -34,10 +33,8 @@ private:
     ros::Publisher map_pub;
 
     // Mux indices
-    int joy_mux_idx;
     int key_mux_idx;
     int web_mux_idx;
-    int random_walker_mux_idx;
     int guarder_mux_idx;
     int wall_follower_mux_idx;
     int gap_follower_mux_idx;
@@ -46,6 +43,7 @@ private:
     int searcher_mux_idx;
     
     // Nav mux indices
+    int roomba_nav_mux_idx;
     int navigator_nav_mux_idx;
     int returner_nav_mux_idx;
     int recaller_nav_mux_idx;
@@ -58,29 +56,11 @@ private:
     std::vector<bool> nav_mux_controller;
     int nav_mux_size;
 
-    // Joystick button indices
-    int joy_button_idx;
-    int key_button_idx;
-    int web_button_idx;
-    int brake_button_idx;
-    int random_walk_button_idx;
-    int guard_button_idx;
-    int wall_follow_button_idx;
-    int gap_follow_button_idx;
-    int log_button_idx;
-    int recall_button_idx;
-    int return_button_idx;
-    int navigate_button_idx;
-    int explore_button_idx;
-    int search_button_idx;
-
     // Key indices
-    std::string joy_key_char;
     std::string keyboard_key_char;
     std::string web_key_char;
     std::string brake_key_char;
     std::string random_walk_key_char;
-    std::string guard_key_char;
     std::string wall_follow_key_char;
     std::string gap_follow_key_char;
     std::string log_key_char;
@@ -92,12 +72,10 @@ private:
     std::string map_clear_key_char;
     
     // Web indices
-    std::string joy_web_char;
     std::string keyboard_web_char;
     std::string web_web_char;
     std::string brake_web_char;
     std::string random_walk_web_char;
-    std::string guard_web_char;
     std::string wall_follow_web_char;
     std::string gap_follow_web_char;
     std::string log_web_char;
@@ -133,6 +111,7 @@ private:
     int collision_count=0;
 
     std::string active_controller;
+    double log_reset_time;
 
 public:
     BehaviorController() {
@@ -140,10 +119,9 @@ public:
         n = ros::NodeHandle("~");
 
         // get topic names
-        std::string scan_topic, odom_topic, joy_topic, keyboard_topic, web_topic, mux_topic, nav_mux_topic, map_topic; 
+        std::string scan_topic, odom_topic, keyboard_topic, web_topic, mux_topic, nav_mux_topic, map_topic; 
         n.getParam("scan_topic", scan_topic);
         n.getParam("odom_topic", odom_topic);
-        n.getParam("joy_topic", joy_topic);
         n.getParam("mux_topic", mux_topic);
         n.getParam("nav_mux_topic", nav_mux_topic);
         n.getParam("keyboard_topic", keyboard_topic);
@@ -158,51 +136,30 @@ public:
 
         // Start subscribers to listen to laser scan, joy, IMU, and odom messages
         laser_sub = n.subscribe(scan_topic, 1, &BehaviorController::laser_callback, this);
-        joy_sub = n.subscribe(joy_topic, 1, &BehaviorController::joy_callback, this);
         odom_sub = n.subscribe(odom_topic, 1, &BehaviorController::odom_callback, this);
         key_sub = n.subscribe(keyboard_topic, 1, &BehaviorController::key_callback, this);
         web_sub = n.subscribe(web_topic, 1, &BehaviorController::web_callback, this);
 
         // Get mux indices
-        n.getParam("joy_mux_idx", joy_mux_idx);
         n.getParam("key_mux_idx", key_mux_idx);
         n.getParam("web_mux_idx", web_mux_idx);
-        n.getParam("random_walker_mux_idx", random_walker_mux_idx);
-        n.getParam("guarder_mux_idx", guarder_mux_idx);
         n.getParam("wall_follower_mux_idx", wall_follower_mux_idx);
         n.getParam("gap_follower_mux_idx", gap_follower_mux_idx);
         n.getParam("navigator_mux_idx", navigator_mux_idx);
         
         // Get nav mux indices
+        n.getParam("wanderer_nav_mux_idx", roomba_nav_mux_idx);
         n.getParam("navigator_nav_mux_idx", navigator_nav_mux_idx);
         n.getParam("returner_nav_mux_idx", returner_nav_mux_idx);
         n.getParam("recaller_nav_mux_idx", recaller_nav_mux_idx);
         n.getParam("explorer_nav_mux_idx", explorer_nav_mux_idx);
         n.getParam("searcher_nav_mux_idx", searcher_nav_mux_idx);
 
-        // Get button indices
-        n.getParam("joy_button_idx", joy_button_idx);
-        n.getParam("key_button_idx", key_button_idx);
-        n.getParam("web_button_idx", web_button_idx);
-        n.getParam("brake_button_idx", brake_button_idx);
-        n.getParam("random_walk_button_idx", random_walk_button_idx);
-        n.getParam("guard_button_idx", guard_button_idx);
-        n.getParam("wall_follow_button_idx", wall_follow_button_idx);
-        n.getParam("gap_follow_button_idx", gap_follow_button_idx);
-        n.getParam("log_button_idx", log_button_idx);
-        n.getParam("recall_button_idx", recall_button_idx);
-        n.getParam("return_button_idx", return_button_idx);
-        n.getParam("navigate_button_idx", navigate_button_idx);
-        n.getParam("explore_button_idx", explore_button_idx);
-        n.getParam("search_button_idx", search_button_idx);
-
         // Get key indices
-        n.getParam("joy_key_char", joy_key_char);
         n.getParam("keyboard_key_char", keyboard_key_char);
         n.getParam("web_key_char", web_key_char);
         n.getParam("brake_key_char", brake_key_char);
         n.getParam("random_walk_key_char", random_walk_key_char);
-        n.getParam("guard_key_char", guard_key_char);
         n.getParam("wall_follow_key_char", wall_follow_key_char);
         n.getParam("gap_follow_key_char", gap_follow_key_char);
         n.getParam("log_key_char", log_key_char);
@@ -211,14 +168,13 @@ public:
         n.getParam("navigate_key_char", navigate_key_char);
         n.getParam("explore_key_char", explore_key_char);
         n.getParam("search_key_char", search_key_char);
+        n.getParam("map_clear_key_char", map_clear_key_char);
         
         // Get web indices
-        n.getParam("joy_web_char", joy_web_char);
         n.getParam("keyboard_web_char", keyboard_web_char);
         n.getParam("web_web_char", web_web_char);
         n.getParam("brake_web_char", brake_web_char);
         n.getParam("random_walk_web_char", random_walk_web_char);
-        n.getParam("guard_web_char", guard_web_char);
         n.getParam("wall_follow_web_char", wall_follow_web_char);
         n.getParam("gap_follow_web_char", gap_follow_web_char);
         n.getParam("log_web_char", log_web_char);
@@ -277,60 +233,42 @@ public:
         beginning_seconds = ros::Time::now().toSec();
 
         active_controller = "key";
+        
+        n.getParam("logging_rate", log_reset_time);
     }
 
     /// ---------------------- GENERAL HELPER FUNCTIONS ----------------------
 
-    void publish_mux() {
+    void publish_muxes() {
         // make mux message
         std_msgs::Int32MultiArray mux_msg;
+        std_msgs::Int32MultiArray nav_mux_msg;
         mux_msg.data.clear();
+        nav_mux_msg.data.clear();
         // push data onto message
         for (int i = 0; i < mux_size; i++) {
             mux_msg.data.push_back(int(mux_controller[i]));
         }
-
-        // publish mux message
-        mux_pub.publish(mux_msg);
-    }
-    
-    void publish_nav_mux() {
-        // make nav mux message
-        std_msgs::Int32MultiArray nav_mux_msg;
-        nav_mux_msg.data.clear();
-        // push data onto message
         for (int i = 0; i < nav_mux_size; i++) {
             nav_mux_msg.data.push_back(int(nav_mux_controller[i]));
         }
 
-        // publish nav mux message
+        // publish mux message
+        mux_pub.publish(mux_msg);
         nav_mux_pub.publish(nav_mux_msg);
     }
 
-    void change_controller(int controller_idx) {
-        // This changes the controller to the input index and publishes it
-
-        // turn everything off
-        for (int i = 0; i < mux_size; i++) {
-            mux_controller[i] = false;
+    void change_controller(std::string mux, int controller_idx) {
+        for (int i = 0; i < mux_size; i++) { mux_controller[i] = false; }
+        for (int i = 0; i < nav_mux_size; i++) { nav_mux_controller[i] = false; }
+        
+        if (mux == "drive mux") mux_controller[controller_idx] = true;
+        else if (mux == "nav mux") {
+            nav_mux_controller[controller_idx] = true;
+            mux_controller[navigator_mux_idx] = true;
         }
-        // turn on desired controller
-        mux_controller[controller_idx] = true;
 
-        publish_mux();
-    }
-    
-    void change_nav_controller(int controller_idx) {
-        // This changes the controller to the input index and publishes it
-
-        // turn everything off
-        for (int i = 0; i < nav_mux_size; i++) {
-            nav_mux_controller[i] = false;
-        }
-        // turn on desired controller
-        nav_mux_controller[controller_idx] = true;
-
-        publish_nav_mux();
+        publish_muxes();
     }
 
     void collision_checker(const sensor_msgs::LaserScan & msg) {
@@ -376,34 +314,27 @@ public:
     */
 
     void toggle_mux(int mux_idx, std::string driver_name) {
-        // This takes in an index and the name of the planner/driver and 
-        // toggles the mux appropiately
         if (mux_controller[mux_idx]) {
             ROS_INFO_STREAM(driver_name << " turned off");
             mux_controller[mux_idx] = false;
-            publish_mux();
+            publish_muxes();
         }
         else {
             ROS_INFO_STREAM(driver_name << " turned on");
-            change_controller(mux_idx);
+            change_controller("drive mux", mux_idx);
         }
     }
     
     void toggle_nav_mux(int nav_mux_idx, std::string driver_name) {
-        // This takes in an index and the name of the planner/driver and 
-        // toggles the nav mux appropiately
-        // It also turns on the mux idx for navigation
         if (nav_mux_controller[nav_mux_idx]) {
             ROS_INFO_STREAM(driver_name << " turned off");
             nav_mux_controller[nav_mux_idx] = false;
             mux_controller[navigator_mux_idx] = false;
-            publish_nav_mux();
-            publish_mux();
+            publish_muxes();
         }
         else {
             ROS_INFO_STREAM(driver_name << " turned on");
-            change_nav_controller(nav_mux_idx);
-            change_controller(navigator_mux_idx);
+            change_controller("nav mux", nav_mux_idx);
         }
         
         std_msgs::String log_msg;
@@ -417,9 +348,10 @@ public:
         if (log) {
             ROS_INFO("Logging mode deactivated. To retrace path, hit 'r'");
             command = "store";
+            log = false;
         }
         else {
-            ROS_INFO("Logging mode activated. Beginning to log the car's path");
+            ROS_INFO_STREAM("Logging mode activated. Beginning to log the car's path... a new waypoint will be logged every " << log_reset_time << " seconds");
             log = true;
             command = "start";
         }
@@ -438,48 +370,15 @@ public:
             nav_mux_controller[i] = false;
         }
 
-        publish_mux();
-        publish_nav_mux();
+        publish_muxes();
     }
 
 
     /// ---------------------- CALLBACK FUNCTIONS ----------------------
-
-    void joy_callback(const sensor_msgs::Joy & msg) {
-        if (msg.buttons[joy_button_idx]) { 
-            toggle_mux(joy_mux_idx, "Joystick");
-            active_controller = "joy";
-        }
-        else if (msg.buttons[web_button_idx]) { 
-            toggle_mux(web_mux_idx, "Web Interface");
-            active_controller = "web";
-        }
-        else if (msg.buttons[key_button_idx]) { 
-            toggle_mux(key_mux_idx, "Keyboard");
-            active_controller = "key";
-        }
-        
-        if (active_controller == "joy"){
-            if (msg.buttons[brake_button_idx]) brake();
-            else if (msg.buttons[random_walk_button_idx]) toggle_mux(random_walker_mux_idx, "Random Walker");
-            else if (msg.buttons[guard_button_idx]) toggle_mux(guarder_mux_idx, "Puppy Guarder");
-            else if (msg.buttons[wall_follow_button_idx]) toggle_mux(wall_follower_mux_idx, "Patroller");
-            else if (msg.buttons[gap_follow_button_idx]) toggle_mux(gap_follower_mux_idx, "Advancer");
-            else if (msg.buttons[log_button_idx]) toggle_logger_mode();
-            else if (msg.buttons[navigate_button_idx]) toggle_nav_mux(navigator_nav_mux_idx, "Custom Navigation");
-            else if (msg.buttons[return_button_idx]) toggle_nav_mux(returner_nav_mux_idx, "Returner");
-            else if (msg.buttons[recall_button_idx]) toggle_nav_mux(recaller_nav_mux_idx, "Recaller");
-            else if (msg.buttons[explore_button_idx]) toggle_nav_mux(explorer_nav_mux_idx, "Explorer");
-            else if (msg.buttons[search_button_idx]) toggle_nav_mux(searcher_nav_mux_idx, "Searcher");
-        }
-    }
+    
     
     void web_callback(const std_msgs::String & msg) {
-        if (msg.data == joy_web_char) {
-            toggle_mux(joy_mux_idx, "Joystick");
-            active_controller = "joy";
-        }
-        else if (msg.data == web_web_char) {
+        if (msg.data == web_web_char) {
             toggle_mux(web_mux_idx, "Web Interface");
             active_controller = "web";
         }
@@ -490,11 +389,10 @@ public:
         
         if (active_controller == "web") {
             if (msg.data == brake_web_char) brake();
-            else if (msg.data == random_walk_web_char) toggle_mux(random_walker_mux_idx, "Random Walker");
-            else if (msg.data == guard_web_char) toggle_mux(guarder_mux_idx, "Guarder");
             else if (msg.data == wall_follow_web_char) toggle_mux(wall_follower_mux_idx, "Wall Follower");
             else if (msg.data == gap_follow_web_char) toggle_mux(gap_follower_mux_idx, "Gap Follower");
             else if (msg.data == log_web_char) toggle_logger_mode();
+            else if (msg.data == random_walk_web_char) toggle_nav_mux(roomba_nav_mux_idx, "Roomba");
             else if (msg.data == navigate_web_char) toggle_nav_mux(navigator_nav_mux_idx, "Custom Navigation");
             else if (msg.data == return_web_char) toggle_nav_mux(returner_nav_mux_idx, "Returner");
             else if (msg.data == recall_web_char) toggle_nav_mux(recaller_nav_mux_idx, "Recaller");
@@ -504,11 +402,7 @@ public:
     }
 
     void key_callback(const std_msgs::String & msg) {
-        if (msg.data == joy_key_char) {
-            toggle_mux(joy_mux_idx, "Joystick");
-            active_controller = "joy";
-        }
-        else if (msg.data == web_key_char) {
+        if (msg.data == web_key_char) {
             toggle_mux(web_mux_idx, "Web Interface");
             active_controller = "web";
         }
@@ -518,12 +412,11 @@ public:
         }
         
         if (active_controller == "key") {
-            if (msg.data == brake_key_char) brake();
-            else if (msg.data == random_walk_key_char) toggle_mux(random_walker_mux_idx, "Random Walker");
-            else if (msg.data == guard_key_char) toggle_mux(guarder_mux_idx, "Guarder");
+            if (msg.data == brake_key_char) brake(); 
             else if (msg.data == wall_follow_key_char) toggle_mux(wall_follower_mux_idx, "Wall Follower");
             else if (msg.data == gap_follow_key_char) toggle_mux(gap_follower_mux_idx, "Gap Follower");
             else if (msg.data == log_key_char) toggle_logger_mode();
+            else if (msg.data == random_walk_key_char) toggle_nav_mux(roomba_nav_mux_idx, "Roomba");
             else if (msg.data == navigate_key_char) toggle_nav_mux(navigator_nav_mux_idx, "Custom Navigation");
             else if (msg.data == return_key_char) toggle_nav_mux(returner_nav_mux_idx, "Returner");
             else if (msg.data == recall_key_char) toggle_nav_mux(recaller_nav_mux_idx, "Recaller");
@@ -531,6 +424,7 @@ public:
             else if (msg.data == search_key_char) toggle_nav_mux(searcher_nav_mux_idx, "Searcher");
             else if (msg.data == map_clear_key_char) {
                 nav_msgs::OccupancyGrid blank_map;
+                blank_map.header.frame_id = "map";
                 map_pub.publish(blank_map);
             }
         }
@@ -542,7 +436,7 @@ public:
         if (safety_on)
             sense_collision(msg);
         */
-        collision_checker(msg);
+        //collision_checker(msg);
     }
 
     void odom_callback(const nav_msgs::Odometry & msg) {

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package format="2">
+    <name>pixy2_ros</name>
+    <version>1.0.0</version>
+    <description>The pixy2_ros package</description>
+
+    <maintainer email="zhiquan.yeo@gmail.com">ZQ Yeo</maintainer>
+
+    <license>GPLv2</license>
+
+    <author email="zhiquan.yeo@gmail.com">ZQ Yeo</author>
+
+    <buildtool_depend>catkin</buildtool_depend>
+    <exec_depend>pixy2_msgs</exec_depend>
+    <exec_depend>pixy2_node</exec_depend>
+
+    <export>
+        <metapackage/>
+    </export>
+</package>

@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/thattori/capstone/velma/src/pathing/include/pathing/channel.h
+/home/ubuntu/F1Tenth/velma/src/pathing/include/pathing/channel.h
 ros/ros.h
 -
 ackermann_msgs/AckermannDriveStamped.h
 -
 
-/home/thattori/capstone/velma/src/pathing/node/mux.cpp
+/home/ubuntu/F1Tenth/velma/src/pathing/node/mux.cpp
 ros/ros.h
 -
 ackermann_msgs/AckermannDriveStamped.h
@@ -30,7 +30,7 @@ sensor_msgs/Joy.h
 std_msgs/String.h
 -
 pathing/channel.h
-/home/thattori/capstone/velma/src/pathing/node/pathing/channel.h
+/home/ubuntu/F1Tenth/velma/src/pathing/node/pathing/channel.h
 
 /opt/ros/noetic/include/ackermann_msgs/AckermannDrive.h
 string

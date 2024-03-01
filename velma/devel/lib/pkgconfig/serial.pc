@@ -1,8 +1,8 @@
-prefix=/home/thattori/capstone/velma/devel
+prefix=/home/ubuntu/F1Tenth/velma/devel
 
 Name: serial
 Description: Description of serial
 Version: 1.2.1
-Cflags: -I/home/thattori/capstone/velma/src/serial/include
+Cflags: -I/home/ubuntu/F1Tenth/velma/src/serial/include
 Libs: -L${prefix}/lib -lserial -lrt -lpthread
 Requires: 

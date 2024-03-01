@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/thattori/capstone/velma/src
+CMAKE_SOURCE_DIR = /home/ubuntu/F1Tenth/velma/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/thattori/capstone/velma/build
+CMAKE_BINARY_DIR = /home/ubuntu/F1Tenth/velma/build
 
 # Utility rule file for sensor_msgs_generate_messages_lisp.
 
@@ -63,10 +63,10 @@ joystick_drivers/joy/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build: se
 .PHONY : joystick_drivers/joy/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
 
 joystick_drivers/joy/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean:
-	cd /home/thattori/capstone/velma/build/joystick_drivers/joy && $(CMAKE_COMMAND) -P CMakeFiles/sensor_msgs_generate_messages_lisp.dir/cmake_clean.cmake
+	cd /home/ubuntu/F1Tenth/velma/build/joystick_drivers/joy && $(CMAKE_COMMAND) -P CMakeFiles/sensor_msgs_generate_messages_lisp.dir/cmake_clean.cmake
 .PHONY : joystick_drivers/joy/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
 
 joystick_drivers/joy/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/depend:
-	cd /home/thattori/capstone/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/thattori/capstone/velma/src /home/thattori/capstone/velma/src/joystick_drivers/joy /home/thattori/capstone/velma/build /home/thattori/capstone/velma/build/joystick_drivers/joy /home/thattori/capstone/velma/build/joystick_drivers/joy/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/F1Tenth/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/F1Tenth/velma/src /home/ubuntu/F1Tenth/velma/src/joystick_drivers/joy /home/ubuntu/F1Tenth/velma/build /home/ubuntu/F1Tenth/velma/build/joystick_drivers/joy /home/ubuntu/F1Tenth/velma/build/joystick_drivers/joy/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : joystick_drivers/joy/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/depend
 

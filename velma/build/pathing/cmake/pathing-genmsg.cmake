@@ -1,10 +1,8 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(FATAL_ERROR "Could not find messages which '/home/thattori/capstone/velma/src/pathing/msg/waypoints.msg' depends on. Did you forget to specify generate_messages(DEPENDENCIES ...)?
-Cannot locate message [PoseWithCovarianceStamped] in package [pathing] with paths [['/home/thattori/capstone/velma/src/pathing/msg']]")
-message(STATUS "pathing: 6 messages, 0 services")
+message(STATUS "pathing: 7 messages, 0 services")
 
-set(MSG_I_FLAGS "-Ipathing:/home/thattori/capstone/velma/src/pathing/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg;-Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg;-Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg;-Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Ipathing:/home/ubuntu/F1Tenth/velma/src/pathing/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg;-Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg;-Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg;-Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -19,29 +17,39 @@ add_custom_target(pathing_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/gpioread.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/F1Tenth/velma/src/pathing/msg/gpioread.msg" NAME_WE)
 add_custom_target(_pathing_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "pathing" "/home/thattori/capstone/velma/src/pathing/msg/gpioread.msg" "std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "pathing" "/home/ubuntu/F1Tenth/velma/src/pathing/msg/gpioread.msg" "std_msgs/Header"
 )
 
-get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/gpiowrite.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/F1Tenth/velma/src/pathing/msg/gpiowrite.msg" NAME_WE)
 add_custom_target(_pathing_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "pathing" "/home/thattori/capstone/velma/src/pathing/msg/gpiowrite.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "pathing" "/home/ubuntu/F1Tenth/velma/src/pathing/msg/gpiowrite.msg" ""
 )
 
-get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyBlock.msg" NAME_WE)
 add_custom_target(_pathing_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "pathing" "/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg" "sensor_msgs/RegionOfInterest"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "pathing" "/home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyBlock.msg" "sensor_msgs/RegionOfInterest"
 )
 
-get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/PixyResolution.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyResolution.msg" NAME_WE)
 add_custom_target(_pathing_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "pathing" "/home/thattori/capstone/velma/src/pathing/msg/PixyResolution.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "pathing" "/home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyResolution.msg" ""
 )
 
-get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/PixyData.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyData.msg" NAME_WE)
 add_custom_target(_pathing_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "pathing" "/home/thattori/capstone/velma/src/pathing/msg/PixyData.msg" "sensor_msgs/RegionOfInterest:pathing/PixyBlock:std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "pathing" "/home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyData.msg" "std_msgs/Header:sensor_msgs/RegionOfInterest:pathing/PixyBlock"
+)
+
+get_filename_component(_filename "/home/ubuntu/F1Tenth/velma/src/pathing/msg/waypoints.msg" NAME_WE)
+add_custom_target(_pathing_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "pathing" "/home/ubuntu/F1Tenth/velma/src/pathing/msg/waypoints.msg" ""
+)
+
+get_filename_component(_filename "/home/ubuntu/F1Tenth/velma/src/pathing/msg/seenPoints.msg" NAME_WE)
+add_custom_target(_pathing_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "pathing" "/home/ubuntu/F1Tenth/velma/src/pathing/msg/seenPoints.msg" ""
 )
 
 #
@@ -51,33 +59,45 @@ add_custom_target(_pathing_generate_messages_check_deps_${_filename}
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(pathing
-  "/home/thattori/capstone/velma/src/pathing/msg/gpioread.msg"
+  "/home/ubuntu/F1Tenth/velma/src/pathing/msg/gpioread.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/pathing
 )
 _generate_msg_cpp(pathing
-  "/home/thattori/capstone/velma/src/pathing/msg/gpiowrite.msg"
+  "/home/ubuntu/F1Tenth/velma/src/pathing/msg/gpiowrite.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/pathing
 )
 _generate_msg_cpp(pathing
-  "/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg"
+  "/home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyBlock.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/pathing
 )
 _generate_msg_cpp(pathing
-  "/home/thattori/capstone/velma/src/pathing/msg/PixyResolution.msg"
+  "/home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyResolution.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/pathing
 )
 _generate_msg_cpp(pathing
-  "/home/thattori/capstone/velma/src/pathing/msg/PixyData.msg"
+  "/home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyData.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyBlock.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/pathing
+)
+_generate_msg_cpp(pathing
+  "/home/ubuntu/F1Tenth/velma/src/pathing/msg/waypoints.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/pathing
+)
+_generate_msg_cpp(pathing
+  "/home/ubuntu/F1Tenth/velma/src/pathing/msg/seenPoints.msg"
+  "${MSG_I_FLAGS}"
+  ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/pathing
 )
 
@@ -95,15 +115,19 @@ add_custom_target(pathing_generate_messages_cpp
 add_dependencies(pathing_generate_messages pathing_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/gpioread.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/F1Tenth/velma/src/pathing/msg/gpioread.msg" NAME_WE)
 add_dependencies(pathing_generate_messages_cpp _pathing_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/gpiowrite.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/F1Tenth/velma/src/pathing/msg/gpiowrite.msg" NAME_WE)
 add_dependencies(pathing_generate_messages_cpp _pathing_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyBlock.msg" NAME_WE)
 add_dependencies(pathing_generate_messages_cpp _pathing_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/PixyResolution.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyResolution.msg" NAME_WE)
 add_dependencies(pathing_generate_messages_cpp _pathing_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/PixyData.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyData.msg" NAME_WE)
+add_dependencies(pathing_generate_messages_cpp _pathing_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/F1Tenth/velma/src/pathing/msg/waypoints.msg" NAME_WE)
+add_dependencies(pathing_generate_messages_cpp _pathing_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/F1Tenth/velma/src/pathing/msg/seenPoints.msg" NAME_WE)
 add_dependencies(pathing_generate_messages_cpp _pathing_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -116,33 +140,45 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS pathing_generate_messages_cpp)
 ### Section generating for lang: geneus
 ### Generating Messages
 _generate_msg_eus(pathing
-  "/home/thattori/capstone/velma/src/pathing/msg/gpioread.msg"
+  "/home/ubuntu/F1Tenth/velma/src/pathing/msg/gpioread.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/pathing
 )
 _generate_msg_eus(pathing
-  "/home/thattori/capstone/velma/src/pathing/msg/gpiowrite.msg"
+  "/home/ubuntu/F1Tenth/velma/src/pathing/msg/gpiowrite.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/pathing
 )
 _generate_msg_eus(pathing
-  "/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg"
+  "/home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyBlock.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/pathing
 )
 _generate_msg_eus(pathing
-  "/home/thattori/capstone/velma/src/pathing/msg/PixyResolution.msg"
+  "/home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyResolution.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/pathing
 )
 _generate_msg_eus(pathing
-  "/home/thattori/capstone/velma/src/pathing/msg/PixyData.msg"
+  "/home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyData.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyBlock.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/pathing
+)
+_generate_msg_eus(pathing
+  "/home/ubuntu/F1Tenth/velma/src/pathing/msg/waypoints.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/pathing
+)
+_generate_msg_eus(pathing
+  "/home/ubuntu/F1Tenth/velma/src/pathing/msg/seenPoints.msg"
+  "${MSG_I_FLAGS}"
+  ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/pathing
 )
 
@@ -160,15 +196,19 @@ add_custom_target(pathing_generate_messages_eus
 add_dependencies(pathing_generate_messages pathing_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/gpioread.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/F1Tenth/velma/src/pathing/msg/gpioread.msg" NAME_WE)
 add_dependencies(pathing_generate_messages_eus _pathing_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/gpiowrite.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/F1Tenth/velma/src/pathing/msg/gpiowrite.msg" NAME_WE)
 add_dependencies(pathing_generate_messages_eus _pathing_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyBlock.msg" NAME_WE)
 add_dependencies(pathing_generate_messages_eus _pathing_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/PixyResolution.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyResolution.msg" NAME_WE)
 add_dependencies(pathing_generate_messages_eus _pathing_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/PixyData.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyData.msg" NAME_WE)
+add_dependencies(pathing_generate_messages_eus _pathing_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/F1Tenth/velma/src/pathing/msg/waypoints.msg" NAME_WE)
+add_dependencies(pathing_generate_messages_eus _pathing_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/F1Tenth/velma/src/pathing/msg/seenPoints.msg" NAME_WE)
 add_dependencies(pathing_generate_messages_eus _pathing_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -181,33 +221,45 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS pathing_generate_messages_eus)
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(pathing
-  "/home/thattori/capstone/velma/src/pathing/msg/gpioread.msg"
+  "/home/ubuntu/F1Tenth/velma/src/pathing/msg/gpioread.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/pathing
 )
 _generate_msg_lisp(pathing
-  "/home/thattori/capstone/velma/src/pathing/msg/gpiowrite.msg"
+  "/home/ubuntu/F1Tenth/velma/src/pathing/msg/gpiowrite.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/pathing
 )
 _generate_msg_lisp(pathing
-  "/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg"
+  "/home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyBlock.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/pathing
 )
 _generate_msg_lisp(pathing
-  "/home/thattori/capstone/velma/src/pathing/msg/PixyResolution.msg"
+  "/home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyResolution.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/pathing
 )
 _generate_msg_lisp(pathing
-  "/home/thattori/capstone/velma/src/pathing/msg/PixyData.msg"
+  "/home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyData.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyBlock.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/pathing
+)
+_generate_msg_lisp(pathing
+  "/home/ubuntu/F1Tenth/velma/src/pathing/msg/waypoints.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/pathing
+)
+_generate_msg_lisp(pathing
+  "/home/ubuntu/F1Tenth/velma/src/pathing/msg/seenPoints.msg"
+  "${MSG_I_FLAGS}"
+  ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/pathing
 )
 
@@ -225,15 +277,19 @@ add_custom_target(pathing_generate_messages_lisp
 add_dependencies(pathing_generate_messages pathing_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/gpioread.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/F1Tenth/velma/src/pathing/msg/gpioread.msg" NAME_WE)
 add_dependencies(pathing_generate_messages_lisp _pathing_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/gpiowrite.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/F1Tenth/velma/src/pathing/msg/gpiowrite.msg" NAME_WE)
 add_dependencies(pathing_generate_messages_lisp _pathing_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyBlock.msg" NAME_WE)
 add_dependencies(pathing_generate_messages_lisp _pathing_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/PixyResolution.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyResolution.msg" NAME_WE)
 add_dependencies(pathing_generate_messages_lisp _pathing_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/PixyData.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyData.msg" NAME_WE)
+add_dependencies(pathing_generate_messages_lisp _pathing_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/F1Tenth/velma/src/pathing/msg/waypoints.msg" NAME_WE)
+add_dependencies(pathing_generate_messages_lisp _pathing_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/F1Tenth/velma/src/pathing/msg/seenPoints.msg" NAME_WE)
 add_dependencies(pathing_generate_messages_lisp _pathing_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -246,33 +302,45 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS pathing_generate_messages_lisp)
 ### Section generating for lang: gennodejs
 ### Generating Messages
 _generate_msg_nodejs(pathing
-  "/home/thattori/capstone/velma/src/pathing/msg/gpioread.msg"
+  "/home/ubuntu/F1Tenth/velma/src/pathing/msg/gpioread.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/pathing
 )
 _generate_msg_nodejs(pathing
-  "/home/thattori/capstone/velma/src/pathing/msg/gpiowrite.msg"
+  "/home/ubuntu/F1Tenth/velma/src/pathing/msg/gpiowrite.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/pathing
 )
 _generate_msg_nodejs(pathing
-  "/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg"
+  "/home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyBlock.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/pathing
 )
 _generate_msg_nodejs(pathing
-  "/home/thattori/capstone/velma/src/pathing/msg/PixyResolution.msg"
+  "/home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyResolution.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/pathing
 )
 _generate_msg_nodejs(pathing
-  "/home/thattori/capstone/velma/src/pathing/msg/PixyData.msg"
+  "/home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyData.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyBlock.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/pathing
+)
+_generate_msg_nodejs(pathing
+  "/home/ubuntu/F1Tenth/velma/src/pathing/msg/waypoints.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/pathing
+)
+_generate_msg_nodejs(pathing
+  "/home/ubuntu/F1Tenth/velma/src/pathing/msg/seenPoints.msg"
+  "${MSG_I_FLAGS}"
+  ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/pathing
 )
 
@@ -290,15 +358,19 @@ add_custom_target(pathing_generate_messages_nodejs
 add_dependencies(pathing_generate_messages pathing_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/gpioread.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/F1Tenth/velma/src/pathing/msg/gpioread.msg" NAME_WE)
 add_dependencies(pathing_generate_messages_nodejs _pathing_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/gpiowrite.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/F1Tenth/velma/src/pathing/msg/gpiowrite.msg" NAME_WE)
 add_dependencies(pathing_generate_messages_nodejs _pathing_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyBlock.msg" NAME_WE)
 add_dependencies(pathing_generate_messages_nodejs _pathing_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/PixyResolution.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyResolution.msg" NAME_WE)
 add_dependencies(pathing_generate_messages_nodejs _pathing_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/PixyData.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyData.msg" NAME_WE)
+add_dependencies(pathing_generate_messages_nodejs _pathing_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/F1Tenth/velma/src/pathing/msg/waypoints.msg" NAME_WE)
+add_dependencies(pathing_generate_messages_nodejs _pathing_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/F1Tenth/velma/src/pathing/msg/seenPoints.msg" NAME_WE)
 add_dependencies(pathing_generate_messages_nodejs _pathing_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -311,33 +383,45 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS pathing_generate_messages_nodejs)
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(pathing
-  "/home/thattori/capstone/velma/src/pathing/msg/gpioread.msg"
+  "/home/ubuntu/F1Tenth/velma/src/pathing/msg/gpioread.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/pathing
 )
 _generate_msg_py(pathing
-  "/home/thattori/capstone/velma/src/pathing/msg/gpiowrite.msg"
+  "/home/ubuntu/F1Tenth/velma/src/pathing/msg/gpiowrite.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/pathing
 )
 _generate_msg_py(pathing
-  "/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg"
+  "/home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyBlock.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/pathing
 )
 _generate_msg_py(pathing
-  "/home/thattori/capstone/velma/src/pathing/msg/PixyResolution.msg"
+  "/home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyResolution.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/pathing
 )
 _generate_msg_py(pathing
-  "/home/thattori/capstone/velma/src/pathing/msg/PixyData.msg"
+  "/home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyData.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyBlock.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/pathing
+)
+_generate_msg_py(pathing
+  "/home/ubuntu/F1Tenth/velma/src/pathing/msg/waypoints.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/pathing
+)
+_generate_msg_py(pathing
+  "/home/ubuntu/F1Tenth/velma/src/pathing/msg/seenPoints.msg"
+  "${MSG_I_FLAGS}"
+  ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/pathing
 )
 
@@ -355,15 +439,19 @@ add_custom_target(pathing_generate_messages_py
 add_dependencies(pathing_generate_messages pathing_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/gpioread.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/F1Tenth/velma/src/pathing/msg/gpioread.msg" NAME_WE)
 add_dependencies(pathing_generate_messages_py _pathing_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/gpiowrite.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/F1Tenth/velma/src/pathing/msg/gpiowrite.msg" NAME_WE)
 add_dependencies(pathing_generate_messages_py _pathing_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyBlock.msg" NAME_WE)
 add_dependencies(pathing_generate_messages_py _pathing_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/PixyResolution.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyResolution.msg" NAME_WE)
 add_dependencies(pathing_generate_messages_py _pathing_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/thattori/capstone/velma/src/pathing/msg/PixyData.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyData.msg" NAME_WE)
+add_dependencies(pathing_generate_messages_py _pathing_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/F1Tenth/velma/src/pathing/msg/waypoints.msg" NAME_WE)
+add_dependencies(pathing_generate_messages_py _pathing_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/F1Tenth/velma/src/pathing/msg/seenPoints.msg" NAME_WE)
 add_dependencies(pathing_generate_messages_py _pathing_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -391,6 +479,12 @@ endif()
 if(TARGET sensor_msgs_generate_messages_cpp)
   add_dependencies(pathing_generate_messages_cpp sensor_msgs_generate_messages_cpp)
 endif()
+if(TARGET geometry_msgs_generate_messages_cpp)
+  add_dependencies(pathing_generate_messages_cpp geometry_msgs_generate_messages_cpp)
+endif()
+if(TARGET actionlib_msgs_generate_messages_cpp)
+  add_dependencies(pathing_generate_messages_cpp actionlib_msgs_generate_messages_cpp)
+endif()
 
 if(geneus_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/pathing)
   # install generated code
@@ -407,6 +501,12 @@ if(TARGET nav_msgs_generate_messages_eus)
 endif()
 if(TARGET sensor_msgs_generate_messages_eus)
   add_dependencies(pathing_generate_messages_eus sensor_msgs_generate_messages_eus)
+endif()
+if(TARGET geometry_msgs_generate_messages_eus)
+  add_dependencies(pathing_generate_messages_eus geometry_msgs_generate_messages_eus)
+endif()
+if(TARGET actionlib_msgs_generate_messages_eus)
+  add_dependencies(pathing_generate_messages_eus actionlib_msgs_generate_messages_eus)
 endif()
 
 if(genlisp_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/pathing)
@@ -425,6 +525,12 @@ endif()
 if(TARGET sensor_msgs_generate_messages_lisp)
   add_dependencies(pathing_generate_messages_lisp sensor_msgs_generate_messages_lisp)
 endif()
+if(TARGET geometry_msgs_generate_messages_lisp)
+  add_dependencies(pathing_generate_messages_lisp geometry_msgs_generate_messages_lisp)
+endif()
+if(TARGET actionlib_msgs_generate_messages_lisp)
+  add_dependencies(pathing_generate_messages_lisp actionlib_msgs_generate_messages_lisp)
+endif()
 
 if(gennodejs_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/pathing)
   # install generated code
@@ -441,6 +547,12 @@ if(TARGET nav_msgs_generate_messages_nodejs)
 endif()
 if(TARGET sensor_msgs_generate_messages_nodejs)
   add_dependencies(pathing_generate_messages_nodejs sensor_msgs_generate_messages_nodejs)
+endif()
+if(TARGET geometry_msgs_generate_messages_nodejs)
+  add_dependencies(pathing_generate_messages_nodejs geometry_msgs_generate_messages_nodejs)
+endif()
+if(TARGET actionlib_msgs_generate_messages_nodejs)
+  add_dependencies(pathing_generate_messages_nodejs actionlib_msgs_generate_messages_nodejs)
 endif()
 
 if(genpy_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/pathing)
@@ -459,4 +571,10 @@ if(TARGET nav_msgs_generate_messages_py)
 endif()
 if(TARGET sensor_msgs_generate_messages_py)
   add_dependencies(pathing_generate_messages_py sensor_msgs_generate_messages_py)
+endif()
+if(TARGET geometry_msgs_generate_messages_py)
+  add_dependencies(pathing_generate_messages_py geometry_msgs_generate_messages_py)
+endif()
+if(TARGET actionlib_msgs_generate_messages_py)
+  add_dependencies(pathing_generate_messages_py actionlib_msgs_generate_messages_py)
 endif()

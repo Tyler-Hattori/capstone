@@ -1,21 +1,21 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
-Change Dir: /home/thattori/capstone/velma/build/CMakeFiles/CMakeTmp
+Change Dir: /home/ubuntu/F1Tenth/velma/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_3aac1/fast && /usr/bin/make -f CMakeFiles/cmTC_3aac1.dir/build.make CMakeFiles/cmTC_3aac1.dir/build
-make[1]: Entering directory '/home/thattori/capstone/velma/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_3aac1.dir/src.c.o
-/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_3aac1.dir/src.c.o   -c /home/thattori/capstone/velma/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_3aac1
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3aac1.dir/link.txt --verbose=1
-/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_3aac1.dir/src.c.o  -o cmTC_3aac1 
-/usr/bin/ld: CMakeFiles/cmTC_3aac1.dir/src.c.o: in function `main':
-src.c:(.text+0x46): undefined reference to `pthread_create'
-/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
-/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+Run Build Command(s):/usr/bin/make cmTC_6a11f/fast && /usr/bin/make -f CMakeFiles/cmTC_6a11f.dir/build.make CMakeFiles/cmTC_6a11f.dir/build
+make[1]: Entering directory '/home/ubuntu/F1Tenth/velma/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6a11f.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_6a11f.dir/src.c.o   -c /home/ubuntu/F1Tenth/velma/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_6a11f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6a11f.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_6a11f.dir/src.c.o  -o cmTC_6a11f 
+/usr/bin/ld: CMakeFiles/cmTC_6a11f.dir/src.c.o: in function `main':
+src.c:(.text+0x48): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x50): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x5c): undefined reference to `pthread_join'
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_3aac1.dir/build.make:87: cmTC_3aac1] Error 1
-make[1]: Leaving directory '/home/thattori/capstone/velma/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_3aac1/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_6a11f.dir/build.make:87: cmTC_6a11f] Error 1
+make[1]: Leaving directory '/home/ubuntu/F1Tenth/velma/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_6a11f/fast] Error 2
 
 
 Source file was:
@@ -39,58 +39,58 @@ int main(void)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/thattori/capstone/velma/build/CMakeFiles/CMakeTmp
+Change Dir: /home/ubuntu/F1Tenth/velma/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_acd72/fast && /usr/bin/make -f CMakeFiles/cmTC_acd72.dir/build.make CMakeFiles/cmTC_acd72.dir/build
-make[1]: Entering directory '/home/thattori/capstone/velma/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_acd72.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_acd72.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
-Linking C executable cmTC_acd72
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_acd72.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_acd72.dir/CheckFunctionExists.c.o  -o cmTC_acd72  -lpthreads 
+Run Build Command(s):/usr/bin/make cmTC_bac1f/fast && /usr/bin/make -f CMakeFiles/cmTC_bac1f.dir/build.make CMakeFiles/cmTC_bac1f.dir/build
+make[1]: Entering directory '/home/ubuntu/F1Tenth/velma/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bac1f.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_bac1f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_bac1f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bac1f.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_bac1f.dir/CheckFunctionExists.c.o  -o cmTC_bac1f  -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_acd72.dir/build.make:87: cmTC_acd72] Error 1
-make[1]: Leaving directory '/home/thattori/capstone/velma/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_acd72/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_bac1f.dir/build.make:87: cmTC_bac1f] Error 1
+make[1]: Leaving directory '/home/ubuntu/F1Tenth/velma/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_bac1f/fast] Error 2
 
 
 
 Determining if the function sgemm_ exists failed with the following output:
-Change Dir: /home/thattori/capstone/velma/build/CMakeFiles/CMakeTmp
+Change Dir: /home/ubuntu/F1Tenth/velma/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_a0288/fast && /usr/bin/make -f CMakeFiles/cmTC_a0288.dir/build.make CMakeFiles/cmTC_a0288.dir/build
-make[1]: Entering directory '/home/thattori/capstone/velma/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_a0288.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=sgemm_   -o CMakeFiles/cmTC_a0288.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
-Linking C executable cmTC_a0288
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a0288.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=sgemm_    CMakeFiles/cmTC_a0288.dir/CheckFunctionExists.c.o  -o cmTC_a0288 
-/usr/bin/ld: CMakeFiles/cmTC_a0288.dir/CheckFunctionExists.c.o: in function `main':
-CheckFunctionExists.c:(.text+0x14): undefined reference to `sgemm_'
+Run Build Command(s):/usr/bin/make cmTC_023b7/fast && /usr/bin/make -f CMakeFiles/cmTC_023b7.dir/build.make CMakeFiles/cmTC_023b7.dir/build
+make[1]: Entering directory '/home/ubuntu/F1Tenth/velma/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_023b7.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=sgemm_   -o CMakeFiles/cmTC_023b7.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_023b7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_023b7.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=sgemm_    CMakeFiles/cmTC_023b7.dir/CheckFunctionExists.c.o  -o cmTC_023b7 
+/usr/bin/ld: CMakeFiles/cmTC_023b7.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x10): undefined reference to `sgemm_'
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_a0288.dir/build.make:87: cmTC_a0288] Error 1
-make[1]: Leaving directory '/home/thattori/capstone/velma/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_a0288/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_023b7.dir/build.make:87: cmTC_023b7] Error 1
+make[1]: Leaving directory '/home/ubuntu/F1Tenth/velma/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_023b7/fast] Error 2
 
 
 
 Determining if the function cheev_ exists failed with the following output:
-Change Dir: /home/thattori/capstone/velma/build/CMakeFiles/CMakeTmp
+Change Dir: /home/ubuntu/F1Tenth/velma/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_42abf/fast && /usr/bin/make -f CMakeFiles/cmTC_42abf.dir/build.make CMakeFiles/cmTC_42abf.dir/build
-make[1]: Entering directory '/home/thattori/capstone/velma/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_42abf.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cheev_   -o CMakeFiles/cmTC_42abf.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
-Linking C executable cmTC_42abf
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_42abf.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=cheev_    CMakeFiles/cmTC_42abf.dir/CheckFunctionExists.c.o  -o cmTC_42abf  /usr/lib/x86_64-linux-gnu/libblas.so 
-/usr/bin/ld: CMakeFiles/cmTC_42abf.dir/CheckFunctionExists.c.o: in function `main':
-CheckFunctionExists.c:(.text+0x14): undefined reference to `cheev_'
+Run Build Command(s):/usr/bin/make cmTC_bac6b/fast && /usr/bin/make -f CMakeFiles/cmTC_bac6b.dir/build.make CMakeFiles/cmTC_bac6b.dir/build
+make[1]: Entering directory '/home/ubuntu/F1Tenth/velma/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bac6b.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cheev_   -o CMakeFiles/cmTC_bac6b.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_bac6b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bac6b.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=cheev_    CMakeFiles/cmTC_bac6b.dir/CheckFunctionExists.c.o  -o cmTC_bac6b  /usr/lib/aarch64-linux-gnu/libblas.so 
+/usr/bin/ld: CMakeFiles/cmTC_bac6b.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x10): undefined reference to `cheev_'
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_42abf.dir/build.make:88: cmTC_42abf] Error 1
-make[1]: Leaving directory '/home/thattori/capstone/velma/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_42abf/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_bac6b.dir/build.make:88: cmTC_bac6b] Error 1
+make[1]: Leaving directory '/home/ubuntu/F1Tenth/velma/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_bac6b/fast] Error 2
 
 
 

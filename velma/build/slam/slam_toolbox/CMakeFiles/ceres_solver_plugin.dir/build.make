@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/thattori/capstone/velma/src
+CMAKE_SOURCE_DIR = /home/ubuntu/F1Tenth/velma/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/thattori/capstone/velma/build
+CMAKE_BINARY_DIR = /home/ubuntu/F1Tenth/velma/build
 
 # Include any dependencies generated for this target.
 include slam/slam_toolbox/CMakeFiles/ceres_solver_plugin.dir/depend.make
@@ -58,17 +58,17 @@ include slam/slam_toolbox/CMakeFiles/ceres_solver_plugin.dir/progress.make
 include slam/slam_toolbox/CMakeFiles/ceres_solver_plugin.dir/flags.make
 
 slam/slam_toolbox/CMakeFiles/ceres_solver_plugin.dir/solvers/ceres_solver.cpp.o: slam/slam_toolbox/CMakeFiles/ceres_solver_plugin.dir/flags.make
-slam/slam_toolbox/CMakeFiles/ceres_solver_plugin.dir/solvers/ceres_solver.cpp.o: /home/thattori/capstone/velma/src/slam/slam_toolbox/solvers/ceres_solver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object slam/slam_toolbox/CMakeFiles/ceres_solver_plugin.dir/solvers/ceres_solver.cpp.o"
-	cd /home/thattori/capstone/velma/build/slam/slam_toolbox && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ceres_solver_plugin.dir/solvers/ceres_solver.cpp.o -c /home/thattori/capstone/velma/src/slam/slam_toolbox/solvers/ceres_solver.cpp
+slam/slam_toolbox/CMakeFiles/ceres_solver_plugin.dir/solvers/ceres_solver.cpp.o: /home/ubuntu/F1Tenth/velma/src/slam/slam_toolbox/solvers/ceres_solver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/F1Tenth/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object slam/slam_toolbox/CMakeFiles/ceres_solver_plugin.dir/solvers/ceres_solver.cpp.o"
+	cd /home/ubuntu/F1Tenth/velma/build/slam/slam_toolbox && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ceres_solver_plugin.dir/solvers/ceres_solver.cpp.o -c /home/ubuntu/F1Tenth/velma/src/slam/slam_toolbox/solvers/ceres_solver.cpp
 
 slam/slam_toolbox/CMakeFiles/ceres_solver_plugin.dir/solvers/ceres_solver.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ceres_solver_plugin.dir/solvers/ceres_solver.cpp.i"
-	cd /home/thattori/capstone/velma/build/slam/slam_toolbox && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/thattori/capstone/velma/src/slam/slam_toolbox/solvers/ceres_solver.cpp > CMakeFiles/ceres_solver_plugin.dir/solvers/ceres_solver.cpp.i
+	cd /home/ubuntu/F1Tenth/velma/build/slam/slam_toolbox && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/F1Tenth/velma/src/slam/slam_toolbox/solvers/ceres_solver.cpp > CMakeFiles/ceres_solver_plugin.dir/solvers/ceres_solver.cpp.i
 
 slam/slam_toolbox/CMakeFiles/ceres_solver_plugin.dir/solvers/ceres_solver.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ceres_solver_plugin.dir/solvers/ceres_solver.cpp.s"
-	cd /home/thattori/capstone/velma/build/slam/slam_toolbox && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/thattori/capstone/velma/src/slam/slam_toolbox/solvers/ceres_solver.cpp -o CMakeFiles/ceres_solver_plugin.dir/solvers/ceres_solver.cpp.s
+	cd /home/ubuntu/F1Tenth/velma/build/slam/slam_toolbox && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/F1Tenth/velma/src/slam/slam_toolbox/solvers/ceres_solver.cpp -o CMakeFiles/ceres_solver_plugin.dir/solvers/ceres_solver.cpp.s
 
 # Object files for target ceres_solver_plugin
 ceres_solver_plugin_OBJECTS = \
@@ -77,73 +77,73 @@ ceres_solver_plugin_OBJECTS = \
 # External object files for target ceres_solver_plugin
 ceres_solver_plugin_EXTERNAL_OBJECTS =
 
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: slam/slam_toolbox/CMakeFiles/ceres_solver_plugin.dir/solvers/ceres_solver.cpp.o
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: slam/slam_toolbox/CMakeFiles/ceres_solver_plugin.dir/build.make
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /home/thattori/capstone/velma/devel/lib/libkartoSlamToolbox.so
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_serialization.so.1.71.0
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/x86_64-linux-gnu/libtbb.so
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /opt/ros/noetic/lib/libsba.so
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /opt/ros/noetic/lib/libtf.so
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /opt/ros/noetic/lib/libclass_loader.so
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/x86_64-linux-gnu/libPocoFoundation.so
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/x86_64-linux-gnu/libdl.so
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /opt/ros/noetic/lib/libroslib.so
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /opt/ros/noetic/lib/librospack.so
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/x86_64-linux-gnu/libpython3.8.so
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_program_options.so.1.71.0
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/liborocos-kdl.so
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/liborocos-kdl.so
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /opt/ros/noetic/lib/libinteractive_markers.so
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /opt/ros/noetic/lib/libtf2_ros.so
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /opt/ros/noetic/lib/libactionlib.so
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /opt/ros/noetic/lib/libmessage_filters.so
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /opt/ros/noetic/lib/libmap_server_image_loader.so
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /opt/ros/noetic/lib/libroscpp.so
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.71.0
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /opt/ros/noetic/lib/librosconsole.so
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /opt/ros/noetic/lib/librosconsole_log4cxx.so
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /opt/ros/noetic/lib/librosconsole_backend_interface.so
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.71.0
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /opt/ros/noetic/lib/libxmlrpcpp.so
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /opt/ros/noetic/lib/libtf2.so
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /opt/ros/noetic/lib/libroscpp_serialization.so
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /opt/ros/noetic/lib/librostime.so
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /opt/ros/noetic/lib/libcpp_common.so
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/libceres.so.1.14.0
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_serialization.so.1.71.0
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_serialization.so.1.71.0
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so.1.71.0
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/x86_64-linux-gnu/libglog.so
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/x86_64-linux-gnu/libgflags.so.2.2.2
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so.1.71.0
-/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so: slam/slam_toolbox/CMakeFiles/ceres_solver_plugin.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library /home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so"
-	cd /home/thattori/capstone/velma/build/slam/slam_toolbox && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ceres_solver_plugin.dir/link.txt --verbose=$(VERBOSE)
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: slam/slam_toolbox/CMakeFiles/ceres_solver_plugin.dir/solvers/ceres_solver.cpp.o
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: slam/slam_toolbox/CMakeFiles/ceres_solver_plugin.dir/build.make
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /home/ubuntu/F1Tenth/velma/devel/lib/libkartoSlamToolbox.so
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/aarch64-linux-gnu/libboost_serialization.so.1.71.0
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/aarch64-linux-gnu/libtbb.so
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /opt/ros/noetic/lib/libsba.so
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /opt/ros/noetic/lib/libtf.so
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /opt/ros/noetic/lib/libclass_loader.so
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/aarch64-linux-gnu/libPocoFoundation.so
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/aarch64-linux-gnu/libdl.so
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /opt/ros/noetic/lib/libroslib.so
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /opt/ros/noetic/lib/librospack.so
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/aarch64-linux-gnu/libpython3.8.so
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/aarch64-linux-gnu/libboost_program_options.so.1.71.0
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/aarch64-linux-gnu/libtinyxml2.so
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/liborocos-kdl.so
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/liborocos-kdl.so
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /opt/ros/noetic/lib/libinteractive_markers.so
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /opt/ros/noetic/lib/libtf2_ros.so
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /opt/ros/noetic/lib/libactionlib.so
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /opt/ros/noetic/lib/libmessage_filters.so
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /opt/ros/noetic/lib/libmap_server_image_loader.so
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /opt/ros/noetic/lib/libroscpp.so
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/aarch64-linux-gnu/libpthread.so
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/aarch64-linux-gnu/libboost_chrono.so.1.71.0
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/aarch64-linux-gnu/libboost_filesystem.so.1.71.0
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /opt/ros/noetic/lib/librosconsole.so
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /opt/ros/noetic/lib/librosconsole_log4cxx.so
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /opt/ros/noetic/lib/librosconsole_backend_interface.so
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/aarch64-linux-gnu/liblog4cxx.so
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.71.0
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /opt/ros/noetic/lib/libxmlrpcpp.so
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /opt/ros/noetic/lib/libtf2.so
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /opt/ros/noetic/lib/libroscpp_serialization.so
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /opt/ros/noetic/lib/librostime.so
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/aarch64-linux-gnu/libboost_date_time.so.1.71.0
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /opt/ros/noetic/lib/libcpp_common.so
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/aarch64-linux-gnu/libboost_system.so.1.71.0
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/aarch64-linux-gnu/libboost_thread.so.1.71.0
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/aarch64-linux-gnu/libconsole_bridge.so.0.4
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/libceres.so.1.14.0
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/aarch64-linux-gnu/libboost_system.so.1.71.0
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/aarch64-linux-gnu/libboost_serialization.so.1.71.0
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/aarch64-linux-gnu/libboost_filesystem.so.1.71.0
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/aarch64-linux-gnu/libboost_thread.so.1.71.0
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/aarch64-linux-gnu/libboost_system.so.1.71.0
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/aarch64-linux-gnu/libboost_serialization.so.1.71.0
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/aarch64-linux-gnu/libboost_filesystem.so.1.71.0
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/aarch64-linux-gnu/libboost_thread.so.1.71.0
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/aarch64-linux-gnu/libboost_atomic.so.1.71.0
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/aarch64-linux-gnu/libglog.so
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/aarch64-linux-gnu/libgflags.so.2.2.2
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: /usr/lib/aarch64-linux-gnu/libboost_atomic.so.1.71.0
+/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so: slam/slam_toolbox/CMakeFiles/ceres_solver_plugin.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/F1Tenth/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library /home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so"
+	cd /home/ubuntu/F1Tenth/velma/build/slam/slam_toolbox && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ceres_solver_plugin.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-slam/slam_toolbox/CMakeFiles/ceres_solver_plugin.dir/build: /home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so
+slam/slam_toolbox/CMakeFiles/ceres_solver_plugin.dir/build: /home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so
 
 .PHONY : slam/slam_toolbox/CMakeFiles/ceres_solver_plugin.dir/build
 
 slam/slam_toolbox/CMakeFiles/ceres_solver_plugin.dir/clean:
-	cd /home/thattori/capstone/velma/build/slam/slam_toolbox && $(CMAKE_COMMAND) -P CMakeFiles/ceres_solver_plugin.dir/cmake_clean.cmake
+	cd /home/ubuntu/F1Tenth/velma/build/slam/slam_toolbox && $(CMAKE_COMMAND) -P CMakeFiles/ceres_solver_plugin.dir/cmake_clean.cmake
 .PHONY : slam/slam_toolbox/CMakeFiles/ceres_solver_plugin.dir/clean
 
 slam/slam_toolbox/CMakeFiles/ceres_solver_plugin.dir/depend:
-	cd /home/thattori/capstone/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/thattori/capstone/velma/src /home/thattori/capstone/velma/src/slam/slam_toolbox /home/thattori/capstone/velma/build /home/thattori/capstone/velma/build/slam/slam_toolbox /home/thattori/capstone/velma/build/slam/slam_toolbox/CMakeFiles/ceres_solver_plugin.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/F1Tenth/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/F1Tenth/velma/src /home/ubuntu/F1Tenth/velma/src/slam/slam_toolbox /home/ubuntu/F1Tenth/velma/build /home/ubuntu/F1Tenth/velma/build/slam/slam_toolbox /home/ubuntu/F1Tenth/velma/build/slam/slam_toolbox/CMakeFiles/ceres_solver_plugin.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : slam/slam_toolbox/CMakeFiles/ceres_solver_plugin.dir/depend
 

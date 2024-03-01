@@ -21,9 +21,9 @@
 class WallFollow {
 
 private:
-    ros::NodeHandle n_;
-    ros::Publisher pub_;
-    ros::Subscriber sub_;
+    ros::NodeHandle n;
+    ros::Publisher pub;
+    ros::Subscriber sub;
     double prev_error = 0.0;
     double prev_tmoment = ros::Time::now().toSec();
     double error = 0.0;
@@ -33,8 +33,13 @@ private:
 
 public:
     WallFollow() {
-        pub_ = n_.advertise<ackermann_msgs::AckermannDriveStamped>("/wall_follow_drive", 1000);
-        sub_ = n_.subscribe("/scan", 1000, &WallFollow::callback, this);
+        n = ros::NodeHandle("~");
+        
+        std::string scan_topic;
+        n.getParam("scan_topic", scan_topic);
+        
+        pub = n.advertise<ackermann_msgs::AckermannDriveStamped>("/wall_follow_drive", 1000);
+        sub = n.subscribe(scan_topic, 1000, &WallFollow::callback, this);
     }
 
     void callback(const sensor_msgs::LaserScan& lidar_info) {
@@ -85,7 +90,7 @@ public:
             ackermann_drive_result.drive.speed = 1.5;
             velocity = 0.5;
         }
-        pub_.publish(ackermann_drive_result);
+        pub.publish(ackermann_drive_result);
     }
 };
 

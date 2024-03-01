@@ -1,8 +1,8 @@
-# Install script for directory: /home/thattori/capstone/velma/src/led_control
+# Install script for directory: /home/ubuntu/F1Tenth/velma/src/led_control
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/thattori/capstone/velma/install")
+  set(CMAKE_INSTALL_PREFIX "/home/ubuntu/F1Tenth/velma/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,53 +38,53 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/led_control/msg" TYPE FILE FILES "/home/thattori/capstone/velma/src/led_control/msg/gpiowrite.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/led_control/msg" TYPE FILE FILES "/home/ubuntu/F1Tenth/velma/src/led_control/msg/gpiowrite.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/led_control/cmake" TYPE FILE FILES "/home/thattori/capstone/velma/build/led_control/catkin_generated/installspace/led_control-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/led_control/cmake" TYPE FILE FILES "/home/ubuntu/F1Tenth/velma/build/led_control/catkin_generated/installspace/led_control-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/thattori/capstone/velma/devel/include/led_control")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/ubuntu/F1Tenth/velma/devel/include/led_control")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/thattori/capstone/velma/devel/share/roseus/ros/led_control")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/led_control")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/thattori/capstone/velma/devel/share/common-lisp/ros/led_control")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/ubuntu/F1Tenth/velma/devel/share/common-lisp/ros/led_control")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/thattori/capstone/velma/devel/share/gennodejs/ros/led_control")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/ubuntu/F1Tenth/velma/devel/share/gennodejs/ros/led_control")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/thattori/capstone/velma/devel/lib/python3/dist-packages/led_control")
+  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/ubuntu/F1Tenth/velma/devel/lib/python3/dist-packages/led_control")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/thattori/capstone/velma/devel/lib/python3/dist-packages/led_control")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/ubuntu/F1Tenth/velma/devel/lib/python3/dist-packages/led_control")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/thattori/capstone/velma/build/led_control/catkin_generated/installspace/led_control.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ubuntu/F1Tenth/velma/build/led_control/catkin_generated/installspace/led_control.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/led_control/cmake" TYPE FILE FILES "/home/thattori/capstone/velma/build/led_control/catkin_generated/installspace/led_control-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/led_control/cmake" TYPE FILE FILES "/home/ubuntu/F1Tenth/velma/build/led_control/catkin_generated/installspace/led_control-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/led_control/cmake" TYPE FILE FILES
-    "/home/thattori/capstone/velma/build/led_control/catkin_generated/installspace/led_controlConfig.cmake"
-    "/home/thattori/capstone/velma/build/led_control/catkin_generated/installspace/led_controlConfig-version.cmake"
+    "/home/ubuntu/F1Tenth/velma/build/led_control/catkin_generated/installspace/led_controlConfig.cmake"
+    "/home/ubuntu/F1Tenth/velma/build/led_control/catkin_generated/installspace/led_controlConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/led_control" TYPE FILE FILES "/home/thattori/capstone/velma/src/led_control/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/led_control" TYPE FILE FILES "/home/ubuntu/F1Tenth/velma/src/led_control/package.xml")
 endif()
 

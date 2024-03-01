@@ -1,0 +1,7 @@
+<launch>
+  <!-- Safety Pins -->
+  <node pkg="gpio_control" type="gpio_control_node" name="safety_leds" args="--device pi --output 18 26" output="screen"/>
+  
+  <!-- Object Detect Pin -->
+  <node pkg="gpio_control" type="gpio_control_node" name="search_detection_led" args="--device pi --output 5" output="screen"/>
+</launch>

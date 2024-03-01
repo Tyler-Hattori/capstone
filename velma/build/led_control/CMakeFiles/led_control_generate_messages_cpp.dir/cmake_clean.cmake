@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/thattori/capstone/velma/devel/include/led_control/gpiowrite.h"
+  "/home/ubuntu/F1Tenth/velma/devel/include/led_control/gpiowrite.h"
   "CMakeFiles/led_control_generate_messages_cpp"
 )
 

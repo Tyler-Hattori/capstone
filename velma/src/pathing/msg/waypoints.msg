@@ -1,1 +1,2 @@
-geometry_msgs/PoseWithCovarianceStamped[] waypoints
+float64[] xs
+float64[] ys

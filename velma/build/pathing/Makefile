@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/thattori/capstone/velma/src
+CMAKE_SOURCE_DIR = /home/ubuntu/F1Tenth/velma/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/thattori/capstone/velma/build
+CMAKE_BINARY_DIR = /home/ubuntu/F1Tenth/velma/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,15 +68,17 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
 
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
 
 # Special rule for the target install
 install: preinstall
@@ -90,6 +92,16 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -100,17 +112,6 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -123,28 +124,27 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
 
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/thattori/capstone/velma/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles /home/thattori/capstone/velma/build/pathing/CMakeFiles/progress.marks
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thattori/capstone/velma/build/CMakeFiles 0
+	cd /home/ubuntu/F1Tenth/velma/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/F1Tenth/velma/build/CMakeFiles /home/ubuntu/F1Tenth/velma/build/pathing/CMakeFiles/progress.marks
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/F1Tenth/velma/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/clean
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,772 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/preinstall
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/preinstall
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/thattori/capstone/velma/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/ubuntu/F1Tenth/velma/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
-pathing/CMakeFiles/mux.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/mux.dir/rule
-.PHONY : pathing/CMakeFiles/mux.dir/rule
-
-# Convenience name for target.
-mux: pathing/CMakeFiles/mux.dir/rule
-
-.PHONY : mux
-
-# fast build rule for target.
-mux/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/mux.dir/build.make pathing/CMakeFiles/mux.dir/build
-.PHONY : mux/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData.dir/rule
-.PHONY : pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData.dir/rule
-
-# Convenience name for target.
-_pathing_generate_messages_check_deps_PixyData: pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData.dir/rule
-
-.PHONY : _pathing_generate_messages_check_deps_PixyData
-
-# fast build rule for target.
-_pathing_generate_messages_check_deps_PixyData/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData.dir/build.make pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData.dir/build
-.PHONY : _pathing_generate_messages_check_deps_PixyData/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/actionlib_generate_messages_cpp.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
-.PHONY : pathing/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-actionlib_generate_messages_cpp: pathing/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
-
-.PHONY : actionlib_generate_messages_cpp
-
-# fast build rule for target.
-actionlib_generate_messages_cpp/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make pathing/CMakeFiles/actionlib_generate_messages_cpp.dir/build
-.PHONY : actionlib_generate_messages_cpp/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyResolution.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyResolution.dir/rule
-.PHONY : pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyResolution.dir/rule
-
-# Convenience name for target.
-_pathing_generate_messages_check_deps_PixyResolution: pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyResolution.dir/rule
-
-.PHONY : _pathing_generate_messages_check_deps_PixyResolution
-
-# fast build rule for target.
-_pathing_generate_messages_check_deps_PixyResolution/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyResolution.dir/build.make pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyResolution.dir/build
-.PHONY : _pathing_generate_messages_check_deps_PixyResolution/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/pathing_generate_messages_cpp.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/pathing_generate_messages_cpp.dir/rule
-.PHONY : pathing/CMakeFiles/pathing_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-pathing_generate_messages_cpp: pathing/CMakeFiles/pathing_generate_messages_cpp.dir/rule
-
-.PHONY : pathing_generate_messages_cpp
-
-# fast build rule for target.
-pathing_generate_messages_cpp/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing_generate_messages_cpp.dir/build.make pathing/CMakeFiles/pathing_generate_messages_cpp.dir/build
-.PHONY : pathing_generate_messages_cpp/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/pathing_geneus.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/pathing_geneus.dir/rule
-.PHONY : pathing/CMakeFiles/pathing_geneus.dir/rule
-
-# Convenience name for target.
-pathing_geneus: pathing/CMakeFiles/pathing_geneus.dir/rule
-
-.PHONY : pathing_geneus
-
-# fast build rule for target.
-pathing_geneus/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing_geneus.dir/build.make pathing/CMakeFiles/pathing_geneus.dir/build
-.PHONY : pathing_geneus/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/pathing_generate_messages.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/pathing_generate_messages.dir/rule
-.PHONY : pathing/CMakeFiles/pathing_generate_messages.dir/rule
-
-# Convenience name for target.
-pathing_generate_messages: pathing/CMakeFiles/pathing_generate_messages.dir/rule
-
-.PHONY : pathing_generate_messages
-
-# fast build rule for target.
-pathing_generate_messages/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing_generate_messages.dir/build.make pathing/CMakeFiles/pathing_generate_messages.dir/build
-.PHONY : pathing_generate_messages/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
-.PHONY : pathing/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-tf2_msgs_generate_messages_lisp: pathing/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : tf2_msgs_generate_messages_lisp
-
-# fast build rule for target.
-tf2_msgs_generate_messages_lisp/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build.make pathing/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build
-.PHONY : tf2_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/unsearched_area_costmap.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/unsearched_area_costmap.dir/rule
-.PHONY : pathing/CMakeFiles/unsearched_area_costmap.dir/rule
-
-# Convenience name for target.
-unsearched_area_costmap: pathing/CMakeFiles/unsearched_area_costmap.dir/rule
-
-.PHONY : unsearched_area_costmap
-
-# fast build rule for target.
-unsearched_area_costmap/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/unsearched_area_costmap.dir/build.make pathing/CMakeFiles/unsearched_area_costmap.dir/build
-.PHONY : unsearched_area_costmap/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/rule
-.PHONY : pathing/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-visualization_msgs_generate_messages_nodejs: pathing/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : visualization_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-visualization_msgs_generate_messages_nodejs/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/build.make pathing/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/build
-.PHONY : visualization_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/sim_car.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/sim_car.dir/rule
-.PHONY : pathing/CMakeFiles/sim_car.dir/rule
-
-# Convenience name for target.
-sim_car: pathing/CMakeFiles/sim_car.dir/rule
-
-.PHONY : sim_car
-
-# fast build rule for target.
-sim_car/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/sim_car.dir/build.make pathing/CMakeFiles/sim_car.dir/build
-.PHONY : sim_car/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
-.PHONY : pathing/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-visualization_msgs_generate_messages_lisp: pathing/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : visualization_msgs_generate_messages_lisp
-
-# fast build rule for target.
-visualization_msgs_generate_messages_lisp/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build.make pathing/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build
-.PHONY : visualization_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/pose_to_posewithcovariance.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/pose_to_posewithcovariance.dir/rule
-.PHONY : pathing/CMakeFiles/pose_to_posewithcovariance.dir/rule
-
-# Convenience name for target.
-pose_to_posewithcovariance: pathing/CMakeFiles/pose_to_posewithcovariance.dir/rule
-
-.PHONY : pose_to_posewithcovariance
-
-# fast build rule for target.
-pose_to_posewithcovariance/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/pose_to_posewithcovariance.dir/build.make pathing/CMakeFiles/pose_to_posewithcovariance.dir/build
-.PHONY : pose_to_posewithcovariance/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/gpio.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/gpio.dir/rule
-.PHONY : pathing/CMakeFiles/gpio.dir/rule
-
-# Convenience name for target.
-gpio: pathing/CMakeFiles/gpio.dir/rule
-
-.PHONY : gpio
-
-# fast build rule for target.
-gpio/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/gpio.dir/build.make pathing/CMakeFiles/gpio.dir/build
-.PHONY : gpio/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/pathing.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/pathing.dir/rule
-.PHONY : pathing/CMakeFiles/pathing.dir/rule
-
-# Convenience name for target.
-pathing: pathing/CMakeFiles/pathing.dir/rule
-
-.PHONY : pathing
-
-# fast build rule for target.
-pathing/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing.dir/build.make pathing/CMakeFiles/pathing.dir/build
-.PHONY : pathing/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyBlock.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyBlock.dir/rule
-.PHONY : pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyBlock.dir/rule
-
-# Convenience name for target.
-_pathing_generate_messages_check_deps_PixyBlock: pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyBlock.dir/rule
-
-.PHONY : _pathing_generate_messages_check_deps_PixyBlock
-
-# fast build rule for target.
-_pathing_generate_messages_check_deps_PixyBlock/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyBlock.dir/build.make pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyBlock.dir/build
-.PHONY : _pathing_generate_messages_check_deps_PixyBlock/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
-.PHONY : pathing/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-tf2_msgs_generate_messages_cpp: pathing/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : tf2_msgs_generate_messages_cpp
-
-# fast build rule for target.
-tf2_msgs_generate_messages_cpp/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make pathing/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
-.PHONY : tf2_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
-.PHONY : pathing/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-tf2_msgs_generate_messages_py: pathing/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
-
-.PHONY : tf2_msgs_generate_messages_py
-
-# fast build rule for target.
-tf2_msgs_generate_messages_py/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make pathing/CMakeFiles/tf2_msgs_generate_messages_py.dir/build
-.PHONY : tf2_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule
-.PHONY : pathing/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-visualization_msgs_generate_messages_eus: pathing/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule
-
-.PHONY : visualization_msgs_generate_messages_eus
-
-# fast build rule for target.
-visualization_msgs_generate_messages_eus/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/visualization_msgs_generate_messages_eus.dir/build.make pathing/CMakeFiles/visualization_msgs_generate_messages_eus.dir/build
-.PHONY : visualization_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/behavior_controller.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/behavior_controller.dir/rule
-.PHONY : pathing/CMakeFiles/behavior_controller.dir/rule
-
-# Convenience name for target.
-behavior_controller: pathing/CMakeFiles/behavior_controller.dir/rule
-
-.PHONY : behavior_controller
-
-# fast build rule for target.
-behavior_controller/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/behavior_controller.dir/build.make pathing/CMakeFiles/behavior_controller.dir/build
-.PHONY : behavior_controller/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
-.PHONY : pathing/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-visualization_msgs_generate_messages_py: pathing/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
-
-.PHONY : visualization_msgs_generate_messages_py
-
-# fast build rule for target.
-visualization_msgs_generate_messages_py/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/visualization_msgs_generate_messages_py.dir/build.make pathing/CMakeFiles/visualization_msgs_generate_messages_py.dir/build
-.PHONY : visualization_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
-.PHONY : pathing/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-tf2_msgs_generate_messages_eus: pathing/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
-
-.PHONY : tf2_msgs_generate_messages_eus
-
-# fast build rule for target.
-tf2_msgs_generate_messages_eus/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make pathing/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
-.PHONY : tf2_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/pathing_generate_messages_lisp.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/pathing_generate_messages_lisp.dir/rule
-.PHONY : pathing/CMakeFiles/pathing_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-pathing_generate_messages_lisp: pathing/CMakeFiles/pathing_generate_messages_lisp.dir/rule
-
-.PHONY : pathing_generate_messages_lisp
-
-# fast build rule for target.
-pathing_generate_messages_lisp/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing_generate_messages_lisp.dir/build.make pathing/CMakeFiles/pathing_generate_messages_lisp.dir/build
-.PHONY : pathing_generate_messages_lisp/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
-.PHONY : pathing/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-tf2_msgs_generate_messages_nodejs: pathing/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : tf2_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-tf2_msgs_generate_messages_nodejs/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build.make pathing/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build
-.PHONY : tf2_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/pathing_gencpp.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/pathing_gencpp.dir/rule
-.PHONY : pathing/CMakeFiles/pathing_gencpp.dir/rule
-
-# Convenience name for target.
-pathing_gencpp: pathing/CMakeFiles/pathing_gencpp.dir/rule
-
-.PHONY : pathing_gencpp
-
-# fast build rule for target.
-pathing_gencpp/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing_gencpp.dir/build.make pathing/CMakeFiles/pathing_gencpp.dir/build
-.PHONY : pathing_gencpp/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/actionlib_generate_messages_lisp.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
-.PHONY : pathing/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-actionlib_generate_messages_lisp: pathing/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
-
-.PHONY : actionlib_generate_messages_lisp
-
-# fast build rule for target.
-actionlib_generate_messages_lisp/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make pathing/CMakeFiles/actionlib_generate_messages_lisp.dir/build
-.PHONY : actionlib_generate_messages_lisp/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/object_costmap.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/object_costmap.dir/rule
-.PHONY : pathing/CMakeFiles/object_costmap.dir/rule
-
-# Convenience name for target.
-object_costmap: pathing/CMakeFiles/object_costmap.dir/rule
-
-.PHONY : object_costmap
-
-# fast build rule for target.
-object_costmap/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/object_costmap.dir/build.make pathing/CMakeFiles/object_costmap.dir/build
-.PHONY : object_costmap/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/wander.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/wander.dir/rule
-.PHONY : pathing/CMakeFiles/wander.dir/rule
-
-# Convenience name for target.
-wander: pathing/CMakeFiles/wander.dir/rule
-
-.PHONY : wander
-
-# fast build rule for target.
-wander/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/wander.dir/build.make pathing/CMakeFiles/wander.dir/build
-.PHONY : wander/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/pathing_generate_messages_eus.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/pathing_generate_messages_eus.dir/rule
-.PHONY : pathing/CMakeFiles/pathing_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-pathing_generate_messages_eus: pathing/CMakeFiles/pathing_generate_messages_eus.dir/rule
-
-.PHONY : pathing_generate_messages_eus
-
-# fast build rule for target.
-pathing_generate_messages_eus/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing_generate_messages_eus.dir/build.make pathing/CMakeFiles/pathing_generate_messages_eus.dir/build
-.PHONY : pathing_generate_messages_eus/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/_pathing_generate_messages_check_deps_gpioread.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/_pathing_generate_messages_check_deps_gpioread.dir/rule
-.PHONY : pathing/CMakeFiles/_pathing_generate_messages_check_deps_gpioread.dir/rule
-
-# Convenience name for target.
-_pathing_generate_messages_check_deps_gpioread: pathing/CMakeFiles/_pathing_generate_messages_check_deps_gpioread.dir/rule
-
-.PHONY : _pathing_generate_messages_check_deps_gpioread
-
-# fast build rule for target.
-_pathing_generate_messages_check_deps_gpioread/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/_pathing_generate_messages_check_deps_gpioread.dir/build.make pathing/CMakeFiles/_pathing_generate_messages_check_deps_gpioread.dir/build
-.PHONY : _pathing_generate_messages_check_deps_gpioread/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
-.PHONY : pathing/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-actionlib_generate_messages_nodejs: pathing/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
-
-.PHONY : actionlib_generate_messages_nodejs
-
-# fast build rule for target.
-actionlib_generate_messages_nodejs/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make pathing/CMakeFiles/actionlib_generate_messages_nodejs.dir/build
-.PHONY : actionlib_generate_messages_nodejs/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/_pathing_generate_messages_check_deps_gpiowrite.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/_pathing_generate_messages_check_deps_gpiowrite.dir/rule
-.PHONY : pathing/CMakeFiles/_pathing_generate_messages_check_deps_gpiowrite.dir/rule
-
-# Convenience name for target.
-_pathing_generate_messages_check_deps_gpiowrite: pathing/CMakeFiles/_pathing_generate_messages_check_deps_gpiowrite.dir/rule
-
-.PHONY : _pathing_generate_messages_check_deps_gpiowrite
-
-# fast build rule for target.
-_pathing_generate_messages_check_deps_gpiowrite/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/_pathing_generate_messages_check_deps_gpiowrite.dir/build.make pathing/CMakeFiles/_pathing_generate_messages_check_deps_gpiowrite.dir/build
-.PHONY : _pathing_generate_messages_check_deps_gpiowrite/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/actionlib_generate_messages_py.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/actionlib_generate_messages_py.dir/rule
-.PHONY : pathing/CMakeFiles/actionlib_generate_messages_py.dir/rule
-
-# Convenience name for target.
-actionlib_generate_messages_py: pathing/CMakeFiles/actionlib_generate_messages_py.dir/rule
-
-.PHONY : actionlib_generate_messages_py
-
-# fast build rule for target.
-actionlib_generate_messages_py/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/actionlib_generate_messages_py.dir/build.make pathing/CMakeFiles/actionlib_generate_messages_py.dir/build
-.PHONY : actionlib_generate_messages_py/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/keyboard.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/keyboard.dir/rule
-.PHONY : pathing/CMakeFiles/keyboard.dir/rule
-
-# Convenience name for target.
-keyboard: pathing/CMakeFiles/keyboard.dir/rule
-
-.PHONY : keyboard
-
-# fast build rule for target.
-keyboard/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/keyboard.dir/build.make pathing/CMakeFiles/keyboard.dir/build
-.PHONY : keyboard/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/ease_costmap.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/ease_costmap.dir/rule
-.PHONY : pathing/CMakeFiles/ease_costmap.dir/rule
-
-# Convenience name for target.
-ease_costmap: pathing/CMakeFiles/ease_costmap.dir/rule
-
-.PHONY : ease_costmap
-
-# fast build rule for target.
-ease_costmap/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/ease_costmap.dir/build.make pathing/CMakeFiles/ease_costmap.dir/build
-.PHONY : ease_costmap/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/pathing_generate_messages_py.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/pathing_generate_messages_py.dir/rule
-.PHONY : pathing/CMakeFiles/pathing_generate_messages_py.dir/rule
-
-# Convenience name for target.
-pathing_generate_messages_py: pathing/CMakeFiles/pathing_generate_messages_py.dir/rule
-
-.PHONY : pathing_generate_messages_py
-
-# fast build rule for target.
-pathing_generate_messages_py/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing_generate_messages_py.dir/build.make pathing/CMakeFiles/pathing_generate_messages_py.dir/build
-.PHONY : pathing_generate_messages_py/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/pathing_genpy.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/pathing_genpy.dir/rule
-.PHONY : pathing/CMakeFiles/pathing_genpy.dir/rule
-
-# Convenience name for target.
-pathing_genpy: pathing/CMakeFiles/pathing_genpy.dir/rule
-
-.PHONY : pathing_genpy
-
-# fast build rule for target.
-pathing_genpy/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing_genpy.dir/build.make pathing/CMakeFiles/pathing_genpy.dir/build
-.PHONY : pathing_genpy/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/frontier_costmap.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/frontier_costmap.dir/rule
-.PHONY : pathing/CMakeFiles/frontier_costmap.dir/rule
-
-# Convenience name for target.
-frontier_costmap: pathing/CMakeFiles/frontier_costmap.dir/rule
-
-.PHONY : frontier_costmap
-
-# fast build rule for target.
-frontier_costmap/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/frontier_costmap.dir/build.make pathing/CMakeFiles/frontier_costmap.dir/build
-.PHONY : frontier_costmap/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/gap_follow.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/gap_follow.dir/rule
-.PHONY : pathing/CMakeFiles/gap_follow.dir/rule
-
-# Convenience name for target.
-gap_follow: pathing/CMakeFiles/gap_follow.dir/rule
-
-.PHONY : gap_follow
-
-# fast build rule for target.
-gap_follow/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/gap_follow.dir/build.make pathing/CMakeFiles/gap_follow.dir/build
-.PHONY : gap_follow/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/pathing_genlisp.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/pathing_genlisp.dir/rule
-.PHONY : pathing/CMakeFiles/pathing_genlisp.dir/rule
-
-# Convenience name for target.
-pathing_genlisp: pathing/CMakeFiles/pathing_genlisp.dir/rule
-
-.PHONY : pathing_genlisp
-
-# fast build rule for target.
-pathing_genlisp/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing_genlisp.dir/build.make pathing/CMakeFiles/pathing_genlisp.dir/build
-.PHONY : pathing_genlisp/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/obstacle_costmap.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/obstacle_costmap.dir/rule
-.PHONY : pathing/CMakeFiles/obstacle_costmap.dir/rule
-
-# Convenience name for target.
-obstacle_costmap: pathing/CMakeFiles/obstacle_costmap.dir/rule
-
-.PHONY : obstacle_costmap
-
-# fast build rule for target.
-obstacle_costmap/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/obstacle_costmap.dir/build.make pathing/CMakeFiles/obstacle_costmap.dir/build
-.PHONY : obstacle_costmap/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/time_costmap.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/time_costmap.dir/rule
-.PHONY : pathing/CMakeFiles/time_costmap.dir/rule
-
-# Convenience name for target.
-time_costmap: pathing/CMakeFiles/time_costmap.dir/rule
-
-.PHONY : time_costmap
-
-# fast build rule for target.
-time_costmap/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/time_costmap.dir/build.make pathing/CMakeFiles/time_costmap.dir/build
-.PHONY : time_costmap/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/explore.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/explore.dir/rule
-.PHONY : pathing/CMakeFiles/explore.dir/rule
-
-# Convenience name for target.
-explore: pathing/CMakeFiles/explore.dir/rule
-
-.PHONY : explore
-
-# fast build rule for target.
-explore/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/explore.dir/build.make pathing/CMakeFiles/explore.dir/build
-.PHONY : explore/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/nav_mux.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/nav_mux.dir/rule
-.PHONY : pathing/CMakeFiles/nav_mux.dir/rule
-
-# Convenience name for target.
-nav_mux: pathing/CMakeFiles/nav_mux.dir/rule
-
-.PHONY : nav_mux
-
-# fast build rule for target.
-nav_mux/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/nav_mux.dir/build.make pathing/CMakeFiles/nav_mux.dir/build
-.PHONY : nav_mux/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/actionlib_generate_messages_eus.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/actionlib_generate_messages_eus.dir/rule
-.PHONY : pathing/CMakeFiles/actionlib_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-actionlib_generate_messages_eus: pathing/CMakeFiles/actionlib_generate_messages_eus.dir/rule
-
-.PHONY : actionlib_generate_messages_eus
-
-# fast build rule for target.
-actionlib_generate_messages_eus/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/actionlib_generate_messages_eus.dir/build.make pathing/CMakeFiles/actionlib_generate_messages_eus.dir/build
-.PHONY : actionlib_generate_messages_eus/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/puppy_guard.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/puppy_guard.dir/rule
-.PHONY : pathing/CMakeFiles/puppy_guard.dir/rule
-
-# Convenience name for target.
-puppy_guard: pathing/CMakeFiles/puppy_guard.dir/rule
-
-.PHONY : puppy_guard
-
-# fast build rule for target.
-puppy_guard/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/puppy_guard.dir/build.make pathing/CMakeFiles/puppy_guard.dir/build
-.PHONY : puppy_guard/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/pathing_generate_messages_nodejs.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/pathing_generate_messages_nodejs.dir/rule
-.PHONY : pathing/CMakeFiles/pathing_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-pathing_generate_messages_nodejs: pathing/CMakeFiles/pathing_generate_messages_nodejs.dir/rule
-
-.PHONY : pathing_generate_messages_nodejs
-
-# fast build rule for target.
-pathing_generate_messages_nodejs/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing_generate_messages_nodejs.dir/build.make pathing/CMakeFiles/pathing_generate_messages_nodejs.dir/build
-.PHONY : pathing_generate_messages_nodejs/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/recall.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/recall.dir/rule
-.PHONY : pathing/CMakeFiles/recall.dir/rule
-
-# Convenience name for target.
-recall: pathing/CMakeFiles/recall.dir/rule
-
-.PHONY : recall
-
-# fast build rule for target.
-recall/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/recall.dir/build.make pathing/CMakeFiles/recall.dir/build
-.PHONY : recall/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/pathing_gennodejs.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/pathing_gennodejs.dir/rule
-.PHONY : pathing/CMakeFiles/pathing_gennodejs.dir/rule
-
-# Convenience name for target.
-pathing_gennodejs: pathing/CMakeFiles/pathing_gennodejs.dir/rule
-
-.PHONY : pathing_gennodejs
-
-# fast build rule for target.
-pathing_gennodejs/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing_gennodejs.dir/build.make pathing/CMakeFiles/pathing_gennodejs.dir/build
-.PHONY : pathing_gennodejs/fast
-
-# Convenience name for target.
-pathing/CMakeFiles/search.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/search.dir/rule
-.PHONY : pathing/CMakeFiles/search.dir/rule
-
-# Convenience name for target.
-search: pathing/CMakeFiles/search.dir/rule
-
-.PHONY : search
-
-# fast build rule for target.
-search/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/search.dir/build.make pathing/CMakeFiles/search.dir/build
-.PHONY : search/fast
-
-# Convenience name for target.
 pathing/CMakeFiles/sim_lidar.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/sim_lidar.dir/rule
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/sim_lidar.dir/rule
 .PHONY : pathing/CMakeFiles/sim_lidar.dir/rule
 
 # Convenience name for target.
@@ -929,12 +179,837 @@ sim_lidar: pathing/CMakeFiles/sim_lidar.dir/rule
 
 # fast build rule for target.
 sim_lidar/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/sim_lidar.dir/build.make pathing/CMakeFiles/sim_lidar.dir/build
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/sim_lidar.dir/build.make pathing/CMakeFiles/sim_lidar.dir/build
 .PHONY : sim_lidar/fast
 
 # Convenience name for target.
+pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData.dir/rule
+.PHONY : pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData.dir/rule
+
+# Convenience name for target.
+_pathing_generate_messages_check_deps_PixyData: pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData.dir/rule
+
+.PHONY : _pathing_generate_messages_check_deps_PixyData
+
+# fast build rule for target.
+_pathing_generate_messages_check_deps_PixyData/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData.dir/build.make pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyData.dir/build
+.PHONY : _pathing_generate_messages_check_deps_PixyData/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/actionlib_generate_messages_cpp.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
+.PHONY : pathing/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+actionlib_generate_messages_cpp: pathing/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
+
+.PHONY : actionlib_generate_messages_cpp
+
+# fast build rule for target.
+actionlib_generate_messages_cpp/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make pathing/CMakeFiles/actionlib_generate_messages_cpp.dir/build
+.PHONY : actionlib_generate_messages_cpp/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyResolution.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyResolution.dir/rule
+.PHONY : pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyResolution.dir/rule
+
+# Convenience name for target.
+_pathing_generate_messages_check_deps_PixyResolution: pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyResolution.dir/rule
+
+.PHONY : _pathing_generate_messages_check_deps_PixyResolution
+
+# fast build rule for target.
+_pathing_generate_messages_check_deps_PixyResolution/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyResolution.dir/build.make pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyResolution.dir/build
+.PHONY : _pathing_generate_messages_check_deps_PixyResolution/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/pathing_generate_messages.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/pathing_generate_messages.dir/rule
+.PHONY : pathing/CMakeFiles/pathing_generate_messages.dir/rule
+
+# Convenience name for target.
+pathing_generate_messages: pathing/CMakeFiles/pathing_generate_messages.dir/rule
+
+.PHONY : pathing_generate_messages
+
+# fast build rule for target.
+pathing_generate_messages/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing_generate_messages.dir/build.make pathing/CMakeFiles/pathing_generate_messages.dir/build
+.PHONY : pathing_generate_messages/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
+.PHONY : pathing/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+tf2_msgs_generate_messages_lisp: pathing/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : tf2_msgs_generate_messages_lisp
+
+# fast build rule for target.
+tf2_msgs_generate_messages_lisp/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build.make pathing/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build
+.PHONY : tf2_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/unsearched_area_costmap.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/unsearched_area_costmap.dir/rule
+.PHONY : pathing/CMakeFiles/unsearched_area_costmap.dir/rule
+
+# Convenience name for target.
+unsearched_area_costmap: pathing/CMakeFiles/unsearched_area_costmap.dir/rule
+
+.PHONY : unsearched_area_costmap
+
+# fast build rule for target.
+unsearched_area_costmap/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/unsearched_area_costmap.dir/build.make pathing/CMakeFiles/unsearched_area_costmap.dir/build
+.PHONY : unsearched_area_costmap/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/rule
+.PHONY : pathing/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+visualization_msgs_generate_messages_nodejs: pathing/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : visualization_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+visualization_msgs_generate_messages_nodejs/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/build.make pathing/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/build
+.PHONY : visualization_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
+.PHONY : pathing/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+visualization_msgs_generate_messages_lisp: pathing/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : visualization_msgs_generate_messages_lisp
+
+# fast build rule for target.
+visualization_msgs_generate_messages_lisp/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build.make pathing/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build
+.PHONY : visualization_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/pose_to_posewithcovariance.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/pose_to_posewithcovariance.dir/rule
+.PHONY : pathing/CMakeFiles/pose_to_posewithcovariance.dir/rule
+
+# Convenience name for target.
+pose_to_posewithcovariance: pathing/CMakeFiles/pose_to_posewithcovariance.dir/rule
+
+.PHONY : pose_to_posewithcovariance
+
+# fast build rule for target.
+pose_to_posewithcovariance/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/pose_to_posewithcovariance.dir/build.make pathing/CMakeFiles/pose_to_posewithcovariance.dir/build
+.PHONY : pose_to_posewithcovariance/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/gpio.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/gpio.dir/rule
+.PHONY : pathing/CMakeFiles/gpio.dir/rule
+
+# Convenience name for target.
+gpio: pathing/CMakeFiles/gpio.dir/rule
+
+.PHONY : gpio
+
+# fast build rule for target.
+gpio/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/gpio.dir/build.make pathing/CMakeFiles/gpio.dir/build
+.PHONY : gpio/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/actionlib_generate_messages_eus.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/actionlib_generate_messages_eus.dir/rule
+.PHONY : pathing/CMakeFiles/actionlib_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+actionlib_generate_messages_eus: pathing/CMakeFiles/actionlib_generate_messages_eus.dir/rule
+
+.PHONY : actionlib_generate_messages_eus
+
+# fast build rule for target.
+actionlib_generate_messages_eus/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/actionlib_generate_messages_eus.dir/build.make pathing/CMakeFiles/actionlib_generate_messages_eus.dir/build
+.PHONY : actionlib_generate_messages_eus/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyBlock.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyBlock.dir/rule
+.PHONY : pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyBlock.dir/rule
+
+# Convenience name for target.
+_pathing_generate_messages_check_deps_PixyBlock: pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyBlock.dir/rule
+
+.PHONY : _pathing_generate_messages_check_deps_PixyBlock
+
+# fast build rule for target.
+_pathing_generate_messages_check_deps_PixyBlock/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyBlock.dir/build.make pathing/CMakeFiles/_pathing_generate_messages_check_deps_PixyBlock.dir/build
+.PHONY : _pathing_generate_messages_check_deps_PixyBlock/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/pathing.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/pathing.dir/rule
+.PHONY : pathing/CMakeFiles/pathing.dir/rule
+
+# Convenience name for target.
+pathing: pathing/CMakeFiles/pathing.dir/rule
+
+.PHONY : pathing
+
+# fast build rule for target.
+pathing/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing.dir/build.make pathing/CMakeFiles/pathing.dir/build
+.PHONY : pathing/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
+.PHONY : pathing/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+tf2_msgs_generate_messages_py: pathing/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
+
+.PHONY : tf2_msgs_generate_messages_py
+
+# fast build rule for target.
+tf2_msgs_generate_messages_py/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make pathing/CMakeFiles/tf2_msgs_generate_messages_py.dir/build
+.PHONY : tf2_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule
+.PHONY : pathing/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+visualization_msgs_generate_messages_eus: pathing/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule
+
+.PHONY : visualization_msgs_generate_messages_eus
+
+# fast build rule for target.
+visualization_msgs_generate_messages_eus/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/visualization_msgs_generate_messages_eus.dir/build.make pathing/CMakeFiles/visualization_msgs_generate_messages_eus.dir/build
+.PHONY : visualization_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/behavior_controller.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/behavior_controller.dir/rule
+.PHONY : pathing/CMakeFiles/behavior_controller.dir/rule
+
+# Convenience name for target.
+behavior_controller: pathing/CMakeFiles/behavior_controller.dir/rule
+
+.PHONY : behavior_controller
+
+# fast build rule for target.
+behavior_controller/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/behavior_controller.dir/build.make pathing/CMakeFiles/behavior_controller.dir/build
+.PHONY : behavior_controller/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/lidar_fix.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/lidar_fix.dir/rule
+.PHONY : pathing/CMakeFiles/lidar_fix.dir/rule
+
+# Convenience name for target.
+lidar_fix: pathing/CMakeFiles/lidar_fix.dir/rule
+
+.PHONY : lidar_fix
+
+# fast build rule for target.
+lidar_fix/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/lidar_fix.dir/build.make pathing/CMakeFiles/lidar_fix.dir/build
+.PHONY : lidar_fix/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/_pathing_generate_messages_check_deps_seenPoints.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/_pathing_generate_messages_check_deps_seenPoints.dir/rule
+.PHONY : pathing/CMakeFiles/_pathing_generate_messages_check_deps_seenPoints.dir/rule
+
+# Convenience name for target.
+_pathing_generate_messages_check_deps_seenPoints: pathing/CMakeFiles/_pathing_generate_messages_check_deps_seenPoints.dir/rule
+
+.PHONY : _pathing_generate_messages_check_deps_seenPoints
+
+# fast build rule for target.
+_pathing_generate_messages_check_deps_seenPoints/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/_pathing_generate_messages_check_deps_seenPoints.dir/build.make pathing/CMakeFiles/_pathing_generate_messages_check_deps_seenPoints.dir/build
+.PHONY : _pathing_generate_messages_check_deps_seenPoints/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/sim_car.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/sim_car.dir/rule
+.PHONY : pathing/CMakeFiles/sim_car.dir/rule
+
+# Convenience name for target.
+sim_car: pathing/CMakeFiles/sim_car.dir/rule
+
+.PHONY : sim_car
+
+# fast build rule for target.
+sim_car/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/sim_car.dir/build.make pathing/CMakeFiles/sim_car.dir/build
+.PHONY : sim_car/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/_pathing_generate_messages_check_deps_waypoints.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/_pathing_generate_messages_check_deps_waypoints.dir/rule
+.PHONY : pathing/CMakeFiles/_pathing_generate_messages_check_deps_waypoints.dir/rule
+
+# Convenience name for target.
+_pathing_generate_messages_check_deps_waypoints: pathing/CMakeFiles/_pathing_generate_messages_check_deps_waypoints.dir/rule
+
+.PHONY : _pathing_generate_messages_check_deps_waypoints
+
+# fast build rule for target.
+_pathing_generate_messages_check_deps_waypoints/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/_pathing_generate_messages_check_deps_waypoints.dir/build.make pathing/CMakeFiles/_pathing_generate_messages_check_deps_waypoints.dir/build
+.PHONY : _pathing_generate_messages_check_deps_waypoints/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/gap_follow.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/gap_follow.dir/rule
+.PHONY : pathing/CMakeFiles/gap_follow.dir/rule
+
+# Convenience name for target.
+gap_follow: pathing/CMakeFiles/gap_follow.dir/rule
+
+.PHONY : gap_follow
+
+# fast build rule for target.
+gap_follow/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/gap_follow.dir/build.make pathing/CMakeFiles/gap_follow.dir/build
+.PHONY : gap_follow/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/frontier_costmap.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/frontier_costmap.dir/rule
+.PHONY : pathing/CMakeFiles/frontier_costmap.dir/rule
+
+# Convenience name for target.
+frontier_costmap: pathing/CMakeFiles/frontier_costmap.dir/rule
+
+.PHONY : frontier_costmap
+
+# fast build rule for target.
+frontier_costmap/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/frontier_costmap.dir/build.make pathing/CMakeFiles/frontier_costmap.dir/build
+.PHONY : frontier_costmap/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/tf_generate_messages_nodejs.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/tf_generate_messages_nodejs.dir/rule
+.PHONY : pathing/CMakeFiles/tf_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+tf_generate_messages_nodejs: pathing/CMakeFiles/tf_generate_messages_nodejs.dir/rule
+
+.PHONY : tf_generate_messages_nodejs
+
+# fast build rule for target.
+tf_generate_messages_nodejs/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/tf_generate_messages_nodejs.dir/build.make pathing/CMakeFiles/tf_generate_messages_nodejs.dir/build
+.PHONY : tf_generate_messages_nodejs/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/object_costmap.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/object_costmap.dir/rule
+.PHONY : pathing/CMakeFiles/object_costmap.dir/rule
+
+# Convenience name for target.
+object_costmap: pathing/CMakeFiles/object_costmap.dir/rule
+
+.PHONY : object_costmap
+
+# fast build rule for target.
+object_costmap/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/object_costmap.dir/build.make pathing/CMakeFiles/object_costmap.dir/build
+.PHONY : object_costmap/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/_pathing_generate_messages_check_deps_gpioread.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/_pathing_generate_messages_check_deps_gpioread.dir/rule
+.PHONY : pathing/CMakeFiles/_pathing_generate_messages_check_deps_gpioread.dir/rule
+
+# Convenience name for target.
+_pathing_generate_messages_check_deps_gpioread: pathing/CMakeFiles/_pathing_generate_messages_check_deps_gpioread.dir/rule
+
+.PHONY : _pathing_generate_messages_check_deps_gpioread
+
+# fast build rule for target.
+_pathing_generate_messages_check_deps_gpioread/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/_pathing_generate_messages_check_deps_gpioread.dir/build.make pathing/CMakeFiles/_pathing_generate_messages_check_deps_gpioread.dir/build
+.PHONY : _pathing_generate_messages_check_deps_gpioread/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
+.PHONY : pathing/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+actionlib_generate_messages_nodejs: pathing/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
+
+.PHONY : actionlib_generate_messages_nodejs
+
+# fast build rule for target.
+actionlib_generate_messages_nodejs/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make pathing/CMakeFiles/actionlib_generate_messages_nodejs.dir/build
+.PHONY : actionlib_generate_messages_nodejs/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/_pathing_generate_messages_check_deps_gpiowrite.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/_pathing_generate_messages_check_deps_gpiowrite.dir/rule
+.PHONY : pathing/CMakeFiles/_pathing_generate_messages_check_deps_gpiowrite.dir/rule
+
+# Convenience name for target.
+_pathing_generate_messages_check_deps_gpiowrite: pathing/CMakeFiles/_pathing_generate_messages_check_deps_gpiowrite.dir/rule
+
+.PHONY : _pathing_generate_messages_check_deps_gpiowrite
+
+# fast build rule for target.
+_pathing_generate_messages_check_deps_gpiowrite/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/_pathing_generate_messages_check_deps_gpiowrite.dir/build.make pathing/CMakeFiles/_pathing_generate_messages_check_deps_gpiowrite.dir/build
+.PHONY : _pathing_generate_messages_check_deps_gpiowrite/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/tf_generate_messages_eus.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/tf_generate_messages_eus.dir/rule
+.PHONY : pathing/CMakeFiles/tf_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+tf_generate_messages_eus: pathing/CMakeFiles/tf_generate_messages_eus.dir/rule
+
+.PHONY : tf_generate_messages_eus
+
+# fast build rule for target.
+tf_generate_messages_eus/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/tf_generate_messages_eus.dir/build.make pathing/CMakeFiles/tf_generate_messages_eus.dir/build
+.PHONY : tf_generate_messages_eus/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
+.PHONY : pathing/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+tf2_msgs_generate_messages_cpp: pathing/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : tf2_msgs_generate_messages_cpp
+
+# fast build rule for target.
+tf2_msgs_generate_messages_cpp/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make pathing/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
+.PHONY : tf2_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/tf_generate_messages_py.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/tf_generate_messages_py.dir/rule
+.PHONY : pathing/CMakeFiles/tf_generate_messages_py.dir/rule
+
+# Convenience name for target.
+tf_generate_messages_py: pathing/CMakeFiles/tf_generate_messages_py.dir/rule
+
+.PHONY : tf_generate_messages_py
+
+# fast build rule for target.
+tf_generate_messages_py/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/tf_generate_messages_py.dir/build.make pathing/CMakeFiles/tf_generate_messages_py.dir/build
+.PHONY : tf_generate_messages_py/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/actionlib_generate_messages_py.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/actionlib_generate_messages_py.dir/rule
+.PHONY : pathing/CMakeFiles/actionlib_generate_messages_py.dir/rule
+
+# Convenience name for target.
+actionlib_generate_messages_py: pathing/CMakeFiles/actionlib_generate_messages_py.dir/rule
+
+.PHONY : actionlib_generate_messages_py
+
+# fast build rule for target.
+actionlib_generate_messages_py/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/actionlib_generate_messages_py.dir/build.make pathing/CMakeFiles/actionlib_generate_messages_py.dir/build
+.PHONY : actionlib_generate_messages_py/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
+.PHONY : pathing/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+visualization_msgs_generate_messages_py: pathing/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
+
+.PHONY : visualization_msgs_generate_messages_py
+
+# fast build rule for target.
+visualization_msgs_generate_messages_py/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/visualization_msgs_generate_messages_py.dir/build.make pathing/CMakeFiles/visualization_msgs_generate_messages_py.dir/build
+.PHONY : visualization_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
+.PHONY : pathing/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+tf2_msgs_generate_messages_eus: pathing/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
+
+.PHONY : tf2_msgs_generate_messages_eus
+
+# fast build rule for target.
+tf2_msgs_generate_messages_eus/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make pathing/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
+.PHONY : tf2_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/pathing_generate_messages_cpp.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/pathing_generate_messages_cpp.dir/rule
+.PHONY : pathing/CMakeFiles/pathing_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+pathing_generate_messages_cpp: pathing/CMakeFiles/pathing_generate_messages_cpp.dir/rule
+
+.PHONY : pathing_generate_messages_cpp
+
+# fast build rule for target.
+pathing_generate_messages_cpp/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing_generate_messages_cpp.dir/build.make pathing/CMakeFiles/pathing_generate_messages_cpp.dir/build
+.PHONY : pathing_generate_messages_cpp/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/actionlib_generate_messages_lisp.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
+.PHONY : pathing/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+actionlib_generate_messages_lisp: pathing/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
+
+.PHONY : actionlib_generate_messages_lisp
+
+# fast build rule for target.
+actionlib_generate_messages_lisp/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make pathing/CMakeFiles/actionlib_generate_messages_lisp.dir/build
+.PHONY : actionlib_generate_messages_lisp/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/pathing_gencpp.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/pathing_gencpp.dir/rule
+.PHONY : pathing/CMakeFiles/pathing_gencpp.dir/rule
+
+# Convenience name for target.
+pathing_gencpp: pathing/CMakeFiles/pathing_gencpp.dir/rule
+
+.PHONY : pathing_gencpp
+
+# fast build rule for target.
+pathing_gencpp/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing_gencpp.dir/build.make pathing/CMakeFiles/pathing_gencpp.dir/build
+.PHONY : pathing_gencpp/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/mux.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/mux.dir/rule
+.PHONY : pathing/CMakeFiles/mux.dir/rule
+
+# Convenience name for target.
+mux: pathing/CMakeFiles/mux.dir/rule
+
+.PHONY : mux
+
+# fast build rule for target.
+mux/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/mux.dir/build.make pathing/CMakeFiles/mux.dir/build
+.PHONY : mux/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/pathing_generate_messages_eus.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/pathing_generate_messages_eus.dir/rule
+.PHONY : pathing/CMakeFiles/pathing_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+pathing_generate_messages_eus: pathing/CMakeFiles/pathing_generate_messages_eus.dir/rule
+
+.PHONY : pathing_generate_messages_eus
+
+# fast build rule for target.
+pathing_generate_messages_eus/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing_generate_messages_eus.dir/build.make pathing/CMakeFiles/pathing_generate_messages_eus.dir/build
+.PHONY : pathing_generate_messages_eus/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/ease_costmap.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/ease_costmap.dir/rule
+.PHONY : pathing/CMakeFiles/ease_costmap.dir/rule
+
+# Convenience name for target.
+ease_costmap: pathing/CMakeFiles/ease_costmap.dir/rule
+
+.PHONY : ease_costmap
+
+# fast build rule for target.
+ease_costmap/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/ease_costmap.dir/build.make pathing/CMakeFiles/ease_costmap.dir/build
+.PHONY : ease_costmap/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/roomba.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/roomba.dir/rule
+.PHONY : pathing/CMakeFiles/roomba.dir/rule
+
+# Convenience name for target.
+roomba: pathing/CMakeFiles/roomba.dir/rule
+
+.PHONY : roomba
+
+# fast build rule for target.
+roomba/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/roomba.dir/build.make pathing/CMakeFiles/roomba.dir/build
+.PHONY : roomba/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/keyboard.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/keyboard.dir/rule
+.PHONY : pathing/CMakeFiles/keyboard.dir/rule
+
+# Convenience name for target.
+keyboard: pathing/CMakeFiles/keyboard.dir/rule
+
+.PHONY : keyboard
+
+# fast build rule for target.
+keyboard/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/keyboard.dir/build.make pathing/CMakeFiles/keyboard.dir/build
+.PHONY : keyboard/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/pathing_geneus.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/pathing_geneus.dir/rule
+.PHONY : pathing/CMakeFiles/pathing_geneus.dir/rule
+
+# Convenience name for target.
+pathing_geneus: pathing/CMakeFiles/pathing_geneus.dir/rule
+
+.PHONY : pathing_geneus
+
+# fast build rule for target.
+pathing_geneus/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing_geneus.dir/build.make pathing/CMakeFiles/pathing_geneus.dir/build
+.PHONY : pathing_geneus/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/pathing_generate_messages_lisp.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/pathing_generate_messages_lisp.dir/rule
+.PHONY : pathing/CMakeFiles/pathing_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+pathing_generate_messages_lisp: pathing/CMakeFiles/pathing_generate_messages_lisp.dir/rule
+
+.PHONY : pathing_generate_messages_lisp
+
+# fast build rule for target.
+pathing_generate_messages_lisp/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing_generate_messages_lisp.dir/build.make pathing/CMakeFiles/pathing_generate_messages_lisp.dir/build
+.PHONY : pathing_generate_messages_lisp/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
+.PHONY : pathing/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+tf2_msgs_generate_messages_nodejs: pathing/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : tf2_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+tf2_msgs_generate_messages_nodejs/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build.make pathing/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build
+.PHONY : tf2_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/nav_fix.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/nav_fix.dir/rule
+.PHONY : pathing/CMakeFiles/nav_fix.dir/rule
+
+# Convenience name for target.
+nav_fix: pathing/CMakeFiles/nav_fix.dir/rule
+
+.PHONY : nav_fix
+
+# fast build rule for target.
+nav_fix/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/nav_fix.dir/build.make pathing/CMakeFiles/nav_fix.dir/build
+.PHONY : nav_fix/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/tf_generate_messages_lisp.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/tf_generate_messages_lisp.dir/rule
+.PHONY : pathing/CMakeFiles/tf_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+tf_generate_messages_lisp: pathing/CMakeFiles/tf_generate_messages_lisp.dir/rule
+
+.PHONY : tf_generate_messages_lisp
+
+# fast build rule for target.
+tf_generate_messages_lisp/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/tf_generate_messages_lisp.dir/build.make pathing/CMakeFiles/tf_generate_messages_lisp.dir/build
+.PHONY : tf_generate_messages_lisp/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/pathing_genlisp.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/pathing_genlisp.dir/rule
+.PHONY : pathing/CMakeFiles/pathing_genlisp.dir/rule
+
+# Convenience name for target.
+pathing_genlisp: pathing/CMakeFiles/pathing_genlisp.dir/rule
+
+.PHONY : pathing_genlisp
+
+# fast build rule for target.
+pathing_genlisp/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing_genlisp.dir/build.make pathing/CMakeFiles/pathing_genlisp.dir/build
+.PHONY : pathing_genlisp/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/pathing_generate_messages_py.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/pathing_generate_messages_py.dir/rule
+.PHONY : pathing/CMakeFiles/pathing_generate_messages_py.dir/rule
+
+# Convenience name for target.
+pathing_generate_messages_py: pathing/CMakeFiles/pathing_generate_messages_py.dir/rule
+
+.PHONY : pathing_generate_messages_py
+
+# fast build rule for target.
+pathing_generate_messages_py/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing_generate_messages_py.dir/build.make pathing/CMakeFiles/pathing_generate_messages_py.dir/build
+.PHONY : pathing_generate_messages_py/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/pathing_genpy.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/pathing_genpy.dir/rule
+.PHONY : pathing/CMakeFiles/pathing_genpy.dir/rule
+
+# Convenience name for target.
+pathing_genpy: pathing/CMakeFiles/pathing_genpy.dir/rule
+
+.PHONY : pathing_genpy
+
+# fast build rule for target.
+pathing_genpy/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing_genpy.dir/build.make pathing/CMakeFiles/pathing_genpy.dir/build
+.PHONY : pathing_genpy/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/explore.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/explore.dir/rule
+.PHONY : pathing/CMakeFiles/explore.dir/rule
+
+# Convenience name for target.
+explore: pathing/CMakeFiles/explore.dir/rule
+
+.PHONY : explore
+
+# fast build rule for target.
+explore/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/explore.dir/build.make pathing/CMakeFiles/explore.dir/build
+.PHONY : explore/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/log.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/log.dir/rule
+.PHONY : pathing/CMakeFiles/log.dir/rule
+
+# Convenience name for target.
+log: pathing/CMakeFiles/log.dir/rule
+
+.PHONY : log
+
+# fast build rule for target.
+log/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/log.dir/build.make pathing/CMakeFiles/log.dir/build
+.PHONY : log/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/pathing_generate_messages_nodejs.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/pathing_generate_messages_nodejs.dir/rule
+.PHONY : pathing/CMakeFiles/pathing_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+pathing_generate_messages_nodejs: pathing/CMakeFiles/pathing_generate_messages_nodejs.dir/rule
+
+.PHONY : pathing_generate_messages_nodejs
+
+# fast build rule for target.
+pathing_generate_messages_nodejs/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing_generate_messages_nodejs.dir/build.make pathing/CMakeFiles/pathing_generate_messages_nodejs.dir/build
+.PHONY : pathing_generate_messages_nodejs/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/recall.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/recall.dir/rule
+.PHONY : pathing/CMakeFiles/recall.dir/rule
+
+# Convenience name for target.
+recall: pathing/CMakeFiles/recall.dir/rule
+
+.PHONY : recall
+
+# fast build rule for target.
+recall/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/recall.dir/build.make pathing/CMakeFiles/recall.dir/build
+.PHONY : recall/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/pathing_gennodejs.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/pathing_gennodejs.dir/rule
+.PHONY : pathing/CMakeFiles/pathing_gennodejs.dir/rule
+
+# Convenience name for target.
+pathing_gennodejs: pathing/CMakeFiles/pathing_gennodejs.dir/rule
+
+.PHONY : pathing_gennodejs
+
+# fast build rule for target.
+pathing_gennodejs/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing_gennodejs.dir/build.make pathing/CMakeFiles/pathing_gennodejs.dir/build
+.PHONY : pathing_gennodejs/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/search.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/search.dir/rule
+.PHONY : pathing/CMakeFiles/search.dir/rule
+
+# Convenience name for target.
+search: pathing/CMakeFiles/search.dir/rule
+
+.PHONY : search
+
+# fast build rule for target.
+search/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/search.dir/build.make pathing/CMakeFiles/search.dir/build
+.PHONY : search/fast
+
+# Convenience name for target.
 pathing/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
 .PHONY : pathing/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -944,12 +1019,12 @@ visualization_msgs_generate_messages_cpp: pathing/CMakeFiles/visualization_msgs_
 
 # fast build rule for target.
 visualization_msgs_generate_messages_cpp/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build.make pathing/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build.make pathing/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build
 .PHONY : visualization_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 pathing/CMakeFiles/wall_follow.dir/rule:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/wall_follow.dir/rule
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/wall_follow.dir/rule
 .PHONY : pathing/CMakeFiles/wall_follow.dir/rule
 
 # Convenience name for target.
@@ -959,8 +1034,257 @@ wall_follow: pathing/CMakeFiles/wall_follow.dir/rule
 
 # fast build rule for target.
 wall_follow/fast:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/wall_follow.dir/build.make pathing/CMakeFiles/wall_follow.dir/build
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/wall_follow.dir/build.make pathing/CMakeFiles/wall_follow.dir/build
 .PHONY : wall_follow/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/time_costmap.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/time_costmap.dir/rule
+.PHONY : pathing/CMakeFiles/time_costmap.dir/rule
+
+# Convenience name for target.
+time_costmap: pathing/CMakeFiles/time_costmap.dir/rule
+
+.PHONY : time_costmap
+
+# fast build rule for target.
+time_costmap/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/time_costmap.dir/build.make pathing/CMakeFiles/time_costmap.dir/build
+.PHONY : time_costmap/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/tf_generate_messages_cpp.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/tf_generate_messages_cpp.dir/rule
+.PHONY : pathing/CMakeFiles/tf_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+tf_generate_messages_cpp: pathing/CMakeFiles/tf_generate_messages_cpp.dir/rule
+
+.PHONY : tf_generate_messages_cpp
+
+# fast build rule for target.
+tf_generate_messages_cpp/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/tf_generate_messages_cpp.dir/build.make pathing/CMakeFiles/tf_generate_messages_cpp.dir/build
+.PHONY : tf_generate_messages_cpp/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/view.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/view.dir/rule
+.PHONY : pathing/CMakeFiles/view.dir/rule
+
+# Convenience name for target.
+view: pathing/CMakeFiles/view.dir/rule
+
+.PHONY : view
+
+# fast build rule for target.
+view/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/view.dir/build.make pathing/CMakeFiles/view.dir/build
+.PHONY : view/fast
+
+# Convenience name for target.
+pathing/CMakeFiles/nav_mux.dir/rule:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f CMakeFiles/Makefile2 pathing/CMakeFiles/nav_mux.dir/rule
+.PHONY : pathing/CMakeFiles/nav_mux.dir/rule
+
+# Convenience name for target.
+nav_mux: pathing/CMakeFiles/nav_mux.dir/rule
+
+.PHONY : nav_mux
+
+# fast build rule for target.
+nav_mux/fast:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/nav_mux.dir/build.make pathing/CMakeFiles/nav_mux.dir/build
+.PHONY : nav_mux/fast
+
+node/algorithms/explore.o: node/algorithms/explore.cpp.o
+
+.PHONY : node/algorithms/explore.o
+
+# target to build an object file
+node/algorithms/explore.cpp.o:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/explore.dir/build.make pathing/CMakeFiles/explore.dir/node/algorithms/explore.cpp.o
+.PHONY : node/algorithms/explore.cpp.o
+
+node/algorithms/explore.i: node/algorithms/explore.cpp.i
+
+.PHONY : node/algorithms/explore.i
+
+# target to preprocess a source file
+node/algorithms/explore.cpp.i:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/explore.dir/build.make pathing/CMakeFiles/explore.dir/node/algorithms/explore.cpp.i
+.PHONY : node/algorithms/explore.cpp.i
+
+node/algorithms/explore.s: node/algorithms/explore.cpp.s
+
+.PHONY : node/algorithms/explore.s
+
+# target to generate assembly for a file
+node/algorithms/explore.cpp.s:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/explore.dir/build.make pathing/CMakeFiles/explore.dir/node/algorithms/explore.cpp.s
+.PHONY : node/algorithms/explore.cpp.s
+
+node/algorithms/gap_follow.o: node/algorithms/gap_follow.cpp.o
+
+.PHONY : node/algorithms/gap_follow.o
+
+# target to build an object file
+node/algorithms/gap_follow.cpp.o:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/gap_follow.dir/build.make pathing/CMakeFiles/gap_follow.dir/node/algorithms/gap_follow.cpp.o
+.PHONY : node/algorithms/gap_follow.cpp.o
+
+node/algorithms/gap_follow.i: node/algorithms/gap_follow.cpp.i
+
+.PHONY : node/algorithms/gap_follow.i
+
+# target to preprocess a source file
+node/algorithms/gap_follow.cpp.i:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/gap_follow.dir/build.make pathing/CMakeFiles/gap_follow.dir/node/algorithms/gap_follow.cpp.i
+.PHONY : node/algorithms/gap_follow.cpp.i
+
+node/algorithms/gap_follow.s: node/algorithms/gap_follow.cpp.s
+
+.PHONY : node/algorithms/gap_follow.s
+
+# target to generate assembly for a file
+node/algorithms/gap_follow.cpp.s:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/gap_follow.dir/build.make pathing/CMakeFiles/gap_follow.dir/node/algorithms/gap_follow.cpp.s
+.PHONY : node/algorithms/gap_follow.cpp.s
+
+node/algorithms/log.o: node/algorithms/log.cpp.o
+
+.PHONY : node/algorithms/log.o
+
+# target to build an object file
+node/algorithms/log.cpp.o:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/log.dir/build.make pathing/CMakeFiles/log.dir/node/algorithms/log.cpp.o
+.PHONY : node/algorithms/log.cpp.o
+
+node/algorithms/log.i: node/algorithms/log.cpp.i
+
+.PHONY : node/algorithms/log.i
+
+# target to preprocess a source file
+node/algorithms/log.cpp.i:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/log.dir/build.make pathing/CMakeFiles/log.dir/node/algorithms/log.cpp.i
+.PHONY : node/algorithms/log.cpp.i
+
+node/algorithms/log.s: node/algorithms/log.cpp.s
+
+.PHONY : node/algorithms/log.s
+
+# target to generate assembly for a file
+node/algorithms/log.cpp.s:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/log.dir/build.make pathing/CMakeFiles/log.dir/node/algorithms/log.cpp.s
+.PHONY : node/algorithms/log.cpp.s
+
+node/algorithms/recall.o: node/algorithms/recall.cpp.o
+
+.PHONY : node/algorithms/recall.o
+
+# target to build an object file
+node/algorithms/recall.cpp.o:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/recall.dir/build.make pathing/CMakeFiles/recall.dir/node/algorithms/recall.cpp.o
+.PHONY : node/algorithms/recall.cpp.o
+
+node/algorithms/recall.i: node/algorithms/recall.cpp.i
+
+.PHONY : node/algorithms/recall.i
+
+# target to preprocess a source file
+node/algorithms/recall.cpp.i:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/recall.dir/build.make pathing/CMakeFiles/recall.dir/node/algorithms/recall.cpp.i
+.PHONY : node/algorithms/recall.cpp.i
+
+node/algorithms/recall.s: node/algorithms/recall.cpp.s
+
+.PHONY : node/algorithms/recall.s
+
+# target to generate assembly for a file
+node/algorithms/recall.cpp.s:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/recall.dir/build.make pathing/CMakeFiles/recall.dir/node/algorithms/recall.cpp.s
+.PHONY : node/algorithms/recall.cpp.s
+
+node/algorithms/roomba.o: node/algorithms/roomba.cpp.o
+
+.PHONY : node/algorithms/roomba.o
+
+# target to build an object file
+node/algorithms/roomba.cpp.o:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/roomba.dir/build.make pathing/CMakeFiles/roomba.dir/node/algorithms/roomba.cpp.o
+.PHONY : node/algorithms/roomba.cpp.o
+
+node/algorithms/roomba.i: node/algorithms/roomba.cpp.i
+
+.PHONY : node/algorithms/roomba.i
+
+# target to preprocess a source file
+node/algorithms/roomba.cpp.i:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/roomba.dir/build.make pathing/CMakeFiles/roomba.dir/node/algorithms/roomba.cpp.i
+.PHONY : node/algorithms/roomba.cpp.i
+
+node/algorithms/roomba.s: node/algorithms/roomba.cpp.s
+
+.PHONY : node/algorithms/roomba.s
+
+# target to generate assembly for a file
+node/algorithms/roomba.cpp.s:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/roomba.dir/build.make pathing/CMakeFiles/roomba.dir/node/algorithms/roomba.cpp.s
+.PHONY : node/algorithms/roomba.cpp.s
+
+node/algorithms/search.o: node/algorithms/search.cpp.o
+
+.PHONY : node/algorithms/search.o
+
+# target to build an object file
+node/algorithms/search.cpp.o:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/search.dir/build.make pathing/CMakeFiles/search.dir/node/algorithms/search.cpp.o
+.PHONY : node/algorithms/search.cpp.o
+
+node/algorithms/search.i: node/algorithms/search.cpp.i
+
+.PHONY : node/algorithms/search.i
+
+# target to preprocess a source file
+node/algorithms/search.cpp.i:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/search.dir/build.make pathing/CMakeFiles/search.dir/node/algorithms/search.cpp.i
+.PHONY : node/algorithms/search.cpp.i
+
+node/algorithms/search.s: node/algorithms/search.cpp.s
+
+.PHONY : node/algorithms/search.s
+
+# target to generate assembly for a file
+node/algorithms/search.cpp.s:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/search.dir/build.make pathing/CMakeFiles/search.dir/node/algorithms/search.cpp.s
+.PHONY : node/algorithms/search.cpp.s
+
+node/algorithms/wall_follow.o: node/algorithms/wall_follow.cpp.o
+
+.PHONY : node/algorithms/wall_follow.o
+
+# target to build an object file
+node/algorithms/wall_follow.cpp.o:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/wall_follow.dir/build.make pathing/CMakeFiles/wall_follow.dir/node/algorithms/wall_follow.cpp.o
+.PHONY : node/algorithms/wall_follow.cpp.o
+
+node/algorithms/wall_follow.i: node/algorithms/wall_follow.cpp.i
+
+.PHONY : node/algorithms/wall_follow.i
+
+# target to preprocess a source file
+node/algorithms/wall_follow.cpp.i:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/wall_follow.dir/build.make pathing/CMakeFiles/wall_follow.dir/node/algorithms/wall_follow.cpp.i
+.PHONY : node/algorithms/wall_follow.cpp.i
+
+node/algorithms/wall_follow.s: node/algorithms/wall_follow.cpp.s
+
+.PHONY : node/algorithms/wall_follow.s
+
+# target to generate assembly for a file
+node/algorithms/wall_follow.cpp.s:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/wall_follow.dir/build.make pathing/CMakeFiles/wall_follow.dir/node/algorithms/wall_follow.cpp.s
+.PHONY : node/algorithms/wall_follow.cpp.s
 
 node/behavior_controller.o: node/behavior_controller.cpp.o
 
@@ -968,7 +1292,7 @@ node/behavior_controller.o: node/behavior_controller.cpp.o
 
 # target to build an object file
 node/behavior_controller.cpp.o:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/behavior_controller.dir/build.make pathing/CMakeFiles/behavior_controller.dir/node/behavior_controller.cpp.o
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/behavior_controller.dir/build.make pathing/CMakeFiles/behavior_controller.dir/node/behavior_controller.cpp.o
 .PHONY : node/behavior_controller.cpp.o
 
 node/behavior_controller.i: node/behavior_controller.cpp.i
@@ -977,7 +1301,7 @@ node/behavior_controller.i: node/behavior_controller.cpp.i
 
 # target to preprocess a source file
 node/behavior_controller.cpp.i:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/behavior_controller.dir/build.make pathing/CMakeFiles/behavior_controller.dir/node/behavior_controller.cpp.i
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/behavior_controller.dir/build.make pathing/CMakeFiles/behavior_controller.dir/node/behavior_controller.cpp.i
 .PHONY : node/behavior_controller.cpp.i
 
 node/behavior_controller.s: node/behavior_controller.cpp.s
@@ -986,7 +1310,7 @@ node/behavior_controller.s: node/behavior_controller.cpp.s
 
 # target to generate assembly for a file
 node/behavior_controller.cpp.s:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/behavior_controller.dir/build.make pathing/CMakeFiles/behavior_controller.dir/node/behavior_controller.cpp.s
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/behavior_controller.dir/build.make pathing/CMakeFiles/behavior_controller.dir/node/behavior_controller.cpp.s
 .PHONY : node/behavior_controller.cpp.s
 
 node/costmaps/ease_costmap.o: node/costmaps/ease_costmap.cpp.o
@@ -995,7 +1319,7 @@ node/costmaps/ease_costmap.o: node/costmaps/ease_costmap.cpp.o
 
 # target to build an object file
 node/costmaps/ease_costmap.cpp.o:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/ease_costmap.dir/build.make pathing/CMakeFiles/ease_costmap.dir/node/costmaps/ease_costmap.cpp.o
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/ease_costmap.dir/build.make pathing/CMakeFiles/ease_costmap.dir/node/costmaps/ease_costmap.cpp.o
 .PHONY : node/costmaps/ease_costmap.cpp.o
 
 node/costmaps/ease_costmap.i: node/costmaps/ease_costmap.cpp.i
@@ -1004,7 +1328,7 @@ node/costmaps/ease_costmap.i: node/costmaps/ease_costmap.cpp.i
 
 # target to preprocess a source file
 node/costmaps/ease_costmap.cpp.i:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/ease_costmap.dir/build.make pathing/CMakeFiles/ease_costmap.dir/node/costmaps/ease_costmap.cpp.i
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/ease_costmap.dir/build.make pathing/CMakeFiles/ease_costmap.dir/node/costmaps/ease_costmap.cpp.i
 .PHONY : node/costmaps/ease_costmap.cpp.i
 
 node/costmaps/ease_costmap.s: node/costmaps/ease_costmap.cpp.s
@@ -1013,7 +1337,7 @@ node/costmaps/ease_costmap.s: node/costmaps/ease_costmap.cpp.s
 
 # target to generate assembly for a file
 node/costmaps/ease_costmap.cpp.s:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/ease_costmap.dir/build.make pathing/CMakeFiles/ease_costmap.dir/node/costmaps/ease_costmap.cpp.s
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/ease_costmap.dir/build.make pathing/CMakeFiles/ease_costmap.dir/node/costmaps/ease_costmap.cpp.s
 .PHONY : node/costmaps/ease_costmap.cpp.s
 
 node/costmaps/frontier_costmap.o: node/costmaps/frontier_costmap.cpp.o
@@ -1022,7 +1346,7 @@ node/costmaps/frontier_costmap.o: node/costmaps/frontier_costmap.cpp.o
 
 # target to build an object file
 node/costmaps/frontier_costmap.cpp.o:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/frontier_costmap.dir/build.make pathing/CMakeFiles/frontier_costmap.dir/node/costmaps/frontier_costmap.cpp.o
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/frontier_costmap.dir/build.make pathing/CMakeFiles/frontier_costmap.dir/node/costmaps/frontier_costmap.cpp.o
 .PHONY : node/costmaps/frontier_costmap.cpp.o
 
 node/costmaps/frontier_costmap.i: node/costmaps/frontier_costmap.cpp.i
@@ -1031,7 +1355,7 @@ node/costmaps/frontier_costmap.i: node/costmaps/frontier_costmap.cpp.i
 
 # target to preprocess a source file
 node/costmaps/frontier_costmap.cpp.i:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/frontier_costmap.dir/build.make pathing/CMakeFiles/frontier_costmap.dir/node/costmaps/frontier_costmap.cpp.i
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/frontier_costmap.dir/build.make pathing/CMakeFiles/frontier_costmap.dir/node/costmaps/frontier_costmap.cpp.i
 .PHONY : node/costmaps/frontier_costmap.cpp.i
 
 node/costmaps/frontier_costmap.s: node/costmaps/frontier_costmap.cpp.s
@@ -1040,7 +1364,7 @@ node/costmaps/frontier_costmap.s: node/costmaps/frontier_costmap.cpp.s
 
 # target to generate assembly for a file
 node/costmaps/frontier_costmap.cpp.s:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/frontier_costmap.dir/build.make pathing/CMakeFiles/frontier_costmap.dir/node/costmaps/frontier_costmap.cpp.s
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/frontier_costmap.dir/build.make pathing/CMakeFiles/frontier_costmap.dir/node/costmaps/frontier_costmap.cpp.s
 .PHONY : node/costmaps/frontier_costmap.cpp.s
 
 node/costmaps/object_costmap.o: node/costmaps/object_costmap.cpp.o
@@ -1049,7 +1373,7 @@ node/costmaps/object_costmap.o: node/costmaps/object_costmap.cpp.o
 
 # target to build an object file
 node/costmaps/object_costmap.cpp.o:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/object_costmap.dir/build.make pathing/CMakeFiles/object_costmap.dir/node/costmaps/object_costmap.cpp.o
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/object_costmap.dir/build.make pathing/CMakeFiles/object_costmap.dir/node/costmaps/object_costmap.cpp.o
 .PHONY : node/costmaps/object_costmap.cpp.o
 
 node/costmaps/object_costmap.i: node/costmaps/object_costmap.cpp.i
@@ -1058,7 +1382,7 @@ node/costmaps/object_costmap.i: node/costmaps/object_costmap.cpp.i
 
 # target to preprocess a source file
 node/costmaps/object_costmap.cpp.i:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/object_costmap.dir/build.make pathing/CMakeFiles/object_costmap.dir/node/costmaps/object_costmap.cpp.i
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/object_costmap.dir/build.make pathing/CMakeFiles/object_costmap.dir/node/costmaps/object_costmap.cpp.i
 .PHONY : node/costmaps/object_costmap.cpp.i
 
 node/costmaps/object_costmap.s: node/costmaps/object_costmap.cpp.s
@@ -1067,35 +1391,8 @@ node/costmaps/object_costmap.s: node/costmaps/object_costmap.cpp.s
 
 # target to generate assembly for a file
 node/costmaps/object_costmap.cpp.s:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/object_costmap.dir/build.make pathing/CMakeFiles/object_costmap.dir/node/costmaps/object_costmap.cpp.s
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/object_costmap.dir/build.make pathing/CMakeFiles/object_costmap.dir/node/costmaps/object_costmap.cpp.s
 .PHONY : node/costmaps/object_costmap.cpp.s
-
-node/costmaps/obstacle_costmap.o: node/costmaps/obstacle_costmap.cpp.o
-
-.PHONY : node/costmaps/obstacle_costmap.o
-
-# target to build an object file
-node/costmaps/obstacle_costmap.cpp.o:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/obstacle_costmap.dir/build.make pathing/CMakeFiles/obstacle_costmap.dir/node/costmaps/obstacle_costmap.cpp.o
-.PHONY : node/costmaps/obstacle_costmap.cpp.o
-
-node/costmaps/obstacle_costmap.i: node/costmaps/obstacle_costmap.cpp.i
-
-.PHONY : node/costmaps/obstacle_costmap.i
-
-# target to preprocess a source file
-node/costmaps/obstacle_costmap.cpp.i:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/obstacle_costmap.dir/build.make pathing/CMakeFiles/obstacle_costmap.dir/node/costmaps/obstacle_costmap.cpp.i
-.PHONY : node/costmaps/obstacle_costmap.cpp.i
-
-node/costmaps/obstacle_costmap.s: node/costmaps/obstacle_costmap.cpp.s
-
-.PHONY : node/costmaps/obstacle_costmap.s
-
-# target to generate assembly for a file
-node/costmaps/obstacle_costmap.cpp.s:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/obstacle_costmap.dir/build.make pathing/CMakeFiles/obstacle_costmap.dir/node/costmaps/obstacle_costmap.cpp.s
-.PHONY : node/costmaps/obstacle_costmap.cpp.s
 
 node/costmaps/time_costmap.o: node/costmaps/time_costmap.cpp.o
 
@@ -1103,7 +1400,7 @@ node/costmaps/time_costmap.o: node/costmaps/time_costmap.cpp.o
 
 # target to build an object file
 node/costmaps/time_costmap.cpp.o:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/time_costmap.dir/build.make pathing/CMakeFiles/time_costmap.dir/node/costmaps/time_costmap.cpp.o
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/time_costmap.dir/build.make pathing/CMakeFiles/time_costmap.dir/node/costmaps/time_costmap.cpp.o
 .PHONY : node/costmaps/time_costmap.cpp.o
 
 node/costmaps/time_costmap.i: node/costmaps/time_costmap.cpp.i
@@ -1112,7 +1409,7 @@ node/costmaps/time_costmap.i: node/costmaps/time_costmap.cpp.i
 
 # target to preprocess a source file
 node/costmaps/time_costmap.cpp.i:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/time_costmap.dir/build.make pathing/CMakeFiles/time_costmap.dir/node/costmaps/time_costmap.cpp.i
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/time_costmap.dir/build.make pathing/CMakeFiles/time_costmap.dir/node/costmaps/time_costmap.cpp.i
 .PHONY : node/costmaps/time_costmap.cpp.i
 
 node/costmaps/time_costmap.s: node/costmaps/time_costmap.cpp.s
@@ -1121,7 +1418,7 @@ node/costmaps/time_costmap.s: node/costmaps/time_costmap.cpp.s
 
 # target to generate assembly for a file
 node/costmaps/time_costmap.cpp.s:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/time_costmap.dir/build.make pathing/CMakeFiles/time_costmap.dir/node/costmaps/time_costmap.cpp.s
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/time_costmap.dir/build.make pathing/CMakeFiles/time_costmap.dir/node/costmaps/time_costmap.cpp.s
 .PHONY : node/costmaps/time_costmap.cpp.s
 
 node/costmaps/unsearched_area_costmap.o: node/costmaps/unsearched_area_costmap.cpp.o
@@ -1130,7 +1427,7 @@ node/costmaps/unsearched_area_costmap.o: node/costmaps/unsearched_area_costmap.c
 
 # target to build an object file
 node/costmaps/unsearched_area_costmap.cpp.o:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/unsearched_area_costmap.dir/build.make pathing/CMakeFiles/unsearched_area_costmap.dir/node/costmaps/unsearched_area_costmap.cpp.o
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/unsearched_area_costmap.dir/build.make pathing/CMakeFiles/unsearched_area_costmap.dir/node/costmaps/unsearched_area_costmap.cpp.o
 .PHONY : node/costmaps/unsearched_area_costmap.cpp.o
 
 node/costmaps/unsearched_area_costmap.i: node/costmaps/unsearched_area_costmap.cpp.i
@@ -1139,7 +1436,7 @@ node/costmaps/unsearched_area_costmap.i: node/costmaps/unsearched_area_costmap.c
 
 # target to preprocess a source file
 node/costmaps/unsearched_area_costmap.cpp.i:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/unsearched_area_costmap.dir/build.make pathing/CMakeFiles/unsearched_area_costmap.dir/node/costmaps/unsearched_area_costmap.cpp.i
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/unsearched_area_costmap.dir/build.make pathing/CMakeFiles/unsearched_area_costmap.dir/node/costmaps/unsearched_area_costmap.cpp.i
 .PHONY : node/costmaps/unsearched_area_costmap.cpp.i
 
 node/costmaps/unsearched_area_costmap.s: node/costmaps/unsearched_area_costmap.cpp.s
@@ -1148,62 +1445,35 @@ node/costmaps/unsearched_area_costmap.s: node/costmaps/unsearched_area_costmap.c
 
 # target to generate assembly for a file
 node/costmaps/unsearched_area_costmap.cpp.s:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/unsearched_area_costmap.dir/build.make pathing/CMakeFiles/unsearched_area_costmap.dir/node/costmaps/unsearched_area_costmap.cpp.s
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/unsearched_area_costmap.dir/build.make pathing/CMakeFiles/unsearched_area_costmap.dir/node/costmaps/unsearched_area_costmap.cpp.s
 .PHONY : node/costmaps/unsearched_area_costmap.cpp.s
 
-node/explore.o: node/explore.cpp.o
+node/costmaps/view.o: node/costmaps/view.cpp.o
 
-.PHONY : node/explore.o
-
-# target to build an object file
-node/explore.cpp.o:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/explore.dir/build.make pathing/CMakeFiles/explore.dir/node/explore.cpp.o
-.PHONY : node/explore.cpp.o
-
-node/explore.i: node/explore.cpp.i
-
-.PHONY : node/explore.i
-
-# target to preprocess a source file
-node/explore.cpp.i:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/explore.dir/build.make pathing/CMakeFiles/explore.dir/node/explore.cpp.i
-.PHONY : node/explore.cpp.i
-
-node/explore.s: node/explore.cpp.s
-
-.PHONY : node/explore.s
-
-# target to generate assembly for a file
-node/explore.cpp.s:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/explore.dir/build.make pathing/CMakeFiles/explore.dir/node/explore.cpp.s
-.PHONY : node/explore.cpp.s
-
-node/gap_follow.o: node/gap_follow.cpp.o
-
-.PHONY : node/gap_follow.o
+.PHONY : node/costmaps/view.o
 
 # target to build an object file
-node/gap_follow.cpp.o:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/gap_follow.dir/build.make pathing/CMakeFiles/gap_follow.dir/node/gap_follow.cpp.o
-.PHONY : node/gap_follow.cpp.o
+node/costmaps/view.cpp.o:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/view.dir/build.make pathing/CMakeFiles/view.dir/node/costmaps/view.cpp.o
+.PHONY : node/costmaps/view.cpp.o
 
-node/gap_follow.i: node/gap_follow.cpp.i
+node/costmaps/view.i: node/costmaps/view.cpp.i
 
-.PHONY : node/gap_follow.i
+.PHONY : node/costmaps/view.i
 
 # target to preprocess a source file
-node/gap_follow.cpp.i:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/gap_follow.dir/build.make pathing/CMakeFiles/gap_follow.dir/node/gap_follow.cpp.i
-.PHONY : node/gap_follow.cpp.i
+node/costmaps/view.cpp.i:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/view.dir/build.make pathing/CMakeFiles/view.dir/node/costmaps/view.cpp.i
+.PHONY : node/costmaps/view.cpp.i
 
-node/gap_follow.s: node/gap_follow.cpp.s
+node/costmaps/view.s: node/costmaps/view.cpp.s
 
-.PHONY : node/gap_follow.s
+.PHONY : node/costmaps/view.s
 
 # target to generate assembly for a file
-node/gap_follow.cpp.s:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/gap_follow.dir/build.make pathing/CMakeFiles/gap_follow.dir/node/gap_follow.cpp.s
-.PHONY : node/gap_follow.cpp.s
+node/costmaps/view.cpp.s:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/view.dir/build.make pathing/CMakeFiles/view.dir/node/costmaps/view.cpp.s
+.PHONY : node/costmaps/view.cpp.s
 
 node/gpio.o: node/gpio.cpp.o
 
@@ -1211,7 +1481,7 @@ node/gpio.o: node/gpio.cpp.o
 
 # target to build an object file
 node/gpio.cpp.o:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/gpio.dir/build.make pathing/CMakeFiles/gpio.dir/node/gpio.cpp.o
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/gpio.dir/build.make pathing/CMakeFiles/gpio.dir/node/gpio.cpp.o
 .PHONY : node/gpio.cpp.o
 
 node/gpio.i: node/gpio.cpp.i
@@ -1220,7 +1490,7 @@ node/gpio.i: node/gpio.cpp.i
 
 # target to preprocess a source file
 node/gpio.cpp.i:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/gpio.dir/build.make pathing/CMakeFiles/gpio.dir/node/gpio.cpp.i
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/gpio.dir/build.make pathing/CMakeFiles/gpio.dir/node/gpio.cpp.i
 .PHONY : node/gpio.cpp.i
 
 node/gpio.s: node/gpio.cpp.s
@@ -1229,7 +1499,7 @@ node/gpio.s: node/gpio.cpp.s
 
 # target to generate assembly for a file
 node/gpio.cpp.s:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/gpio.dir/build.make pathing/CMakeFiles/gpio.dir/node/gpio.cpp.s
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/gpio.dir/build.make pathing/CMakeFiles/gpio.dir/node/gpio.cpp.s
 .PHONY : node/gpio.cpp.s
 
 node/keyboard.o: node/keyboard.cpp.o
@@ -1238,7 +1508,7 @@ node/keyboard.o: node/keyboard.cpp.o
 
 # target to build an object file
 node/keyboard.cpp.o:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/keyboard.dir/build.make pathing/CMakeFiles/keyboard.dir/node/keyboard.cpp.o
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/keyboard.dir/build.make pathing/CMakeFiles/keyboard.dir/node/keyboard.cpp.o
 .PHONY : node/keyboard.cpp.o
 
 node/keyboard.i: node/keyboard.cpp.i
@@ -1247,7 +1517,7 @@ node/keyboard.i: node/keyboard.cpp.i
 
 # target to preprocess a source file
 node/keyboard.cpp.i:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/keyboard.dir/build.make pathing/CMakeFiles/keyboard.dir/node/keyboard.cpp.i
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/keyboard.dir/build.make pathing/CMakeFiles/keyboard.dir/node/keyboard.cpp.i
 .PHONY : node/keyboard.cpp.i
 
 node/keyboard.s: node/keyboard.cpp.s
@@ -1256,8 +1526,35 @@ node/keyboard.s: node/keyboard.cpp.s
 
 # target to generate assembly for a file
 node/keyboard.cpp.s:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/keyboard.dir/build.make pathing/CMakeFiles/keyboard.dir/node/keyboard.cpp.s
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/keyboard.dir/build.make pathing/CMakeFiles/keyboard.dir/node/keyboard.cpp.s
 .PHONY : node/keyboard.cpp.s
+
+node/lidar_fix.o: node/lidar_fix.cpp.o
+
+.PHONY : node/lidar_fix.o
+
+# target to build an object file
+node/lidar_fix.cpp.o:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/lidar_fix.dir/build.make pathing/CMakeFiles/lidar_fix.dir/node/lidar_fix.cpp.o
+.PHONY : node/lidar_fix.cpp.o
+
+node/lidar_fix.i: node/lidar_fix.cpp.i
+
+.PHONY : node/lidar_fix.i
+
+# target to preprocess a source file
+node/lidar_fix.cpp.i:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/lidar_fix.dir/build.make pathing/CMakeFiles/lidar_fix.dir/node/lidar_fix.cpp.i
+.PHONY : node/lidar_fix.cpp.i
+
+node/lidar_fix.s: node/lidar_fix.cpp.s
+
+.PHONY : node/lidar_fix.s
+
+# target to generate assembly for a file
+node/lidar_fix.cpp.s:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/lidar_fix.dir/build.make pathing/CMakeFiles/lidar_fix.dir/node/lidar_fix.cpp.s
+.PHONY : node/lidar_fix.cpp.s
 
 node/mux.o: node/mux.cpp.o
 
@@ -1265,7 +1562,7 @@ node/mux.o: node/mux.cpp.o
 
 # target to build an object file
 node/mux.cpp.o:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/mux.dir/build.make pathing/CMakeFiles/mux.dir/node/mux.cpp.o
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/mux.dir/build.make pathing/CMakeFiles/mux.dir/node/mux.cpp.o
 .PHONY : node/mux.cpp.o
 
 node/mux.i: node/mux.cpp.i
@@ -1274,7 +1571,7 @@ node/mux.i: node/mux.cpp.i
 
 # target to preprocess a source file
 node/mux.cpp.i:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/mux.dir/build.make pathing/CMakeFiles/mux.dir/node/mux.cpp.i
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/mux.dir/build.make pathing/CMakeFiles/mux.dir/node/mux.cpp.i
 .PHONY : node/mux.cpp.i
 
 node/mux.s: node/mux.cpp.s
@@ -1283,8 +1580,35 @@ node/mux.s: node/mux.cpp.s
 
 # target to generate assembly for a file
 node/mux.cpp.s:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/mux.dir/build.make pathing/CMakeFiles/mux.dir/node/mux.cpp.s
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/mux.dir/build.make pathing/CMakeFiles/mux.dir/node/mux.cpp.s
 .PHONY : node/mux.cpp.s
+
+node/nav_fix.o: node/nav_fix.cpp.o
+
+.PHONY : node/nav_fix.o
+
+# target to build an object file
+node/nav_fix.cpp.o:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/nav_fix.dir/build.make pathing/CMakeFiles/nav_fix.dir/node/nav_fix.cpp.o
+.PHONY : node/nav_fix.cpp.o
+
+node/nav_fix.i: node/nav_fix.cpp.i
+
+.PHONY : node/nav_fix.i
+
+# target to preprocess a source file
+node/nav_fix.cpp.i:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/nav_fix.dir/build.make pathing/CMakeFiles/nav_fix.dir/node/nav_fix.cpp.i
+.PHONY : node/nav_fix.cpp.i
+
+node/nav_fix.s: node/nav_fix.cpp.s
+
+.PHONY : node/nav_fix.s
+
+# target to generate assembly for a file
+node/nav_fix.cpp.s:
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/nav_fix.dir/build.make pathing/CMakeFiles/nav_fix.dir/node/nav_fix.cpp.s
+.PHONY : node/nav_fix.cpp.s
 
 node/nav_mux.o: node/nav_mux.cpp.o
 
@@ -1292,7 +1616,7 @@ node/nav_mux.o: node/nav_mux.cpp.o
 
 # target to build an object file
 node/nav_mux.cpp.o:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/nav_mux.dir/build.make pathing/CMakeFiles/nav_mux.dir/node/nav_mux.cpp.o
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/nav_mux.dir/build.make pathing/CMakeFiles/nav_mux.dir/node/nav_mux.cpp.o
 .PHONY : node/nav_mux.cpp.o
 
 node/nav_mux.i: node/nav_mux.cpp.i
@@ -1301,7 +1625,7 @@ node/nav_mux.i: node/nav_mux.cpp.i
 
 # target to preprocess a source file
 node/nav_mux.cpp.i:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/nav_mux.dir/build.make pathing/CMakeFiles/nav_mux.dir/node/nav_mux.cpp.i
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/nav_mux.dir/build.make pathing/CMakeFiles/nav_mux.dir/node/nav_mux.cpp.i
 .PHONY : node/nav_mux.cpp.i
 
 node/nav_mux.s: node/nav_mux.cpp.s
@@ -1310,7 +1634,7 @@ node/nav_mux.s: node/nav_mux.cpp.s
 
 # target to generate assembly for a file
 node/nav_mux.cpp.s:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/nav_mux.dir/build.make pathing/CMakeFiles/nav_mux.dir/node/nav_mux.cpp.s
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/nav_mux.dir/build.make pathing/CMakeFiles/nav_mux.dir/node/nav_mux.cpp.s
 .PHONY : node/nav_mux.cpp.s
 
 node/pose_to_posewithcovariance.o: node/pose_to_posewithcovariance.cpp.o
@@ -1319,7 +1643,7 @@ node/pose_to_posewithcovariance.o: node/pose_to_posewithcovariance.cpp.o
 
 # target to build an object file
 node/pose_to_posewithcovariance.cpp.o:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/pose_to_posewithcovariance.dir/build.make pathing/CMakeFiles/pose_to_posewithcovariance.dir/node/pose_to_posewithcovariance.cpp.o
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/pose_to_posewithcovariance.dir/build.make pathing/CMakeFiles/pose_to_posewithcovariance.dir/node/pose_to_posewithcovariance.cpp.o
 .PHONY : node/pose_to_posewithcovariance.cpp.o
 
 node/pose_to_posewithcovariance.i: node/pose_to_posewithcovariance.cpp.i
@@ -1328,7 +1652,7 @@ node/pose_to_posewithcovariance.i: node/pose_to_posewithcovariance.cpp.i
 
 # target to preprocess a source file
 node/pose_to_posewithcovariance.cpp.i:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/pose_to_posewithcovariance.dir/build.make pathing/CMakeFiles/pose_to_posewithcovariance.dir/node/pose_to_posewithcovariance.cpp.i
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/pose_to_posewithcovariance.dir/build.make pathing/CMakeFiles/pose_to_posewithcovariance.dir/node/pose_to_posewithcovariance.cpp.i
 .PHONY : node/pose_to_posewithcovariance.cpp.i
 
 node/pose_to_posewithcovariance.s: node/pose_to_posewithcovariance.cpp.s
@@ -1337,89 +1661,8 @@ node/pose_to_posewithcovariance.s: node/pose_to_posewithcovariance.cpp.s
 
 # target to generate assembly for a file
 node/pose_to_posewithcovariance.cpp.s:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/pose_to_posewithcovariance.dir/build.make pathing/CMakeFiles/pose_to_posewithcovariance.dir/node/pose_to_posewithcovariance.cpp.s
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/pose_to_posewithcovariance.dir/build.make pathing/CMakeFiles/pose_to_posewithcovariance.dir/node/pose_to_posewithcovariance.cpp.s
 .PHONY : node/pose_to_posewithcovariance.cpp.s
-
-node/puppy_guard.o: node/puppy_guard.cpp.o
-
-.PHONY : node/puppy_guard.o
-
-# target to build an object file
-node/puppy_guard.cpp.o:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/puppy_guard.dir/build.make pathing/CMakeFiles/puppy_guard.dir/node/puppy_guard.cpp.o
-.PHONY : node/puppy_guard.cpp.o
-
-node/puppy_guard.i: node/puppy_guard.cpp.i
-
-.PHONY : node/puppy_guard.i
-
-# target to preprocess a source file
-node/puppy_guard.cpp.i:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/puppy_guard.dir/build.make pathing/CMakeFiles/puppy_guard.dir/node/puppy_guard.cpp.i
-.PHONY : node/puppy_guard.cpp.i
-
-node/puppy_guard.s: node/puppy_guard.cpp.s
-
-.PHONY : node/puppy_guard.s
-
-# target to generate assembly for a file
-node/puppy_guard.cpp.s:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/puppy_guard.dir/build.make pathing/CMakeFiles/puppy_guard.dir/node/puppy_guard.cpp.s
-.PHONY : node/puppy_guard.cpp.s
-
-node/recall.o: node/recall.cpp.o
-
-.PHONY : node/recall.o
-
-# target to build an object file
-node/recall.cpp.o:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/recall.dir/build.make pathing/CMakeFiles/recall.dir/node/recall.cpp.o
-.PHONY : node/recall.cpp.o
-
-node/recall.i: node/recall.cpp.i
-
-.PHONY : node/recall.i
-
-# target to preprocess a source file
-node/recall.cpp.i:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/recall.dir/build.make pathing/CMakeFiles/recall.dir/node/recall.cpp.i
-.PHONY : node/recall.cpp.i
-
-node/recall.s: node/recall.cpp.s
-
-.PHONY : node/recall.s
-
-# target to generate assembly for a file
-node/recall.cpp.s:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/recall.dir/build.make pathing/CMakeFiles/recall.dir/node/recall.cpp.s
-.PHONY : node/recall.cpp.s
-
-node/search.o: node/search.cpp.o
-
-.PHONY : node/search.o
-
-# target to build an object file
-node/search.cpp.o:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/search.dir/build.make pathing/CMakeFiles/search.dir/node/search.cpp.o
-.PHONY : node/search.cpp.o
-
-node/search.i: node/search.cpp.i
-
-.PHONY : node/search.i
-
-# target to preprocess a source file
-node/search.cpp.i:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/search.dir/build.make pathing/CMakeFiles/search.dir/node/search.cpp.i
-.PHONY : node/search.cpp.i
-
-node/search.s: node/search.cpp.s
-
-.PHONY : node/search.s
-
-# target to generate assembly for a file
-node/search.cpp.s:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/search.dir/build.make pathing/CMakeFiles/search.dir/node/search.cpp.s
-.PHONY : node/search.cpp.s
 
 node/sim_car.o: node/sim_car.cpp.o
 
@@ -1427,7 +1670,7 @@ node/sim_car.o: node/sim_car.cpp.o
 
 # target to build an object file
 node/sim_car.cpp.o:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/sim_car.dir/build.make pathing/CMakeFiles/sim_car.dir/node/sim_car.cpp.o
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/sim_car.dir/build.make pathing/CMakeFiles/sim_car.dir/node/sim_car.cpp.o
 .PHONY : node/sim_car.cpp.o
 
 node/sim_car.i: node/sim_car.cpp.i
@@ -1436,7 +1679,7 @@ node/sim_car.i: node/sim_car.cpp.i
 
 # target to preprocess a source file
 node/sim_car.cpp.i:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/sim_car.dir/build.make pathing/CMakeFiles/sim_car.dir/node/sim_car.cpp.i
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/sim_car.dir/build.make pathing/CMakeFiles/sim_car.dir/node/sim_car.cpp.i
 .PHONY : node/sim_car.cpp.i
 
 node/sim_car.s: node/sim_car.cpp.s
@@ -1445,7 +1688,7 @@ node/sim_car.s: node/sim_car.cpp.s
 
 # target to generate assembly for a file
 node/sim_car.cpp.s:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/sim_car.dir/build.make pathing/CMakeFiles/sim_car.dir/node/sim_car.cpp.s
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/sim_car.dir/build.make pathing/CMakeFiles/sim_car.dir/node/sim_car.cpp.s
 .PHONY : node/sim_car.cpp.s
 
 node/sim_lidar.o: node/sim_lidar.cpp.o
@@ -1454,7 +1697,7 @@ node/sim_lidar.o: node/sim_lidar.cpp.o
 
 # target to build an object file
 node/sim_lidar.cpp.o:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/sim_lidar.dir/build.make pathing/CMakeFiles/sim_lidar.dir/node/sim_lidar.cpp.o
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/sim_lidar.dir/build.make pathing/CMakeFiles/sim_lidar.dir/node/sim_lidar.cpp.o
 .PHONY : node/sim_lidar.cpp.o
 
 node/sim_lidar.i: node/sim_lidar.cpp.i
@@ -1463,7 +1706,7 @@ node/sim_lidar.i: node/sim_lidar.cpp.i
 
 # target to preprocess a source file
 node/sim_lidar.cpp.i:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/sim_lidar.dir/build.make pathing/CMakeFiles/sim_lidar.dir/node/sim_lidar.cpp.i
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/sim_lidar.dir/build.make pathing/CMakeFiles/sim_lidar.dir/node/sim_lidar.cpp.i
 .PHONY : node/sim_lidar.cpp.i
 
 node/sim_lidar.s: node/sim_lidar.cpp.s
@@ -1472,62 +1715,8 @@ node/sim_lidar.s: node/sim_lidar.cpp.s
 
 # target to generate assembly for a file
 node/sim_lidar.cpp.s:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/sim_lidar.dir/build.make pathing/CMakeFiles/sim_lidar.dir/node/sim_lidar.cpp.s
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/sim_lidar.dir/build.make pathing/CMakeFiles/sim_lidar.dir/node/sim_lidar.cpp.s
 .PHONY : node/sim_lidar.cpp.s
-
-node/wall_follow.o: node/wall_follow.cpp.o
-
-.PHONY : node/wall_follow.o
-
-# target to build an object file
-node/wall_follow.cpp.o:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/wall_follow.dir/build.make pathing/CMakeFiles/wall_follow.dir/node/wall_follow.cpp.o
-.PHONY : node/wall_follow.cpp.o
-
-node/wall_follow.i: node/wall_follow.cpp.i
-
-.PHONY : node/wall_follow.i
-
-# target to preprocess a source file
-node/wall_follow.cpp.i:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/wall_follow.dir/build.make pathing/CMakeFiles/wall_follow.dir/node/wall_follow.cpp.i
-.PHONY : node/wall_follow.cpp.i
-
-node/wall_follow.s: node/wall_follow.cpp.s
-
-.PHONY : node/wall_follow.s
-
-# target to generate assembly for a file
-node/wall_follow.cpp.s:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/wall_follow.dir/build.make pathing/CMakeFiles/wall_follow.dir/node/wall_follow.cpp.s
-.PHONY : node/wall_follow.cpp.s
-
-node/wander.o: node/wander.cpp.o
-
-.PHONY : node/wander.o
-
-# target to build an object file
-node/wander.cpp.o:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/wander.dir/build.make pathing/CMakeFiles/wander.dir/node/wander.cpp.o
-.PHONY : node/wander.cpp.o
-
-node/wander.i: node/wander.cpp.i
-
-.PHONY : node/wander.i
-
-# target to preprocess a source file
-node/wander.cpp.i:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/wander.dir/build.make pathing/CMakeFiles/wander.dir/node/wander.cpp.i
-.PHONY : node/wander.cpp.i
-
-node/wander.s: node/wander.cpp.s
-
-.PHONY : node/wander.s
-
-# target to generate assembly for a file
-node/wander.cpp.s:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/wander.dir/build.make pathing/CMakeFiles/wander.dir/node/wander.cpp.s
-.PHONY : node/wander.cpp.s
 
 src/distance_transform.o: src/distance_transform.cpp.o
 
@@ -1535,7 +1724,7 @@ src/distance_transform.o: src/distance_transform.cpp.o
 
 # target to build an object file
 src/distance_transform.cpp.o:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing.dir/build.make pathing/CMakeFiles/pathing.dir/src/distance_transform.cpp.o
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing.dir/build.make pathing/CMakeFiles/pathing.dir/src/distance_transform.cpp.o
 .PHONY : src/distance_transform.cpp.o
 
 src/distance_transform.i: src/distance_transform.cpp.i
@@ -1544,7 +1733,7 @@ src/distance_transform.i: src/distance_transform.cpp.i
 
 # target to preprocess a source file
 src/distance_transform.cpp.i:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing.dir/build.make pathing/CMakeFiles/pathing.dir/src/distance_transform.cpp.i
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing.dir/build.make pathing/CMakeFiles/pathing.dir/src/distance_transform.cpp.i
 .PHONY : src/distance_transform.cpp.i
 
 src/distance_transform.s: src/distance_transform.cpp.s
@@ -1553,7 +1742,7 @@ src/distance_transform.s: src/distance_transform.cpp.s
 
 # target to generate assembly for a file
 src/distance_transform.cpp.s:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing.dir/build.make pathing/CMakeFiles/pathing.dir/src/distance_transform.cpp.s
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing.dir/build.make pathing/CMakeFiles/pathing.dir/src/distance_transform.cpp.s
 .PHONY : src/distance_transform.cpp.s
 
 src/ks_kinematics.o: src/ks_kinematics.cpp.o
@@ -1562,7 +1751,7 @@ src/ks_kinematics.o: src/ks_kinematics.cpp.o
 
 # target to build an object file
 src/ks_kinematics.cpp.o:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing.dir/build.make pathing/CMakeFiles/pathing.dir/src/ks_kinematics.cpp.o
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing.dir/build.make pathing/CMakeFiles/pathing.dir/src/ks_kinematics.cpp.o
 .PHONY : src/ks_kinematics.cpp.o
 
 src/ks_kinematics.i: src/ks_kinematics.cpp.i
@@ -1571,7 +1760,7 @@ src/ks_kinematics.i: src/ks_kinematics.cpp.i
 
 # target to preprocess a source file
 src/ks_kinematics.cpp.i:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing.dir/build.make pathing/CMakeFiles/pathing.dir/src/ks_kinematics.cpp.i
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing.dir/build.make pathing/CMakeFiles/pathing.dir/src/ks_kinematics.cpp.i
 .PHONY : src/ks_kinematics.cpp.i
 
 src/ks_kinematics.s: src/ks_kinematics.cpp.s
@@ -1580,7 +1769,7 @@ src/ks_kinematics.s: src/ks_kinematics.cpp.s
 
 # target to generate assembly for a file
 src/ks_kinematics.cpp.s:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing.dir/build.make pathing/CMakeFiles/pathing.dir/src/ks_kinematics.cpp.s
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing.dir/build.make pathing/CMakeFiles/pathing.dir/src/ks_kinematics.cpp.s
 .PHONY : src/ks_kinematics.cpp.s
 
 src/precompute.o: src/precompute.cpp.o
@@ -1589,7 +1778,7 @@ src/precompute.o: src/precompute.cpp.o
 
 # target to build an object file
 src/precompute.cpp.o:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing.dir/build.make pathing/CMakeFiles/pathing.dir/src/precompute.cpp.o
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing.dir/build.make pathing/CMakeFiles/pathing.dir/src/precompute.cpp.o
 .PHONY : src/precompute.cpp.o
 
 src/precompute.i: src/precompute.cpp.i
@@ -1598,7 +1787,7 @@ src/precompute.i: src/precompute.cpp.i
 
 # target to preprocess a source file
 src/precompute.cpp.i:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing.dir/build.make pathing/CMakeFiles/pathing.dir/src/precompute.cpp.i
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing.dir/build.make pathing/CMakeFiles/pathing.dir/src/precompute.cpp.i
 .PHONY : src/precompute.cpp.i
 
 src/precompute.s: src/precompute.cpp.s
@@ -1607,7 +1796,7 @@ src/precompute.s: src/precompute.cpp.s
 
 # target to generate assembly for a file
 src/precompute.cpp.s:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing.dir/build.make pathing/CMakeFiles/pathing.dir/src/precompute.cpp.s
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing.dir/build.make pathing/CMakeFiles/pathing.dir/src/precompute.cpp.s
 .PHONY : src/precompute.cpp.s
 
 src/scan_simulator_2d.o: src/scan_simulator_2d.cpp.o
@@ -1616,7 +1805,7 @@ src/scan_simulator_2d.o: src/scan_simulator_2d.cpp.o
 
 # target to build an object file
 src/scan_simulator_2d.cpp.o:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing.dir/build.make pathing/CMakeFiles/pathing.dir/src/scan_simulator_2d.cpp.o
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing.dir/build.make pathing/CMakeFiles/pathing.dir/src/scan_simulator_2d.cpp.o
 .PHONY : src/scan_simulator_2d.cpp.o
 
 src/scan_simulator_2d.i: src/scan_simulator_2d.cpp.i
@@ -1625,7 +1814,7 @@ src/scan_simulator_2d.i: src/scan_simulator_2d.cpp.i
 
 # target to preprocess a source file
 src/scan_simulator_2d.cpp.i:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing.dir/build.make pathing/CMakeFiles/pathing.dir/src/scan_simulator_2d.cpp.i
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing.dir/build.make pathing/CMakeFiles/pathing.dir/src/scan_simulator_2d.cpp.i
 .PHONY : src/scan_simulator_2d.cpp.i
 
 src/scan_simulator_2d.s: src/scan_simulator_2d.cpp.s
@@ -1634,7 +1823,7 @@ src/scan_simulator_2d.s: src/scan_simulator_2d.cpp.s
 
 # target to generate assembly for a file
 src/scan_simulator_2d.cpp.s:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing.dir/build.make pathing/CMakeFiles/pathing.dir/src/scan_simulator_2d.cpp.s
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing.dir/build.make pathing/CMakeFiles/pathing.dir/src/scan_simulator_2d.cpp.s
 .PHONY : src/scan_simulator_2d.cpp.s
 
 src/st_kinematics.o: src/st_kinematics.cpp.o
@@ -1643,7 +1832,7 @@ src/st_kinematics.o: src/st_kinematics.cpp.o
 
 # target to build an object file
 src/st_kinematics.cpp.o:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing.dir/build.make pathing/CMakeFiles/pathing.dir/src/st_kinematics.cpp.o
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing.dir/build.make pathing/CMakeFiles/pathing.dir/src/st_kinematics.cpp.o
 .PHONY : src/st_kinematics.cpp.o
 
 src/st_kinematics.i: src/st_kinematics.cpp.i
@@ -1652,7 +1841,7 @@ src/st_kinematics.i: src/st_kinematics.cpp.i
 
 # target to preprocess a source file
 src/st_kinematics.cpp.i:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing.dir/build.make pathing/CMakeFiles/pathing.dir/src/st_kinematics.cpp.i
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing.dir/build.make pathing/CMakeFiles/pathing.dir/src/st_kinematics.cpp.i
 .PHONY : src/st_kinematics.cpp.i
 
 src/st_kinematics.s: src/st_kinematics.cpp.s
@@ -1661,7 +1850,7 @@ src/st_kinematics.s: src/st_kinematics.cpp.s
 
 # target to generate assembly for a file
 src/st_kinematics.cpp.s:
-	cd /home/thattori/capstone/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing.dir/build.make pathing/CMakeFiles/pathing.dir/src/st_kinematics.cpp.s
+	cd /home/ubuntu/F1Tenth/velma/build && $(MAKE) -f pathing/CMakeFiles/pathing.dir/build.make pathing/CMakeFiles/pathing.dir/src/st_kinematics.cpp.s
 .PHONY : src/st_kinematics.cpp.s
 
 # Help Target
@@ -1671,65 +1860,95 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
-	@echo "... mux"
+	@echo "... install/local"
+	@echo "... install"
+	@echo "... list_install_components"
+	@echo "... rebuild_cache"
+	@echo "... edit_cache"
+	@echo "... test"
+	@echo "... sim_lidar"
 	@echo "... _pathing_generate_messages_check_deps_PixyData"
 	@echo "... actionlib_generate_messages_cpp"
 	@echo "... _pathing_generate_messages_check_deps_PixyResolution"
-	@echo "... pathing_generate_messages_cpp"
-	@echo "... pathing_geneus"
 	@echo "... pathing_generate_messages"
 	@echo "... tf2_msgs_generate_messages_lisp"
 	@echo "... unsearched_area_costmap"
 	@echo "... visualization_msgs_generate_messages_nodejs"
-	@echo "... sim_car"
-	@echo "... list_install_components"
 	@echo "... visualization_msgs_generate_messages_lisp"
 	@echo "... pose_to_posewithcovariance"
 	@echo "... gpio"
-	@echo "... pathing"
+	@echo "... actionlib_generate_messages_eus"
 	@echo "... _pathing_generate_messages_check_deps_PixyBlock"
-	@echo "... tf2_msgs_generate_messages_cpp"
+	@echo "... pathing"
 	@echo "... tf2_msgs_generate_messages_py"
 	@echo "... visualization_msgs_generate_messages_eus"
 	@echo "... behavior_controller"
-	@echo "... visualization_msgs_generate_messages_py"
-	@echo "... install"
-	@echo "... tf2_msgs_generate_messages_eus"
-	@echo "... rebuild_cache"
-	@echo "... pathing_generate_messages_lisp"
-	@echo "... tf2_msgs_generate_messages_nodejs"
-	@echo "... pathing_gencpp"
-	@echo "... actionlib_generate_messages_lisp"
+	@echo "... lidar_fix"
+	@echo "... _pathing_generate_messages_check_deps_seenPoints"
+	@echo "... sim_car"
+	@echo "... _pathing_generate_messages_check_deps_waypoints"
+	@echo "... gap_follow"
+	@echo "... frontier_costmap"
+	@echo "... tf_generate_messages_nodejs"
 	@echo "... object_costmap"
-	@echo "... wander"
-	@echo "... pathing_generate_messages_eus"
 	@echo "... _pathing_generate_messages_check_deps_gpioread"
 	@echo "... actionlib_generate_messages_nodejs"
 	@echo "... _pathing_generate_messages_check_deps_gpiowrite"
+	@echo "... tf_generate_messages_eus"
+	@echo "... tf2_msgs_generate_messages_cpp"
+	@echo "... tf_generate_messages_py"
 	@echo "... actionlib_generate_messages_py"
-	@echo "... keyboard"
+	@echo "... visualization_msgs_generate_messages_py"
+	@echo "... tf2_msgs_generate_messages_eus"
+	@echo "... pathing_generate_messages_cpp"
+	@echo "... actionlib_generate_messages_lisp"
+	@echo "... pathing_gencpp"
+	@echo "... mux"
+	@echo "... pathing_generate_messages_eus"
 	@echo "... ease_costmap"
+	@echo "... roomba"
+	@echo "... keyboard"
+	@echo "... pathing_geneus"
+	@echo "... pathing_generate_messages_lisp"
+	@echo "... tf2_msgs_generate_messages_nodejs"
+	@echo "... nav_fix"
+	@echo "... tf_generate_messages_lisp"
+	@echo "... pathing_genlisp"
 	@echo "... pathing_generate_messages_py"
 	@echo "... pathing_genpy"
-	@echo "... frontier_costmap"
-	@echo "... gap_follow"
-	@echo "... pathing_genlisp"
-	@echo "... obstacle_costmap"
-	@echo "... time_costmap"
 	@echo "... explore"
-	@echo "... nav_mux"
-	@echo "... actionlib_generate_messages_eus"
-	@echo "... puppy_guard"
+	@echo "... log"
 	@echo "... pathing_generate_messages_nodejs"
 	@echo "... recall"
 	@echo "... pathing_gennodejs"
 	@echo "... search"
-	@echo "... sim_lidar"
 	@echo "... visualization_msgs_generate_messages_cpp"
 	@echo "... wall_follow"
-	@echo "... test"
-	@echo "... edit_cache"
-	@echo "... install/local"
+	@echo "... time_costmap"
+	@echo "... tf_generate_messages_cpp"
+	@echo "... view"
+	@echo "... nav_mux"
+	@echo "... node/algorithms/explore.o"
+	@echo "... node/algorithms/explore.i"
+	@echo "... node/algorithms/explore.s"
+	@echo "... node/algorithms/gap_follow.o"
+	@echo "... node/algorithms/gap_follow.i"
+	@echo "... node/algorithms/gap_follow.s"
+	@echo "... node/algorithms/log.o"
+	@echo "... node/algorithms/log.i"
+	@echo "... node/algorithms/log.s"
+	@echo "... node/algorithms/recall.o"
+	@echo "... node/algorithms/recall.i"
+	@echo "... node/algorithms/recall.s"
+	@echo "... node/algorithms/roomba.o"
+	@echo "... node/algorithms/roomba.i"
+	@echo "... node/algorithms/roomba.s"
+	@echo "... node/algorithms/search.o"
+	@echo "... node/algorithms/search.i"
+	@echo "... node/algorithms/search.s"
+	@echo "... node/algorithms/wall_follow.o"
+	@echo "... node/algorithms/wall_follow.i"
+	@echo "... node/algorithms/wall_follow.s"
 	@echo "... node/behavior_controller.o"
 	@echo "... node/behavior_controller.i"
 	@echo "... node/behavior_controller.s"
@@ -1742,57 +1961,42 @@ help:
 	@echo "... node/costmaps/object_costmap.o"
 	@echo "... node/costmaps/object_costmap.i"
 	@echo "... node/costmaps/object_costmap.s"
-	@echo "... node/costmaps/obstacle_costmap.o"
-	@echo "... node/costmaps/obstacle_costmap.i"
-	@echo "... node/costmaps/obstacle_costmap.s"
 	@echo "... node/costmaps/time_costmap.o"
 	@echo "... node/costmaps/time_costmap.i"
 	@echo "... node/costmaps/time_costmap.s"
 	@echo "... node/costmaps/unsearched_area_costmap.o"
 	@echo "... node/costmaps/unsearched_area_costmap.i"
 	@echo "... node/costmaps/unsearched_area_costmap.s"
-	@echo "... node/explore.o"
-	@echo "... node/explore.i"
-	@echo "... node/explore.s"
-	@echo "... node/gap_follow.o"
-	@echo "... node/gap_follow.i"
-	@echo "... node/gap_follow.s"
+	@echo "... node/costmaps/view.o"
+	@echo "... node/costmaps/view.i"
+	@echo "... node/costmaps/view.s"
 	@echo "... node/gpio.o"
 	@echo "... node/gpio.i"
 	@echo "... node/gpio.s"
 	@echo "... node/keyboard.o"
 	@echo "... node/keyboard.i"
 	@echo "... node/keyboard.s"
+	@echo "... node/lidar_fix.o"
+	@echo "... node/lidar_fix.i"
+	@echo "... node/lidar_fix.s"
 	@echo "... node/mux.o"
 	@echo "... node/mux.i"
 	@echo "... node/mux.s"
+	@echo "... node/nav_fix.o"
+	@echo "... node/nav_fix.i"
+	@echo "... node/nav_fix.s"
 	@echo "... node/nav_mux.o"
 	@echo "... node/nav_mux.i"
 	@echo "... node/nav_mux.s"
 	@echo "... node/pose_to_posewithcovariance.o"
 	@echo "... node/pose_to_posewithcovariance.i"
 	@echo "... node/pose_to_posewithcovariance.s"
-	@echo "... node/puppy_guard.o"
-	@echo "... node/puppy_guard.i"
-	@echo "... node/puppy_guard.s"
-	@echo "... node/recall.o"
-	@echo "... node/recall.i"
-	@echo "... node/recall.s"
-	@echo "... node/search.o"
-	@echo "... node/search.i"
-	@echo "... node/search.s"
 	@echo "... node/sim_car.o"
 	@echo "... node/sim_car.i"
 	@echo "... node/sim_car.s"
 	@echo "... node/sim_lidar.o"
 	@echo "... node/sim_lidar.i"
 	@echo "... node/sim_lidar.s"
-	@echo "... node/wall_follow.o"
-	@echo "... node/wall_follow.i"
-	@echo "... node/wall_follow.s"
-	@echo "... node/wander.o"
-	@echo "... node/wander.i"
-	@echo "... node/wander.s"
 	@echo "... src/distance_transform.o"
 	@echo "... src/distance_transform.i"
 	@echo "... src/distance_transform.s"
@@ -1819,6 +2023,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/thattori/capstone/velma/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/ubuntu/F1Tenth/velma/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

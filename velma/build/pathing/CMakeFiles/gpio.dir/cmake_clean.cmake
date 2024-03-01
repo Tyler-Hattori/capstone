@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/thattori/capstone/velma/devel/lib/pathing/gpio"
-  "/home/thattori/capstone/velma/devel/lib/pathing/gpio.pdb"
+  "/home/ubuntu/F1Tenth/velma/devel/lib/pathing/gpio"
+  "/home/ubuntu/F1Tenth/velma/devel/lib/pathing/gpio.pdb"
   "CMakeFiles/gpio.dir/node/gpio.cpp.o"
 )
 

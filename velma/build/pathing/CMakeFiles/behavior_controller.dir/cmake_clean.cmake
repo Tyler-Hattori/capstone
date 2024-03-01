@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/thattori/capstone/velma/devel/lib/pathing/behavior_controller"
-  "/home/thattori/capstone/velma/devel/lib/pathing/behavior_controller.pdb"
+  "/home/ubuntu/F1Tenth/velma/devel/lib/pathing/behavior_controller"
+  "/home/ubuntu/F1Tenth/velma/devel/lib/pathing/behavior_controller.pdb"
   "CMakeFiles/behavior_controller.dir/node/behavior_controller.cpp.o"
 )
 

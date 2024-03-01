@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/thattori/capstone/velma/devel/lib/led_control/blind_spot"
-  "/home/thattori/capstone/velma/devel/lib/led_control/blind_spot.pdb"
+  "/home/ubuntu/F1Tenth/velma/devel/lib/led_control/blind_spot"
+  "/home/ubuntu/F1Tenth/velma/devel/lib/led_control/blind_spot.pdb"
   "CMakeFiles/blind_spot.dir/node/blind_spot.cpp.o"
 )
 

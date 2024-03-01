@@ -1,5 +1,5 @@
 # generated from catkin/cmake/template/order_packages.context.py.in
-source_root_dir = '/home/thattori/capstone/velma/src'
+source_root_dir = '/home/ubuntu/F1Tenth/velma/src'
 whitelisted_packages = ''.split(';') if '' != '' else []
 blacklisted_packages = ''.split(';') if '' != '' else []
-underlay_workspaces = '/home/thattori/capstone/velma/devel;/opt/ros/noetic'.split(';') if '/home/thattori/capstone/velma/devel;/opt/ros/noetic' != '' else []
+underlay_workspaces = '/home/ubuntu/F1Tenth/velma/devel;/opt/ros/noetic'.split(';') if '/home/ubuntu/F1Tenth/velma/devel;/opt/ros/noetic' != '' else []

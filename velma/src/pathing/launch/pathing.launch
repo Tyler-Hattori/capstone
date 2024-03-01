@@ -16,5 +16,16 @@
   
   <!-- navigation -->
   <include file="$(find velma_nav)/move_base.launch"/>
+  
   <node pkg="twist_to_ackermann" name="twist_to_ackermann" type="convert.py" output="screen"/>
+  
+  <!-- Launch node in charge of turning around for tough navigation goals -->
+  <node pkg="pathing" name="turn_around_if_needed" type="nav_fix" output="screen">
+    <rosparam command="load" file="$(find pathing)/params.yaml"/>
+  </node>
+  
+  <!-- Launch node in charge of stopping the car if it is about to crash -->
+  <node pkg="pathing" name="safety" type="safety" output="screen">
+    <rosparam command="load" file="$(find pathing)/params.yaml"/>
+  </node>
 </launch>

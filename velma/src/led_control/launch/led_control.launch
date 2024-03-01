@@ -12,7 +12,7 @@
   <node pkg="gpio_control" type="gpio_control_node" name="indicator_leds" args="--device pi --output 35 36 37 38 40" output="screen"/>
   
   <!-- Blind Spot Pins -->
-  <node pkg="gpio_control" type="gpio_control_node" name="blind_spot_leds" args="--device pi --output 18 19" output="screen"/>
+  <node pkg="gpio_control" type="gpio_control_node" name="safety_leds" args="--device pi --output 18 19" output="screen"/>
   
   <!-- Manual Command Pins -->
   <node pkg="gpio_control" type="gpio_control_node" name="manual_command_leds" args="--device pi --output 31 32 33 16" output="screen"/>

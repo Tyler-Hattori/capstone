@@ -6,7 +6,7 @@ from os import path as os_path
 from pkgutil import extend_path
 from sys import path as sys_path
 
-__extended_path = '/home/thattori/capstone/velma/src/gpio/include'.split(';')
+__extended_path = '/home/ubuntu/F1Tenth/velma/src/gpio/include'.split(';')
 for p in reversed(__extended_path):
     sys_path.insert(0, p)
     del p

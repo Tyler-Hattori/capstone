@@ -1,13 +1,18 @@
 <!-- -*- mode: XML -*- -->
 <launch>
   <arg name="simulate" default="no" />
-  <arg name="map" default="maze1" />
-  <arg name="track" default="Austin" />
+  <arg name="map" default="no" />
+  <arg name="track" default="no" />
   
   <!-- vesc, lidar, tf -->
   <include file="$(find racecar)/launch/teleop.launch">
     <arg name="simulate" value="$(arg simulate)"/>
   </include>
+    
+  <group ns="mapping">
+    <!-- slam -->
+    <include file="$(find slam_toolbox)/launch/online_async.launch" if="$(eval arg('simulate') == 'no')" />
+  </group>
   
   <!-- planner framework -->
   <include file="$(find pathing)/launch/system.launch">
@@ -18,18 +23,13 @@
   
   <group ns="sensors">
       <!-- pixy -->
-     <include file="$(find pixy2_node)/launch/pixy2.launch" if="$(eval arg('simulate') == 'no')"/>
-  </group>
-    
-  <group ns="mapping">
-    <!-- slam -->
-    <include file="$(find slam_toolbox)/launch/online_async.launch"/>
+     <include file="$(find pixy2_node)/launch/pixy2.launch"/> <!--if="$(eval arg('simulate') == 'no')" -->
   </group>
   
-  <group ns="led_control">
-    <!-- indicator network -->
-    <include file="$(find led_control)/launch/led_control.launch" if="$(eval arg('simulate') == 'no')"/>
-  </group>
+  <!--group ns="led_control
+     indicator network
+    include file="$(find led_control)/launch/led_control.launch" if="$(eval arg('simulate') == 'no')"/
+  /group-->
   
   <!-- rviz --> 
   <node pkg="rviz" type="rviz" name="rviz" args="-d $(find velma)/launch/velma.rviz" output="screen"/>

@@ -1,7 +1,7 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
 messages_str = ""
-services_str = "/home/thattori/capstone/velma/src/slam/slam_toolbox_msgs/srv/Pause.srv;/home/thattori/capstone/velma/src/slam/slam_toolbox_msgs/srv/ClearQueue.srv;/home/thattori/capstone/velma/src/slam/slam_toolbox_msgs/srv/ToggleInteractive.srv;/home/thattori/capstone/velma/src/slam/slam_toolbox_msgs/srv/Clear.srv;/home/thattori/capstone/velma/src/slam/slam_toolbox_msgs/srv/SaveMap.srv;/home/thattori/capstone/velma/src/slam/slam_toolbox_msgs/srv/LoopClosure.srv;/home/thattori/capstone/velma/src/slam/slam_toolbox_msgs/srv/MergeMaps.srv;/home/thattori/capstone/velma/src/slam/slam_toolbox_msgs/srv/AddSubmap.srv;/home/thattori/capstone/velma/src/slam/slam_toolbox_msgs/srv/DeserializePoseGraph.srv;/home/thattori/capstone/velma/src/slam/slam_toolbox_msgs/srv/SerializePoseGraph.srv"
+services_str = "/home/ubuntu/F1Tenth/velma/src/slam/slam_toolbox_msgs/srv/Pause.srv;/home/ubuntu/F1Tenth/velma/src/slam/slam_toolbox_msgs/srv/ClearQueue.srv;/home/ubuntu/F1Tenth/velma/src/slam/slam_toolbox_msgs/srv/ToggleInteractive.srv;/home/ubuntu/F1Tenth/velma/src/slam/slam_toolbox_msgs/srv/Clear.srv;/home/ubuntu/F1Tenth/velma/src/slam/slam_toolbox_msgs/srv/SaveMap.srv;/home/ubuntu/F1Tenth/velma/src/slam/slam_toolbox_msgs/srv/LoopClosure.srv;/home/ubuntu/F1Tenth/velma/src/slam/slam_toolbox_msgs/srv/MergeMaps.srv;/home/ubuntu/F1Tenth/velma/src/slam/slam_toolbox_msgs/srv/AddSubmap.srv;/home/ubuntu/F1Tenth/velma/src/slam/slam_toolbox_msgs/srv/DeserializePoseGraph.srv;/home/ubuntu/F1Tenth/velma/src/slam/slam_toolbox_msgs/srv/SerializePoseGraph.srv"
 pkg_name = "slam_toolbox_msgs"
 dependencies_str = "std_srvs;std_msgs;geometry_msgs"
 langs = "gencpp;geneus;genlisp;gennodejs;genpy"

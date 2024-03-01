@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/thattori/capstone/velma/devel/lib/python3/dist-packages/led_control/msg/__init__.py"
-  "/home/thattori/capstone/velma/devel/lib/python3/dist-packages/led_control/msg/_gpiowrite.py"
+  "/home/ubuntu/F1Tenth/velma/devel/lib/python3/dist-packages/led_control/msg/__init__.py"
+  "/home/ubuntu/F1Tenth/velma/devel/lib/python3/dist-packages/led_control/msg/_gpiowrite.py"
   "CMakeFiles/led_control_generate_messages_py"
 )
 

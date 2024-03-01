@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/thattori/capstone/velma/devel/lib/pathing/ease_costmap"
-  "/home/thattori/capstone/velma/devel/lib/pathing/ease_costmap.pdb"
+  "/home/ubuntu/F1Tenth/velma/devel/lib/pathing/ease_costmap"
+  "/home/ubuntu/F1Tenth/velma/devel/lib/pathing/ease_costmap.pdb"
   "CMakeFiles/ease_costmap.dir/node/costmaps/ease_costmap.cpp.o"
 )
 

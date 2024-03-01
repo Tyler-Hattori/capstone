@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/thattori/capstone/velma/devel/include/led_control/gpiowrite.h
+/home/ubuntu/F1Tenth/velma/devel/include/led_control/gpiowrite.h
 string
 -
 vector
@@ -22,7 +22,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/thattori/capstone/velma/src/led_control/node/indicator.cpp
+/home/ubuntu/F1Tenth/velma/src/led_control/node/indicator.cpp
 ros/ros.h
 -
 ackermann_msgs/AckermannDriveStamped.h

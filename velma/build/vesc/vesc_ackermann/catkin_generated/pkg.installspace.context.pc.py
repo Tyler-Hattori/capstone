@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "${prefix}/include".split(';') if "${prefix}/i
 PROJECT_CATKIN_DEPENDS = "nodelet;pluginlib;roscpp;nav_msgs;std_msgs;geometry_msgs;tf;ackermann_msgs;vesc_msgs".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "vesc_ackermann"
-PROJECT_SPACE_DIR = "/home/thattori/capstone/velma/install"
+PROJECT_SPACE_DIR = "/home/ubuntu/F1Tenth/velma/install"
 PROJECT_VERSION = "0.0.1"

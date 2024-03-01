@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/thattori/capstone/velma/src/pathing/node/gap_follow.cpp
+/home/ubuntu/F1Tenth/velma/src/pathing/node/algorithms/gap_follow.cpp
 ros/ros.h
 -
 ackermann_msgs/AckermannDriveStamped.h
@@ -20,7 +20,7 @@ std_msgs/Float64.h
 vector
 -
 math.h
-/home/thattori/capstone/velma/src/pathing/node/math.h
+/home/ubuntu/F1Tenth/velma/src/pathing/node/algorithms/math.h
 
 /opt/ros/noetic/include/ackermann_msgs/AckermannDrive.h
 string

@@ -1,26 +1,26 @@
 
 "use strict";
 
-let DeserializePoseGraph = require('./DeserializePoseGraph.js')
+let LoopClosure = require('./LoopClosure.js')
+let Pause = require('./Pause.js')
 let ClearQueue = require('./ClearQueue.js')
+let SerializePoseGraph = require('./SerializePoseGraph.js')
 let Clear = require('./Clear.js')
 let AddSubmap = require('./AddSubmap.js')
-let LoopClosure = require('./LoopClosure.js')
 let ToggleInteractive = require('./ToggleInteractive.js')
-let SaveMap = require('./SaveMap.js')
-let SerializePoseGraph = require('./SerializePoseGraph.js')
-let Pause = require('./Pause.js')
 let MergeMaps = require('./MergeMaps.js')
+let SaveMap = require('./SaveMap.js')
+let DeserializePoseGraph = require('./DeserializePoseGraph.js')
 
 module.exports = {
-  DeserializePoseGraph: DeserializePoseGraph,
+  LoopClosure: LoopClosure,
+  Pause: Pause,
   ClearQueue: ClearQueue,
+  SerializePoseGraph: SerializePoseGraph,
   Clear: Clear,
   AddSubmap: AddSubmap,
-  LoopClosure: LoopClosure,
   ToggleInteractive: ToggleInteractive,
-  SaveMap: SaveMap,
-  SerializePoseGraph: SerializePoseGraph,
-  Pause: Pause,
   MergeMaps: MergeMaps,
+  SaveMap: SaveMap,
+  DeserializePoseGraph: DeserializePoseGraph,
 };

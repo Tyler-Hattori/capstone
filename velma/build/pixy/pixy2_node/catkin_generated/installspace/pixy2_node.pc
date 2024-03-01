@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/F1Tenth/velma/install
+
+Name: pixy2_node
+Description: Description of pixy2_node
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

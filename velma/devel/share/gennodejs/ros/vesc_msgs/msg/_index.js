@@ -1,10 +1,10 @@
 
 "use strict";
 
-let VescStateStamped = require('./VescStateStamped.js');
 let VescState = require('./VescState.js');
+let VescStateStamped = require('./VescStateStamped.js');
 
 module.exports = {
-  VescStateStamped: VescStateStamped,
   VescState: VescState,
+  VescStateStamped: VescStateStamped,
 };

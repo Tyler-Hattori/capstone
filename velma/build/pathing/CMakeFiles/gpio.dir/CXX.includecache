@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/thattori/capstone/velma/devel/include/pathing/gpioread.h
+/home/ubuntu/F1Tenth/velma/devel/include/pathing/gpioread.h
 string
 -
 vector
@@ -24,7 +24,7 @@ ros/message_operations.h
 std_msgs/Header.h
 -
 
-/home/thattori/capstone/velma/src/pathing/node/gpio.cpp
+/home/ubuntu/F1Tenth/velma/src/pathing/node/gpio.cpp
 ros/ros.h
 -
 std_msgs/String.h

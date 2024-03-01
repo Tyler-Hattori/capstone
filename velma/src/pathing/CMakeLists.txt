@@ -45,6 +45,7 @@ if(DEFINED CATKIN_DEVEL_PREFIX)
   find_package(catkin REQUIRED COMPONENTS
     roslib
     roscpp
+    tf
     tf2
     tf2_ros
     tf2_geometry_msgs
@@ -52,6 +53,7 @@ if(DEFINED CATKIN_DEVEL_PREFIX)
     nav_msgs
     sensor_msgs
     geometry_msgs
+    actionlib_msgs
 
     interactive_markers
     visualization_msgs
@@ -68,6 +70,8 @@ if(DEFINED CATKIN_DEVEL_PREFIX)
     PixyResolution.msg
     PixyData.msg
     waypoints.msg
+    seenPoints.msg
+    calcTimes.msg
   )
 
   generate_messages(
@@ -76,6 +80,7 @@ if(DEFINED CATKIN_DEVEL_PREFIX)
     nav_msgs
     sensor_msgs
     geometry_msgs
+    actionlib_msgs
     )
 
   # Include catkin_libraries

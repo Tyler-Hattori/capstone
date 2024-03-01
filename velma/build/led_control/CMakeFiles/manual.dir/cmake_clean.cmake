@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/thattori/capstone/velma/devel/lib/led_control/manual"
-  "/home/thattori/capstone/velma/devel/lib/led_control/manual.pdb"
+  "/home/ubuntu/F1Tenth/velma/devel/lib/led_control/manual"
+  "/home/ubuntu/F1Tenth/velma/devel/lib/led_control/manual.pdb"
   "CMakeFiles/manual.dir/node/manual.cpp.o"
 )
 

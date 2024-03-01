@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/thattori/capstone/velma/devel/lib/pathing/mux"
-  "/home/thattori/capstone/velma/devel/lib/pathing/mux.pdb"
+  "/home/ubuntu/F1Tenth/velma/devel/lib/pathing/mux"
+  "/home/ubuntu/F1Tenth/velma/devel/lib/pathing/mux.pdb"
   "CMakeFiles/mux.dir/node/mux.cpp.o"
 )
 

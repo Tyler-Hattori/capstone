@@ -15,8 +15,12 @@
   <group ns="simulation">
     <!-- Launch a map from the maps folder as instructed from the command line -->
     <arg name="map" default="$(find pathing)/maps/$(arg map_name)/$(arg map_name).yaml"/>
-    <arg name="track" default="$(find pathing)/tracks/$(arg track_name)/$(arg track_name).yaml"/>
-    <node pkg="map_server" name="map_server" type="map_server" args="$(arg map)" if="$(eval arg('simulate') == 'all' or arg('simulate') == 'map')">
+    <arg name="track" default="$(find pathing)/tracks/$(arg track_name)/$(arg track_name)_map.yaml"/>
+    
+    <node pkg="map_server" name="map_server" type="map_server" args="$(arg map)" if="$(eval arg('map_name') != 'no')">
+      <remap from="/simulation/map" to="/map"/>
+    </node>
+    <node pkg="map_server" name="map_server" type="map_server" args="$(arg track)" if="$(eval arg('track_name') != 'no' and arg('map_name') == 'no')">
       <remap from="/simulation/map" to="/map"/>
     </node>
 
@@ -41,9 +45,18 @@
   <group ns="algorithms">
     <include file="$(find pathing)/launch/algorithms.launch"/>
   </group>
+  
+  <group ns="led_control">
+    <include file="$(find pathing)/launch/led.launch"/>
+  </group>
     
   <!-- Launch node to convert rviz user nav goal to pose with covariance (where covariance is set to 0) -->
   <node pkg="pathing" name="pose_to_posewithcovariance" type="pose_to_posewithcovariance" output="screen">
+    <rosparam command="load" file="$(find pathing)/params.yaml"/>
+  </node>
+  
+  <!-- Launch node to flip the scan info 180 degrees about the z axis for the wall follow, gap follow, etc. nodes -->
+  <node pkg="pathing" name="lidar_flip" type="lidar_fix" output="screen">
     <rosparam command="load" file="$(find pathing)/params.yaml"/>
   </node>
 </launch>

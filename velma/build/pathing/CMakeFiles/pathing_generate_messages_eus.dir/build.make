@@ -43,65 +43,79 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/thattori/capstone/velma/src
+CMAKE_SOURCE_DIR = /home/ubuntu/F1Tenth/velma/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/thattori/capstone/velma/build
+CMAKE_BINARY_DIR = /home/ubuntu/F1Tenth/velma/build
 
 # Utility rule file for pathing_generate_messages_eus.
 
 # Include the progress variables for this target.
 include pathing/CMakeFiles/pathing_generate_messages_eus.dir/progress.make
 
-pathing/CMakeFiles/pathing_generate_messages_eus: /home/thattori/capstone/velma/devel/share/roseus/ros/pathing/msg/gpioread.l
-pathing/CMakeFiles/pathing_generate_messages_eus: /home/thattori/capstone/velma/devel/share/roseus/ros/pathing/msg/gpiowrite.l
-pathing/CMakeFiles/pathing_generate_messages_eus: /home/thattori/capstone/velma/devel/share/roseus/ros/pathing/msg/PixyBlock.l
-pathing/CMakeFiles/pathing_generate_messages_eus: /home/thattori/capstone/velma/devel/share/roseus/ros/pathing/msg/PixyResolution.l
-pathing/CMakeFiles/pathing_generate_messages_eus: /home/thattori/capstone/velma/devel/share/roseus/ros/pathing/msg/PixyData.l
-pathing/CMakeFiles/pathing_generate_messages_eus: /home/thattori/capstone/velma/devel/share/roseus/ros/pathing/manifest.l
+pathing/CMakeFiles/pathing_generate_messages_eus: /home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg/gpioread.l
+pathing/CMakeFiles/pathing_generate_messages_eus: /home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg/gpiowrite.l
+pathing/CMakeFiles/pathing_generate_messages_eus: /home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg/PixyBlock.l
+pathing/CMakeFiles/pathing_generate_messages_eus: /home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg/PixyResolution.l
+pathing/CMakeFiles/pathing_generate_messages_eus: /home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg/PixyData.l
+pathing/CMakeFiles/pathing_generate_messages_eus: /home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg/waypoints.l
+pathing/CMakeFiles/pathing_generate_messages_eus: /home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg/seenPoints.l
+pathing/CMakeFiles/pathing_generate_messages_eus: /home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/manifest.l
 
 
-/home/thattori/capstone/velma/devel/share/roseus/ros/pathing/msg/gpioread.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-/home/thattori/capstone/velma/devel/share/roseus/ros/pathing/msg/gpioread.l: /home/thattori/capstone/velma/src/pathing/msg/gpioread.msg
-/home/thattori/capstone/velma/devel/share/roseus/ros/pathing/msg/gpioread.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from pathing/gpioread.msg"
-	cd /home/thattori/capstone/velma/build/pathing && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/thattori/capstone/velma/src/pathing/msg/gpioread.msg -Ipathing:/home/thattori/capstone/velma/src/pathing/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p pathing -o /home/thattori/capstone/velma/devel/share/roseus/ros/pathing/msg
+/home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg/gpioread.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg/gpioread.l: /home/ubuntu/F1Tenth/velma/src/pathing/msg/gpioread.msg
+/home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg/gpioread.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/F1Tenth/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from pathing/gpioread.msg"
+	cd /home/ubuntu/F1Tenth/velma/build/pathing && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/ubuntu/F1Tenth/velma/src/pathing/msg/gpioread.msg -Ipathing:/home/ubuntu/F1Tenth/velma/src/pathing/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p pathing -o /home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg
 
-/home/thattori/capstone/velma/devel/share/roseus/ros/pathing/msg/gpiowrite.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-/home/thattori/capstone/velma/devel/share/roseus/ros/pathing/msg/gpiowrite.l: /home/thattori/capstone/velma/src/pathing/msg/gpiowrite.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from pathing/gpiowrite.msg"
-	cd /home/thattori/capstone/velma/build/pathing && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/thattori/capstone/velma/src/pathing/msg/gpiowrite.msg -Ipathing:/home/thattori/capstone/velma/src/pathing/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p pathing -o /home/thattori/capstone/velma/devel/share/roseus/ros/pathing/msg
+/home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg/gpiowrite.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg/gpiowrite.l: /home/ubuntu/F1Tenth/velma/src/pathing/msg/gpiowrite.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/F1Tenth/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from pathing/gpiowrite.msg"
+	cd /home/ubuntu/F1Tenth/velma/build/pathing && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/ubuntu/F1Tenth/velma/src/pathing/msg/gpiowrite.msg -Ipathing:/home/ubuntu/F1Tenth/velma/src/pathing/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p pathing -o /home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg
 
-/home/thattori/capstone/velma/devel/share/roseus/ros/pathing/msg/PixyBlock.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-/home/thattori/capstone/velma/devel/share/roseus/ros/pathing/msg/PixyBlock.l: /home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg
-/home/thattori/capstone/velma/devel/share/roseus/ros/pathing/msg/PixyBlock.l: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp code from pathing/PixyBlock.msg"
-	cd /home/thattori/capstone/velma/build/pathing && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg -Ipathing:/home/thattori/capstone/velma/src/pathing/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p pathing -o /home/thattori/capstone/velma/devel/share/roseus/ros/pathing/msg
+/home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg/PixyBlock.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg/PixyBlock.l: /home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyBlock.msg
+/home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg/PixyBlock.l: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/F1Tenth/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp code from pathing/PixyBlock.msg"
+	cd /home/ubuntu/F1Tenth/velma/build/pathing && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyBlock.msg -Ipathing:/home/ubuntu/F1Tenth/velma/src/pathing/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p pathing -o /home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg
 
-/home/thattori/capstone/velma/devel/share/roseus/ros/pathing/msg/PixyResolution.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-/home/thattori/capstone/velma/devel/share/roseus/ros/pathing/msg/PixyResolution.l: /home/thattori/capstone/velma/src/pathing/msg/PixyResolution.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp code from pathing/PixyResolution.msg"
-	cd /home/thattori/capstone/velma/build/pathing && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/thattori/capstone/velma/src/pathing/msg/PixyResolution.msg -Ipathing:/home/thattori/capstone/velma/src/pathing/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p pathing -o /home/thattori/capstone/velma/devel/share/roseus/ros/pathing/msg
+/home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg/PixyResolution.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg/PixyResolution.l: /home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyResolution.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/F1Tenth/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp code from pathing/PixyResolution.msg"
+	cd /home/ubuntu/F1Tenth/velma/build/pathing && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyResolution.msg -Ipathing:/home/ubuntu/F1Tenth/velma/src/pathing/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p pathing -o /home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg
 
-/home/thattori/capstone/velma/devel/share/roseus/ros/pathing/msg/PixyData.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-/home/thattori/capstone/velma/devel/share/roseus/ros/pathing/msg/PixyData.l: /home/thattori/capstone/velma/src/pathing/msg/PixyData.msg
-/home/thattori/capstone/velma/devel/share/roseus/ros/pathing/msg/PixyData.l: /home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg
-/home/thattori/capstone/velma/devel/share/roseus/ros/pathing/msg/PixyData.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/thattori/capstone/velma/devel/share/roseus/ros/pathing/msg/PixyData.l: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating EusLisp code from pathing/PixyData.msg"
-	cd /home/thattori/capstone/velma/build/pathing && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/thattori/capstone/velma/src/pathing/msg/PixyData.msg -Ipathing:/home/thattori/capstone/velma/src/pathing/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p pathing -o /home/thattori/capstone/velma/devel/share/roseus/ros/pathing/msg
+/home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg/PixyData.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg/PixyData.l: /home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyData.msg
+/home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg/PixyData.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg/PixyData.l: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
+/home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg/PixyData.l: /home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyBlock.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/F1Tenth/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating EusLisp code from pathing/PixyData.msg"
+	cd /home/ubuntu/F1Tenth/velma/build/pathing && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyData.msg -Ipathing:/home/ubuntu/F1Tenth/velma/src/pathing/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p pathing -o /home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg
 
-/home/thattori/capstone/velma/devel/share/roseus/ros/pathing/manifest.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating EusLisp manifest code for pathing"
-	cd /home/thattori/capstone/velma/build/pathing && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/thattori/capstone/velma/devel/share/roseus/ros/pathing pathing std_msgs nav_msgs sensor_msgs
+/home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg/waypoints.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg/waypoints.l: /home/ubuntu/F1Tenth/velma/src/pathing/msg/waypoints.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/F1Tenth/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating EusLisp code from pathing/waypoints.msg"
+	cd /home/ubuntu/F1Tenth/velma/build/pathing && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/ubuntu/F1Tenth/velma/src/pathing/msg/waypoints.msg -Ipathing:/home/ubuntu/F1Tenth/velma/src/pathing/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p pathing -o /home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg
+
+/home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg/seenPoints.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg/seenPoints.l: /home/ubuntu/F1Tenth/velma/src/pathing/msg/seenPoints.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/F1Tenth/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating EusLisp code from pathing/seenPoints.msg"
+	cd /home/ubuntu/F1Tenth/velma/build/pathing && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/ubuntu/F1Tenth/velma/src/pathing/msg/seenPoints.msg -Ipathing:/home/ubuntu/F1Tenth/velma/src/pathing/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p pathing -o /home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg
+
+/home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/manifest.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/F1Tenth/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating EusLisp manifest code for pathing"
+	cd /home/ubuntu/F1Tenth/velma/build/pathing && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing pathing std_msgs nav_msgs sensor_msgs geometry_msgs actionlib_msgs
 
 pathing_generate_messages_eus: pathing/CMakeFiles/pathing_generate_messages_eus
-pathing_generate_messages_eus: /home/thattori/capstone/velma/devel/share/roseus/ros/pathing/msg/gpioread.l
-pathing_generate_messages_eus: /home/thattori/capstone/velma/devel/share/roseus/ros/pathing/msg/gpiowrite.l
-pathing_generate_messages_eus: /home/thattori/capstone/velma/devel/share/roseus/ros/pathing/msg/PixyBlock.l
-pathing_generate_messages_eus: /home/thattori/capstone/velma/devel/share/roseus/ros/pathing/msg/PixyResolution.l
-pathing_generate_messages_eus: /home/thattori/capstone/velma/devel/share/roseus/ros/pathing/msg/PixyData.l
-pathing_generate_messages_eus: /home/thattori/capstone/velma/devel/share/roseus/ros/pathing/manifest.l
+pathing_generate_messages_eus: /home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg/gpioread.l
+pathing_generate_messages_eus: /home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg/gpiowrite.l
+pathing_generate_messages_eus: /home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg/PixyBlock.l
+pathing_generate_messages_eus: /home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg/PixyResolution.l
+pathing_generate_messages_eus: /home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg/PixyData.l
+pathing_generate_messages_eus: /home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg/waypoints.l
+pathing_generate_messages_eus: /home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/msg/seenPoints.l
+pathing_generate_messages_eus: /home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/pathing/manifest.l
 pathing_generate_messages_eus: pathing/CMakeFiles/pathing_generate_messages_eus.dir/build.make
 
 .PHONY : pathing_generate_messages_eus
@@ -112,10 +126,10 @@ pathing/CMakeFiles/pathing_generate_messages_eus.dir/build: pathing_generate_mes
 .PHONY : pathing/CMakeFiles/pathing_generate_messages_eus.dir/build
 
 pathing/CMakeFiles/pathing_generate_messages_eus.dir/clean:
-	cd /home/thattori/capstone/velma/build/pathing && $(CMAKE_COMMAND) -P CMakeFiles/pathing_generate_messages_eus.dir/cmake_clean.cmake
+	cd /home/ubuntu/F1Tenth/velma/build/pathing && $(CMAKE_COMMAND) -P CMakeFiles/pathing_generate_messages_eus.dir/cmake_clean.cmake
 .PHONY : pathing/CMakeFiles/pathing_generate_messages_eus.dir/clean
 
 pathing/CMakeFiles/pathing_generate_messages_eus.dir/depend:
-	cd /home/thattori/capstone/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/thattori/capstone/velma/src /home/thattori/capstone/velma/src/pathing /home/thattori/capstone/velma/build /home/thattori/capstone/velma/build/pathing /home/thattori/capstone/velma/build/pathing/CMakeFiles/pathing_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/F1Tenth/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/F1Tenth/velma/src /home/ubuntu/F1Tenth/velma/src/pathing /home/ubuntu/F1Tenth/velma/build /home/ubuntu/F1Tenth/velma/build/pathing /home/ubuntu/F1Tenth/velma/build/pathing/CMakeFiles/pathing_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : pathing/CMakeFiles/pathing_generate_messages_eus.dir/depend
 

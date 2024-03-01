@@ -1,72 +1,66 @@
 #include <ros/ros.h>
 
-#include <geometry_msgs/PoseWithCovarianceStamped.h>
-#include <sensor_msgs/LaserScan.h>
+#include <geometry_msgs/PoseStamped.h>
 #include <pathing/waypoints.h>
-#include <nav_msgs/Odometry.h>
-
-#include <std_msgs/Float32.h>
-#include <std_msgs/Float64.h>
 
 #include "math.h"
 
 struct Point {
-    float x;
-    float y;
+    double x;
+    double y;
 };
 
 class Recall {
     
 private:
     ros::NodeHandle n;
-    ros::Publisher pub;
+    ros::Publisher goal;
     ros::Subscriber waypoints_sub;
-    ros::Subscriber odom_sub;
     
-    int pursuing_accuracy;
-    bool point_reached;
+    ros::Timer timer;
     
-    Point loc;
+    bool recall;
+    pathing::waypoints waypoints;
+    int idx;
     
 public:
     Recall() {
-        std::string waypoints_topic, odom_topic;
+        n = ros::NodeHandle("~");
+        
+        std::string waypoints_topic;
         n.getParam("waypoints_topic", waypoints_topic);
-        n.getParam("odom_topic", odom_topic);
-        pub = n.advertise<geometry_msgs::PoseWithCovarianceStamped>("/recall_goal", 1000);
+        
+        goal = n.advertise<geometry_msgs::PoseStamped>("/recall_goal", 1000);
         waypoints_sub = n.subscribe("/algorithms/logged_points", 1, &Recall::waypoints_callback, this);
-        odom_sub = n.subscribe(odom_topic, 1, &Recall::odom_callback, this);
         
-        n.getParam("pursuing_accuracy", pursuing_accuracy);
-        point_reached = false;
+        double reset_time;
+        n.getParam("recalling_rate", reset_time);
+        timer = n.createTimer(ros::Duration(reset_time), &Recall::timer_callback, this);
         
-        loc. x = 0.0; loc.y = 0.0;
+        recall = false;
+        idx = 0;
     }
 
-    void waypoints_callback(const pathing::waypoints& waypoints) {
-        for (int i = 0; i < int(waypoints.waypoints.size()); i++) {
-            navigate_to_point(waypoints.waypoints[i]);
-        }
+    void waypoints_callback(const pathing::waypoints& msg) {
+        recall = true;
+        waypoints.xs = msg.xs;
+        waypoints.ys = msg.ys;
+        idx = 0;
     }
     
-    void odom_callback(const nav_msgs::Odometry& msg) {
-        loc.x = msg.pose.pose.position.x;
-        loc.y = msg.pose.pose.position.y;
-    }
-
-    void navigate_to_point(const geometry_msgs::PoseWithCovarianceStamped& point) {
-        point_reached = false;
-        geometry_msgs::PoseWithCovarianceStamped output;
-        output.pose.pose.position.x = point.pose.pose.position.x;
-        output.pose.pose.position.y = point.pose.pose.position.y;
-        
-        while (!point_reached) {
-            pub.publish(output);
-            double dist = sqrt( pow(loc.x-point.pose.pose.position.x,2) + pow(loc.y-point.pose.pose.position.y,2) );
-            if (dist <= pursuing_accuracy) point_reached = true;
+    void timer_callback(const ros::TimerEvent&) {
+        if (recall) {
+            geometry_msgs::PoseStamped waypoint;
+            waypoint.header.stamp = ros::Time::now();
+            waypoint.header.frame_id = "map";
+            waypoint.pose.position.x = waypoints.xs[idx];
+            waypoint.pose.position.y = waypoints.ys[idx];
+            waypoint.pose.orientation.w = 1.0;
+            goal.publish(waypoint);
+            idx += 1;
+            if (idx == int(waypoints.xs.size())) idx = 0;
         }
     }
-
 };
 
 int main(int argc, char** argv) {

@@ -88,7 +88,7 @@ public:
         n.getParam("scan_topic", scan_topic);
         n.getParam("odom_topic", odom_topic);
 
-        n.getParam("map_frame", map_frame);
+        n.getParam("odom_frame", map_frame);
         n.getParam("base_frame", base_frame);
         n.getParam("scan_frame", scan_frame);
 

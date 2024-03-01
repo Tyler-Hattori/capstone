@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/thattori/capstone/velma/devel/share/roseus/ros/led_control/manifest.l"
-  "/home/thattori/capstone/velma/devel/share/roseus/ros/led_control/msg/gpiowrite.l"
+  "/home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/led_control/manifest.l"
+  "/home/ubuntu/F1Tenth/velma/devel/share/roseus/ros/led_control/msg/gpiowrite.l"
   "CMakeFiles/led_control_generate_messages_eus"
 )
 

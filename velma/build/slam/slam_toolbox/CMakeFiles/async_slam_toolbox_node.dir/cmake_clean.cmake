@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/thattori/capstone/velma/devel/lib/slam_toolbox/async_slam_toolbox_node"
-  "/home/thattori/capstone/velma/devel/lib/slam_toolbox/async_slam_toolbox_node.pdb"
+  "/home/ubuntu/F1Tenth/velma/devel/lib/slam_toolbox/async_slam_toolbox_node"
+  "/home/ubuntu/F1Tenth/velma/devel/lib/slam_toolbox/async_slam_toolbox_node.pdb"
   "CMakeFiles/async_slam_toolbox_node.dir/src/slam_toolbox_async_node.cpp.o"
 )
 

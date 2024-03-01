@@ -6,15 +6,35 @@
 
 #IncludeRegexTransform: 
 
-/home/thattori/capstone/velma/src/pathing/node/costmaps/time_costmap.cpp
+/home/ubuntu/F1Tenth/velma/devel/include/pathing/seenPoints.h
+string
+-
+vector
+-
+memory
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+
+/home/ubuntu/F1Tenth/velma/src/pathing/node/costmaps/time_costmap.cpp
 ros/ros.h
 -
 nav_msgs/OccupancyGrid.h
 -
 nav_msgs/Odometry.h
 -
+geometry_msgs/PoseStamped.h
+-
+pathing/seenPoints.h
+-
 math.h
-/home/thattori/capstone/velma/src/pathing/node/costmaps/math.h
+/home/ubuntu/F1Tenth/velma/src/pathing/node/costmaps/math.h
 
 /opt/ros/noetic/include/geometry_msgs/Point.h
 string
@@ -50,6 +70,26 @@ ros/message_operations.h
 geometry_msgs/Point.h
 -
 geometry_msgs/Quaternion.h
+-
+
+/opt/ros/noetic/include/geometry_msgs/PoseStamped.h
+string
+-
+vector
+-
+memory
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+std_msgs/Header.h
+-
+geometry_msgs/Pose.h
 -
 
 /opt/ros/noetic/include/geometry_msgs/PoseWithCovariance.h

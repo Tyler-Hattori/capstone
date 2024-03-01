@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/thattori/capstone/velma/devel/lib/pathing/frontier_costmap"
-  "/home/thattori/capstone/velma/devel/lib/pathing/frontier_costmap.pdb"
+  "/home/ubuntu/F1Tenth/velma/devel/lib/pathing/frontier_costmap"
+  "/home/ubuntu/F1Tenth/velma/devel/lib/pathing/frontier_costmap.pdb"
   "CMakeFiles/frontier_costmap.dir/node/costmaps/frontier_costmap.cpp.o"
 )
 

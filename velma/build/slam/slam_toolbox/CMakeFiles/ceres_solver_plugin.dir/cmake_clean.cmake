@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.pdb"
-  "/home/thattori/capstone/velma/devel/lib/libceres_solver_plugin.so"
+  "/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.pdb"
+  "/home/ubuntu/F1Tenth/velma/devel/lib/libceres_solver_plugin.so"
   "CMakeFiles/ceres_solver_plugin.dir/solvers/ceres_solver.cpp.o"
 )
 

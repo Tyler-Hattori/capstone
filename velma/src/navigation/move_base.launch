@@ -5,6 +5,9 @@
     <rosparam file="$(find velma_nav)/local_costmap_params.yaml" command="load" />
     <rosparam file="$(find velma_nav)/global_costmap_params.yaml" command="load" /> 
     <rosparam file="$(find velma_nav)/base_local_planner_params.yaml" command="load" />
+      <!-- param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS" 
+      param name="controller_frequency" value="10.0" -->
     <remap from="/pathing/map" to="/map"/>
+    <remap from="/pathing/odom" to="/odom"/>
  </node>
 </launch> 

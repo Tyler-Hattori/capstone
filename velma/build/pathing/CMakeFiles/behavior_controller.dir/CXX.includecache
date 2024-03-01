@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/thattori/capstone/velma/src/pathing/include/pathing/car_state.hpp
+/home/ubuntu/F1Tenth/velma/src/pathing/include/pathing/car_state.hpp
 
-/home/thattori/capstone/velma/src/pathing/include/pathing/precompute.hpp
+/home/ubuntu/F1Tenth/velma/src/pathing/include/pathing/precompute.hpp
 
-/home/thattori/capstone/velma/src/pathing/node/behavior_controller.cpp
+/home/ubuntu/F1Tenth/velma/src/pathing/node/behavior_controller.cpp
 ros/ros.h
 -
 ros/package.h
@@ -25,6 +25,8 @@ sensor_msgs/LaserScan.h
 -
 nav_msgs/Odometry.h
 -
+nav_msgs/OccupancyGrid.h
+-
 sensor_msgs/Imu.h
 -
 std_msgs/String.h
@@ -32,9 +34,9 @@ std_msgs/String.h
 fstream
 -
 pathing/car_state.hpp
-/home/thattori/capstone/velma/src/pathing/node/pathing/car_state.hpp
+/home/ubuntu/F1Tenth/velma/src/pathing/node/pathing/car_state.hpp
 pathing/precompute.hpp
-/home/thattori/capstone/velma/src/pathing/node/pathing/precompute.hpp
+/home/ubuntu/F1Tenth/velma/src/pathing/node/pathing/precompute.hpp
 
 /opt/ros/noetic/include/geometry_msgs/Point.h
 string
@@ -158,6 +160,44 @@ ros/serialization.h
 ros/builtin_message_traits.h
 -
 ros/message_operations.h
+-
+
+/opt/ros/noetic/include/nav_msgs/MapMetaData.h
+string
+-
+vector
+-
+memory
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+geometry_msgs/Pose.h
+-
+
+/opt/ros/noetic/include/nav_msgs/OccupancyGrid.h
+string
+-
+vector
+-
+memory
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+std_msgs/Header.h
+-
+nav_msgs/MapMetaData.h
 -
 
 /opt/ros/noetic/include/nav_msgs/Odometry.h

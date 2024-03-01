@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/thattori/capstone/velma/devel/lib/led_control/indicator"
-  "/home/thattori/capstone/velma/devel/lib/led_control/indicator.pdb"
+  "/home/ubuntu/F1Tenth/velma/devel/lib/led_control/indicator"
+  "/home/ubuntu/F1Tenth/velma/devel/lib/led_control/indicator.pdb"
   "CMakeFiles/indicator.dir/node/indicator.cpp.o"
 )
 

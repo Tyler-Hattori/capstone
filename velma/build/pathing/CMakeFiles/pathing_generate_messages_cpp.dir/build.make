@@ -43,64 +43,80 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/thattori/capstone/velma/src
+CMAKE_SOURCE_DIR = /home/ubuntu/F1Tenth/velma/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/thattori/capstone/velma/build
+CMAKE_BINARY_DIR = /home/ubuntu/F1Tenth/velma/build
 
 # Utility rule file for pathing_generate_messages_cpp.
 
 # Include the progress variables for this target.
 include pathing/CMakeFiles/pathing_generate_messages_cpp.dir/progress.make
 
-pathing/CMakeFiles/pathing_generate_messages_cpp: /home/thattori/capstone/velma/devel/include/pathing/gpioread.h
-pathing/CMakeFiles/pathing_generate_messages_cpp: /home/thattori/capstone/velma/devel/include/pathing/gpiowrite.h
-pathing/CMakeFiles/pathing_generate_messages_cpp: /home/thattori/capstone/velma/devel/include/pathing/PixyBlock.h
-pathing/CMakeFiles/pathing_generate_messages_cpp: /home/thattori/capstone/velma/devel/include/pathing/PixyResolution.h
-pathing/CMakeFiles/pathing_generate_messages_cpp: /home/thattori/capstone/velma/devel/include/pathing/PixyData.h
+pathing/CMakeFiles/pathing_generate_messages_cpp: /home/ubuntu/F1Tenth/velma/devel/include/pathing/gpioread.h
+pathing/CMakeFiles/pathing_generate_messages_cpp: /home/ubuntu/F1Tenth/velma/devel/include/pathing/gpiowrite.h
+pathing/CMakeFiles/pathing_generate_messages_cpp: /home/ubuntu/F1Tenth/velma/devel/include/pathing/PixyBlock.h
+pathing/CMakeFiles/pathing_generate_messages_cpp: /home/ubuntu/F1Tenth/velma/devel/include/pathing/PixyResolution.h
+pathing/CMakeFiles/pathing_generate_messages_cpp: /home/ubuntu/F1Tenth/velma/devel/include/pathing/PixyData.h
+pathing/CMakeFiles/pathing_generate_messages_cpp: /home/ubuntu/F1Tenth/velma/devel/include/pathing/waypoints.h
+pathing/CMakeFiles/pathing_generate_messages_cpp: /home/ubuntu/F1Tenth/velma/devel/include/pathing/seenPoints.h
 
 
-/home/thattori/capstone/velma/devel/include/pathing/gpioread.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/thattori/capstone/velma/devel/include/pathing/gpioread.h: /home/thattori/capstone/velma/src/pathing/msg/gpioread.msg
-/home/thattori/capstone/velma/devel/include/pathing/gpioread.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/thattori/capstone/velma/devel/include/pathing/gpioread.h: /opt/ros/noetic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from pathing/gpioread.msg"
-	cd /home/thattori/capstone/velma/src/pathing && /home/thattori/capstone/velma/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/thattori/capstone/velma/src/pathing/msg/gpioread.msg -Ipathing:/home/thattori/capstone/velma/src/pathing/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p pathing -o /home/thattori/capstone/velma/devel/include/pathing -e /opt/ros/noetic/share/gencpp/cmake/..
+/home/ubuntu/F1Tenth/velma/devel/include/pathing/gpioread.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/ubuntu/F1Tenth/velma/devel/include/pathing/gpioread.h: /home/ubuntu/F1Tenth/velma/src/pathing/msg/gpioread.msg
+/home/ubuntu/F1Tenth/velma/devel/include/pathing/gpioread.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/ubuntu/F1Tenth/velma/devel/include/pathing/gpioread.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/F1Tenth/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from pathing/gpioread.msg"
+	cd /home/ubuntu/F1Tenth/velma/src/pathing && /home/ubuntu/F1Tenth/velma/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ubuntu/F1Tenth/velma/src/pathing/msg/gpioread.msg -Ipathing:/home/ubuntu/F1Tenth/velma/src/pathing/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p pathing -o /home/ubuntu/F1Tenth/velma/devel/include/pathing -e /opt/ros/noetic/share/gencpp/cmake/..
 
-/home/thattori/capstone/velma/devel/include/pathing/gpiowrite.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/thattori/capstone/velma/devel/include/pathing/gpiowrite.h: /home/thattori/capstone/velma/src/pathing/msg/gpiowrite.msg
-/home/thattori/capstone/velma/devel/include/pathing/gpiowrite.h: /opt/ros/noetic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from pathing/gpiowrite.msg"
-	cd /home/thattori/capstone/velma/src/pathing && /home/thattori/capstone/velma/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/thattori/capstone/velma/src/pathing/msg/gpiowrite.msg -Ipathing:/home/thattori/capstone/velma/src/pathing/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p pathing -o /home/thattori/capstone/velma/devel/include/pathing -e /opt/ros/noetic/share/gencpp/cmake/..
+/home/ubuntu/F1Tenth/velma/devel/include/pathing/gpiowrite.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/ubuntu/F1Tenth/velma/devel/include/pathing/gpiowrite.h: /home/ubuntu/F1Tenth/velma/src/pathing/msg/gpiowrite.msg
+/home/ubuntu/F1Tenth/velma/devel/include/pathing/gpiowrite.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/F1Tenth/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from pathing/gpiowrite.msg"
+	cd /home/ubuntu/F1Tenth/velma/src/pathing && /home/ubuntu/F1Tenth/velma/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ubuntu/F1Tenth/velma/src/pathing/msg/gpiowrite.msg -Ipathing:/home/ubuntu/F1Tenth/velma/src/pathing/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p pathing -o /home/ubuntu/F1Tenth/velma/devel/include/pathing -e /opt/ros/noetic/share/gencpp/cmake/..
 
-/home/thattori/capstone/velma/devel/include/pathing/PixyBlock.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/thattori/capstone/velma/devel/include/pathing/PixyBlock.h: /home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg
-/home/thattori/capstone/velma/devel/include/pathing/PixyBlock.h: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
-/home/thattori/capstone/velma/devel/include/pathing/PixyBlock.h: /opt/ros/noetic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from pathing/PixyBlock.msg"
-	cd /home/thattori/capstone/velma/src/pathing && /home/thattori/capstone/velma/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg -Ipathing:/home/thattori/capstone/velma/src/pathing/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p pathing -o /home/thattori/capstone/velma/devel/include/pathing -e /opt/ros/noetic/share/gencpp/cmake/..
+/home/ubuntu/F1Tenth/velma/devel/include/pathing/PixyBlock.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/ubuntu/F1Tenth/velma/devel/include/pathing/PixyBlock.h: /home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyBlock.msg
+/home/ubuntu/F1Tenth/velma/devel/include/pathing/PixyBlock.h: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
+/home/ubuntu/F1Tenth/velma/devel/include/pathing/PixyBlock.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/F1Tenth/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from pathing/PixyBlock.msg"
+	cd /home/ubuntu/F1Tenth/velma/src/pathing && /home/ubuntu/F1Tenth/velma/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyBlock.msg -Ipathing:/home/ubuntu/F1Tenth/velma/src/pathing/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p pathing -o /home/ubuntu/F1Tenth/velma/devel/include/pathing -e /opt/ros/noetic/share/gencpp/cmake/..
 
-/home/thattori/capstone/velma/devel/include/pathing/PixyResolution.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/thattori/capstone/velma/devel/include/pathing/PixyResolution.h: /home/thattori/capstone/velma/src/pathing/msg/PixyResolution.msg
-/home/thattori/capstone/velma/devel/include/pathing/PixyResolution.h: /opt/ros/noetic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating C++ code from pathing/PixyResolution.msg"
-	cd /home/thattori/capstone/velma/src/pathing && /home/thattori/capstone/velma/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/thattori/capstone/velma/src/pathing/msg/PixyResolution.msg -Ipathing:/home/thattori/capstone/velma/src/pathing/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p pathing -o /home/thattori/capstone/velma/devel/include/pathing -e /opt/ros/noetic/share/gencpp/cmake/..
+/home/ubuntu/F1Tenth/velma/devel/include/pathing/PixyResolution.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/ubuntu/F1Tenth/velma/devel/include/pathing/PixyResolution.h: /home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyResolution.msg
+/home/ubuntu/F1Tenth/velma/devel/include/pathing/PixyResolution.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/F1Tenth/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating C++ code from pathing/PixyResolution.msg"
+	cd /home/ubuntu/F1Tenth/velma/src/pathing && /home/ubuntu/F1Tenth/velma/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyResolution.msg -Ipathing:/home/ubuntu/F1Tenth/velma/src/pathing/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p pathing -o /home/ubuntu/F1Tenth/velma/devel/include/pathing -e /opt/ros/noetic/share/gencpp/cmake/..
 
-/home/thattori/capstone/velma/devel/include/pathing/PixyData.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/thattori/capstone/velma/devel/include/pathing/PixyData.h: /home/thattori/capstone/velma/src/pathing/msg/PixyData.msg
-/home/thattori/capstone/velma/devel/include/pathing/PixyData.h: /home/thattori/capstone/velma/src/pathing/msg/PixyBlock.msg
-/home/thattori/capstone/velma/devel/include/pathing/PixyData.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/thattori/capstone/velma/devel/include/pathing/PixyData.h: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
-/home/thattori/capstone/velma/devel/include/pathing/PixyData.h: /opt/ros/noetic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating C++ code from pathing/PixyData.msg"
-	cd /home/thattori/capstone/velma/src/pathing && /home/thattori/capstone/velma/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/thattori/capstone/velma/src/pathing/msg/PixyData.msg -Ipathing:/home/thattori/capstone/velma/src/pathing/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p pathing -o /home/thattori/capstone/velma/devel/include/pathing -e /opt/ros/noetic/share/gencpp/cmake/..
+/home/ubuntu/F1Tenth/velma/devel/include/pathing/PixyData.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/ubuntu/F1Tenth/velma/devel/include/pathing/PixyData.h: /home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyData.msg
+/home/ubuntu/F1Tenth/velma/devel/include/pathing/PixyData.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/ubuntu/F1Tenth/velma/devel/include/pathing/PixyData.h: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
+/home/ubuntu/F1Tenth/velma/devel/include/pathing/PixyData.h: /home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyBlock.msg
+/home/ubuntu/F1Tenth/velma/devel/include/pathing/PixyData.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/F1Tenth/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating C++ code from pathing/PixyData.msg"
+	cd /home/ubuntu/F1Tenth/velma/src/pathing && /home/ubuntu/F1Tenth/velma/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ubuntu/F1Tenth/velma/src/pathing/msg/PixyData.msg -Ipathing:/home/ubuntu/F1Tenth/velma/src/pathing/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p pathing -o /home/ubuntu/F1Tenth/velma/devel/include/pathing -e /opt/ros/noetic/share/gencpp/cmake/..
+
+/home/ubuntu/F1Tenth/velma/devel/include/pathing/waypoints.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/ubuntu/F1Tenth/velma/devel/include/pathing/waypoints.h: /home/ubuntu/F1Tenth/velma/src/pathing/msg/waypoints.msg
+/home/ubuntu/F1Tenth/velma/devel/include/pathing/waypoints.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/F1Tenth/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating C++ code from pathing/waypoints.msg"
+	cd /home/ubuntu/F1Tenth/velma/src/pathing && /home/ubuntu/F1Tenth/velma/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ubuntu/F1Tenth/velma/src/pathing/msg/waypoints.msg -Ipathing:/home/ubuntu/F1Tenth/velma/src/pathing/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p pathing -o /home/ubuntu/F1Tenth/velma/devel/include/pathing -e /opt/ros/noetic/share/gencpp/cmake/..
+
+/home/ubuntu/F1Tenth/velma/devel/include/pathing/seenPoints.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/ubuntu/F1Tenth/velma/devel/include/pathing/seenPoints.h: /home/ubuntu/F1Tenth/velma/src/pathing/msg/seenPoints.msg
+/home/ubuntu/F1Tenth/velma/devel/include/pathing/seenPoints.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/F1Tenth/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating C++ code from pathing/seenPoints.msg"
+	cd /home/ubuntu/F1Tenth/velma/src/pathing && /home/ubuntu/F1Tenth/velma/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ubuntu/F1Tenth/velma/src/pathing/msg/seenPoints.msg -Ipathing:/home/ubuntu/F1Tenth/velma/src/pathing/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p pathing -o /home/ubuntu/F1Tenth/velma/devel/include/pathing -e /opt/ros/noetic/share/gencpp/cmake/..
 
 pathing_generate_messages_cpp: pathing/CMakeFiles/pathing_generate_messages_cpp
-pathing_generate_messages_cpp: /home/thattori/capstone/velma/devel/include/pathing/gpioread.h
-pathing_generate_messages_cpp: /home/thattori/capstone/velma/devel/include/pathing/gpiowrite.h
-pathing_generate_messages_cpp: /home/thattori/capstone/velma/devel/include/pathing/PixyBlock.h
-pathing_generate_messages_cpp: /home/thattori/capstone/velma/devel/include/pathing/PixyResolution.h
-pathing_generate_messages_cpp: /home/thattori/capstone/velma/devel/include/pathing/PixyData.h
+pathing_generate_messages_cpp: /home/ubuntu/F1Tenth/velma/devel/include/pathing/gpioread.h
+pathing_generate_messages_cpp: /home/ubuntu/F1Tenth/velma/devel/include/pathing/gpiowrite.h
+pathing_generate_messages_cpp: /home/ubuntu/F1Tenth/velma/devel/include/pathing/PixyBlock.h
+pathing_generate_messages_cpp: /home/ubuntu/F1Tenth/velma/devel/include/pathing/PixyResolution.h
+pathing_generate_messages_cpp: /home/ubuntu/F1Tenth/velma/devel/include/pathing/PixyData.h
+pathing_generate_messages_cpp: /home/ubuntu/F1Tenth/velma/devel/include/pathing/waypoints.h
+pathing_generate_messages_cpp: /home/ubuntu/F1Tenth/velma/devel/include/pathing/seenPoints.h
 pathing_generate_messages_cpp: pathing/CMakeFiles/pathing_generate_messages_cpp.dir/build.make
 
 .PHONY : pathing_generate_messages_cpp
@@ -111,10 +127,10 @@ pathing/CMakeFiles/pathing_generate_messages_cpp.dir/build: pathing_generate_mes
 .PHONY : pathing/CMakeFiles/pathing_generate_messages_cpp.dir/build
 
 pathing/CMakeFiles/pathing_generate_messages_cpp.dir/clean:
-	cd /home/thattori/capstone/velma/build/pathing && $(CMAKE_COMMAND) -P CMakeFiles/pathing_generate_messages_cpp.dir/cmake_clean.cmake
+	cd /home/ubuntu/F1Tenth/velma/build/pathing && $(CMAKE_COMMAND) -P CMakeFiles/pathing_generate_messages_cpp.dir/cmake_clean.cmake
 .PHONY : pathing/CMakeFiles/pathing_generate_messages_cpp.dir/clean
 
 pathing/CMakeFiles/pathing_generate_messages_cpp.dir/depend:
-	cd /home/thattori/capstone/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/thattori/capstone/velma/src /home/thattori/capstone/velma/src/pathing /home/thattori/capstone/velma/build /home/thattori/capstone/velma/build/pathing /home/thattori/capstone/velma/build/pathing/CMakeFiles/pathing_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/F1Tenth/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/F1Tenth/velma/src /home/ubuntu/F1Tenth/velma/src/pathing /home/ubuntu/F1Tenth/velma/build /home/ubuntu/F1Tenth/velma/build/pathing /home/ubuntu/F1Tenth/velma/build/pathing/CMakeFiles/pathing_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : pathing/CMakeFiles/pathing_generate_messages_cpp.dir/depend
 

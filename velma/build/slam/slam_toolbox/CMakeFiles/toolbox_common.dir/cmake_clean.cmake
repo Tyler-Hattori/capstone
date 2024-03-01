@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/thattori/capstone/velma/devel/lib/libtoolbox_common.pdb"
-  "/home/thattori/capstone/velma/devel/lib/libtoolbox_common.so"
+  "/home/ubuntu/F1Tenth/velma/devel/lib/libtoolbox_common.pdb"
+  "/home/ubuntu/F1Tenth/velma/devel/lib/libtoolbox_common.so"
   "CMakeFiles/toolbox_common.dir/src/laser_utils.cpp.o"
   "CMakeFiles/toolbox_common.dir/src/loop_closure_assistant.cpp.o"
   "CMakeFiles/toolbox_common.dir/src/map_saver.cpp.o"

@@ -67,14 +67,14 @@ set(karto_sdk_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(karto_sdk_SOURCE_PREFIX /home/thattori/capstone/velma/src/slam/slam_toolbox/lib/karto_sdk)
-  set(karto_sdk_DEVEL_PREFIX /home/thattori/capstone/velma/devel)
+  set(karto_sdk_SOURCE_PREFIX /home/ubuntu/F1Tenth/velma/src/slam/slam_toolbox/lib/karto_sdk)
+  set(karto_sdk_DEVEL_PREFIX /home/ubuntu/F1Tenth/velma/devel)
   set(karto_sdk_INSTALL_PREFIX "")
   set(karto_sdk_PREFIX ${karto_sdk_DEVEL_PREFIX})
 else()
   set(karto_sdk_SOURCE_PREFIX "")
   set(karto_sdk_DEVEL_PREFIX "")
-  set(karto_sdk_INSTALL_PREFIX /home/thattori/capstone/velma/install)
+  set(karto_sdk_INSTALL_PREFIX /home/ubuntu/F1Tenth/velma/install)
   set(karto_sdk_PREFIX ${karto_sdk_INSTALL_PREFIX})
 endif()
 
@@ -116,7 +116,7 @@ if(NOT "include;/usr/include " STREQUAL " ")
   endforeach()
 endif()
 
-set(libraries "kartoSlamToolbox;/usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0;/usr/lib/x86_64-linux-gnu/libboost_serialization.so.1.71.0;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0;/usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0;optimized;/usr/lib/x86_64-linux-gnu/libtbb.so;debug;/usr/lib/x86_64-linux-gnu/libtbb.so")
+set(libraries "kartoSlamToolbox;/usr/lib/aarch64-linux-gnu/libboost_system.so.1.71.0;/usr/lib/aarch64-linux-gnu/libboost_serialization.so.1.71.0;/usr/lib/aarch64-linux-gnu/libboost_filesystem.so.1.71.0;/usr/lib/aarch64-linux-gnu/libboost_thread.so.1.71.0;optimized;/usr/lib/aarch64-linux-gnu/libtbb.so;debug;/usr/lib/aarch64-linux-gnu/libtbb.so")
 foreach(library ${libraries})
   # keep build configuration keywords, target names and absolute libraries as-is
   if("${library}" MATCHES "^(debug|optimized|general)$")
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/thattori/capstone/velma/install/lib;/home/thattori/capstone/velma/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/ubuntu/F1Tenth/velma/install/lib;/home/ubuntu/F1Tenth/velma/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

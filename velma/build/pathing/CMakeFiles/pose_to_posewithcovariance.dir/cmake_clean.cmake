@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/thattori/capstone/velma/devel/lib/pathing/pose_to_posewithcovariance"
-  "/home/thattori/capstone/velma/devel/lib/pathing/pose_to_posewithcovariance.pdb"
+  "/home/ubuntu/F1Tenth/velma/devel/lib/pathing/pose_to_posewithcovariance"
+  "/home/ubuntu/F1Tenth/velma/devel/lib/pathing/pose_to_posewithcovariance.pdb"
   "CMakeFiles/pose_to_posewithcovariance.dir/node/pose_to_posewithcovariance.cpp.o"
 )
 

@@ -67,14 +67,14 @@ set(slam_toolbox_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(slam_toolbox_SOURCE_PREFIX /home/thattori/capstone/velma/src/slam/slam_toolbox)
-  set(slam_toolbox_DEVEL_PREFIX /home/thattori/capstone/velma/devel)
+  set(slam_toolbox_SOURCE_PREFIX /home/ubuntu/F1Tenth/velma/src/slam/slam_toolbox)
+  set(slam_toolbox_DEVEL_PREFIX /home/ubuntu/F1Tenth/velma/devel)
   set(slam_toolbox_INSTALL_PREFIX "")
   set(slam_toolbox_PREFIX ${slam_toolbox_DEVEL_PREFIX})
 else()
   set(slam_toolbox_SOURCE_PREFIX "")
   set(slam_toolbox_DEVEL_PREFIX "")
-  set(slam_toolbox_INSTALL_PREFIX /home/thattori/capstone/velma/install)
+  set(slam_toolbox_INSTALL_PREFIX /home/ubuntu/F1Tenth/velma/install)
   set(slam_toolbox_PREFIX ${slam_toolbox_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(slam_toolbox_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/thattori/capstone/velma/src/slam/slam_toolbox/include;/usr/include;/usr/include/eigen3 " STREQUAL " ")
+if(NOT "/home/ubuntu/F1Tenth/velma/src/slam/slam_toolbox/include;/usr/include;/usr/include/eigen3 " STREQUAL " ")
   set(slam_toolbox_INCLUDE_DIRS "")
-  set(_include_dirs "/home/thattori/capstone/velma/src/slam/slam_toolbox/include;/usr/include;/usr/include/eigen3")
+  set(_include_dirs "/home/ubuntu/F1Tenth/velma/src/slam/slam_toolbox/include;/usr/include;/usr/include/eigen3")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -110,13 +110,13 @@ if(NOT "/home/thattori/capstone/velma/src/slam/slam_toolbox/include;/usr/include
         message(FATAL_ERROR "Project 'slam_toolbox' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'slam_toolbox' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/thattori/capstone/velma/src/slam/slam_toolbox/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'slam_toolbox' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/ubuntu/F1Tenth/velma/src/slam/slam_toolbox/${idir}'.  ${_report}")
     endif()
     _list_append_unique(slam_toolbox_INCLUDE_DIRS ${include})
   endforeach()
 endif()
 
-set(libraries "ceres_solver_plugin;toolbox_lib;slam_toolbox_rviz_plugin;/usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0;/usr/lib/x86_64-linux-gnu/libboost_serialization.so.1.71.0;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0;/usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0")
+set(libraries "ceres_solver_plugin;toolbox_lib;slam_toolbox_rviz_plugin;/usr/lib/aarch64-linux-gnu/libboost_system.so.1.71.0;/usr/lib/aarch64-linux-gnu/libboost_serialization.so.1.71.0;/usr/lib/aarch64-linux-gnu/libboost_filesystem.so.1.71.0;/usr/lib/aarch64-linux-gnu/libboost_thread.so.1.71.0")
 foreach(library ${libraries})
   # keep build configuration keywords, target names and absolute libraries as-is
   if("${library}" MATCHES "^(debug|optimized|general)$")
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/thattori/capstone/velma/devel/lib;/home/thattori/capstone/velma/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/ubuntu/F1Tenth/velma/devel/lib;/home/ubuntu/F1Tenth/velma/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

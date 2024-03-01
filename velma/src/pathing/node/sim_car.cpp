@@ -76,6 +76,7 @@ private:
 
     // Listen for a map
     ros::Subscriber map_sub;
+    ros::Subscriber sim_map_sub;
     bool map_exists = false;
 
     // Listen for updates to the pose
@@ -225,6 +226,7 @@ public:
 
         // Start a subscriber to listen to new maps
         map_sub = n.subscribe(map_topic, 1, &RacecarSimulator::map_callback, this);
+	sim_map_sub = n.subscribe("/sim_map", 1, &RacecarSimulator::sim_map_callback, this);
 
         // Start a subscriber to listen to pose messages
         pose_sub = n.subscribe(pose_topic, 1, &RacecarSimulator::pose_callback, this);
@@ -308,7 +310,7 @@ public:
         // simulate P controller
         compute_accel(desired_speed);
         double actual_ang = 0.0;
-        if (steering_buffer.size() < buffer_length) {
+        if (int(steering_buffer.size()) < buffer_length) {
             steering_buffer.push_back(desired_steer_ang);
             actual_ang = 0.0;
         } else {
@@ -573,6 +575,40 @@ public:
             clear_obs_clicked = false;
         }
     }
+	
+	void sim_map_callback(const nav_msgs::OccupancyGrid & msg) {
+            /*// Fetch the map parameters
+            size_t height = msg.info.height;
+            size_t width = msg.info.width;
+            double resolution = msg.info.resolution;
+            // Convert the ROS origin to a pose
+            Pose2D origin;
+            origin.x = msg.info.origin.position.x;
+            origin.y = msg.info.origin.position.y;
+            geometry_msgs::Quaternion q = msg.info.origin.orientation;
+            tf2::Quaternion quat(q.x, q.y, q.z, q.w);
+            origin.theta = tf2::impl::getYaw(quat);
+
+            // Convert the map to probability values
+            std::vector<double> map(msg.data.size());
+            for (size_t i = 0; i < height * width; i++) {
+                if (msg.data[i] > 100 or msg.data[i] < 0) {
+                    map[i] = 0.5; // Unknown
+                } else {
+                    map[i] = msg.data[i]/100.;
+                }
+            }
+
+            // Send the map to the scanner
+            scan_simulator.set_map(
+                map,
+                height,
+                width,
+                resolution,
+                origin,
+                map_free_threshold);
+            map_exists = true;*/
+        }
 
         void map_callback(const nav_msgs::OccupancyGrid & msg) {
             // Fetch the map parameters

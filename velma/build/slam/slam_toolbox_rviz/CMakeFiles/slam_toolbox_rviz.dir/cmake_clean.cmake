@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/thattori/capstone/velma/devel/lib/libslam_toolbox_rviz.pdb"
-  "/home/thattori/capstone/velma/devel/lib/libslam_toolbox_rviz.so"
+  "/home/ubuntu/F1Tenth/velma/devel/lib/libslam_toolbox_rviz.pdb"
+  "/home/ubuntu/F1Tenth/velma/devel/lib/libslam_toolbox_rviz.so"
   "CMakeFiles/slam_toolbox_rviz.dir/moc_slam_toolbox_rviz_plugin.cxx.o"
   "CMakeFiles/slam_toolbox_rviz.dir/src/slam_toolbox_rviz_plugin.cpp.o"
   "moc_slam_toolbox_rviz_plugin.cxx"

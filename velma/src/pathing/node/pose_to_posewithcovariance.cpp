@@ -1,7 +1,6 @@
 #include <ros/ros.h>
 
 #include <geometry_msgs/PoseStamped.h>
-#include <geometry_msgs/PoseWithCovarianceStamped.h>
 
 class PosetoPoseWithCovariance {
     
@@ -13,21 +12,22 @@ private:
 public:
   PosetoPoseWithCovariance() {
     n = ros::NodeHandle("~");
-    new_pose = n.advertise<geometry_msgs::PoseWithCovarianceStamped>("/navigate_goal", 1000);
+    new_pose = n.advertise<geometry_msgs::PoseStamped>("/navigate_goal", 1000);
     pose = n.subscribe("/rviz_requested_goal", 1000, &PosetoPoseWithCovariance::pose_callback, this);
   }
   
-  void convert_and_publish(const geometry_msgs::PoseStamped & pose) {
+  /*void convert_and_publish(const geometry_msgs::PoseStamped & pose) {
     geometry_msgs::PoseWithCovarianceStamped pose_with_cov;
     
     pose_with_cov.header = pose.header;
     pose_with_cov.pose.pose = pose.pose;
     
     new_pose.publish(pose_with_cov);
-  }
+  }*/
   
   void pose_callback(const geometry_msgs::PoseStamped & pose) {
-    convert_and_publish(pose);
+    //convert_and_publish(pose);
+    new_pose.publish(pose);
   }
 };
 

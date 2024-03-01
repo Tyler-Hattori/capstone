@@ -6,12 +6,10 @@
 
 #IncludeRegexTransform: 
 
-/home/thattori/capstone/velma/src/pathing/node/pose_to_posewithcovariance.cpp
+/home/ubuntu/F1Tenth/velma/src/pathing/node/pose_to_posewithcovariance.cpp
 ros/ros.h
 -
 geometry_msgs/PoseStamped.h
--
-geometry_msgs/PoseWithCovarianceStamped.h
 -
 
 /opt/ros/noetic/include/geometry_msgs/Point.h
@@ -68,44 +66,6 @@ ros/message_operations.h
 std_msgs/Header.h
 -
 geometry_msgs/Pose.h
--
-
-/opt/ros/noetic/include/geometry_msgs/PoseWithCovariance.h
-string
--
-vector
--
-memory
--
-ros/types.h
--
-ros/serialization.h
--
-ros/builtin_message_traits.h
--
-ros/message_operations.h
--
-geometry_msgs/Pose.h
--
-
-/opt/ros/noetic/include/geometry_msgs/PoseWithCovarianceStamped.h
-string
--
-vector
--
-memory
--
-ros/types.h
--
-ros/serialization.h
--
-ros/builtin_message_traits.h
--
-ros/message_operations.h
--
-std_msgs/Header.h
--
-geometry_msgs/PoseWithCovariance.h
 -
 
 /opt/ros/noetic/include/geometry_msgs/Quaternion.h

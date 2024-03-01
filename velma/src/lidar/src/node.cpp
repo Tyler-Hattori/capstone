@@ -31,7 +31,7 @@
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
  */
-
+#include <unistd.h>
 #include "ros/ros.h"
 #include "sensor_msgs/LaserScan.h"
 #include "std_srvs/Empty.h"
@@ -113,7 +113,6 @@ bool getRPLIDARDeviceInfo(ILidarDriver * drv)
 {
     sl_result     op_result;
     sl_lidar_response_device_info_t devinfo;
-
     op_result = drv->getDeviceInfo(devinfo);
     if (SL_IS_FAIL(op_result)) {
         if (op_result == SL_RESULT_OPERATION_TIMEOUT) {
@@ -150,10 +149,9 @@ bool checkRPLIDARHealth(ILidarDriver * drv)
 {
     sl_result     op_result;
     sl_lidar_response_device_health_t healthinfo;
-
     op_result = drv->getHealth(healthinfo);
     if (SL_IS_OK(op_result)) { 
-        //ROS_INFO("RPLidar health status : %d", healthinfo.status);
+        ROS_INFO("RPLidar health status : %d", healthinfo.status);
         switch (healthinfo.status) {
 			case SL_LIDAR_STATUS_OK:
                 ROS_INFO("RPLidar health status : OK.");
@@ -167,6 +165,7 @@ bool checkRPLIDARHealth(ILidarDriver * drv)
         }
     } else {
         ROS_ERROR("Error, cannot retrieve rplidar health code: %x", op_result);
+
         return false;
     }
 }
@@ -204,6 +203,7 @@ static float getAngle(const sl_lidar_response_measurement_node_hq_t& node)
 }
 
 int main(int argc, char * argv[]) {
+	
     ros::init(argc, argv, "rplidar_node");
     
     std::string channel_type;
@@ -222,7 +222,7 @@ int main(int argc, char * argv[]) {
     float max_distance;
     double scan_frequency;
     ros::NodeHandle nh;
-    ros::Publisher scan_pub = nh.advertise<sensor_msgs::LaserScan>("scan", 1000);
+    ros::Publisher scan_pub = nh.advertise<sensor_msgs::LaserScan>("/backwards_scan", 1000);
     ros::NodeHandle nh_private("~");
     nh_private.param<std::string>("channel_type", channel_type, "serial");
     nh_private.param<std::string>("tcp_ip", tcp_ip, "192.168.0.7"); 
@@ -246,11 +246,13 @@ int main(int argc, char * argv[]) {
     int ver_minor = SL_LIDAR_SDK_VERSION_MINOR;
     int ver_patch = SL_LIDAR_SDK_VERSION_PATCH;    
     ROS_INFO("RPLIDAR running on ROS package rplidar_ros, SDK Version:%d.%d.%d",ver_major,ver_minor,ver_patch);
-
     sl_result  op_result;
 
     // create the driver instance
     drv = *createLidarDriver();
+    //op_result = drv->reset(2000);
+    //usleep(2000);
+    ROS_INFO( "result is : %x", op_result);
     IChannel* _channel;
     if(channel_type == "tcp"){
         _channel = *createTcpChannel(tcp_ip, tcp_port);

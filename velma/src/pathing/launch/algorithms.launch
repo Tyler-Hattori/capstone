@@ -1,13 +1,4 @@
 <launch>
-  <!-- Launch the Wanderer Node -->
-  <node pkg="pathing" name="wanderer" type="wander" output="screen">
-    <rosparam command="load" file="$(find pathing)/params.yaml"/>
-  </node>
-
-  <!-- Launch the Puppy Guarder Node -->
-  <node pkg="pathing" name="puppy_guarder" type="puppy_guard" output="screen">
-    <rosparam command="load" file="$(find pathing)/params.yaml"/>
-  </node>
 
   <!-- Launch the Wall Follower Node -->
   <node pkg="pathing" name="patroller" type="wall_follow" output="screen">
@@ -25,6 +16,16 @@
   </node>
   
   <group ns="navigation">
+    <!-- Launch the Roomba Node -->
+    <node pkg="pathing" name="wanderer" type="roomba" output="screen">
+      <rosparam command="load" file="$(find pathing)/params.yaml"/>
+    </node>
+    
+    <!-- Launch the Returner Node -->
+    <!-- node pkg="pathing" name="returner" type="return" output="screen"
+      rosparam command="load" file="$(find pathing)/params.yaml"/
+    /node -->
+    
     <!-- Launch the Recaller Node -->
     <node pkg="pathing" name="retracer" type="recall" output="screen">
       <rosparam command="load" file="$(find pathing)/params.yaml"/>
@@ -42,19 +43,25 @@
       </node>
       
       <!-- Launch the Costmap generators -->
-      <node pkg="pathing" name="remember_old_locations" type="time_costmap" output="screen">
+      <node pkg="pathing" name="consider_search_history" type="time_costmap" output="screen">
         <rosparam command="load" file="$(find pathing)/params.yaml"/>
       </node>
-      <node pkg="pathing" name="measure_route_convenience" type="ease_costmap" output="screen">
+      <node pkg="pathing" name="consider_easiest_path" type="ease_costmap" output="screen">
         <rosparam command="load" file="$(find pathing)/params.yaml"/>
       </node>
-      <node pkg="pathing" name="analyze_unsearched_area" type="unsearched_area_costmap" output="screen">
+      <node pkg="pathing" name="consider_unsearched_area" type="unsearched_area_costmap" output="screen">
         <rosparam command="load" file="$(find pathing)/params.yaml"/>
       </node>
-      <node pkg="pathing" name="detect_bucket" type="object_costmap" output="screen">
+      <node pkg="pathing" name="consider_obstacles" type="obstacle_costmap" output="screen">
         <rosparam command="load" file="$(find pathing)/params.yaml"/>
       </node>
-      <node pkg="pathing" name="explore_the_unknown" type="frontier_costmap" output="screen">
+      <node pkg="pathing" name="consider_unknown_areas" type="frontier_costmap" output="screen">
+        <rosparam command="load" file="$(find pathing)/params.yaml"/>
+      </node>
+      <!--node pkg="pathing" name="avoid_obstacles" type="obstacle_costmap" output="screen"
+        <rosparam command="load" file="$(find pathing)/params.yaml"/
+      /node-->
+      <node pkg="pathing" name="view" type="view" output="screen">
         <rosparam command="load" file="$(find pathing)/params.yaml"/>
       </node>
     </group>

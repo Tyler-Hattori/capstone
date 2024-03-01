@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/thattori/capstone/velma/src
+CMAKE_SOURCE_DIR = /home/ubuntu/F1Tenth/velma/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/thattori/capstone/velma/build
+CMAKE_BINARY_DIR = /home/ubuntu/F1Tenth/velma/build
 
 # Include any dependencies generated for this target.
 include pathing/CMakeFiles/pathing.dir/depend.make
@@ -58,69 +58,69 @@ include pathing/CMakeFiles/pathing.dir/progress.make
 include pathing/CMakeFiles/pathing.dir/flags.make
 
 pathing/CMakeFiles/pathing.dir/src/distance_transform.cpp.o: pathing/CMakeFiles/pathing.dir/flags.make
-pathing/CMakeFiles/pathing.dir/src/distance_transform.cpp.o: /home/thattori/capstone/velma/src/pathing/src/distance_transform.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object pathing/CMakeFiles/pathing.dir/src/distance_transform.cpp.o"
-	cd /home/thattori/capstone/velma/build/pathing && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pathing.dir/src/distance_transform.cpp.o -c /home/thattori/capstone/velma/src/pathing/src/distance_transform.cpp
+pathing/CMakeFiles/pathing.dir/src/distance_transform.cpp.o: /home/ubuntu/F1Tenth/velma/src/pathing/src/distance_transform.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/F1Tenth/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object pathing/CMakeFiles/pathing.dir/src/distance_transform.cpp.o"
+	cd /home/ubuntu/F1Tenth/velma/build/pathing && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pathing.dir/src/distance_transform.cpp.o -c /home/ubuntu/F1Tenth/velma/src/pathing/src/distance_transform.cpp
 
 pathing/CMakeFiles/pathing.dir/src/distance_transform.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pathing.dir/src/distance_transform.cpp.i"
-	cd /home/thattori/capstone/velma/build/pathing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/thattori/capstone/velma/src/pathing/src/distance_transform.cpp > CMakeFiles/pathing.dir/src/distance_transform.cpp.i
+	cd /home/ubuntu/F1Tenth/velma/build/pathing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/F1Tenth/velma/src/pathing/src/distance_transform.cpp > CMakeFiles/pathing.dir/src/distance_transform.cpp.i
 
 pathing/CMakeFiles/pathing.dir/src/distance_transform.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pathing.dir/src/distance_transform.cpp.s"
-	cd /home/thattori/capstone/velma/build/pathing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/thattori/capstone/velma/src/pathing/src/distance_transform.cpp -o CMakeFiles/pathing.dir/src/distance_transform.cpp.s
+	cd /home/ubuntu/F1Tenth/velma/build/pathing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/F1Tenth/velma/src/pathing/src/distance_transform.cpp -o CMakeFiles/pathing.dir/src/distance_transform.cpp.s
 
 pathing/CMakeFiles/pathing.dir/src/ks_kinematics.cpp.o: pathing/CMakeFiles/pathing.dir/flags.make
-pathing/CMakeFiles/pathing.dir/src/ks_kinematics.cpp.o: /home/thattori/capstone/velma/src/pathing/src/ks_kinematics.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object pathing/CMakeFiles/pathing.dir/src/ks_kinematics.cpp.o"
-	cd /home/thattori/capstone/velma/build/pathing && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pathing.dir/src/ks_kinematics.cpp.o -c /home/thattori/capstone/velma/src/pathing/src/ks_kinematics.cpp
+pathing/CMakeFiles/pathing.dir/src/ks_kinematics.cpp.o: /home/ubuntu/F1Tenth/velma/src/pathing/src/ks_kinematics.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/F1Tenth/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object pathing/CMakeFiles/pathing.dir/src/ks_kinematics.cpp.o"
+	cd /home/ubuntu/F1Tenth/velma/build/pathing && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pathing.dir/src/ks_kinematics.cpp.o -c /home/ubuntu/F1Tenth/velma/src/pathing/src/ks_kinematics.cpp
 
 pathing/CMakeFiles/pathing.dir/src/ks_kinematics.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pathing.dir/src/ks_kinematics.cpp.i"
-	cd /home/thattori/capstone/velma/build/pathing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/thattori/capstone/velma/src/pathing/src/ks_kinematics.cpp > CMakeFiles/pathing.dir/src/ks_kinematics.cpp.i
+	cd /home/ubuntu/F1Tenth/velma/build/pathing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/F1Tenth/velma/src/pathing/src/ks_kinematics.cpp > CMakeFiles/pathing.dir/src/ks_kinematics.cpp.i
 
 pathing/CMakeFiles/pathing.dir/src/ks_kinematics.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pathing.dir/src/ks_kinematics.cpp.s"
-	cd /home/thattori/capstone/velma/build/pathing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/thattori/capstone/velma/src/pathing/src/ks_kinematics.cpp -o CMakeFiles/pathing.dir/src/ks_kinematics.cpp.s
+	cd /home/ubuntu/F1Tenth/velma/build/pathing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/F1Tenth/velma/src/pathing/src/ks_kinematics.cpp -o CMakeFiles/pathing.dir/src/ks_kinematics.cpp.s
 
 pathing/CMakeFiles/pathing.dir/src/precompute.cpp.o: pathing/CMakeFiles/pathing.dir/flags.make
-pathing/CMakeFiles/pathing.dir/src/precompute.cpp.o: /home/thattori/capstone/velma/src/pathing/src/precompute.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object pathing/CMakeFiles/pathing.dir/src/precompute.cpp.o"
-	cd /home/thattori/capstone/velma/build/pathing && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pathing.dir/src/precompute.cpp.o -c /home/thattori/capstone/velma/src/pathing/src/precompute.cpp
+pathing/CMakeFiles/pathing.dir/src/precompute.cpp.o: /home/ubuntu/F1Tenth/velma/src/pathing/src/precompute.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/F1Tenth/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object pathing/CMakeFiles/pathing.dir/src/precompute.cpp.o"
+	cd /home/ubuntu/F1Tenth/velma/build/pathing && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pathing.dir/src/precompute.cpp.o -c /home/ubuntu/F1Tenth/velma/src/pathing/src/precompute.cpp
 
 pathing/CMakeFiles/pathing.dir/src/precompute.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pathing.dir/src/precompute.cpp.i"
-	cd /home/thattori/capstone/velma/build/pathing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/thattori/capstone/velma/src/pathing/src/precompute.cpp > CMakeFiles/pathing.dir/src/precompute.cpp.i
+	cd /home/ubuntu/F1Tenth/velma/build/pathing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/F1Tenth/velma/src/pathing/src/precompute.cpp > CMakeFiles/pathing.dir/src/precompute.cpp.i
 
 pathing/CMakeFiles/pathing.dir/src/precompute.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pathing.dir/src/precompute.cpp.s"
-	cd /home/thattori/capstone/velma/build/pathing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/thattori/capstone/velma/src/pathing/src/precompute.cpp -o CMakeFiles/pathing.dir/src/precompute.cpp.s
+	cd /home/ubuntu/F1Tenth/velma/build/pathing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/F1Tenth/velma/src/pathing/src/precompute.cpp -o CMakeFiles/pathing.dir/src/precompute.cpp.s
 
 pathing/CMakeFiles/pathing.dir/src/scan_simulator_2d.cpp.o: pathing/CMakeFiles/pathing.dir/flags.make
-pathing/CMakeFiles/pathing.dir/src/scan_simulator_2d.cpp.o: /home/thattori/capstone/velma/src/pathing/src/scan_simulator_2d.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object pathing/CMakeFiles/pathing.dir/src/scan_simulator_2d.cpp.o"
-	cd /home/thattori/capstone/velma/build/pathing && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pathing.dir/src/scan_simulator_2d.cpp.o -c /home/thattori/capstone/velma/src/pathing/src/scan_simulator_2d.cpp
+pathing/CMakeFiles/pathing.dir/src/scan_simulator_2d.cpp.o: /home/ubuntu/F1Tenth/velma/src/pathing/src/scan_simulator_2d.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/F1Tenth/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object pathing/CMakeFiles/pathing.dir/src/scan_simulator_2d.cpp.o"
+	cd /home/ubuntu/F1Tenth/velma/build/pathing && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pathing.dir/src/scan_simulator_2d.cpp.o -c /home/ubuntu/F1Tenth/velma/src/pathing/src/scan_simulator_2d.cpp
 
 pathing/CMakeFiles/pathing.dir/src/scan_simulator_2d.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pathing.dir/src/scan_simulator_2d.cpp.i"
-	cd /home/thattori/capstone/velma/build/pathing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/thattori/capstone/velma/src/pathing/src/scan_simulator_2d.cpp > CMakeFiles/pathing.dir/src/scan_simulator_2d.cpp.i
+	cd /home/ubuntu/F1Tenth/velma/build/pathing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/F1Tenth/velma/src/pathing/src/scan_simulator_2d.cpp > CMakeFiles/pathing.dir/src/scan_simulator_2d.cpp.i
 
 pathing/CMakeFiles/pathing.dir/src/scan_simulator_2d.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pathing.dir/src/scan_simulator_2d.cpp.s"
-	cd /home/thattori/capstone/velma/build/pathing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/thattori/capstone/velma/src/pathing/src/scan_simulator_2d.cpp -o CMakeFiles/pathing.dir/src/scan_simulator_2d.cpp.s
+	cd /home/ubuntu/F1Tenth/velma/build/pathing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/F1Tenth/velma/src/pathing/src/scan_simulator_2d.cpp -o CMakeFiles/pathing.dir/src/scan_simulator_2d.cpp.s
 
 pathing/CMakeFiles/pathing.dir/src/st_kinematics.cpp.o: pathing/CMakeFiles/pathing.dir/flags.make
-pathing/CMakeFiles/pathing.dir/src/st_kinematics.cpp.o: /home/thattori/capstone/velma/src/pathing/src/st_kinematics.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object pathing/CMakeFiles/pathing.dir/src/st_kinematics.cpp.o"
-	cd /home/thattori/capstone/velma/build/pathing && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pathing.dir/src/st_kinematics.cpp.o -c /home/thattori/capstone/velma/src/pathing/src/st_kinematics.cpp
+pathing/CMakeFiles/pathing.dir/src/st_kinematics.cpp.o: /home/ubuntu/F1Tenth/velma/src/pathing/src/st_kinematics.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/F1Tenth/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object pathing/CMakeFiles/pathing.dir/src/st_kinematics.cpp.o"
+	cd /home/ubuntu/F1Tenth/velma/build/pathing && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pathing.dir/src/st_kinematics.cpp.o -c /home/ubuntu/F1Tenth/velma/src/pathing/src/st_kinematics.cpp
 
 pathing/CMakeFiles/pathing.dir/src/st_kinematics.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pathing.dir/src/st_kinematics.cpp.i"
-	cd /home/thattori/capstone/velma/build/pathing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/thattori/capstone/velma/src/pathing/src/st_kinematics.cpp > CMakeFiles/pathing.dir/src/st_kinematics.cpp.i
+	cd /home/ubuntu/F1Tenth/velma/build/pathing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/F1Tenth/velma/src/pathing/src/st_kinematics.cpp > CMakeFiles/pathing.dir/src/st_kinematics.cpp.i
 
 pathing/CMakeFiles/pathing.dir/src/st_kinematics.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pathing.dir/src/st_kinematics.cpp.s"
-	cd /home/thattori/capstone/velma/build/pathing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/thattori/capstone/velma/src/pathing/src/st_kinematics.cpp -o CMakeFiles/pathing.dir/src/st_kinematics.cpp.s
+	cd /home/ubuntu/F1Tenth/velma/build/pathing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/F1Tenth/velma/src/pathing/src/st_kinematics.cpp -o CMakeFiles/pathing.dir/src/st_kinematics.cpp.s
 
 # Object files for target pathing
 pathing_OBJECTS = \
@@ -133,26 +133,26 @@ pathing_OBJECTS = \
 # External object files for target pathing
 pathing_EXTERNAL_OBJECTS =
 
-/home/thattori/capstone/velma/devel/lib/libpathing.so: pathing/CMakeFiles/pathing.dir/src/distance_transform.cpp.o
-/home/thattori/capstone/velma/devel/lib/libpathing.so: pathing/CMakeFiles/pathing.dir/src/ks_kinematics.cpp.o
-/home/thattori/capstone/velma/devel/lib/libpathing.so: pathing/CMakeFiles/pathing.dir/src/precompute.cpp.o
-/home/thattori/capstone/velma/devel/lib/libpathing.so: pathing/CMakeFiles/pathing.dir/src/scan_simulator_2d.cpp.o
-/home/thattori/capstone/velma/devel/lib/libpathing.so: pathing/CMakeFiles/pathing.dir/src/st_kinematics.cpp.o
-/home/thattori/capstone/velma/devel/lib/libpathing.so: pathing/CMakeFiles/pathing.dir/build.make
-/home/thattori/capstone/velma/devel/lib/libpathing.so: pathing/CMakeFiles/pathing.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/thattori/capstone/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX shared library /home/thattori/capstone/velma/devel/lib/libpathing.so"
-	cd /home/thattori/capstone/velma/build/pathing && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pathing.dir/link.txt --verbose=$(VERBOSE)
+/home/ubuntu/F1Tenth/velma/devel/lib/libpathing.so: pathing/CMakeFiles/pathing.dir/src/distance_transform.cpp.o
+/home/ubuntu/F1Tenth/velma/devel/lib/libpathing.so: pathing/CMakeFiles/pathing.dir/src/ks_kinematics.cpp.o
+/home/ubuntu/F1Tenth/velma/devel/lib/libpathing.so: pathing/CMakeFiles/pathing.dir/src/precompute.cpp.o
+/home/ubuntu/F1Tenth/velma/devel/lib/libpathing.so: pathing/CMakeFiles/pathing.dir/src/scan_simulator_2d.cpp.o
+/home/ubuntu/F1Tenth/velma/devel/lib/libpathing.so: pathing/CMakeFiles/pathing.dir/src/st_kinematics.cpp.o
+/home/ubuntu/F1Tenth/velma/devel/lib/libpathing.so: pathing/CMakeFiles/pathing.dir/build.make
+/home/ubuntu/F1Tenth/velma/devel/lib/libpathing.so: pathing/CMakeFiles/pathing.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/F1Tenth/velma/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX shared library /home/ubuntu/F1Tenth/velma/devel/lib/libpathing.so"
+	cd /home/ubuntu/F1Tenth/velma/build/pathing && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pathing.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-pathing/CMakeFiles/pathing.dir/build: /home/thattori/capstone/velma/devel/lib/libpathing.so
+pathing/CMakeFiles/pathing.dir/build: /home/ubuntu/F1Tenth/velma/devel/lib/libpathing.so
 
 .PHONY : pathing/CMakeFiles/pathing.dir/build
 
 pathing/CMakeFiles/pathing.dir/clean:
-	cd /home/thattori/capstone/velma/build/pathing && $(CMAKE_COMMAND) -P CMakeFiles/pathing.dir/cmake_clean.cmake
+	cd /home/ubuntu/F1Tenth/velma/build/pathing && $(CMAKE_COMMAND) -P CMakeFiles/pathing.dir/cmake_clean.cmake
 .PHONY : pathing/CMakeFiles/pathing.dir/clean
 
 pathing/CMakeFiles/pathing.dir/depend:
-	cd /home/thattori/capstone/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/thattori/capstone/velma/src /home/thattori/capstone/velma/src/pathing /home/thattori/capstone/velma/build /home/thattori/capstone/velma/build/pathing /home/thattori/capstone/velma/build/pathing/CMakeFiles/pathing.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/F1Tenth/velma/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/F1Tenth/velma/src /home/ubuntu/F1Tenth/velma/src/pathing /home/ubuntu/F1Tenth/velma/build /home/ubuntu/F1Tenth/velma/build/pathing /home/ubuntu/F1Tenth/velma/build/pathing/CMakeFiles/pathing.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : pathing/CMakeFiles/pathing.dir/depend
 

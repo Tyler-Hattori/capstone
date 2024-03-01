@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/thattori/capstone/velma/devel/lib/pathing/explore"
-  "/home/thattori/capstone/velma/devel/lib/pathing/explore.pdb"
-  "CMakeFiles/explore.dir/node/explore.cpp.o"
+  "/home/ubuntu/F1Tenth/velma/devel/lib/pathing/explore"
+  "/home/ubuntu/F1Tenth/velma/devel/lib/pathing/explore.pdb"
+  "CMakeFiles/explore.dir/node/algorithms/explore.cpp.o"
 )
 
 # Per-language clean rules from dependency scanning.

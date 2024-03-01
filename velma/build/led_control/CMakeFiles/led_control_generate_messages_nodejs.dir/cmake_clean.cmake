@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/thattori/capstone/velma/devel/share/gennodejs/ros/led_control/msg/gpiowrite.js"
+  "/home/ubuntu/F1Tenth/velma/devel/share/gennodejs/ros/led_control/msg/gpiowrite.js"
   "CMakeFiles/led_control_generate_messages_nodejs"
 )
 

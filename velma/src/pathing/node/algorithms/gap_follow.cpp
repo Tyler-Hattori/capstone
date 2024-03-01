@@ -24,7 +24,7 @@ class GapFollow {
 public:
     GapFollow() {
         pub_ = n_.advertise<ackermann_msgs::AckermannDriveStamped>("/gap_follow_drive", 1000);
-        sub_ = n_.subscribe("/scan", 1000, &GapFollow::callback, this);
+        sub_ = n_.subscribe("/backwards_scan", 1000, &GapFollow::callback, this);
     }
 
     void callback(const sensor_msgs::LaserScan& lidar_info) {

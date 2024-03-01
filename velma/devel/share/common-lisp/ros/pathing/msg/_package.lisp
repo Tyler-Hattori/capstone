@@ -7,9 +7,15 @@
    "PIXYDATA"
    "<PIXYRESOLUTION>"
    "PIXYRESOLUTION"
+   "<GPIO>"
+   "GPIO"
    "<GPIOREAD>"
    "GPIOREAD"
    "<GPIOWRITE>"
    "GPIOWRITE"
+   "<SEENPOINTS>"
+   "SEENPOINTS"
+   "<WAYPOINTS>"
+   "WAYPOINTS"
   ))
 

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/thattori/capstone/velma/devel/lib/libasync_slam_toolbox.pdb"
-  "/home/thattori/capstone/velma/devel/lib/libasync_slam_toolbox.so"
+  "/home/ubuntu/F1Tenth/velma/devel/lib/libasync_slam_toolbox.pdb"
+  "/home/ubuntu/F1Tenth/velma/devel/lib/libasync_slam_toolbox.so"
   "CMakeFiles/async_slam_toolbox.dir/src/slam_toolbox_async.cpp.o"
 )
 

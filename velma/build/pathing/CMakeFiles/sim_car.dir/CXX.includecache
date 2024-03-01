@@ -6,37 +6,37 @@
 
 #IncludeRegexTransform: 
 
-/home/thattori/capstone/velma/src/pathing/include/pathing/ackermann_kinematics.hpp
+/home/ubuntu/F1Tenth/velma/src/pathing/include/pathing/ackermann_kinematics.hpp
 pathing/pose_2d.hpp
-/home/thattori/capstone/velma/src/pathing/include/pathing/pathing/pose_2d.hpp
+/home/ubuntu/F1Tenth/velma/src/pathing/include/pathing/pathing/pose_2d.hpp
 
-/home/thattori/capstone/velma/src/pathing/include/pathing/car_params.hpp
+/home/ubuntu/F1Tenth/velma/src/pathing/include/pathing/car_params.hpp
 
-/home/thattori/capstone/velma/src/pathing/include/pathing/car_state.hpp
+/home/ubuntu/F1Tenth/velma/src/pathing/include/pathing/car_state.hpp
 
-/home/thattori/capstone/velma/src/pathing/include/pathing/ks_kinematics.hpp
+/home/ubuntu/F1Tenth/velma/src/pathing/include/pathing/ks_kinematics.hpp
 pathing/car_state.hpp
-/home/thattori/capstone/velma/src/pathing/include/pathing/pathing/car_state.hpp
+/home/ubuntu/F1Tenth/velma/src/pathing/include/pathing/pathing/car_state.hpp
 pathing/car_params.hpp
-/home/thattori/capstone/velma/src/pathing/include/pathing/pathing/car_params.hpp
+/home/ubuntu/F1Tenth/velma/src/pathing/include/pathing/pathing/car_params.hpp
 
-/home/thattori/capstone/velma/src/pathing/include/pathing/pose_2d.hpp
+/home/ubuntu/F1Tenth/velma/src/pathing/include/pathing/pose_2d.hpp
 
-/home/thattori/capstone/velma/src/pathing/include/pathing/precompute.hpp
+/home/ubuntu/F1Tenth/velma/src/pathing/include/pathing/precompute.hpp
 
-/home/thattori/capstone/velma/src/pathing/include/pathing/scan_simulator_2d.hpp
+/home/ubuntu/F1Tenth/velma/src/pathing/include/pathing/scan_simulator_2d.hpp
 random
 -
 pathing/pose_2d.hpp
-/home/thattori/capstone/velma/src/pathing/include/pathing/pathing/pose_2d.hpp
+/home/ubuntu/F1Tenth/velma/src/pathing/include/pathing/pathing/pose_2d.hpp
 
-/home/thattori/capstone/velma/src/pathing/include/pathing/st_kinematics.hpp
+/home/ubuntu/F1Tenth/velma/src/pathing/include/pathing/st_kinematics.hpp
 pathing/car_state.hpp
-/home/thattori/capstone/velma/src/pathing/include/pathing/pathing/car_state.hpp
+/home/ubuntu/F1Tenth/velma/src/pathing/include/pathing/pathing/car_state.hpp
 pathing/car_params.hpp
-/home/thattori/capstone/velma/src/pathing/include/pathing/pathing/car_params.hpp
+/home/ubuntu/F1Tenth/velma/src/pathing/include/pathing/pathing/car_params.hpp
 
-/home/thattori/capstone/velma/src/pathing/node/sim_car.cpp
+/home/ubuntu/F1Tenth/velma/src/pathing/node/sim_car.cpp
 ros/ros.h
 -
 interactive_markers/interactive_marker_server.h
@@ -66,21 +66,21 @@ geometry_msgs/PoseStamped.h
 geometry_msgs/PointStamped.h
 -
 pathing/pose_2d.hpp
-/home/thattori/capstone/velma/src/pathing/node/pathing/pose_2d.hpp
+/home/ubuntu/F1Tenth/velma/src/pathing/node/pathing/pose_2d.hpp
 pathing/ackermann_kinematics.hpp
-/home/thattori/capstone/velma/src/pathing/node/pathing/ackermann_kinematics.hpp
+/home/ubuntu/F1Tenth/velma/src/pathing/node/pathing/ackermann_kinematics.hpp
 pathing/scan_simulator_2d.hpp
-/home/thattori/capstone/velma/src/pathing/node/pathing/scan_simulator_2d.hpp
+/home/ubuntu/F1Tenth/velma/src/pathing/node/pathing/scan_simulator_2d.hpp
 pathing/car_state.hpp
-/home/thattori/capstone/velma/src/pathing/node/pathing/car_state.hpp
+/home/ubuntu/F1Tenth/velma/src/pathing/node/pathing/car_state.hpp
 pathing/car_params.hpp
-/home/thattori/capstone/velma/src/pathing/node/pathing/car_params.hpp
+/home/ubuntu/F1Tenth/velma/src/pathing/node/pathing/car_params.hpp
 pathing/ks_kinematics.hpp
-/home/thattori/capstone/velma/src/pathing/node/pathing/ks_kinematics.hpp
+/home/ubuntu/F1Tenth/velma/src/pathing/node/pathing/ks_kinematics.hpp
 pathing/st_kinematics.hpp
-/home/thattori/capstone/velma/src/pathing/node/pathing/st_kinematics.hpp
+/home/ubuntu/F1Tenth/velma/src/pathing/node/pathing/st_kinematics.hpp
 pathing/precompute.hpp
-/home/thattori/capstone/velma/src/pathing/node/pathing/precompute.hpp
+/home/ubuntu/F1Tenth/velma/src/pathing/node/pathing/precompute.hpp
 iostream
 -
 math.h

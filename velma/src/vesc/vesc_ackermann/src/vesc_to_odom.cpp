@@ -20,6 +20,7 @@ VescToOdom::VescToOdom(ros::NodeHandle nh, ros::NodeHandle private_nh) :
   // get ROS parameters
   private_nh.param("odom_frame", odom_frame_, odom_frame_);
   private_nh.param("base_frame", base_frame_, base_frame_);
+  private_nh.param("publish_tf", publish_tf_, publish_tf_);
   private_nh.param("use_servo_cmd_to_calc_angular_velocity", use_servo_cmd_, use_servo_cmd_);
   if (!getRequiredParam(nh, "speed_to_erpm_gain", speed_to_erpm_gain_))
     return;
@@ -28,21 +29,19 @@ VescToOdom::VescToOdom(ros::NodeHandle nh, ros::NodeHandle private_nh) :
   if (use_servo_cmd_) {
     if (!getRequiredParam(nh, "steering_angle_to_servo_gain", steering_to_servo_gain_))
       return;
-    //if (!getRequiredParam(nh, "steering_angle_to_servo_offset", steering_to_servo_offset_))
-      //return;
-    speed_to_erpm_offset_ = 200;
+    if (!getRequiredParam(nh, "steering_angle_to_servo_offset", steering_to_servo_offset_))
+      return;
     if (!getRequiredParam(nh, "wheelbase", wheelbase_))
       return;
   }
-  private_nh.param("publish_tf", publish_tf_, publish_tf_);
 
   // create odom publisher
   odom_pub_ = nh.advertise<nav_msgs::Odometry>("/odom", 10);
 
   // create tf broadcaster
-  //if (publish_tf_) {
+  if (publish_tf_) {
     tf_pub_.reset(new tf::TransformBroadcaster);
-  //}
+  }
 
   // subscribe to vesc state and. optionally, servo command
   vesc_state_sub_ = nh.subscribe("sensors/core", 10, &VescToOdom::vescStateCallback, this);
@@ -54,18 +53,20 @@ VescToOdom::VescToOdom(ros::NodeHandle nh, ros::NodeHandle private_nh) :
 
 void VescToOdom::vescStateCallback(const vesc_msgs::VescStateStamped::ConstPtr& state)
 {
-  ROS_INFO("vescStateCallback ran");
   // check that we have a last servo command if we are depending on it for angular velocity
   if (use_servo_cmd_ && !last_servo_cmd_) {
     return;
   }
 
   // convert to engineering units
-  double current_speed = ( state->state.speed - speed_to_erpm_offset_ ) / speed_to_erpm_gain_;
+  double current_speed = -(state->state.speed - speed_to_erpm_offset_ ) / speed_to_erpm_gain_;
   double current_steering_angle(0.0), current_angular_velocity(0.0);
+  if (std::fabs(current_speed) < 0.05){
+    current_speed = 0.0;
+  }
   if (use_servo_cmd_) {
     current_steering_angle =
-      ( last_servo_cmd_->data - steering_to_servo_offset_ ) / steering_to_servo_gain_;
+      ( last_servo_cmd_->data - steering_to_servo_offset_ ) / (steering_to_servo_gain_);
     current_angular_velocity = current_speed * tan(current_steering_angle) / wheelbase_;
   }
 
@@ -117,7 +118,7 @@ void VescToOdom::vescStateCallback(const vesc_msgs::VescStateStamped::ConstPtr& 
   // Velocity uncertainty
   /** @todo Think about velocity uncertainty */
 
-  //if (publish_tf_) {
+  if (publish_tf_) {
     geometry_msgs::TransformStamped tf;
     tf.header.frame_id = odom_frame_;
     tf.child_frame_id = base_frame_;
@@ -129,7 +130,7 @@ void VescToOdom::vescStateCallback(const vesc_msgs::VescStateStamped::ConstPtr& 
     if (ros::ok()) {
       tf_pub_->sendTransform(tf);
     }
-  //}
+  }
 
   if (ros::ok()) {
     odom_pub_.publish(odom);
@@ -144,7 +145,7 @@ void VescToOdom::servoCmdCallback(const std_msgs::Float64::ConstPtr& servo)
 template <typename T>
 inline bool getRequiredParam(const ros::NodeHandle& nh, std::string name, T& value)
 {
-  if (nh.getParam(name, value))
+  if (nh.getParam(name, value)) 
     return true;
 
   ROS_FATAL("VescToOdom: Parameter %s is required.", name.c_str());

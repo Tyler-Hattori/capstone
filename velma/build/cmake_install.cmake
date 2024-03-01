@@ -1,8 +1,8 @@
-# Install script for directory: /home/thattori/capstone/velma/src
+# Install script for directory: /home/ubuntu/F1Tenth/velma/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/thattori/capstone/velma/install")
+  set(CMAKE_INSTALL_PREFIX "/home/ubuntu/F1Tenth/velma/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -49,107 +49,110 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/thattori/capstone/velma/install/_setup_util.py")
+   "/home/ubuntu/F1Tenth/velma/install/_setup_util.py")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/thattori/capstone/velma/install" TYPE PROGRAM FILES "/home/thattori/capstone/velma/build/catkin_generated/installspace/_setup_util.py")
+file(INSTALL DESTINATION "/home/ubuntu/F1Tenth/velma/install" TYPE PROGRAM FILES "/home/ubuntu/F1Tenth/velma/build/catkin_generated/installspace/_setup_util.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/thattori/capstone/velma/install/env.sh")
+   "/home/ubuntu/F1Tenth/velma/install/env.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/thattori/capstone/velma/install" TYPE PROGRAM FILES "/home/thattori/capstone/velma/build/catkin_generated/installspace/env.sh")
+file(INSTALL DESTINATION "/home/ubuntu/F1Tenth/velma/install" TYPE PROGRAM FILES "/home/ubuntu/F1Tenth/velma/build/catkin_generated/installspace/env.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/thattori/capstone/velma/install/setup.bash;/home/thattori/capstone/velma/install/local_setup.bash")
+   "/home/ubuntu/F1Tenth/velma/install/setup.bash;/home/ubuntu/F1Tenth/velma/install/local_setup.bash")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/thattori/capstone/velma/install" TYPE FILE FILES
-    "/home/thattori/capstone/velma/build/catkin_generated/installspace/setup.bash"
-    "/home/thattori/capstone/velma/build/catkin_generated/installspace/local_setup.bash"
+file(INSTALL DESTINATION "/home/ubuntu/F1Tenth/velma/install" TYPE FILE FILES
+    "/home/ubuntu/F1Tenth/velma/build/catkin_generated/installspace/setup.bash"
+    "/home/ubuntu/F1Tenth/velma/build/catkin_generated/installspace/local_setup.bash"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/thattori/capstone/velma/install/setup.sh;/home/thattori/capstone/velma/install/local_setup.sh")
+   "/home/ubuntu/F1Tenth/velma/install/setup.sh;/home/ubuntu/F1Tenth/velma/install/local_setup.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/thattori/capstone/velma/install" TYPE FILE FILES
-    "/home/thattori/capstone/velma/build/catkin_generated/installspace/setup.sh"
-    "/home/thattori/capstone/velma/build/catkin_generated/installspace/local_setup.sh"
+file(INSTALL DESTINATION "/home/ubuntu/F1Tenth/velma/install" TYPE FILE FILES
+    "/home/ubuntu/F1Tenth/velma/build/catkin_generated/installspace/setup.sh"
+    "/home/ubuntu/F1Tenth/velma/build/catkin_generated/installspace/local_setup.sh"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/thattori/capstone/velma/install/setup.zsh;/home/thattori/capstone/velma/install/local_setup.zsh")
+   "/home/ubuntu/F1Tenth/velma/install/setup.zsh;/home/ubuntu/F1Tenth/velma/install/local_setup.zsh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/thattori/capstone/velma/install" TYPE FILE FILES
-    "/home/thattori/capstone/velma/build/catkin_generated/installspace/setup.zsh"
-    "/home/thattori/capstone/velma/build/catkin_generated/installspace/local_setup.zsh"
+file(INSTALL DESTINATION "/home/ubuntu/F1Tenth/velma/install" TYPE FILE FILES
+    "/home/ubuntu/F1Tenth/velma/build/catkin_generated/installspace/setup.zsh"
+    "/home/ubuntu/F1Tenth/velma/build/catkin_generated/installspace/local_setup.zsh"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/thattori/capstone/velma/install/.rosinstall")
+   "/home/ubuntu/F1Tenth/velma/install/.rosinstall")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/thattori/capstone/velma/install" TYPE FILE FILES "/home/thattori/capstone/velma/build/catkin_generated/installspace/.rosinstall")
+file(INSTALL DESTINATION "/home/ubuntu/F1Tenth/velma/install" TYPE FILE FILES "/home/ubuntu/F1Tenth/velma/build/catkin_generated/installspace/.rosinstall")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/thattori/capstone/velma/build/gtest/cmake_install.cmake")
-  include("/home/thattori/capstone/velma/build/joystick_drivers/joystick_drivers/cmake_install.cmake")
-  include("/home/thattori/capstone/velma/build/racecar/racecar/cmake_install.cmake")
-  include("/home/thattori/capstone/velma/build/serial/cmake_install.cmake")
-  include("/home/thattori/capstone/velma/build/slam/slam_toolbox_msgs/cmake_install.cmake")
-  include("/home/thattori/capstone/velma/build/velma/cmake_install.cmake")
-  include("/home/thattori/capstone/velma/build/vesc/vesc/cmake_install.cmake")
-  include("/home/thattori/capstone/velma/build/vesc/vesc_msgs/cmake_install.cmake")
-  include("/home/thattori/capstone/velma/build/gpio/cmake_install.cmake")
-  include("/home/thattori/capstone/velma/build/led_control/cmake_install.cmake")
-  include("/home/thattori/capstone/velma/build/racecar/ackermann_cmd_mux/cmake_install.cmake")
-  include("/home/thattori/capstone/velma/build/joystick_drivers/joy/cmake_install.cmake")
-  include("/home/thattori/capstone/velma/build/lidar/cmake_install.cmake")
-  include("/home/thattori/capstone/velma/build/pathing/cmake_install.cmake")
-  include("/home/thattori/capstone/velma/build/slam/slam_toolbox/cmake_install.cmake")
-  include("/home/thattori/capstone/velma/build/twist_to_ackermann/cmake_install.cmake")
-  include("/home/thattori/capstone/velma/build/slam/slam_toolbox_rviz/cmake_install.cmake")
-  include("/home/thattori/capstone/velma/build/vesc/vesc_ackermann/cmake_install.cmake")
-  include("/home/thattori/capstone/velma/build/vesc/vesc_driver/cmake_install.cmake")
-  include("/home/thattori/capstone/velma/build/navigation/cmake_install.cmake")
+  include("/home/ubuntu/F1Tenth/velma/build/gtest/cmake_install.cmake")
+  include("/home/ubuntu/F1Tenth/velma/build/joystick_drivers/joystick_drivers/cmake_install.cmake")
+  include("/home/ubuntu/F1Tenth/velma/build/pixy/pixy2_ros/cmake_install.cmake")
+  include("/home/ubuntu/F1Tenth/velma/build/racecar/racecar/cmake_install.cmake")
+  include("/home/ubuntu/F1Tenth/velma/build/serial/cmake_install.cmake")
+  include("/home/ubuntu/F1Tenth/velma/build/slam/slam_toolbox_msgs/cmake_install.cmake")
+  include("/home/ubuntu/F1Tenth/velma/build/velma/cmake_install.cmake")
+  include("/home/ubuntu/F1Tenth/velma/build/vesc/vesc/cmake_install.cmake")
+  include("/home/ubuntu/F1Tenth/velma/build/vesc/vesc_msgs/cmake_install.cmake")
+  include("/home/ubuntu/F1Tenth/velma/build/gpio/cmake_install.cmake")
+  include("/home/ubuntu/F1Tenth/velma/build/led_control/cmake_install.cmake")
+  include("/home/ubuntu/F1Tenth/velma/build/racecar/ackermann_cmd_mux/cmake_install.cmake")
+  include("/home/ubuntu/F1Tenth/velma/build/joystick_drivers/joy/cmake_install.cmake")
+  include("/home/ubuntu/F1Tenth/velma/build/pixy/pixy2_msgs/cmake_install.cmake")
+  include("/home/ubuntu/F1Tenth/velma/build/pixy/pixy2_node/cmake_install.cmake")
+  include("/home/ubuntu/F1Tenth/velma/build/lidar/cmake_install.cmake")
+  include("/home/ubuntu/F1Tenth/velma/build/pathing/cmake_install.cmake")
+  include("/home/ubuntu/F1Tenth/velma/build/slam/slam_toolbox/cmake_install.cmake")
+  include("/home/ubuntu/F1Tenth/velma/build/twist_to_ackermann/cmake_install.cmake")
+  include("/home/ubuntu/F1Tenth/velma/build/slam/slam_toolbox_rviz/cmake_install.cmake")
+  include("/home/ubuntu/F1Tenth/velma/build/vesc/vesc_ackermann/cmake_install.cmake")
+  include("/home/ubuntu/F1Tenth/velma/build/vesc/vesc_driver/cmake_install.cmake")
+  include("/home/ubuntu/F1Tenth/velma/build/navigation/cmake_install.cmake")
 
 endif()
 
@@ -161,5 +164,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/thattori/capstone/velma/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/ubuntu/F1Tenth/velma/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

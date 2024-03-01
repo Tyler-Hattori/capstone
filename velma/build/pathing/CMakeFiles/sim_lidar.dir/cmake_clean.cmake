@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/thattori/capstone/velma/devel/lib/pathing/sim_lidar"
-  "/home/thattori/capstone/velma/devel/lib/pathing/sim_lidar.pdb"
+  "/home/ubuntu/F1Tenth/velma/devel/lib/pathing/sim_lidar"
+  "/home/ubuntu/F1Tenth/velma/devel/lib/pathing/sim_lidar.pdb"
   "CMakeFiles/sim_lidar.dir/node/sim_lidar.cpp.o"
 )
 

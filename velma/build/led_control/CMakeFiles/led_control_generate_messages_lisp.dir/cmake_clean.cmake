@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/thattori/capstone/velma/devel/share/common-lisp/ros/led_control/msg/gpiowrite.lisp"
+  "/home/ubuntu/F1Tenth/velma/devel/share/common-lisp/ros/led_control/msg/gpiowrite.lisp"
   "CMakeFiles/led_control_generate_messages_lisp"
 )
 

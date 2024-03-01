@@ -6,16 +6,14 @@
 
 #IncludeRegexTransform: 
 
-/home/thattori/capstone/velma/src/pathing/include/pathing/nav_channel.h
+/home/ubuntu/F1Tenth/velma/src/pathing/include/pathing/nav_channel.h
 ros/ros.h
 -
 geometry_msgs/PoseStamped.h
 -
 
-/home/thattori/capstone/velma/src/pathing/node/nav_mux.cpp
+/home/ubuntu/F1Tenth/velma/src/pathing/node/nav_mux.cpp
 ros/ros.h
--
-geometry_msgs/PoseWithCovarianceStamped.h
 -
 geometry_msgs/PoseStamped.h
 -
@@ -30,7 +28,7 @@ sensor_msgs/Joy.h
 std_msgs/String.h
 -
 pathing/nav_channel.h
-/home/thattori/capstone/velma/src/pathing/node/pathing/nav_channel.h
+/home/ubuntu/F1Tenth/velma/src/pathing/node/pathing/nav_channel.h
 
 /opt/ros/noetic/include/geometry_msgs/Point.h
 string
@@ -86,44 +84,6 @@ ros/message_operations.h
 std_msgs/Header.h
 -
 geometry_msgs/Pose.h
--
-
-/opt/ros/noetic/include/geometry_msgs/PoseWithCovariance.h
-string
--
-vector
--
-memory
--
-ros/types.h
--
-ros/serialization.h
--
-ros/builtin_message_traits.h
--
-ros/message_operations.h
--
-geometry_msgs/Pose.h
--
-
-/opt/ros/noetic/include/geometry_msgs/PoseWithCovarianceStamped.h
-string
--
-vector
--
-memory
--
-ros/types.h
--
-ros/serialization.h
--
-ros/builtin_message_traits.h
--
-ros/message_operations.h
--
-std_msgs/Header.h
--
-geometry_msgs/PoseWithCovariance.h
 -
 
 /opt/ros/noetic/include/geometry_msgs/Quaternion.h

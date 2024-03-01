@@ -1,8 +1,8 @@
-prefix=/home/thattori/capstone/velma/devel
+prefix=/home/ubuntu/F1Tenth/velma/devel
 
 Name: pathing
 Description: Description of pathing
 Version: 0.0.1
-Cflags: -I/home/thattori/capstone/velma/devel/include -I/home/thattori/capstone/velma/src/pathing/include
+Cflags: -I/home/ubuntu/F1Tenth/velma/devel/include -I/home/ubuntu/F1Tenth/velma/src/pathing/include
 Libs: -L${prefix}/lib -lpathing
 Requires: message_runtime

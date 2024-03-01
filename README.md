@@ -1,15 +1,37 @@
-#F1TENTH
+# F1TENTH VELMA
 
-source code used by the ucsb f1tenth capstone team to control their car.
+source code written by the 2022-2023 ucsb f1tenth capstone team
 
-written for the intended use of ros noetic on ubuntu 20.04.
+written for ros noetic on ubuntu 20.04.
 
-this repo contains three separate projects.
+## Required packages
+```
+ros-noetic-slam-toolbox
+ros-noetic-navigation
+ros-noetic-tf2-geometry-msgs
+ros-noetic-ackermann-msgs
+ros-noetic-map-server
+python-is-python3
+git libusb-1.0-0-dev g++ build-essential
+```
 
-first, the "basic" directory contains the full code that was used to control the f1tenth car in 2018 by UPenn. we will not be using this structure, but we will draw from the layout and source code.
+## Usage
+```
+roslaunch velma velma.launch
+```
+## Driving Modes
+1. Manual Control - 'k'
+3. Wall Follow - 'p'
+4. Gap Follow - 'g'
+5. Return to starting point - 'h'
+6. Navigate to selected point on RVIZ map - 'n'
+7. Begin to log waypoints of car's path - 'l'
+8. Recall and navigate to logged waypoints in sequential order indefinitely - 'r'
+9. Explore unknown areas of the environment - 'e'
+10. Search for an object of a certain color in the environment (color specified by pixy settings) - 's'
 
-second, the 'simulator' directory contains the full code that was used to launch our first prototype demo. this is the structure we will use, but we need to adjust the code since it is only a simulator.
-
-third, the 'velma' directory contains the full code that will be used for our final project. it is a work in progress.
-
-the misc directory contains any extra files and the source code for each of the hardware drivers.
+## Required Hardware
+1. Raspberry Pi 4
+2. RP Lidar S2
+3. VESC 6 MK V
+4. RC car

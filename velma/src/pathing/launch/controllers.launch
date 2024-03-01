@@ -1,26 +1,26 @@
 <launch>
   <arg name="simulate"/>
   
-  <!-- Listen to messages from joysicks -->
-  <node pkg="joy" name="joy_node" type="joy_node" if="$(eval arg('simulate') == 'no' or arg('simulate') == 'map')"/>
+  <!-- Listen to messages from joysicks 
+  <node pkg="joy" name="joy_node" type="joy_node" if="$(eval arg('simulate') == 'no' or arg('simulate') == 'map')"/> -->
     
   <!-- Launch the Keyboard Node -->
   <node pkg="pathing" name="keyboard" type="keyboard" output="screen">
     <rosparam command="load" file="$(find pathing)/params.yaml"/>
   </node>
   
-  <!-- Launch the Web Interface -->
-  <node pkg="pathing" name="web" type="gpio" output="screen" if="$(eval arg('simulate') == 'no' or arg('simulate') == 'map')">
-    <rosparam command="load" file="$(find pathing)/params.yaml"/>
-  </node>
+  <!-- Launch the Web Interface 
+  node pkg="pathing" name="web" type="gpio" output="screen" if="$(eval arg('simulate') == 'no' or arg('simulate') == 'map')"
+    rosparam command="load" file="$(find pathing)/params.yaml"/
+  /node
   
-  <!-- Read controller pins -->
-  <node pkg="gpio_control" type="gpio_control_node" name="read_controller_pins" args="--device pi --input 11 12" output="screen" if="$(eval arg('simulate') == 'no' or arg('simulate') == 'map')"/>
+   Read controller pins 
+  node pkg="gpio_control" type="gpio_control_node" name="read_controller_pins" args=" evice pi nput 11 12" output="screen" if="$(eval arg('simulate') == 'no' or arg('simulate') == 'map')"/
   
-  <!-- Read pathing pins -->
-  <node pkg="gpio_control" type="gpio_control_node" name="read_pathing_pins" args="--device pi --input 21 22 23 24" output="screen" if="$(eval arg('simulate') == 'no' or arg('simulate') == 'map')"/>
+  Read pathing pins
+  node pkg="gpio_control" type="gpio_control_node" name="read_pathing_pins" args=" evice pi nput 21 22 23 24" output="screen" if="$(eval arg('simulate') == 'no' or arg('simulate') == 'map')"/
   
-  <!-- Read logging pin -->
-  <node pkg="gpio_control" type="gpio_control_node" name="read_logging_pin" args="--device pi --input 13" output="screen" if="$(eval arg('simulate') == 'no' or arg('simulate') == 'map')"/>
-  
+  Read logging pin 
+  node pkg="gpio_control" type="gpio_control_node" name="read_logging_pin" args=" evice pi nput 13" output="screen" if="$(eval arg('simulate') == 'no' or arg('simulate') == 'map')"/
+  -->
 </launch>

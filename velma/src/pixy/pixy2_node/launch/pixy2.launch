@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+    <node name="pixy2_node" pkg="pixy2_node" type="pixy2_node" output="screen">
+            <param name="rate" value="50.0"/>
+            <param name="use_servos" value="true"/>
+    </node>
+</launch>

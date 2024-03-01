@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/thattori/capstone/velma/devel/lib/pathing/keyboard"
-  "/home/thattori/capstone/velma/devel/lib/pathing/keyboard.pdb"
+  "/home/ubuntu/F1Tenth/velma/devel/lib/pathing/keyboard"
+  "/home/ubuntu/F1Tenth/velma/devel/lib/pathing/keyboard.pdb"
   "CMakeFiles/keyboard.dir/node/keyboard.cpp.o"
 )
 
